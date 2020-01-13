@@ -9,6 +9,14 @@
 
 html {
   scroll-behavior: smooth;
+  height: 80vmin;
+}
+
+/* JV Logo */
+.jv-logo {
+  height: 120px;
+  transform: translateX(-15px);
+  transform: translateY(-5px);
 }
 
 /* React Logo */

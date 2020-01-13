@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Container from './Container';
+import Container from '../Container';
 
 const Hero = () => {
   const HeroParagraph = styled.p`
     max-width: 840px;
-    font-size: 3.5rem;
+    font-size: 3.3rem;
     line-height: 68px;
     letter-spacing: -1px;
     margin: 1.25em 0 2em 0;

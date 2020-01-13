@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Container from './Container';
-import logo from '../logo.svg';
+import Container from '../Container';
+import ReactLogo from '../../logos/react_logo.svg';
 
 const AdditionalInfo = () => {
   const InfoContainer = styled.div`
@@ -21,7 +21,7 @@ const AdditionalInfo = () => {
     <Container>
       <InfoContainer>
         <Label>Built with:</Label>
-        <img src={logo} className='react-logo' alt='React logo.' />
+        <img src={ReactLogo} className='react-logo' alt='React logo.' />
       </InfoContainer>
     </Container>
   );
