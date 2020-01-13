@@ -24,12 +24,14 @@ const ProjectSection = () => {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 3rem;
-    margin: 2rem;
-    padding: 0 1rem;
-    margin-top: 4em;
+    margin: 4em 3em;
 
     @media (max-width: 750px) {
       grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 580px) {
+      margin: 4em 0.5em;
     }
   `;
 
@@ -51,16 +53,24 @@ const ProjectSection = () => {
         0 32px 16px rgba(0, 0, 0, 0.09);
     }
 
-    div {
-      background: #fff !important;
-    }
-
     h3 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       padding: 1em 0;
       letter-spacing: 3px;
       background: ${props => props.theme.primary};
       color: black;
+    }
+
+    @media (max-width: 950px) {
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 580px) {
+      h3 {
+        padding: 0.7em 0;
+      }
     }
 
     img {
@@ -71,8 +81,16 @@ const ProjectSection = () => {
 
   const TechInfo = styled.div`
     font-size: 1.3rem;
-    padding: 0.7em 0 1em 0 !important;
-    background: #fbfbfb !important;
+    padding: 1em;
+    background: #fff;
+
+    @media (max-width: 950px) {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 580px) {
+      font-size: 1rem;
+    }
   `;
 
   return (

@@ -15,8 +15,7 @@ html {
 /* JV Logo */
 .jv-logo {
   height: 120px;
-  transform: translateX(-15px);
-  transform: translateY(-5px);
+  transform: translate(-15px, -5px);
 }
 
 /* React Logo */

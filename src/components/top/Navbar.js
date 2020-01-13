@@ -8,16 +8,10 @@ const Navbar = () => {
     padding: 2em 0 0.5em;
   `;
 
-  const Logo = styled.div`
-    font-size: 3rem;
-    align-self: flex-start;
-    flex: 1 1 0;
-  `;
-
   const LinkList = styled.ul`
     align-self: right;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     flex: 1 1 0;
     text-align: right;
     padding: 0;

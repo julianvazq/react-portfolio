@@ -11,7 +11,7 @@ const Hero = () => {
     margin: 1.25em 0 2em 0;
 
     @media (max-width: 580px) {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
     }
   `;
 
