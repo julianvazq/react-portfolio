@@ -29,6 +29,10 @@ const Navbar = () => {
     display: inline-block;
     padding: 0 40px 10px 0;
     letter-spacing: 0.5px;
+
+    &:hover {
+      opacity: 0.8;
+    }
   `;
 
   return (

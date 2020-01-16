@@ -12,6 +12,12 @@ html {
   height: 80vmin;
 }
 
+body {
+  color: #5d5d5d;
+  background: #fdfdfd;
+  font-family: 'Work Sans', 'Helvetica', 'sans-serif';
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -24,11 +30,6 @@ a {
 }
 
 /* React Logo */
-body {
-  color: #5d5d5d;
-  font-family: 'Work Sans', 'Helvetica', 'sans-serif';
-}
-
 .react-logo {
   height: 100px;
   pointer-events: none;
