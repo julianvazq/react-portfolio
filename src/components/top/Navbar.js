@@ -1,4 +1,6 @@
 import React from 'react';
+// import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import JVLogo from '../../logos/jv_logo.png';
 import styled from 'styled-components';
 import Container from '../Container';
@@ -6,6 +8,7 @@ import Container from '../Container';
 const Navbar = () => {
   const Nav = styled.nav`
     padding: 2em 0 0.5em;
+    margin-bottom: 2em;
   `;
 
   const LinkList = styled.ul`
@@ -31,11 +34,23 @@ const Navbar = () => {
   return (
     <Nav>
       <Container style={{ justifyItems: 'space-around' }}>
-        <img src={JVLogo} className='jv-logo' alt='JV logo.' />
+        <Link to='/'>
+          <img src={JVLogo} className='jv-logo' alt='JV logo.' />
+        </Link>
         <LinkList>
-          <ListItem>Projects</ListItem>
-          <ListItem>Contact</ListItem>
-          <ListItem>Github</ListItem>
+          <Link to='/#projects'>
+            <ListItem>Projects</ListItem>
+          </Link>
+          <Link to='/#contact'>
+            <ListItem>Contact</ListItem>
+          </Link>
+          <a
+            href='https://github.com/julianvazq'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <ListItem>Github</ListItem>
+          </a>
         </LinkList>
       </Container>
     </Nav>

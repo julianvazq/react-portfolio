@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Container from '../Container';
 import LifeTracker from '../../images/life-tracker.png';
@@ -47,7 +48,7 @@ const ProjectSection = () => {
     transition: all 0.2s ease;
 
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-3px);
       box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09), 0 4px 2px rgba(0, 0, 0, 0.09),
         0 8px 4px rgba(0, 0, 0, 0.09), 0 16px 8px rgba(0, 0, 0, 0.09),
         0 32px 16px rgba(0, 0, 0, 0.09);
@@ -56,9 +57,16 @@ const ProjectSection = () => {
     h3 {
       font-size: 1.8rem;
       padding: 1em 0;
-      letter-spacing: 3px;
-      background: ${props => props.theme.primary};
-      color: black;
+      letter-spacing: 2px;
+      background: linear-gradient(
+        34deg,
+        rgba(134, 200, 255, 1) 0%,
+        rgba(110, 186, 252, 1) 25%,
+        rgba(96, 176, 244, 1) 50%,
+        rgba(110, 186, 252, 1) 75%,
+        rgba(134, 200, 255, 1) 100%
+      );
+      color: #333;
     }
 
     @media (max-width: 950px) {
@@ -96,22 +104,24 @@ const ProjectSection = () => {
   return (
     <StyledSection>
       <Container>
-        <SectionTitle>Recent Projects</SectionTitle>
+        <SectionTitle id='projects'>Recent Projects</SectionTitle>
       </Container>
       <GridContainer>
+        <Link to='/life-tracker'>
+          <ProjectItem>
+            <div>
+              <TechInfo>
+                <p>React | Node | Express | MongoDB</p>
+              </TechInfo>
+              <img src={LifeTracker} alt='Life Tracker App.' />
+              <h3>Life Tracker App</h3>
+            </div>
+          </ProjectItem>
+        </Link>
         <ProjectItem>
           <div>
             <TechInfo>
-              <p>React | Node | Express | MongoDB</p>
-            </TechInfo>
-            <img src={LifeTracker} alt='Life Tracker App.' />
-            <h3>Life Tracker App</h3>
-          </div>
-        </ProjectItem>
-        <ProjectItem>
-          <div>
-            <TechInfo>
-              <p>JS | HTML | CSS | LeafLet API</p>
+              <p>JS | Node | Express | HTML | CSS </p>
             </TechInfo>
             <img src={PGFinder} alt='PG Finder.' />
             <h3>PG Finder</h3>

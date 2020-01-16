@@ -12,6 +12,11 @@ html {
   height: 80vmin;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* JV Logo */
 .jv-logo {
   height: 120px;

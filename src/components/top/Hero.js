@@ -8,7 +8,7 @@ const Hero = () => {
     font-size: 3.3rem;
     line-height: 68px;
     letter-spacing: -1px;
-    margin: 1.25em 0 2em 0;
+    margin-bottom: 2em;
 
     @media (max-width: 580px) {
       font-size: 2.3rem;
