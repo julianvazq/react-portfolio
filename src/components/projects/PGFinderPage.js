@@ -1,12 +1,21 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
-import Container from '../Container';
 import PGFinderDemo from '../../gifs/pg-finder-demo.mp4';
 import PGFinderResponsive from '../../images/pg-finder-responsive.png';
 import PGFinderDocumentation from '../../images/pg-finder-documentation.png';
 
 const PGFinderPage = () => {
+  const Container = styled.div`
+    max-width: 1400px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    flex-flow: row wrap;
+    padding-bottom: 4em;
+  `;
+
   const InnerContainer = styled.div`
     margin: auto;
     width: 700px;
@@ -33,31 +42,29 @@ const PGFinderPage = () => {
   `;
 
   const SubHeading = styled.h3`
-    margin-top: 4em;
-    padding-bottom: 1em;
+    margin-bottom: 2em;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 400;
 
     @media (max-width: 750px) {
-      margin-top: 0;
       font-size: 1.5rem;
     }
+  `;
+
+  const StyledParagraph = styled.p`
+    font-size: 1.5rem;
+    line-height: 1.7;
   `;
 
   const TechList = styled.ul`
     list-style-type: square;
     list-style-position: inside;
     font-size: 1.5rem;
-    margin: 4em auto 6em auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2em;
-
-    @media (max-width: 750px) {
-      margin: 2em auto 4em auto;
-    }
   `;
 
   const ListItem = styled.li`
@@ -66,12 +73,13 @@ const PGFinderPage = () => {
   `;
 
   const Button = styled.a`
+    display: inline-block;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: 400;
     background: ${props => props.theme.primary};
-    color: #fdfdfd;
+    color: #fff;
     padding: 0.5em 0.8em;
     font-family: inherit;
     border-radius: 0.3rem;
@@ -82,113 +90,138 @@ const PGFinderPage = () => {
     }
   `;
 
+  const ProjectsButton = styled(Button)`
+    margin-top: 4em;
+  `;
+
   const StyledSpan = styled.span`
     font-weight: 300;
   `;
 
-  const MarginWrapper = styled.div`
-    padding-bottom: 6em;
+  const BackgroundWrapper = styled.div`
+    background: #fbfbfb;
+  `;
 
-    @media (max-width: 750px) {
-      padding-bottom: 3em;
-    }
+  const PaddingWrapper = styled.div`
+    padding: 4em 0;
   `;
 
   return (
     <Fragment>
-      <Container>
-        <InnerContainer>
-          <Title>PG Finder</Title>
-          <ProjectDescription>
-            Allows residents of PG County to easily find the location of public
-            services and resources, such as traffic cameras, police and fire
-            stations.
-          </ProjectDescription>
-          <Button
-            // href='http://lifetracker.julianvazquez.me'
-            target='_blank'
-            rel='noopener noreferrer'
+      <BackgroundWrapper>
+        <PaddingWrapper>
+          <Container>
+            <InnerContainer>
+              <Title>PG Finder</Title>
+              <ProjectDescription>
+                Allows residents of PG County to easily find the location of
+                public services and resources, such as traffic cameras, police
+                and fire stations.
+              </ProjectDescription>
+              <Button
+                // href='http://lifetracker.julianvazquez.me'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Go to website
+              </Button>
+            </InnerContainer>
+          </Container>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              margin: 'auto',
+              display: 'block',
+              width: '100%',
+              maxWidth: '1370px'
+            }}
           >
-            Go to website
-          </Button>
-        </InnerContainer>
-      </Container>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          margin: '4em auto',
-          display: 'block',
-          width: '100%',
-          maxWidth: '1370px'
-        }}
-      >
-        <source src={PGFinderDemo} type='video/mp4' />
-      </video>
-      <Container>
-        <InnerContainer>
-          <SubHeading>Responsive design</SubHeading>
-        </InnerContainer>
-      </Container>
-      <img
-        src={PGFinderResponsive}
-        alt='Responsive design.'
-        style={{
-          display: 'block',
-          width: '100%',
-          maxWidth: '1370px',
-          margin: '4em auto'
-        }}
-      />
-      <Container>
-        <InnerContainer>
-          <SubHeading>Documentation</SubHeading>
-        </InnerContainer>
-      </Container>
-      <img
-        src={PGFinderDocumentation}
-        alt='Documentation page.'
-        style={{
-          display: 'block',
-          width: '100%',
-          maxWidth: '1370px',
-          margin: '4em auto'
-        }}
-      />
-      <Container>
-        <InnerContainer style={{ marginBottom: '4em' }}>
-          <Button
-            // href='http://lifetracker.julianvazquez.me'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Read documentation
-          </Button>
-        </InnerContainer>
-      </Container>
-      <MarginWrapper>
+            <source src={PGFinderDemo} type='video/mp4' />
+          </video>
+        </PaddingWrapper>
+      </BackgroundWrapper>
+
+      <PaddingWrapper>
         <Container>
           <InnerContainer>
-            <SubHeading>Technologies</SubHeading>
-            <TechList>
-              <ListItem>
-                <StyledSpan>Frontend:</StyledSpan> Vanilla JavaScript, CSS, HTML
-              </ListItem>
-              <ListItem>
-                <StyledSpan>Backend:</StyledSpan> Node, Express
-              </ListItem>
-              <ListItem>
-                <StyledSpan>Others:</StyledSpan> Leaflet Map API
-              </ListItem>
-            </TechList>
-            <Button as={Link} to='/#projects'>
-              Back to projects
-            </Button>
+            <SubHeading>Responsive design</SubHeading>
+            <StyledParagraph>
+              Mobile accounts for approximately half of web traffic worldwide.
+              In the upcoming decade, mobile web traffic is expected to keep
+              growing, making it increasingly important to cater to devices of
+              all sizes.
+            </StyledParagraph>
           </InnerContainer>
         </Container>
-      </MarginWrapper>
+        <img
+          src={PGFinderResponsive}
+          alt='Responsive design.'
+          style={{
+            display: 'block',
+            width: '100%',
+            maxWidth: '1370px',
+            margin: 'auto'
+          }}
+        />
+      </PaddingWrapper>
+
+      <PaddingWrapper>
+        <Container>
+          <InnerContainer>
+            <SubHeading>Documentation</SubHeading>
+          </InnerContainer>
+        </Container>
+        <img
+          src={PGFinderDocumentation}
+          alt='Documentation page.'
+          style={{
+            display: 'block',
+            width: '100%',
+            maxWidth: '1370px',
+            margin: 'auto'
+          }}
+        />
+
+        <Container style={{ paddingBottom: 0 }}>
+          <InnerContainer>
+            <ProjectsButton
+              // href='http://lifetracker.julianvazquez.me'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Read documentation
+            </ProjectsButton>
+          </InnerContainer>
+        </Container>
+      </PaddingWrapper>
+
+      <BackgroundWrapper>
+        <PaddingWrapper>
+          <Container>
+            <InnerContainer>
+              <SubHeading>Technologies</SubHeading>
+              <TechList>
+                <ListItem>
+                  <StyledSpan>Frontend:</StyledSpan> Vanilla JavaScript, CSS,
+                  HTML
+                </ListItem>
+                <ListItem>
+                  <StyledSpan>Backend:</StyledSpan> Node, Express
+                </ListItem>
+                <ListItem>
+                  <StyledSpan>Others:</StyledSpan> Leaflet Map API
+                </ListItem>
+              </TechList>
+              <ProjectsButton as={Link} to='/#projects'>
+                Back to projects
+              </ProjectsButton>
+            </InnerContainer>
+          </Container>
+        </PaddingWrapper>
+      </BackgroundWrapper>
     </Fragment>
   );
 };

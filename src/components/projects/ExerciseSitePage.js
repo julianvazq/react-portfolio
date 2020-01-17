@@ -1,11 +1,20 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
-import Container from '../Container';
 import ExerciseSiteHomePage from '../../images/exercise-site.png';
 import ExerciseSiteResponsive from '../../images/exercise-site-responsive.png';
 
 const ExoticPetStorePage = () => {
+  const Container = styled.div`
+    max-width: 1400px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    flex-flow: row wrap;
+    padding-bottom: 4em;
+  `;
+
   const InnerContainer = styled.div`
     margin: auto;
     width: 700px;
@@ -32,31 +41,29 @@ const ExoticPetStorePage = () => {
   `;
 
   const SubHeading = styled.h3`
-    margin-top: 4em;
-    padding-bottom: 1em;
+    margin-bottom: 2em;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 400;
 
     @media (max-width: 750px) {
-      margin-top: 0;
       font-size: 1.5rem;
     }
+  `;
+
+  const StyledParagraph = styled.p`
+    font-size: 1.5rem;
+    line-height: 1.7;
   `;
 
   const TechList = styled.ul`
     list-style-type: square;
     list-style-position: inside;
     font-size: 1.5rem;
-    margin: 4em auto 6em auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2em;
-
-    @media (max-width: 750px) {
-      margin: 2em auto 4em auto;
-    }
   `;
 
   const ListItem = styled.li`
@@ -65,12 +72,13 @@ const ExoticPetStorePage = () => {
   `;
 
   const Button = styled.a`
+    display: inline-block;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: 400;
     background: ${props => props.theme.primary};
-    color: #fdfdfd;
+    color: #fff;
     padding: 0.5em 0.8em;
     font-family: inherit;
     border-radius: 0.3rem;
@@ -81,79 +89,99 @@ const ExoticPetStorePage = () => {
     }
   `;
 
+  const ProjectsButton = styled(Button)`
+    margin-top: 4em;
+  `;
+
   const StyledSpan = styled.span`
     font-weight: 300;
   `;
 
-  const MarginWrapper = styled.div`
-    padding-bottom: 6em;
+  const BackgroundWrapper = styled.div`
+    background: #fbfbfb;
+  `;
 
-    @media (max-width: 750px) {
-      padding-bottom: 3em;
-    }
+  const PaddingWrapper = styled.div`
+    padding: 4em 0;
   `;
 
   return (
     <Fragment>
-      <Container>
-        <InnerContainer>
-          <Title>Exotic Pet Store</Title>
-          <ProjectDescription>
-            Landing page for a fictional store that offers services related to
-            exotic animals.
-          </ProjectDescription>
-          <Button
-            href='https://julianvazq.github.io/exercise-site/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Go to website
-          </Button>
-        </InnerContainer>
-      </Container>
-      <img
-        src={ExerciseSiteHomePage}
-        alt='Responsive design.'
-        style={{
-          display: 'block',
-          width: '100%',
-          maxWidth: '1370px',
-          margin: '4em auto'
-        }}
-      />
-      <Container>
-        <InnerContainer>
-          <SubHeading>Responsive design</SubHeading>
-        </InnerContainer>
-      </Container>
-      <img
-        src={ExerciseSiteResponsive}
-        alt='Responsive design.'
-        style={{
-          display: 'block',
-          width: '100%',
-          maxWidth: '1370px',
-          margin: '4em auto'
-        }}
-      />
-      <MarginWrapper>
+      <BackgroundWrapper>
+        <PaddingWrapper>
+          <Container>
+            <InnerContainer>
+              <Title>Exotic Pet Store</Title>
+              <ProjectDescription>
+                Landing page for a fictional store that offers services related
+                to exotic animals.
+              </ProjectDescription>
+              <Button
+                href='https://julianvazq.github.io/exercise-site/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Go to website
+              </Button>
+            </InnerContainer>
+          </Container>
+          <img
+            src={ExerciseSiteHomePage}
+            alt='Responsive design.'
+            style={{
+              display: 'block',
+              width: '100%',
+              maxWidth: '1370px',
+              margin: 'auto'
+            }}
+          />
+        </PaddingWrapper>
+      </BackgroundWrapper>
+
+      <PaddingWrapper>
         <Container>
           <InnerContainer>
-            <SubHeading>Technologies</SubHeading>
-            <TechList>
-              <ListItem>
-                <StyledSpan>Frontend:</StyledSpan> HTML, CSS
-              </ListItem>
-              <ListItem>
-                <StyledSpan>Others:</StyledSpan> CSS Grid, CSS Flexbox
-              </ListItem>
-            </TechList>
-            <Button as={Link} to='/#projects'>
-              Back to projects
-            </Button>
+            <SubHeading>Responsive design</SubHeading>
+            <StyledParagraph>
+              Mobile accounts for approximately half of web traffic worldwide.
+              In the upcoming decade, mobile web traffic is expected to keep
+              growing, making it increasingly important to cater to devices of
+              all sizes.
+            </StyledParagraph>
           </InnerContainer>
         </Container>
-      </MarginWrapper>
+        <img
+          src={ExerciseSiteResponsive}
+          alt='Responsive design.'
+          style={{
+            display: 'block',
+            width: '100%',
+            maxWidth: '1370px',
+            margin: 'auto'
+          }}
+        />
+      </PaddingWrapper>
+
+      <BackgroundWrapper>
+        <PaddingWrapper>
+          <Container>
+            <InnerContainer>
+              <SubHeading>Technologies</SubHeading>
+              <TechList>
+                <ListItem>
+                  <StyledSpan>Frontend:</StyledSpan> HTML, CSS
+                </ListItem>
+                <ListItem>
+                  <StyledSpan>Others:</StyledSpan> CSS Grid, CSS Flexbox
+                </ListItem>
+              </TechList>
+              <ProjectsButton as={Link} to='/#projects'>
+                Back to projects
+              </ProjectsButton>
+            </InnerContainer>
+          </Container>
+        </PaddingWrapper>
+      </BackgroundWrapper>
     </Fragment>
   );
 };
