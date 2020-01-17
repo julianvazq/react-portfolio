@@ -39,7 +39,7 @@ const ExoticPetStorePage = () => {
     font-weight: 400;
 
     @media (max-width: 750px) {
-      margin-top: 1em;
+       margin-top: 0;
       font-size: 1.5rem;
     }
   `;
@@ -52,6 +52,10 @@ const ExoticPetStorePage = () => {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2em;
+
+    @media (max-width: 750px) {
+      margin: 2em auto;
+    }
   `;
 
   const ListItem = styled.li`
@@ -75,6 +79,13 @@ const ExoticPetStorePage = () => {
   const StyledSpan = styled.span`
     font-weight: 300;
   `;
+
+   const MarginWrapper = styled.div`
+  padding-bottom: 6em;
+  
+    @media (max-width: 750px) {
+      padding-bottom: 3em;
+    }`
 
   return (
     <Fragment>
@@ -123,6 +134,7 @@ const ExoticPetStorePage = () => {
           margin: '4em auto'
         }}
       />
+      <MarginWrapper>
       <Container>
         <InnerContainer style={{ paddingBottom: '6em' }}>
           <SubHeading>Technologies</SubHeading>
@@ -139,6 +151,7 @@ const ExoticPetStorePage = () => {
           </Button>
         </InnerContainer>
       </Container>
+      </MarginWrapper>
     </Fragment>
   );
 };
