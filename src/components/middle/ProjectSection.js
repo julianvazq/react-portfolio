@@ -118,33 +118,39 @@ const ProjectSection = () => {
             </div>
           </ProjectItem>
         </Link>
-        <ProjectItem>
-          <div>
-            <TechInfo>
-              <p>JS | Node | Express | HTML | CSS </p>
-            </TechInfo>
-            <img src={PGFinder} alt='PG Finder.' />
-            <h3>PG Finder</h3>
-          </div>
-        </ProjectItem>
-        <ProjectItem>
-          <div>
-            <TechInfo>
-              <p>HTML | CSS</p>
-            </TechInfo>
-            <img src={ExoticPetStore} alt='Store Landing Page.' />
-            <h3>Store Landing Page</h3>
-          </div>
-        </ProjectItem>
-        <ProjectItem>
-          <div>
-            <TechInfo>
-              <p>JS | HTML | CSS</p>
-            </TechInfo>
-            <img src={TypingTest} alt='JavaScript Typing Test.' />
-            <h3>JS Typing Test</h3>
-          </div>
-        </ProjectItem>
+        <Link to='/pg-finder'>
+          <ProjectItem>
+            <div>
+              <TechInfo>
+                <p>JS | Node | Express | HTML | CSS </p>
+              </TechInfo>
+              <img src={PGFinder} alt='PG Finder.' />
+              <h3>PG Finder</h3>
+            </div>
+          </ProjectItem>
+        </Link>
+        <Link to='/exotic-pet-store'>
+          <ProjectItem>
+            <div>
+              <TechInfo>
+                <p>HTML | CSS</p>
+              </TechInfo>
+              <img src={ExoticPetStore} alt='Store Landing Page.' />
+              <h3>Store Landing Page</h3>
+            </div>
+          </ProjectItem>
+        </Link>
+        <Link to='/js-typing-test'>
+          <ProjectItem>
+            <div>
+              <TechInfo>
+                <p>JS | HTML | CSS</p>
+              </TechInfo>
+              <img src={TypingTest} alt='JavaScript Typing Test.' />
+              <h3>JS Typing Test</h3>
+            </div>
+          </ProjectItem>
+        </Link>
         <ProjectItem>
           <div>
             <TechInfo>
