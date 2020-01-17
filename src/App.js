@@ -10,6 +10,7 @@ import ScrollToTop from './components/ScrollToTop';
 import PGFinderPage from './components/projects/PGFinderPage';
 import ExoticPetStorePage from './components/projects/ExoticPetStorePage';
 import TypingTestPage from './components/projects/TypingTestPage';
+import ExerciseSitePage from './components/projects/ExerciseSitePage';
 
 const theme = {
   primary: '#60b0f4'
@@ -27,6 +28,7 @@ function App() {
           <Route path='/pg-finder' component={PGFinderPage} />
           <Route path='/exotic-pet-store' component={ExoticPetStorePage} />
           <Route path='/js-typing-test' component={TypingTestPage} />
+          <Route path='/exercise-site' component={ExerciseSitePage} />
         </Switch>
         <Footer />
       </Router>

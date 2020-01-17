@@ -63,6 +63,10 @@ const LifeTrackerPage = () => {
     cursor: pointer;
   `;
 
+  const StyledSpan = styled.span`
+    font-weight: 300;
+  `;
+
   return (
     <Fragment>
       <Container>
@@ -114,11 +118,18 @@ const LifeTrackerPage = () => {
         <InnerContainer style={{ paddingBottom: '6em' }}>
           <SubHeading>Technologies</SubHeading>
           <TechList>
-            <ListItem>Frontend: React, Reactstrap</ListItem>
-            <ListItem>Backend: Node, Express</ListItem>
-            <ListItem>Database: MongoDB Atlas</ListItem>
             <ListItem>
-              Others: React Hook Form, React Router, Context API
+              <StyledSpan>Frontend:</StyledSpan> React, Reactstrap
+            </ListItem>
+            <ListItem>
+              <StyledSpan>Backend:</StyledSpan> Node, Express
+            </ListItem>
+            <ListItem>
+              <StyledSpan>Database:</StyledSpan> MongoDB Atlas
+            </ListItem>
+            <ListItem>
+              <StyledSpan>Others:</StyledSpan> React Hook Form, React Router,
+              Context API
             </ListItem>
           </TechList>
           <Button as={Link} to='/#projects'>

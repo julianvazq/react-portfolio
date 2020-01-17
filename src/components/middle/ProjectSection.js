@@ -151,15 +151,17 @@ const ProjectSection = () => {
             </div>
           </ProjectItem>
         </Link>
-        <ProjectItem>
-          <div>
-            <TechInfo>
-              <p>HTML | CSS</p>
-            </TechInfo>
-            <img src={ExerciseSite} alt='Product Landing Page.' />
-            <h3>Product Landing Page</h3>
-          </div>
-        </ProjectItem>
+        <Link to='/exercise-site'>
+          <ProjectItem>
+            <div>
+              <TechInfo>
+                <p>HTML | CSS</p>
+              </TechInfo>
+              <img src={ExerciseSite} alt='Product Landing Page.' />
+              <h3>Product Landing Page</h3>
+            </div>
+          </ProjectItem>
+        </Link>
       </GridContainer>
     </StyledSection>
   );
