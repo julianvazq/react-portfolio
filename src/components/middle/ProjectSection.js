@@ -23,6 +23,10 @@ const ProjectSection = () => {
     font-size: 3.3rem;
     font-weight: 400;
     letter-spacing: -1px;
+
+    @media (max-width: 580px) {
+      font-size: 2.3rem;
+    }
   `;
 
   const GridContainer = styled.div`
