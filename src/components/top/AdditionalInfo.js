@@ -6,7 +6,7 @@ import ReactLogo from '../../logos/react_logo.svg';
 const AdditionalInfo = () => {
   const InfoContainer = styled.div`
     flex: 1 10;
-    margin-bottom: 0;
+    margin-bottom: 4em;
   `;
 
   const Label = styled.h3`

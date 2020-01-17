@@ -11,11 +11,14 @@ import PGFinder from '../../images/pg-finder.png';
 const ProjectSection = () => {
   const StyledSection = styled.section`
     background: #fbfbfb;
-    margin-top: 4em;
     padding: 8em 0;
 
+    @media (max-width: 1000px) {
+      padding: 4em 0;
+    }
+
     @media (max-width: 750px) {
-      padding: 2em 0;
+      padding: 2em 0 1em 0;
     }
   `;
 

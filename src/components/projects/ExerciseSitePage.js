@@ -33,6 +33,7 @@ const ExoticPetStorePage = () => {
 
   const SubHeading = styled.h3`
     margin-top: 4em;
+    padding-bottom: 1em;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 2rem;
@@ -48,13 +49,13 @@ const ExoticPetStorePage = () => {
     list-style-type: square;
     list-style-position: inside;
     font-size: 1.5rem;
-    margin: 4em auto;
+    margin: 4em auto 6em auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2em;
 
     @media (max-width: 750px) {
-      margin: 2em auto;
+      margin: 2em auto 4em auto;
     }
   `;
 
@@ -74,6 +75,10 @@ const ExoticPetStorePage = () => {
     font-family: inherit;
     border-radius: 0.3rem;
     cursor: pointer;
+
+    @media (max-width: 580px) {
+      font-size: 1.1rem;
+    }
   `;
 
   const StyledSpan = styled.span`
@@ -81,11 +86,12 @@ const ExoticPetStorePage = () => {
   `;
 
   const MarginWrapper = styled.div`
-  padding-bottom: 6em;
-  
+    padding-bottom: 6em;
+
     @media (max-width: 750px) {
       padding-bottom: 3em;
-    }`
+    }
+  `;
 
   return (
     <Fragment>
@@ -131,22 +137,22 @@ const ExoticPetStorePage = () => {
         }}
       />
       <MarginWrapper>
-      <Container>
-        <InnerContainer >
-          <SubHeading>Technologies</SubHeading>
-          <TechList>
-            <ListItem>
-              <StyledSpan>Frontend:</StyledSpan> HTML, CSS
-            </ListItem>
-            <ListItem>
-              <StyledSpan>Others:</StyledSpan> CSS Grid, CSS Flexbox
-            </ListItem>
-          </TechList>
-          <Button as={Link} to='/#projects'>
-            Back to projects
-          </Button>
-        </InnerContainer>
-      </Container>
+        <Container>
+          <InnerContainer>
+            <SubHeading>Technologies</SubHeading>
+            <TechList>
+              <ListItem>
+                <StyledSpan>Frontend:</StyledSpan> HTML, CSS
+              </ListItem>
+              <ListItem>
+                <StyledSpan>Others:</StyledSpan> CSS Grid, CSS Flexbox
+              </ListItem>
+            </TechList>
+            <Button as={Link} to='/#projects'>
+              Back to projects
+            </Button>
+          </InnerContainer>
+        </Container>
       </MarginWrapper>
     </Fragment>
   );
