@@ -9,6 +9,10 @@ const Footer = () => {
     margin: 6em 0;
     width: 100%;
 
+    @media (max-width: 750px) {
+      margin: 3em 0;
+    }
+
     @media (max-width: 580px) {
       flex-direction: column;
     }

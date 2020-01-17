@@ -13,6 +13,10 @@ const ProjectSection = () => {
     background: #fbfbfb;
     margin-top: 4em;
     padding: 8em 0;
+
+    @media (max-width: 750px) {
+      padding: 4em 0;
+    }
   `;
 
   const SectionTitle = styled.h2`

@@ -26,6 +26,10 @@ const PGFinderPage = () => {
     font-size: 2.3rem;
     font-weight: 400;
     margin-bottom: 1.5em;
+
+    @media (max-width: 580px) {
+      font-size: 1.8rem;
+    }
   `;
 
   const SubHeading = styled.h3`
@@ -34,6 +38,10 @@ const PGFinderPage = () => {
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 400;
+
+    @media (max-width: 750px) {
+      margin-top: 1em;
+    }
   `;
 
   const TechList = styled.ul`
