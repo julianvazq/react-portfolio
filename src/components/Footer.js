@@ -28,7 +28,7 @@ const Footer = () => {
     padding-right: 0.3em;
 
     @media (max-width: 850px) {
-      font-size: 2.3rem;
+      font-size: 2.1rem;
     }
 
     @media (max-width: 580px) {

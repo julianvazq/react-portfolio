@@ -15,7 +15,7 @@ const ProjectSection = () => {
     padding: 8em 0;
 
     @media (max-width: 750px) {
-      padding: 4em 0;
+      padding: 2em 0;
     }
   `;
 
@@ -25,7 +25,7 @@ const ProjectSection = () => {
     letter-spacing: -1px;
 
     @media (max-width: 580px) {
-      font-size: 2.3rem;
+      font-size: 2.2rem;
     }
   `;
 

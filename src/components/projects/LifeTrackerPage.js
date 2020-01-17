@@ -22,7 +22,7 @@ const LifeTrackerPage = () => {
   const ProjectDescription = styled.h2`
     letter-spacing: -1.5px;
     line-height: 1.7;
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     font-weight: 400;
     margin-bottom: 1.5em;
 
