@@ -202,7 +202,7 @@ const LifeTrackerPage = () => {
                   <StyledSpan>Database:</StyledSpan> MongoDB Atlas
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Others:</StyledSpan> React Hook Form, React
+                  <StyledSpan>Others:</StyledSpan> Form Validation, React
                   Router, Context API
                 </ListItem>
               </TechList>

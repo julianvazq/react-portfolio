@@ -13,18 +13,19 @@ const AdditionalInfo = () => {
     margin-bottom: 1em;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    transform: translateX(22px);
     font-weight: 300;
 
     @media (max-width: 800px) {
-      font-size: 1rem;
+      transform: translate(9px);
     }
   `;
 
   const Caption = styled(Label)`
-    font-size: 1rem;
-    transform: translateX(38px);
+    font-size: 1.1rem;
     margin-top: 1em;
+    transform: translateX(38px);
 
     @media (max-width: 800px) {
       transform: translate(25px);
