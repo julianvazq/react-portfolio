@@ -154,7 +154,7 @@ const PGFinderPage = () => {
             style={{
               margin: 'auto',
               display: 'block',
-              width: '100%',
+              width: '90%',
               maxWidth: '1370px'
             }}
           >
@@ -180,7 +180,7 @@ const PGFinderPage = () => {
           alt='Responsive design.'
           style={{
             display: 'block',
-            width: '100%',
+            width: '90%',
             maxWidth: '1370px',
             margin: 'auto'
           }}
@@ -204,7 +204,7 @@ const PGFinderPage = () => {
             alt='Documentation page.'
             style={{
               display: 'block',
-              width: '100%',
+              width: '90%',
               maxWidth: '1370px',
               margin: 'auto'
             }}

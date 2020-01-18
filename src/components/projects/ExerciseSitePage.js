@@ -149,7 +149,7 @@ const ExoticPetStorePage = () => {
             alt='Responsive design.'
             style={{
               display: 'block',
-              width: '100%',
+              width: '90%',
               maxWidth: '1370px',
               margin: 'auto'
             }}
@@ -174,7 +174,7 @@ const ExoticPetStorePage = () => {
           alt='Responsive design.'
           style={{
             display: 'block',
-            width: '100%',
+            width: '90%',
             maxWidth: '1370px',
             margin: 'auto'
           }}
