@@ -25,7 +25,7 @@ const TypingTestPage = () => {
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
   `;
 
   const ProjectDescription = styled.h2`
@@ -71,6 +71,11 @@ const TypingTestPage = () => {
     border-bottom: 1px solid ${props => props.theme.primary};
   `;
 
+  const ButtonContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+  `;
+
   const Button = styled.a`
     display: inline-block;
     letter-spacing: 2px;
@@ -83,13 +88,18 @@ const TypingTestPage = () => {
     font-family: inherit;
     border-radius: 0.3rem;
     cursor: pointer;
+    margin-right: 1em;
 
-    @media (max-width: 580px) {
+    @media (max-width: 600px) {
       font-size: 1.1rem;
+    }
+
+    @media (max-width: 460px) {
+      margin-bottom: 1em;
     }
   `;
 
-  const ProjectsButton = styled(Button)`
+  const MarginButton = styled(Button)`
     margin-top: 4em;
   `;
 
@@ -117,13 +127,22 @@ const TypingTestPage = () => {
                 word for word excerpts from either Harry Potter or The Lord of
                 the Rings.
               </ProjectDescription>
-              <Button
-                href='https://julianvazq.github.io/typing-speed-tester/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Go to website
-              </Button>
+              <ButtonContainer>
+                <Button
+                  href='https://julianvazq.github.io/typing-speed-tester/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Go to website
+                </Button>
+                <Button
+                  href='https://github.com/julianvazq/typing-speed-tester'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Go to GitHub
+                </Button>
+              </ButtonContainer>
             </InnerContainer>
           </Container>
           <video
@@ -177,9 +196,9 @@ const TypingTestPage = () => {
                   <StyledSpan>Frontend:</StyledSpan> JS, HTML, CSS
                 </ListItem>
               </TechList>
-              <ProjectsButton as={Link} to='/#projects'>
+              <MarginButton as={Link} to='/#projects'>
                 Back to projects
-              </ProjectsButton>
+              </MarginButton>
             </InnerContainer>
           </Container>
         </PaddingWrapper>

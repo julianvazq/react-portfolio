@@ -48,6 +48,7 @@ const ProjectSection = () => {
   `;
 
   const ProjectItem = styled.div`
+    border-radius: 0.3rem;
     background-size: cover;
     object-fit: cover;
     text-align: center;

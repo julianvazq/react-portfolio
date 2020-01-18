@@ -3,7 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 import PGFinderDemo from '../../gifs/pg-finder-demo.mp4';
 import PGFinderResponsive from '../../images/pg-finder-responsive.png';
-import PGFinderDocumentation from '../../images/pg-finder-documentation.png';
+import PGFinderDocumentation from '../../images/pg-finder-documentation1.png';
 
 const PGFinderPage = () => {
   const Container = styled.div`
@@ -26,7 +26,7 @@ const PGFinderPage = () => {
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
   `;
 
   const ProjectDescription = styled.h2`
@@ -72,6 +72,11 @@ const PGFinderPage = () => {
     border-bottom: 1px solid ${props => props.theme.primary};
   `;
 
+  const ButtonContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+  `;
+
   const Button = styled.a`
     display: inline-block;
     letter-spacing: 2px;
@@ -84,13 +89,18 @@ const PGFinderPage = () => {
     font-family: inherit;
     border-radius: 0.3rem;
     cursor: pointer;
+    margin-right: 1em;
 
-    @media (max-width: 580px) {
+    @media (max-width: 600px) {
       font-size: 1.1rem;
+    }
+
+    @media (max-width: 460px) {
+      margin-bottom: 1em;
     }
   `;
 
-  const ProjectsButton = styled(Button)`
+  const MarginButton = styled(Button)`
     margin-top: 4em;
   `;
 
@@ -118,13 +128,22 @@ const PGFinderPage = () => {
                 public services and resources, such as traffic cameras, police
                 and fire stations.
               </ProjectDescription>
-              <Button
-                // href='http://lifetracker.julianvazquez.me'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Go to website
-              </Button>
+              <ButtonContainer>
+                <Button
+                  // href='http://lifetracker.julianvazquez.me'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Go to website
+                </Button>
+                <Button
+                  // href='http://lifetracker.julianvazquez.me'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Go to GitHub
+                </Button>
+              </ButtonContainer>
             </InnerContainer>
           </Container>
           <video
@@ -168,60 +187,64 @@ const PGFinderPage = () => {
         />
       </PaddingWrapper>
 
-      <PaddingWrapper>
-        <Container>
-          <InnerContainer>
-            <SubHeading>Documentation</SubHeading>
-          </InnerContainer>
-        </Container>
-        <img
-          src={PGFinderDocumentation}
-          alt='Documentation page.'
-          style={{
-            display: 'block',
-            width: '100%',
-            maxWidth: '1370px',
-            margin: 'auto'
-          }}
-        />
-
-        <Container style={{ paddingBottom: 0 }}>
-          <InnerContainer>
-            <ProjectsButton
-              // href='http://lifetracker.julianvazquez.me'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              Read documentation
-            </ProjectsButton>
-          </InnerContainer>
-        </Container>
-      </PaddingWrapper>
-
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
             <InnerContainer>
-              <SubHeading>Technologies</SubHeading>
-              <TechList>
-                <ListItem>
-                  <StyledSpan>Frontend:</StyledSpan> Vanilla JavaScript, CSS,
-                  HTML
-                </ListItem>
-                <ListItem>
-                  <StyledSpan>Backend:</StyledSpan> Node, Express
-                </ListItem>
-                <ListItem>
-                  <StyledSpan>Others:</StyledSpan> Leaflet Map API
-                </ListItem>
-              </TechList>
-              <ProjectsButton as={Link} to='/#projects'>
-                Back to projects
-              </ProjectsButton>
+              <SubHeading>Documentation</SubHeading>
+              <StyledParagraph>
+                Writing solid documentation helps keep track of all aspects of
+                an application, improves the quality of the product, and makes
+                it easier to bring other developers up to speed.
+              </StyledParagraph>
+            </InnerContainer>
+          </Container>
+          <img
+            src={PGFinderDocumentation}
+            alt='Documentation page.'
+            style={{
+              display: 'block',
+              width: '100%',
+              maxWidth: '1370px',
+              margin: 'auto'
+            }}
+          />
+
+          <Container style={{ paddingBottom: 0 }}>
+            <InnerContainer>
+              <MarginButton
+                // href='http://lifetracker.julianvazquez.me'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Read documentation
+              </MarginButton>
             </InnerContainer>
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>
+
+      <PaddingWrapper>
+        <Container>
+          <InnerContainer>
+            <SubHeading>Technologies</SubHeading>
+            <TechList>
+              <ListItem>
+                <StyledSpan>Frontend:</StyledSpan> Vanilla JavaScript, CSS, HTML
+              </ListItem>
+              <ListItem>
+                <StyledSpan>Backend:</StyledSpan> Node, Express
+              </ListItem>
+              <ListItem>
+                <StyledSpan>Others:</StyledSpan> Leaflet Map API
+              </ListItem>
+            </TechList>
+            <MarginButton as={Link} to='/#projects'>
+              Back to projects
+            </MarginButton>
+          </InnerContainer>
+        </Container>
+      </PaddingWrapper>
     </Fragment>
   );
 };

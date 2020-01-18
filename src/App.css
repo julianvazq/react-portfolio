@@ -35,6 +35,12 @@ a {
   pointer-events: none;
 }
 
+@media only screen and (max-width: 800px) {
+  .react-logo {
+    height: 80px;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .react-logo {
     animation: react-logo-spin infinite 10s linear;

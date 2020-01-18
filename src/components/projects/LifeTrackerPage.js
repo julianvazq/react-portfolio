@@ -26,7 +26,7 @@ const LifeTrackerPage = () => {
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
   `;
 
   const ProjectDescription = styled.h2`
@@ -72,6 +72,11 @@ const LifeTrackerPage = () => {
     border-bottom: 1px solid ${props => props.theme.primary};
   `;
 
+  const ButtonContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+  `;
+
   const Button = styled.a`
     display: inline-block;
     letter-spacing: 2px;
@@ -84,13 +89,18 @@ const LifeTrackerPage = () => {
     font-family: inherit;
     border-radius: 0.3rem;
     cursor: pointer;
+    margin-right: 1em;
 
-    @media (max-width: 580px) {
+    @media (max-width: 600px) {
       font-size: 1.1rem;
+    }
+
+    @media (max-width: 460px) {
+      margin-bottom: 1em;
     }
   `;
 
-  const ProjectsButton = styled(Button)`
+  const MarginButton = styled(Button)`
     margin-top: 4em;
   `;
 
@@ -117,13 +127,22 @@ const LifeTrackerPage = () => {
                 CRUD app that allows users to track certain aspects of their
                 lives, such as groceries, appointments, moods, books and more.{' '}
               </ProjectDescription>
-              <Button
-                href='http://lifetracker.julianvazquez.me'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Go to website
-              </Button>
+              <ButtonContainer>
+                <Button
+                  href='http://lifetracker.julianvazquez.me'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Go to website
+                </Button>
+                <Button
+                  href='https://github.com/julianvazq/mern-stack'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Go to GitHub
+                </Button>
+              </ButtonContainer>
             </InnerContainer>
           </Container>
           <video
@@ -187,9 +206,9 @@ const LifeTrackerPage = () => {
                   Router, Context API
                 </ListItem>
               </TechList>
-              <ProjectsButton as={Link} to='/#projects'>
+              <MarginButton as={Link} to='/#projects'>
                 Back to projects
-              </ProjectsButton>
+              </MarginButton>
             </InnerContainer>
           </Container>
         </PaddingWrapper>

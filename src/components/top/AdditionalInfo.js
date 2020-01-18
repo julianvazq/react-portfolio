@@ -14,13 +14,21 @@ const AdditionalInfo = () => {
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
+
+    @media (max-width: 800px) {
+      font-size: 1rem;
+    }
   `;
 
   const Caption = styled(Label)`
     font-size: 1rem;
     transform: translateX(38px);
     margin-top: 1em;
+
+    @media (max-width: 800px) {
+      transform: translate(25px);
+    }
   `;
 
   return (
