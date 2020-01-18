@@ -70,6 +70,7 @@ const LifeTrackerPage = () => {
   const ListItem = styled.li`
     padding-bottom: 0.5em;
     border-bottom: 1px solid ${props => props.theme.primary};
+    line-height: 1.7;
   `;
 
   const ButtonContainer = styled.div`
