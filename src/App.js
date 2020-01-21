@@ -13,7 +13,8 @@ import TypingTestPage from './components/projects/TypingTestPage';
 import ExerciseSitePage from './components/projects/ExerciseSitePage';
 
 const theme = {
-  primary: '#60b0f4'
+  primary: '#60b0f4',
+  secondary: '#f0f4f6'
 };
 
 function App() {

@@ -109,7 +109,7 @@ const TypingTestPage = () => {
   `;
 
   const BackgroundWrapper = styled.div`
-    background: #fbfbfb;
+    background: #f0f4f6;
   `;
 
   const PaddingWrapper = styled.div`

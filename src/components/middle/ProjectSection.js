@@ -10,7 +10,7 @@ import PGFinder from '../../images/pg-finder.png';
 
 const ProjectSection = () => {
   const StyledSection = styled.section`
-    background: #fbfbfb;
+    background: ${props => props.theme.secondary};
     padding: 8em 0;
 
     @media (max-width: 1000px) {

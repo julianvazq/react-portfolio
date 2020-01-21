@@ -110,7 +110,7 @@ const PGFinderPage = () => {
   `;
 
   const BackgroundWrapper = styled.div`
-    background: #fbfbfb;
+    background: ${props => props.theme.secondary};
   `;
 
   const PaddingWrapper = styled.div`
