@@ -131,14 +131,14 @@ const PGFinderPage = () => {
               </ProjectDescription>
               <ButtonContainer>
                 <Button
-                  // href='http://lifetracker.julianvazquez.me'
+                  href='http://pg-finder.julianvazquez.me/'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   Go to website
                 </Button>
                 <Button
-                  // href='http://lifetracker.julianvazquez.me'
+                  href='http://pg-finder.julianvazquez.me/doc.html'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
