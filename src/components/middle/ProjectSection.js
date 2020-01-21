@@ -145,7 +145,7 @@ const ProjectSection = () => {
           <ProjectItem>
             <div>
               <TechInfo>
-                <p>HTML | CSS</p>
+                <p>JS | HTML | CSS</p>
               </TechInfo>
               <img src={ExoticPetStore} alt='Store Landing Page.' />
               <h3>Store Landing Page</h3>

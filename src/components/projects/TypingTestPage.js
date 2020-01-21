@@ -196,6 +196,9 @@ const TypingTestPage = () => {
                 <ListItem>
                   <StyledSpan>Frontend:</StyledSpan> JS, HTML, CSS
                 </ListItem>
+                <ListItem>
+                  <StyledSpan>Others:</StyledSpan> CSS Flexbox
+                </ListItem>
               </TechList>
               <MarginButton as={Link} to='/#projects'>
                 Back to projects

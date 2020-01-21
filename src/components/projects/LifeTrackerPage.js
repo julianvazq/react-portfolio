@@ -3,6 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 // import Container from '../Container';
 import LifeTrackerDemo from '../../gifs/life-tracker-demo.mp4';
+import LifeTrackerDemoEdit from '../../gifs/life-tracker-demo-edit.mp4';
 import LifeTrackerResponsive from '../../images/life-tracker-responsive.png';
 
 const LifeTrackerPage = () => {
@@ -27,6 +28,18 @@ const LifeTrackerPage = () => {
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: 300;
+  `;
+
+  const VideoHeading = styled.h3`
+    margin-bottom: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    @media (max-width: 700px) {
+      font-size: 1.2rem;
+    }
   `;
 
   const ProjectDescription = styled.h2`
@@ -146,6 +159,31 @@ const LifeTrackerPage = () => {
               </ButtonContainer>
             </InnerContainer>
           </Container>
+          <Container style={{ padding: 0 }}>
+            <InnerContainer>
+              <VideoHeading>Add and delete items</VideoHeading>
+            </InnerContainer>
+          </Container>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              margin: 'auto',
+              marginBottom: '4em',
+              display: 'block',
+              width: '90%',
+              maxWidth: '1370px'
+            }}
+          >
+            <source src={LifeTrackerDemo} type='video/mp4' />
+          </video>
+          <Container style={{ padding: 0 }}>
+            <InnerContainer>
+              <VideoHeading>Edit items</VideoHeading>
+            </InnerContainer>
+          </Container>
           <video
             autoPlay
             loop
@@ -158,7 +196,7 @@ const LifeTrackerPage = () => {
               maxWidth: '1370px'
             }}
           >
-            <source src={LifeTrackerDemo} type='video/mp4' />
+            <source src={LifeTrackerDemoEdit} type='video/mp4' />
           </video>
         </PaddingWrapper>
       </BackgroundWrapper>
@@ -203,8 +241,8 @@ const LifeTrackerPage = () => {
                   <StyledSpan>Database:</StyledSpan> MongoDB Atlas
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Others:</StyledSpan> Form Validation, React
-                  Router, Context API
+                  <StyledSpan>Others:</StyledSpan> Form Validation, Error
+                  Handling, React Router, React Hooks, Context API
                 </ListItem>
               </TechList>
               <MarginButton as={Link} to='/#projects'>

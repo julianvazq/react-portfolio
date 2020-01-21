@@ -193,7 +193,7 @@ const ExoticPetStorePage = () => {
               <SubHeading>Technologies</SubHeading>
               <TechList>
                 <ListItem>
-                  <StyledSpan>Frontend:</StyledSpan> HTML, CSS
+                  <StyledSpan>Frontend:</StyledSpan> JS, HTML, CSS
                 </ListItem>
                 <ListItem>
                   <StyledSpan>Others:</StyledSpan> CSS Grid, CSS Flexbox
