@@ -138,7 +138,7 @@ const PGFinderPage = () => {
                   Go to website
                 </Button>
                 <Button
-                  href='http://pg-finder.julianvazquez.me/doc.html'
+                  href='https://github.com/julianvazq/pg-finder'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -214,7 +214,7 @@ const PGFinderPage = () => {
           <Container style={{ paddingBottom: 0 }}>
             <InnerContainer>
               <MarginButton
-                // href='http://lifetracker.julianvazquez.me'
+                href='http://pg-finder.julianvazquez.me/doc.html'
                 target='_blank'
                 rel='noopener noreferrer'
               >

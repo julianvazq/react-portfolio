@@ -130,7 +130,7 @@ const LifeTrackerPage = () => {
               </ProjectDescription>
               <ButtonContainer>
                 <Button
-                  href='http://lifetracker.julianvazquez.me'
+                  href='http://life-tracker.julianvazquez.me'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
