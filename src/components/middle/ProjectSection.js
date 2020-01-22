@@ -2,11 +2,6 @@ import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 import Container from '../Container';
-import LifeTracker from '../../images/life-tracker.png';
-import ExoticPetStore from '../../images/exotic-pet-store.png';
-import TypingTest from '../../images/js-typing-test.png';
-import ExerciseSite from '../../images/exercise-site.png';
-import PGFinder from '../../images/pg-finder.png';
 
 const ProjectSection = () => {
   const StyledSection = styled.section`
@@ -125,7 +120,17 @@ const ProjectSection = () => {
               <TechInfo>
                 <p>React | Node | Express | MongoDB</p>
               </TechInfo>
-              <img src={LifeTracker} alt='Life Tracker App.' />
+              <img
+                width='100%'
+                src={require('../../images/md/life-tracker-md.png')}
+                srcSet={`${require('../../images/lg/life-tracker-lg.png')} 1300w,
+                        ${require('../../images/md/life-tracker-md.png')} 853w,
+                        ${require('../../images/sm/life-tracker-sm.png')} 650w`}
+                sizes='(max-width: 1000px) 650px,
+                       (max-width: 1500px) 853px,
+                       1300px'
+                alt='Life Tracker App.'
+              />
               <h3>Life Tracker App</h3>
             </div>
           </ProjectItem>
@@ -136,7 +141,16 @@ const ProjectSection = () => {
               <TechInfo>
                 <p>JS | Node | Express | HTML | CSS </p>
               </TechInfo>
-              <img src={PGFinder} alt='PG Finder.' />
+              <img
+                // src={require('../../images/md/pg-finder-md.png')}
+                srcSet={`${require('../../images/lg/pg-finder-lg.png')} 1300w,
+                        ${require('../../images/md/pg-finder-md.png')} 853w,
+                        ${require('../../images/sm/pg-finder-sm.png')} 650w`}
+                sizes='(max-width: 1000px) 650px,
+                        (max-width: 1500px) 853px,
+                        1300px'
+                alt='PG Finder.'
+              />
               <h3>PG Finder</h3>
             </div>
           </ProjectItem>
@@ -147,7 +161,16 @@ const ProjectSection = () => {
               <TechInfo>
                 <p>JS | HTML | CSS</p>
               </TechInfo>
-              <img src={ExoticPetStore} alt='Store Landing Page.' />
+              <img
+                // src={require('../../images/md/exotic-pet-store-md.png')}
+                srcSet={`${require('../../images/lg/exotic-pet-store-lg.png')} 1300w,
+                        ${require('../../images/md/exotic-pet-store-md.png')} 853w,
+                        ${require('../../images/sm/exotic-pet-store-sm.png')} 650w`}
+                sizes='(max-width: 1000px) 650px,
+                        (max-width: 1500px) 853px,
+                        1300px'
+                alt='Store Landing Page.'
+              />
               <h3>Store Landing Page</h3>
             </div>
           </ProjectItem>
@@ -158,7 +181,16 @@ const ProjectSection = () => {
               <TechInfo>
                 <p>JS | HTML | CSS</p>
               </TechInfo>
-              <img src={TypingTest} alt='JavaScript Typing Test.' />
+              <img
+                // src={require('../../images/md/js-typing-test-md.png')}
+                srcSet={`${require('../../images/lg/js-typing-test-lg.png')} 1300w,
+                        ${require('../../images/md/js-typing-test-md.png')} 853w,
+                        ${require('../../images/sm/js-typing-test-sm.png')} 650w`}
+                sizes='(max-width: 1000px) 650px,
+                        (max-width: 1500px) 853px,
+                        1300px'
+                alt='JavaScript Typing Test.'
+              />
               <h3>JS Typing Test</h3>
             </div>
           </ProjectItem>
@@ -169,7 +201,16 @@ const ProjectSection = () => {
               <TechInfo>
                 <p>HTML | CSS</p>
               </TechInfo>
-              <img src={ExerciseSite} alt='Product Landing Page.' />
+              <img
+                // src={require('../../images/md/exercise-site-md.png')}
+                srcSet={`${require('../../images/lg/exercise-site-lg.png')} 1300w,
+                        ${require('../../images/md/exercise-site-md.png')} 853w,
+                        ${require('../../images/sm/exercise-site-sm.png')} 650w`}
+                sizes='(max-width: 1000px) 650px,
+                        (max-width: 1500px) 853px,
+                        1300px'
+                alt='Product Landing Page.'
+              />
               <h3>Product Landing Page</h3>
             </div>
           </ProjectItem>

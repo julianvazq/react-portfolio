@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
-import ExerciseSiteHomePage from '../../images/exercise-site.png';
+import ExerciseSiteHomePage from '../../images/lg/exercise-site-lg.png';
 import ExerciseSiteResponsive from '../../images/exercise-site-responsive.png';
 
 const ExoticPetStorePage = () => {

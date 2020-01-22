@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
-// import Container from '../Container';
 import LifeTrackerDemo from '../../gifs/life-tracker-demo.mp4';
 import LifeTrackerDemoEdit from '../../gifs/life-tracker-demo-edit.mp4';
 import LifeTrackerResponsive from '../../images/life-tracker-responsive.png';
