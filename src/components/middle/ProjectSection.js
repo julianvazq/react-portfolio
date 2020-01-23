@@ -121,7 +121,6 @@ const ProjectSection = () => {
                 <p>React | Node | Express | MongoDB</p>
               </TechInfo>
               <img
-                width='100%'
                 src={require('../../images/md/life-tracker-md.png')}
                 srcSet={`${require('../../images/lg/life-tracker-lg.png')} 1300w,
                         ${require('../../images/md/life-tracker-md.png')} 853w,

@@ -122,7 +122,7 @@ const ExoticPetStorePage = () => {
         <PaddingWrapper>
           <Container>
             <InnerContainer>
-              <Title>Exotic Pet Store</Title>
+              <Title>Exercise&trade;</Title>
               <ProjectDescription>
                 Landing page for a fictional product. Decided to have a little
                 fun and made it as if 'Exercise' was the product.
