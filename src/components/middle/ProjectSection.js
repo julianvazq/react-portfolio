@@ -98,6 +98,7 @@ const ProjectSection = () => {
     font-size: 1.3rem;
     padding: 1em;
     background: #fff;
+    color: ${props => props.theme.gray};
 
     @media (max-width: 950px) {
       font-size: 1.1rem;

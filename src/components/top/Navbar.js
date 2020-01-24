@@ -31,7 +31,7 @@ const Navbar = () => {
     letter-spacing: 0.5px;
 
     &:hover {
-      opacity: 0.8;
+      color: ${props => props.theme.gray};
     }
   `;
 

@@ -14,7 +14,8 @@ import ExerciseSitePage from './components/projects/ExerciseSitePage';
 
 const theme = {
   primary: '#60b0f4',
-  secondary: '#f0f4f6'
+  secondary: '#f0f4f6',
+  gray: 'hsl(0, 0%, 55%)'
 };
 
 function App() {

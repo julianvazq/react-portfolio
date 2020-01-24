@@ -47,6 +47,7 @@ const PGFinderPage = () => {
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 400;
+    color: ${props => props.theme.gray};
 
     @media (max-width: 750px) {
       font-size: 1.5rem;
