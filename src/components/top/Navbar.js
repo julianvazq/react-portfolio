@@ -53,7 +53,7 @@ const Navbar = () => {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <ListItem>Github</ListItem>
+            <ListItem>GitHub</ListItem>
           </a>
         </LinkList>
       </Container>
