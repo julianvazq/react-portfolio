@@ -60,6 +60,17 @@ const LifeTrackerPage = () => {
     font-size: 2rem;
     font-weight: 400;
     color: ${props => props.theme.gray};
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -80%;
+      left: 0;
+      width: 20%;
+      height: 3px;
+      background: ${props => props.theme.primary};
+    }
 
     @media (max-width: 750px) {
       font-size: 1.5rem;
@@ -104,6 +115,7 @@ const LifeTrackerPage = () => {
     border-radius: 0.3rem;
     cursor: pointer;
     margin-right: 1em;
+    box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
 
     @media (max-width: 600px) {
       font-size: 1.1rem;
