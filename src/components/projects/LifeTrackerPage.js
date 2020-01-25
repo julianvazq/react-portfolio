@@ -48,8 +48,8 @@ const LifeTrackerPage = () => {
     font-weight: 400;
     margin-bottom: 1.5em;
 
-    @media (max-width: 580px) {
-      font-size: 1.8rem;
+    @media (max-width: 700px) {
+      font-size: 1.5rem;
     }
   `;
 
@@ -80,15 +80,26 @@ const LifeTrackerPage = () => {
   const StyledParagraph = styled.p`
     font-size: 1.5rem;
     line-height: 1.7;
+
+    @media (max-width: 700px) {
+      font-size: 1.2rem;
+    }
   `;
 
   const TechList = styled.ul`
-    list-style-type: square;
+    list-style-type: none;
     list-style-position: inside;
     font-size: 1.5rem;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 2em;
+    grid-gap: 1em;
+    border-radius: 0.3rem;
+    padding: 2em;
+    box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.15);
+
+    @media (max-width: 700px) {
+      font-size: 1.2rem;
+    }
   `;
 
   const ListItem = styled.li`
@@ -244,17 +255,21 @@ const LifeTrackerPage = () => {
               <SubHeading>Technologies</SubHeading>
               <TechList>
                 <ListItem>
-                  <StyledSpan>Frontend:</StyledSpan> React, Reactstrap
+                  <StyledSpan>Frontend</StyledSpan>
+                  <br /> React, Reactstrap
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Backend:</StyledSpan> Node, Express
+                  <StyledSpan>Backend</StyledSpan>
+                  <br /> Node, Express
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Database:</StyledSpan> MongoDB Atlas
+                  <StyledSpan>Database</StyledSpan>
+                  <br /> MongoDB Atlas
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Others:</StyledSpan> Form Validation, Error
-                  Handling, React Router, React Hooks, Context API
+                  <StyledSpan>Others</StyledSpan>
+                  <br /> Form Validation, Error Handling, React Router, React
+                  Hooks, Context API
                 </ListItem>
               </TechList>
               <MarginButton as={Link} to='/#projects'>

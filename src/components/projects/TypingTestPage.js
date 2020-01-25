@@ -35,8 +35,8 @@ const TypingTestPage = () => {
     font-weight: 400;
     margin-bottom: 1.5em;
 
-    @media (max-width: 580px) {
-      font-size: 1.8rem;
+    @media (max-width: 700px) {
+      font-size: 1.5rem;
     }
   `;
 
@@ -67,6 +67,10 @@ const TypingTestPage = () => {
   const StyledParagraph = styled.p`
     font-size: 1.5rem;
     line-height: 1.7;
+
+    @media (max-width: 700px) {
+      font-size: 1.2rem;
+    }
   `;
 
   const TechList = styled.ul`
@@ -75,7 +79,14 @@ const TypingTestPage = () => {
     font-size: 1.5rem;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 2em;
+    grid-gap: 1em;
+    border-radius: 0.3rem;
+    padding: 2em;
+    box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.15);
+
+    @media (max-width: 700px) {
+      font-size: 1.2rem;
+    }
   `;
 
   const ListItem = styled.li`
@@ -207,10 +218,12 @@ const TypingTestPage = () => {
               <SubHeading>Technologies</SubHeading>
               <TechList>
                 <ListItem>
-                  <StyledSpan>Frontend:</StyledSpan> JS, HTML, CSS
+                  <StyledSpan>Frontend</StyledSpan>
+                  <br /> JS, HTML, CSS
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Others:</StyledSpan> CSS Flexbox
+                  <StyledSpan>Others</StyledSpan>
+                  <br /> CSS Flexbox
                 </ListItem>
               </TechList>
               <MarginButton as={Link} to='/#projects'>
