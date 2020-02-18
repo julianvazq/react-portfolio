@@ -99,6 +99,7 @@ const ProjectSection = () => {
     padding: 1em;
     background: #fff;
     color: ${props => props.theme.gray};
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 
     @media (max-width: 950px) {
       font-size: 1.1rem;
@@ -132,6 +133,20 @@ const ProjectSection = () => {
                 alt='Life Tracker App.'
               />
               <h3>Life Tracker App</h3>
+            </div>
+          </ProjectItem>
+        </Link>
+        <Link to='/pet-matcher'>
+          <ProjectItem>
+            <div>
+              <TechInfo>
+                <p>React | Node | Express | Styled Components </p>
+              </TechInfo>
+              <img
+                src={require('../../images/md/pet-matcher-md.png')}
+                alt='Pet Matcher.'
+              />
+              <h3>Pet Matcher</h3>
             </div>
           </ProjectItem>
         </Link>
