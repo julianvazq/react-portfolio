@@ -197,13 +197,13 @@ const ProjectSection = () => {
                 <p>JS | HTML | CSS</p>
               </TechInfo>
               <img
-                src={require('../../images/md/js-typing-test-md.png')}
-                srcSet={`${require('../../images/lg/js-typing-test-lg.png')} 1300w,
-                        ${require('../../images/md/js-typing-test-md.png')} 853w,
-                        ${require('../../images/sm/js-typing-test-sm.png')} 650w`}
-                sizes='(max-width: 1000px) 650px,
-                        (max-width: 1500px) 853px,
-                        1300px'
+                src={require('../../images/md/js-typing-test-md-new.png')}
+                // srcSet={`${require('../../images/lg/js-typing-test-lg.png')} 1300w,
+                //         ${require('../../images/md/js-typing-test-md.png')} 853w,
+                //         ${require('../../images/sm/js-typing-test-sm.png')} 650w`}
+                // sizes='(max-width: 1000px) 650px,
+                //         (max-width: 1500px) 853px,
+                //         1300px'
                 alt='JavaScript Typing Test.'
               />
               <h3>JS Typing Test</h3>
