@@ -197,7 +197,7 @@ const ProjectSection = () => {
                 <p>JS | HTML | CSS</p>
               </TechInfo>
               <img
-                src={require('../../images/md/js-typing-test-md-new.png')}
+                src={require('../../images/md/js-typing-test-md.png')}
                 // srcSet={`${require('../../images/lg/js-typing-test-lg.png')} 1300w,
                 //         ${require('../../images/md/js-typing-test-md.png')} 853w,
                 //         ${require('../../images/sm/js-typing-test-sm.png')} 650w`}
