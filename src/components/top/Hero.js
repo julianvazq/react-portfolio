@@ -24,8 +24,8 @@ const Hero = () => {
   return (
     <Container>
       <HeroParagraph>
-        I'm <StyledSpan>Julian Vazquez</StyledSpan>, currently a senior at the
-        University of Maryland.
+        I'm <StyledSpan>Julian Vazquez</StyledSpan>, an Information Science
+        senior at the University of Maryland.
       </HeroParagraph>
     </Container>
   );
