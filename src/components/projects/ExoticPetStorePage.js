@@ -7,6 +7,8 @@ import {
   InnerContainer,
   Title,
   ProjectDescription,
+  Video,
+  ResponsiveImg,
   SubHeading,
   StyledParagraph,
   TechList,
@@ -49,20 +51,9 @@ const ExoticPetStorePage = () => {
               </ButtonContainer>
             </InnerContainer>
           </Container>
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            style={{
-              margin: 'auto',
-              display: 'block',
-              width: '90%',
-              maxWidth: '1370px'
-            }}
-          >
+          <Video autoPlay loop muted playsInline>
             <source src={ExoticPetStoreDemo} type='video/mp4' />
-          </video>
+          </Video>
         </PaddingWrapper>
       </BackgroundWrapper>
 
@@ -78,15 +69,9 @@ const ExoticPetStorePage = () => {
             </StyledParagraph>
           </InnerContainer>
         </Container>
-        <img
+        <ResponsiveImg
           src={ExoticPetStoreResponsive}
           alt='Responsive design.'
-          style={{
-            display: 'block',
-            width: '90%',
-            maxWidth: '1370px',
-            margin: 'auto'
-          }}
         />
       </PaddingWrapper>
 

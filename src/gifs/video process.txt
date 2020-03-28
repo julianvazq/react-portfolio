@@ -1,0 +1,6 @@
+- Record screen
+- Save as video > Microsoft Video 1 (compression)
+- Go to https://www.youcompress.com/avi/ and compress .avi file
+- Use VLC video player to convert .avi to .mp4
+- Go to https://www.mp4compress.com/ and compress .mp4
+-  ?? PROFIT

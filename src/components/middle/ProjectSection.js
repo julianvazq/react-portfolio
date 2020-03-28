@@ -21,6 +21,7 @@ const ProjectSection = () => {
     font-size: 3.3rem;
     font-weight: 400;
     letter-spacing: -1px;
+    margin: auto;
 
     @media (max-width: 580px) {
       font-size: 2.2rem;
@@ -29,12 +30,25 @@ const ProjectSection = () => {
 
   const GridContainer = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(8, 1fr);
     grid-gap: 3rem;
     margin: 4em 3em;
 
-    @media (max-width: 750px) {
+    a {
+      grid-column: span 4;
+    }
+
+    a:first-of-type {
+      grid-column: 3/7;
+    }
+
+    @media (max-width: 900px) {
       grid-template-columns: 1fr;
+
+      a,
+      a:first-of-type {
+        grid-column: span 8;
+      }
     }
 
     @media (max-width: 580px) {
@@ -63,7 +77,7 @@ const ProjectSection = () => {
 
     h3 {
       font-size: 1.8rem;
-      padding: 1em 0;
+      padding: 0.5em 0;
       letter-spacing: 2px;
       background: linear-gradient(
         34deg,
@@ -82,12 +96,6 @@ const ProjectSection = () => {
       }
     }
 
-    @media (max-width: 580px) {
-      h3 {
-        padding: 0.7em 0;
-      }
-    }
-
     img {
       width: 100%;
       display: block;
@@ -96,7 +104,7 @@ const ProjectSection = () => {
 
   const TechInfo = styled.div`
     font-size: 1.3rem;
-    padding: 1em;
+    padding: 0.75em;
     background: #fff;
     color: ${props => props.theme.gray};
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
@@ -116,22 +124,50 @@ const ProjectSection = () => {
         <SectionTitle id='projects'>Recent Projects</SectionTitle>
       </Container>
       <GridContainer>
+        <Link to='/movie-explorer'>
+          <ProjectItem>
+            <div>
+              <TechInfo>
+                <p>React | Redux | Node | Express </p>
+              </TechInfo>
+              <picture>
+                <source
+                  srcSet={require('../../images/lg/movie-explorer-lg.png')}
+                  media='(min-width: 1200px)'
+                />
+                <source
+                  srcSet={require('../../images/sm/movie-explorer-sm.jpg')}
+                  media='(max-width: 1200px)'
+                />
+                <img
+                  src={require('../../images/lg/movie-explorer-lg.png')}
+                  alt='Movie Explorer App.'
+                />
+              </picture>
+              <h3>Movie Explorer</h3>
+            </div>
+          </ProjectItem>
+        </Link>
         <Link to='/life-tracker'>
           <ProjectItem>
             <div>
               <TechInfo>
                 <p>React | Node | Express | MongoDB</p>
               </TechInfo>
-              <img
-                src={require('../../images/md/life-tracker-md.png')}
-                srcSet={`${require('../../images/lg/life-tracker-lg.png')} 1300w,
-                        ${require('../../images/md/life-tracker-md.png')} 853w,
-                        ${require('../../images/sm/life-tracker-sm.png')} 650w`}
-                sizes='(max-width: 1000px) 650px,
-                       (max-width: 1500px) 853px,
-                       1300px'
-                alt='Life Tracker App.'
-              />
+              <picture>
+                <source
+                  srcSet={require('../../images/lg/life-tracker-lg.png')}
+                  media='(min-width: 1200px)'
+                />
+                <source
+                  srcSet={require('../../images/sm/life-tracker-sm.jpg')}
+                  media='(max-width: 1200px)'
+                />
+                <img
+                  src={require('../../images/lg/life-tracker-lg.png')}
+                  alt='Life Tracker App.'
+                />
+              </picture>
               <h3>Life Tracker App</h3>
             </div>
           </ProjectItem>
@@ -142,11 +178,45 @@ const ProjectSection = () => {
               <TechInfo>
                 <p>React | Node | Express | Styled Components </p>
               </TechInfo>
-              <img
-                src={require('../../images/md/pet-matcher-md.png')}
-                alt='Pet Matcher.'
-              />
+              <picture>
+                <source
+                  srcSet={require('../../images/lg/pet-matcher-lg.png')}
+                  media='(min-width: 1200px)'
+                />
+                <source
+                  srcSet={require('../../images/sm/pet-matcher-sm.jpg')}
+                  media='(max-width: 1200px)'
+                />
+                <img
+                  src={require('../../images/lg/pet-matcher-lg.png')}
+                  alt='Pet Matcher App.'
+                />
+              </picture>
               <h3>Pet Matcher</h3>
+            </div>
+          </ProjectItem>
+        </Link>
+        <Link to='/js-typing-test'>
+          <ProjectItem>
+            <div>
+              <TechInfo>
+                <p>JS | HTML | CSS</p>
+              </TechInfo>
+              <picture>
+                <source
+                  srcSet={require('../../images/lg/js-typing-test-lg.png')}
+                  media='(min-width: 1200px)'
+                />
+                <source
+                  srcSet={require('../../images/sm/js-typing-test-sm.jpg')}
+                  media='(max-width: 1200px)'
+                />
+                <img
+                  src={require('../../images/lg/js-typing-test-lg.png')}
+                  alt='JavaScript Typing Test.'
+                />
+              </picture>
+              <h3>JS Typing Test</h3>
             </div>
           </ProjectItem>
         </Link>
@@ -156,16 +226,20 @@ const ProjectSection = () => {
               <TechInfo>
                 <p>JS | Node | Express | HTML | CSS </p>
               </TechInfo>
-              <img
-                src={require('../../images/md/pg-finder-md.png')}
-                srcSet={`${require('../../images/lg/pg-finder-lg.png')} 1300w,
-                        ${require('../../images/md/pg-finder-md.png')} 853w,
-                        ${require('../../images/sm/pg-finder-sm.png')} 650w`}
-                sizes='(max-width: 1000px) 650px,
-                        (max-width: 1500px) 853px,
-                        1300px'
-                alt='PG Finder.'
-              />
+              <picture>
+                <source
+                  srcSet={require('../../images/lg/pg-finder-lg.jpg')}
+                  media='(min-width: 1200px)'
+                />
+                <source
+                  srcSet={require('../../images/sm/pg-finder-sm.jpg')}
+                  media='(max-width: 1200px)'
+                />
+                <img
+                  src={require('../../images/lg/pg-finder-lg.jpg')}
+                  alt='PG Finder App.'
+                />
+              </picture>
               <h3>PG Finder</h3>
             </div>
           </ProjectItem>
@@ -176,37 +250,21 @@ const ProjectSection = () => {
               <TechInfo>
                 <p>JS | HTML | CSS</p>
               </TechInfo>
-              <img
-                src={require('../../images/md/exotic-pet-store-md.png')}
-                srcSet={`${require('../../images/lg/exotic-pet-store-lg.png')} 1300w,
-                        ${require('../../images/md/exotic-pet-store-md.png')} 853w,
-                        ${require('../../images/sm/exotic-pet-store-sm.png')} 650w`}
-                sizes='(max-width: 1000px) 650px,
-                        (max-width: 1500px) 853px,
-                        1300px'
-                alt='Store Landing Page.'
-              />
+              <picture>
+                <source
+                  srcSet={require('../../images/lg/exotic-pet-store-lg.png')}
+                  media='(min-width: 1200px)'
+                />
+                <source
+                  srcSet={require('../../images/sm/exotic-pet-store-sm.png')}
+                  media='(max-width: 1200px)'
+                />
+                <img
+                  src={require('../../images/lg/exotic-pet-store-lg.png')}
+                  alt='Exotic Pet Store Landing Page.'
+                />
+              </picture>
               <h3>Store Landing Page</h3>
-            </div>
-          </ProjectItem>
-        </Link>
-        <Link to='/js-typing-test'>
-          <ProjectItem>
-            <div>
-              <TechInfo>
-                <p>JS | HTML | CSS</p>
-              </TechInfo>
-              <img
-                src={require('../../images/md/js-typing-test-md.png')}
-                // srcSet={`${require('../../images/lg/js-typing-test-lg.png')} 1300w,
-                //         ${require('../../images/md/js-typing-test-md.png')} 853w,
-                //         ${require('../../images/sm/js-typing-test-sm.png')} 650w`}
-                // sizes='(max-width: 1000px) 650px,
-                //         (max-width: 1500px) 853px,
-                //         1300px'
-                alt='JavaScript Typing Test.'
-              />
-              <h3>JS Typing Test</h3>
             </div>
           </ProjectItem>
         </Link>
@@ -216,16 +274,20 @@ const ProjectSection = () => {
               <TechInfo>
                 <p>HTML | CSS</p>
               </TechInfo>
-              <img
-                src={require('../../images/md/exercise-site-md.png')}
-                srcSet={`${require('../../images/lg/exercise-site-lg.png')} 1300w,
-                        ${require('../../images/md/exercise-site-md.png')} 853w,
-                        ${require('../../images/sm/exercise-site-sm.png')} 650w`}
-                sizes='(max-width: 1000px) 650px,
-                        (max-width: 1500px) 853px,
-                        1300px'
-                alt='Product Landing Page.'
-              />
+              <picture>
+                <source
+                  srcSet={require('../../images/lg/exercise-site-lg.jpg')}
+                  media='(min-width: 1200px)'
+                />
+                <source
+                  srcSet={require('../../images/sm/exercise-site-sm.jpg')}
+                  media='(max-width: 1200px)'
+                />
+                <img
+                  src={require('../../images/lg/exercise-site-lg.jpg')}
+                  alt='Exercise Site Product Landing Page.'
+                />
+              </picture>
               <h3>Product Landing Page</h3>
             </div>
           </ProjectItem>

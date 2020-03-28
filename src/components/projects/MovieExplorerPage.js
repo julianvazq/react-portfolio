@@ -1,14 +1,16 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import TypingTestDemo from '../../gifs/js-typing-test-demo.mp4';
-import TypingTestResponsive from '../../images/js-typing-test-responsive.png';
+import MovieExplorerBrowse from '../../gifs/movie-explorer-browse.mp4';
+import MovieExplorerWatchlist from '../../gifs/movie-explorer-watchlist.mp4';
+import MovieExplorerResponsive from '../../images/movie-explorer-responsive.png';
 import {
   Container,
   InnerContainer,
   Title,
-  ProjectDescription,
+  VideoHeading,
   Video,
   ResponsiveImg,
+  ProjectDescription,
   SubHeading,
   StyledParagraph,
   TechList,
@@ -21,29 +23,27 @@ import {
   PaddingWrapper
 } from '../styled-components/StyledComponents';
 
-const TypingTestPage = () => {
+const MovieExplorerPage = () => {
   return (
     <Fragment>
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
             <InnerContainer>
-              <Title>JS Typing Test</Title>
+              <Title>Movie Explorer</Title>
               <ProjectDescription>
-                Allows users to test their typing speed and accuracy by copying
-                word for word excerpts from either Harry Potter or The Lord of
-                the Rings.
+                Discover thousands of movies and add them to your watchlist.
               </ProjectDescription>
               <ButtonContainer>
                 <Button
-                  href='https://julianvazq.github.io/typing-speed-tester/'
+                  href='http://movie-explorer.julianvazquez.me'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   Go to website
                 </Button>
                 <Button
-                  href='https://github.com/julianvazq/typing-speed-tester'
+                  href='https://github.com/julianvazq/movie-explorer'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -52,8 +52,23 @@ const TypingTestPage = () => {
               </ButtonContainer>
             </InnerContainer>
           </Container>
+          <Container style={{ padding: 0 }}>
+            <InnerContainer>
+              <VideoHeading>Browse similar movies</VideoHeading>
+            </InnerContainer>
+          </Container>
           <Video autoPlay loop muted playsInline>
-            <source src={TypingTestDemo} type='video/mp4' />
+            <source src={MovieExplorerBrowse} type='video/mp4' />
+          </Video>
+          <Container style={{ padding: 0 }}>
+            <InnerContainer>
+              <VideoHeading style={{ marginTop: '2em' }}>
+                Add movies to watchlist
+              </VideoHeading>
+            </InnerContainer>
+          </Container>
+          <Video autoPlay loop muted playsInline>
+            <source src={MovieExplorerWatchlist} type='video/mp4' />
           </Video>
         </PaddingWrapper>
       </BackgroundWrapper>
@@ -70,7 +85,7 @@ const TypingTestPage = () => {
             </StyledParagraph>
           </InnerContainer>
         </Container>
-        <ResponsiveImg src={TypingTestResponsive} alt='Responsive design.' />
+        <ResponsiveImg src={MovieExplorerResponsive} alt='Responsive design.' />
       </PaddingWrapper>
 
       <BackgroundWrapper>
@@ -81,11 +96,15 @@ const TypingTestPage = () => {
               <TechList>
                 <ListItem>
                   <StyledSpan>Frontend</StyledSpan>
-                  <br /> JS, HTML, CSS
+                  <br /> React, Redux, Styled Components
+                </ListItem>
+                <ListItem>
+                  <StyledSpan>Backend</StyledSpan>
+                  <br /> Node, Express
                 </ListItem>
                 <ListItem>
                   <StyledSpan>Others</StyledSpan>
-                  <br /> CSS Flexbox
+                  <br /> React Hooks, React Router, Responsive Images
                 </ListItem>
               </TechList>
               <MarginButton as={Link} to='/#projects'>
@@ -99,4 +118,4 @@ const TypingTestPage = () => {
   );
 };
 
-export default TypingTestPage;
+export default MovieExplorerPage;

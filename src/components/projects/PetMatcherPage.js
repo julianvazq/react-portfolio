@@ -1,12 +1,14 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import PetMatcherDemo from '../../gifs/pet-matcher-demo.mp4';
-import PetMatcherResponsive from '../../images/pet-matcher-responsive.png';
+import PetMatcherResponsive from '../../images/pet-matcher-responsive-3.png';
 import {
   Container,
   InnerContainer,
   Title,
   ProjectDescription,
+  Video,
+  ResponsiveImg,
   SubHeading,
   StyledParagraph,
   TechList,
@@ -48,19 +50,9 @@ const PetMatcherPage = () => {
               </ButtonContainer>
             </InnerContainer>
           </Container>
-          <video
-            autoPlay
-            muted
-            playsInline
-            style={{
-              margin: 'auto',
-              display: 'block',
-              width: '90%',
-              maxWidth: '1370px'
-            }}
-          >
+          <Video autoPlay loop muted playsInline>
             <source src={PetMatcherDemo} type='video/mp4' />
-          </video>
+          </Video>
         </PaddingWrapper>
       </BackgroundWrapper>
 
@@ -76,16 +68,7 @@ const PetMatcherPage = () => {
             </StyledParagraph>
           </InnerContainer>
         </Container>
-        <img
-          src={PetMatcherResponsive}
-          alt='Responsive design.'
-          style={{
-            display: 'block',
-            width: '90%',
-            maxWidth: '1370px',
-            margin: 'auto'
-          }}
-        />
+        <ResponsiveImg src={PetMatcherResponsive} alt='Responsive design.' />
       </PaddingWrapper>
 
       <BackgroundWrapper>

@@ -12,6 +12,7 @@ import PGFinderPage from './components/projects/PGFinderPage';
 import ExoticPetStorePage from './components/projects/ExoticPetStorePage';
 import TypingTestPage from './components/projects/TypingTestPage';
 import ExerciseSitePage from './components/projects/ExerciseSitePage';
+import MovieExplorerPage from './components/projects/MovieExplorerPage';
 
 const theme = {
   primary: '#60b0f4',
@@ -33,6 +34,7 @@ function App() {
           <Route path='/exotic-pet-store' component={ExoticPetStorePage} />
           <Route path='/js-typing-test' component={TypingTestPage} />
           <Route path='/exercise-site' component={ExerciseSitePage} />
+          <Route path='/movie-explorer' component={MovieExplorerPage} />
         </Switch>
         <Footer />
       </Router>

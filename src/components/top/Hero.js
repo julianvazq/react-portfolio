@@ -6,13 +6,14 @@ const Hero = () => {
   const HeroParagraph = styled.p`
     max-width: 840px;
     font-size: 3.3rem;
-    line-height: 68px;
+    line-height: 1.5;
     letter-spacing: -1px;
     margin-bottom: 2em;
     color: #808080;
 
     @media (max-width: 580px) {
       font-size: 2.1rem;
+      line-height: 1.75;
     }
   `;
 
@@ -23,9 +24,8 @@ const Hero = () => {
   return (
     <Container>
       <HeroParagraph>
-        I'm <StyledSpan>Julian Vazquez</StyledSpan>, currently a{' '}
-        <StyledSpan>senior </StyledSpan>
-        at the <StyledSpan>University of Maryland</StyledSpan>.
+        I'm <StyledSpan>Julian Vazquez</StyledSpan>, currently a senior at the
+        University of Maryland.
       </HeroParagraph>
     </Container>
   );

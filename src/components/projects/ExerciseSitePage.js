@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import ExerciseSiteHomePage from '../../images/lg/exercise-site-lg.png';
+import ExerciseSiteHomePage from '../../images/lg/exercise-site-lg.jpg';
 import ExerciseSiteResponsive from '../../images/exercise-site-responsive.png';
 import {
   Container,
   InnerContainer,
   Title,
   ProjectDescription,
+  ResponsiveImg,
   SubHeading,
   StyledParagraph,
   TechList,
@@ -49,16 +50,7 @@ const ExoticPetStorePage = () => {
               </ButtonContainer>
             </InnerContainer>
           </Container>
-          <img
-            src={ExerciseSiteHomePage}
-            alt='Responsive design.'
-            style={{
-              display: 'block',
-              width: '90%',
-              maxWidth: '1370px',
-              margin: 'auto'
-            }}
-          />
+          <ResponsiveImg src={ExerciseSiteHomePage} alt='Responsive design.' />
         </PaddingWrapper>
       </BackgroundWrapper>
 

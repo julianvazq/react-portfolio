@@ -8,6 +8,8 @@ import {
   InnerContainer,
   Title,
   ProjectDescription,
+  Video,
+  ResponsiveImg,
   SubHeading,
   StyledParagraph,
   TechList,
@@ -51,20 +53,9 @@ const PGFinderPage = () => {
               </ButtonContainer>
             </InnerContainer>
           </Container>
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            style={{
-              margin: 'auto',
-              display: 'block',
-              width: '90%',
-              maxWidth: '1370px'
-            }}
-          >
+          <Video autoPlay loop muted playsInline>
             <source src={PGFinderDemo} type='video/mp4' />
-          </video>
+          </Video>
         </PaddingWrapper>
       </BackgroundWrapper>
 
@@ -80,16 +71,7 @@ const PGFinderPage = () => {
             </StyledParagraph>
           </InnerContainer>
         </Container>
-        <img
-          src={PGFinderResponsive}
-          alt='Responsive design.'
-          style={{
-            display: 'block',
-            width: '90%',
-            maxWidth: '1370px',
-            margin: 'auto'
-          }}
-        />
+        <ResponsiveImg src={PGFinderResponsive} alt='Responsive design.' />
       </PaddingWrapper>
 
       <BackgroundWrapper>
@@ -104,15 +86,10 @@ const PGFinderPage = () => {
               </StyledParagraph>
             </InnerContainer>
           </Container>
-          <img
+          <ResponsiveImg
             src={PGFinderDocumentation}
             alt='Documentation page.'
-            style={{
-              display: 'block',
-              width: '90%',
-              maxWidth: '1370px',
-              margin: 'auto'
-            }}
+            style={{ mixBlendMode: 'darken' }}
           />
 
           <Container style={{ paddingBottom: 0 }}>
@@ -133,7 +110,7 @@ const PGFinderPage = () => {
         <Container>
           <InnerContainer>
             <SubHeading>Technologies</SubHeading>
-            <TechList>
+            <TechList style={{ background: '#f0f4f6' }}>
               <ListItem>
                 <StyledSpan>Frontend</StyledSpan>
                 <br /> Vanilla JavaScript, CSS, HTML

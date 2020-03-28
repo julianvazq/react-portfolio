@@ -8,6 +8,8 @@ import {
   InnerContainer,
   Title,
   VideoHeading,
+  Video,
+  ResponsiveImg,
   ProjectDescription,
   SubHeading,
   StyledParagraph,
@@ -56,40 +58,19 @@ const LifeTrackerPage = () => {
               <VideoHeading>Add and delete items</VideoHeading>
             </InnerContainer>
           </Container>
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            style={{
-              margin: 'auto',
-              marginBottom: '4em',
-              display: 'block',
-              width: '90%',
-              maxWidth: '1370px'
-            }}
-          >
+          <Video autoPlay loop muted playsInline>
             <source src={LifeTrackerDemo} type='video/mp4' />
-          </video>
+          </Video>
           <Container style={{ padding: 0 }}>
             <InnerContainer>
-              <VideoHeading>Edit items</VideoHeading>
+              <VideoHeading style={{ marginTop: '2em' }}>
+                Edit items
+              </VideoHeading>
             </InnerContainer>
           </Container>
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            style={{
-              margin: 'auto',
-              display: 'block',
-              width: '90%',
-              maxWidth: '1370px'
-            }}
-          >
+          <Video autoPlay loop muted playsInline>
             <source src={LifeTrackerDemoEdit} type='video/mp4' />
-          </video>
+          </Video>
         </PaddingWrapper>
       </BackgroundWrapper>
 
@@ -105,16 +86,7 @@ const LifeTrackerPage = () => {
             </StyledParagraph>
           </InnerContainer>
         </Container>
-        <img
-          src={LifeTrackerResponsive}
-          alt='Responsive design.'
-          style={{
-            display: 'block',
-            width: '90%',
-            maxWidth: '1370px',
-            margin: 'auto'
-          }}
-        />
+        <ResponsiveImg src={LifeTrackerResponsive} alt='Responsive design.' />
       </PaddingWrapper>
 
       <BackgroundWrapper>

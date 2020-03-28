@@ -8,6 +8,10 @@ export const Container = styled.div`
   margin: auto;
   flex-flow: row wrap;
   padding-bottom: 4em;
+
+  @media (max-width: 450px) {
+    padding-bottom: 2em;
+  }
 `;
 
 export const InnerContainer = styled.div`
@@ -30,8 +34,33 @@ export const VideoHeading = styled.h3`
   font-size: 1.5rem;
   font-weight: 300;
 
+  @media (max-width: 850px) {
+    /* text-align: center; */
+  }
+
   @media (max-width: 700px) {
     font-size: 1.2rem;
+  }
+`;
+
+export const Video = styled.video`
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-height: 700px;
+
+  @media (max-width: 1100px) {
+    width: 90%;
+  }
+`;
+
+export const ResponsiveImg = styled.img`
+  margin: auto;
+  display: block;
+  max-height: 700px;
+
+  @media (max-width: 1100px) {
+    width: 90%;
   }
 `;
 
@@ -81,6 +110,7 @@ export const StyledParagraph = styled.p`
 `;
 
 export const TechList = styled.ul`
+  background: #fff;
   list-style-type: none;
   list-style-position: inside;
   font-size: 1.5rem;
@@ -136,7 +166,7 @@ export const MarginButton = styled(Button)`
 `;
 
 export const StyledSpan = styled.span`
-  font-weight: 300;
+  color: hsl(208, 40%, 65%);
 `;
 
 export const BackgroundWrapper = styled.div`
