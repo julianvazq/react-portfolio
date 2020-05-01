@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import PetMatcherDemo from '../../gifs/pet-matcher-demo.mp4';
-import PetMatcherResponsive from '../../images/pet-matcher-responsive-3.png';
+import PetMatcherResponsive from '../../images/pet-matcher-responsive.png';
 import {
   Container,
   InnerContainer,
@@ -18,7 +18,7 @@ import {
   MarginButton,
   StyledSpan,
   BackgroundWrapper,
-  PaddingWrapper
+  PaddingWrapper,
 } from '../styled-components/StyledComponents';
 const PetMatcherPage = () => {
   return (
@@ -29,8 +29,7 @@ const PetMatcherPage = () => {
             <InnerContainer>
               <Title>Pet Matcher</Title>
               <ProjectDescription>
-                Answer multiple choice questions and help a pet in your area
-                find a home!
+                Find dogs up for adoption in your area.
               </ProjectDescription>
               <ButtonContainer>
                 <Button

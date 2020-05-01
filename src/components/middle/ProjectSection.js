@@ -5,7 +5,7 @@ import Container from '../Container';
 
 const ProjectSection = () => {
   const StyledSection = styled.section`
-    background: ${props => props.theme.secondary};
+    background: ${(props) => props.theme.secondary};
     padding: 8em 0;
 
     @media (max-width: 1000px) {
@@ -106,7 +106,7 @@ const ProjectSection = () => {
     font-size: 1.3rem;
     padding: 0.75em;
     background: #fff;
-    color: ${props => props.theme.gray};
+    color: ${(props) => props.theme.gray};
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 
     @media (max-width: 950px) {
@@ -184,7 +184,7 @@ const ProjectSection = () => {
                   media='(min-width: 1200px)'
                 />
                 <source
-                  srcSet={require('../../images/sm/pet-matcher-sm.jpg')}
+                  srcSet={require('../../images/sm/pet-matcher-sm.png')}
                   media='(max-width: 1200px)'
                 />
                 <img
