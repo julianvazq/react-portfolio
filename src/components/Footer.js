@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Container from './Container';
+import ResumePDF from '../docs/julian_vazquez_resume.pdf';
 
 const Footer = () => {
   const Footer = styled.div`
@@ -37,7 +38,7 @@ const Footer = () => {
   `;
 
   const FooterCTA = styled(FooterText)`
-    color: ${props => props.theme.primary};
+    color: ${(props) => props.theme.primary};
     font-weight: 300;
 
     &:hover {
@@ -103,6 +104,9 @@ const Footer = () => {
             rel='noopener noreferrer'
           >
             <ContactItem>Email</ContactItem>
+          </a>
+          <a href={ResumePDF} target='_blank' rel='noopener noreferrer'>
+            <ContactItem>Resume</ContactItem>
           </a>
         </ContactList>
       </Footer>
