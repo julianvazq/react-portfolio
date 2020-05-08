@@ -132,7 +132,7 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/movie-explorer-lg.png')}
+                  srcSet={require('../../images/lg/movie-explorer-lg.jpg')}
                   media='(min-width: 1200px)'
                 />
                 <source
@@ -140,7 +140,7 @@ const ProjectSection = () => {
                   media='(max-width: 1200px)'
                 />
                 <img
-                  src={require('../../images/lg/movie-explorer-lg.png')}
+                  src={require('../../images/lg/movie-explorer-lg.jpg')}
                   alt='Movie Explorer App.'
                 />
               </picture>
@@ -156,7 +156,7 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/life-tracker-lg.png')}
+                  srcSet={require('../../images/lg/life-tracker-lg.jpg')}
                   media='(min-width: 1200px)'
                 />
                 <source
@@ -164,7 +164,7 @@ const ProjectSection = () => {
                   media='(max-width: 1200px)'
                 />
                 <img
-                  src={require('../../images/lg/life-tracker-lg.png')}
+                  src={require('../../images/lg/life-tracker-lg.jpg')}
                   alt='Life Tracker App.'
                 />
               </picture>
@@ -180,7 +180,7 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/pet-matcher-lg.png')}
+                  srcSet={require('../../images/lg/pet-matcher-lg.jpg')}
                   media='(min-width: 1200px)'
                 />
                 <source
@@ -188,7 +188,7 @@ const ProjectSection = () => {
                   media='(max-width: 1200px)'
                 />
                 <img
-                  src={require('../../images/lg/pet-matcher-lg.png')}
+                  src={require('../../images/lg/pet-matcher-lg.jpg')}
                   alt='Pet Matcher App.'
                 />
               </picture>
@@ -204,7 +204,7 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/js-typing-test-lg.png')}
+                  srcSet={require('../../images/lg/js-typing-test-lg.jpg')}
                   media='(min-width: 1200px)'
                 />
                 <source
@@ -212,7 +212,7 @@ const ProjectSection = () => {
                   media='(max-width: 1200px)'
                 />
                 <img
-                  src={require('../../images/lg/js-typing-test-lg.png')}
+                  src={require('../../images/lg/js-typing-test-lg.jpg')}
                   alt='JavaScript Typing Test.'
                 />
               </picture>
@@ -252,7 +252,7 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/exotic-pet-store-lg.png')}
+                  srcSet={require('../../images/lg/exotic-pet-store-lg.jpg')}
                   media='(min-width: 1200px)'
                 />
                 <source
@@ -260,7 +260,7 @@ const ProjectSection = () => {
                   media='(max-width: 1200px)'
                 />
                 <img
-                  src={require('../../images/lg/exotic-pet-store-lg.png')}
+                  src={require('../../images/lg/exotic-pet-store-lg.jpg')}
                   alt='Exotic Pet Store Landing Page.'
                 />
               </picture>

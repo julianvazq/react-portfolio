@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import ExerciseSiteHomePage from '../../images/lg/exercise-site-lg.jpg';
-import ExerciseSiteResponsive from '../../images/exercise-site-responsive.png';
+import ExerciseSiteResponsive from '../../images/exercise-site-responsive.jpg';
 import {
   Container,
   InnerContainer,
@@ -17,7 +17,7 @@ import {
   MarginButton,
   StyledSpan,
   BackgroundWrapper,
-  PaddingWrapper
+  PaddingWrapper,
 } from '../styled-components/StyledComponents';
 
 const ExoticPetStorePage = () => {
@@ -73,7 +73,7 @@ const ExoticPetStorePage = () => {
             display: 'block',
             width: '90%',
             maxWidth: '1370px',
-            margin: 'auto'
+            margin: 'auto',
           }}
         />
       </PaddingWrapper>
