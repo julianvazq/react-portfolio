@@ -5,11 +5,9 @@ import styled from 'styled-components';
 import Container from '../Container';
 import ResumePDF from '../../docs/julian_vazquez_resume.pdf';
 
-const Navbar = ({ home }) => {
+const Navbar = () => {
   const Nav = styled.nav`
     padding: 2em 0;
-    border-bottom: ${(props) =>
-      props.home ? '' : `0.5px solid ${props.theme.primary}`};
   `;
 
   const LinkList = styled.ul`
@@ -42,7 +40,7 @@ const Navbar = ({ home }) => {
   `;
 
   return (
-    <Nav home={home}>
+    <Nav>
       <Container style={{ justifyItems: 'space-around' }}>
         <Link to='/'>
           <img src={JVLogo} className='jv-logo' alt='JV logo.' />

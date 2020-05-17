@@ -6,8 +6,6 @@ import Container from '../Container';
 const StyledSection = styled.section`
   background: ${(props) => props.theme.secondary};
   padding: 8em 0;
-  border-top: 0.5px solid ${(props) => props.theme.primary};
-  /* border-bottom: 0.5px solid ${(props) => props.theme.primary}; */
 
   @media (max-width: 1000px) {
     padding: 4em 0;
