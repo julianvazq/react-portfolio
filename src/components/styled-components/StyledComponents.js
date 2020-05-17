@@ -82,7 +82,7 @@ export const SubHeading = styled.h3`
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 400;
-  color: ${props => props.theme.gray};
+  color: ${(props) => props.theme.gray};
   position: relative;
 
   &:after {
@@ -92,7 +92,7 @@ export const SubHeading = styled.h3`
     left: 0;
     width: 20%;
     height: 3px;
-    background: ${props => props.theme.primary};
+    background: ${(props) => props.theme.primary};
   }
 
   @media (max-width: 750px) {
@@ -128,7 +128,7 @@ export const TechList = styled.ul`
 
 export const ListItem = styled.li`
   padding-bottom: 0.5em;
-  border-bottom: 1px solid ${props => props.theme.primary};
+  border-bottom: 1px solid ${(props) => props.theme.primary};
   line-height: 1.7;
 `;
 
@@ -143,7 +143,7 @@ export const Button = styled.a`
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 400;
-  background: ${props => props.theme.primary};
+  background: ${(props) => props.theme.primary};
   color: #fff;
   padding: 0.5em 0.8em;
   font-family: inherit;
@@ -169,10 +169,10 @@ export const StyledSpan = styled.span`
   color: hsl(208, 40%, 65%);
 `;
 
-export const BackgroundWrapper = styled.div`
-  background: ${props => props.theme.secondary};
+export const BackgroundWrapper = styled.main`
+  background: ${(props) => props.theme.secondary};
 `;
 
-export const PaddingWrapper = styled.div`
+export const PaddingWrapper = styled.section`
   padding: 4em 0;
 `;

@@ -5,10 +5,11 @@ import styled from 'styled-components';
 import Container from '../Container';
 import ResumePDF from '../../docs/julian_vazquez_resume.pdf';
 
-const Navbar = () => {
+const Navbar = ({ home }) => {
   const Nav = styled.nav`
-    padding: 2em 0 0.5em;
-    margin-bottom: 2em;
+    padding: 2em 0;
+    border-bottom: ${(props) =>
+      props.home ? '' : `0.5px solid ${props.theme.primary}`};
   `;
 
   const LinkList = styled.ul`
@@ -19,6 +20,10 @@ const Navbar = () => {
     text-align: right;
     padding: 0;
 
+    a:focus {
+      color: ${(props) => props.theme.gray};
+    }
+
     @media (max-width: 735px) {
       flex-direction: column;
     }
@@ -27,16 +32,17 @@ const Navbar = () => {
   const ListItem = styled.li`
     font-size: 1.3rem;
     display: inline-block;
-    padding: 0 40px 10px 0;
+    padding: 0 20px 10px;
     letter-spacing: 0.5px;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: ${(props) => props.theme.gray};
     }
   `;
 
   return (
-    <Nav>
+    <Nav home={home}>
       <Container style={{ justifyItems: 'space-around' }}>
         <Link to='/'>
           <img src={JVLogo} className='jv-logo' alt='JV logo.' />

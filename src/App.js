@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import './App.css';
-import Navbar from './components/top/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -17,7 +16,7 @@ import MovieExplorerPage from './components/projects/MovieExplorerPage';
 const theme = {
   primary: '#60b0f4',
   secondary: '#f0f4f6',
-  gray: 'hsl(0, 0%, 55%)'
+  gray: 'hsl(0, 0%, 55%)',
 };
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <ScrollToTop />
-        <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/life-tracker' component={LifeTrackerPage} />

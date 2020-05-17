@@ -18,12 +18,14 @@ import {
   MarginButton,
   StyledSpan,
   BackgroundWrapper,
-  PaddingWrapper
+  PaddingWrapper,
 } from '../styled-components/StyledComponents';
+import Navbar from '../top/Navbar';
 
 const TypingTestPage = () => {
   return (
     <Fragment>
+      <Navbar />
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -57,7 +59,6 @@ const TypingTestPage = () => {
           </Video>
         </PaddingWrapper>
       </BackgroundWrapper>
-
       <PaddingWrapper>
         <Container>
           <InnerContainer>
@@ -72,7 +73,6 @@ const TypingTestPage = () => {
         </Container>
         <ResponsiveImg src={TypingTestResponsive} alt='Responsive design.' />
       </PaddingWrapper>
-
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>

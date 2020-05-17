@@ -10,6 +10,10 @@ const Footer = () => {
     margin: 6em 0;
     width: 100%;
 
+    a:focus {
+      opacity: 0.8;
+    }
+
     @media (max-width: 750px) {
       margin: 3em 0;
     }
@@ -41,7 +45,8 @@ const Footer = () => {
     color: ${(props) => props.theme.primary};
     font-weight: 300;
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 0.8;
     }
   `;
@@ -54,7 +59,7 @@ const Footer = () => {
     width: 100%;
     text-align: left;
 
-    @media (max-width: 580px) {
+    @media (max-width: 650px) {
       margin-top: 1em;
       flex-direction: column;
     }
@@ -63,11 +68,12 @@ const Footer = () => {
   const ContactItem = styled.li`
     margin-right: 1em;
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 0.8;
     }
 
-    @media (max-width: 580px) {
+    @media (max-width: 650px) {
       margin-bottom: 1em;
     }
   `;
@@ -107,6 +113,13 @@ const Footer = () => {
           </a>
           <a href={ResumePDF} target='_blank' rel='noopener noreferrer'>
             <ContactItem>Resume</ContactItem>
+          </a>
+          <a
+            href='https://julianvazq.github.io/accessibility-web-explainer/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <ContactItem>Accessibility</ContactItem>
           </a>
         </ContactList>
       </Footer>

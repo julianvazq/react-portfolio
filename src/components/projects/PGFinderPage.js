@@ -19,12 +19,14 @@ import {
   MarginButton,
   StyledSpan,
   BackgroundWrapper,
-  PaddingWrapper
+  PaddingWrapper,
 } from '../styled-components/StyledComponents';
+import Navbar from '../top/Navbar';
 
 const PGFinderPage = () => {
   return (
     <Fragment>
+      <Navbar />
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>

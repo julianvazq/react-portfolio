@@ -3,121 +3,143 @@ import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 import Container from '../Container';
 
-const ProjectSection = () => {
-  const StyledSection = styled.section`
-    background: ${(props) => props.theme.secondary};
-    padding: 8em 0;
+const StyledSection = styled.section`
+  background: ${(props) => props.theme.secondary};
+  padding: 8em 0;
+  border-top: 0.5px solid ${(props) => props.theme.primary};
+  /* border-bottom: 0.5px solid ${(props) => props.theme.primary}; */
 
-    @media (max-width: 1000px) {
-      padding: 4em 0;
-    }
+  @media (max-width: 1000px) {
+    padding: 4em 0;
+  }
 
-    @media (max-width: 750px) {
-      padding: 2em 0 1em 0;
-    }
-  `;
+  @media (max-width: 750px) {
+    padding: 4em 0 1em 0;
+  }
+`;
 
-  const SectionTitle = styled.h2`
-    font-size: 3.3rem;
-    font-weight: 400;
-    letter-spacing: -1px;
-    margin: auto;
+const SectionTitle = styled.h2`
+  font-size: 3.3rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin: auto;
+  position: relative;
 
-    @media (max-width: 580px) {
-      font-size: 2.2rem;
-    }
-  `;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    width: 40%;
+    height: 3px;
+    background: ${(props) => props.theme.primary};
+  }
 
-  const GridContainer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-gap: 3rem;
-    margin: 4em 3em;
+  @media (max-width: 580px) {
+    font-size: 2.2rem;
+    margin: 0 auto 0 auto;
+  }
+`;
 
-    a {
-      grid-column: span 4;
-    }
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 3rem;
+  margin: 4em 3em;
 
+  a {
+    grid-column: span 4;
+  }
+
+  a:first-of-type {
+    grid-column: 3/7;
+  }
+
+  a:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09), 0 4px 2px rgba(0, 0, 0, 0.09),
+      0 8px 4px rgba(0, 0, 0, 0.09), 0 16px 8px rgba(0, 0, 0, 0.09),
+      0 32px 16px rgba(0, 0, 0, 0.09);
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+
+    a,
     a:first-of-type {
-      grid-column: 3/7;
+      grid-column: span 8;
     }
+  }
 
-    @media (max-width: 900px) {
-      grid-template-columns: 1fr;
+  @media (max-width: 580px) {
+    margin: 4em 0.5em;
+  }
+`;
 
-      a,
-      a:first-of-type {
-        grid-column: span 8;
-      }
-    }
+const ProjectItem = styled.div`
+  border-radius: 0.3rem;
+  background-size: cover;
+  object-fit: cover;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+    0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11),
+    0 8px 16px rgba(0, 0, 0, 0.11);
 
-    @media (max-width: 580px) {
-      margin: 4em 0.5em;
-    }
-  `;
+  transform: translateY(0);
+  transition: all 0.2s ease;
 
-  const ProjectItem = styled.div`
-    border-radius: 0.3rem;
-    background-size: cover;
-    object-fit: cover;
-    text-align: center;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
-      0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11),
-      0 8px 16px rgba(0, 0, 0, 0.11);
+  &:hover,
+  &:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09), 0 4px 2px rgba(0, 0, 0, 0.09),
+      0 8px 4px rgba(0, 0, 0, 0.09), 0 16px 8px rgba(0, 0, 0, 0.09),
+      0 32px 16px rgba(0, 0, 0, 0.09);
+  }
 
-    transform: translateY(0);
-    transition: all 0.2s ease;
+  h3 {
+    font-size: 1.8rem;
+    padding: 0.5em 0;
+    letter-spacing: 2px;
+    background: linear-gradient(
+      34deg,
+      rgba(134, 200, 255, 1) 0%,
+      rgba(110, 186, 252, 1) 25%,
+      rgba(96, 176, 244, 1) 50%,
+      rgba(110, 186, 252, 1) 75%,
+      rgba(134, 200, 255, 1) 100%
+    );
+    color: #333;
+  }
 
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09), 0 4px 2px rgba(0, 0, 0, 0.09),
-        0 8px 4px rgba(0, 0, 0, 0.09), 0 16px 8px rgba(0, 0, 0, 0.09),
-        0 32px 16px rgba(0, 0, 0, 0.09);
-    }
-
+  @media (max-width: 950px) {
     h3 {
-      font-size: 1.8rem;
-      padding: 0.5em 0;
-      letter-spacing: 2px;
-      background: linear-gradient(
-        34deg,
-        rgba(134, 200, 255, 1) 0%,
-        rgba(110, 186, 252, 1) 25%,
-        rgba(96, 176, 244, 1) 50%,
-        rgba(110, 186, 252, 1) 75%,
-        rgba(134, 200, 255, 1) 100%
-      );
-      color: #333;
+      font-size: 1.5rem;
     }
+  }
 
-    @media (max-width: 950px) {
-      h3 {
-        font-size: 1.5rem;
-      }
-    }
+  img {
+    width: 100%;
+    display: block;
+  }
+`;
 
-    img {
-      width: 100%;
-      display: block;
-    }
-  `;
+const TechInfo = styled.div`
+  font-size: 1.3rem;
+  padding: 0.75em;
+  background: #fff;
+  color: ${(props) => props.theme.gray};
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 
-  const TechInfo = styled.div`
-    font-size: 1.3rem;
-    padding: 0.75em;
-    background: #fff;
-    color: ${(props) => props.theme.gray};
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+  @media (max-width: 950px) {
+    font-size: 1.1rem;
+  }
 
-    @media (max-width: 950px) {
-      font-size: 1.1rem;
-    }
+  @media (max-width: 580px) {
+    font-size: 1rem;
+  }
+`;
 
-    @media (max-width: 580px) {
-      font-size: 1rem;
-    }
-  `;
-
+const ProjectSection = () => {
   return (
     <StyledSection>
       <Container>

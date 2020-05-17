@@ -20,9 +20,12 @@ import {
   BackgroundWrapper,
   PaddingWrapper,
 } from '../styled-components/StyledComponents';
+import Navbar from '../top/Navbar';
+
 const PetMatcherPage = () => {
   return (
     <Fragment>
+      <Navbar />
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>

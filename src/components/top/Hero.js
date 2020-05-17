@@ -8,7 +8,7 @@ const Hero = () => {
     font-size: 3.3rem;
     line-height: 1.5;
     letter-spacing: -1px;
-    margin-bottom: 2em;
+    margin: 1rem 0 4rem;
     color: #808080;
 
     @media (max-width: 580px) {
@@ -18,7 +18,7 @@ const Hero = () => {
   `;
 
   const StyledSpan = styled.span`
-    color: ${props => props.theme.primary};
+    color: ${(props) => props.theme.primary};
   `;
 
   return (
