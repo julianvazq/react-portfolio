@@ -9,6 +9,7 @@ const Container = ({ children }) => {
     align-items: center;
     margin: auto;
     flex-flow: row wrap;
+    position: relative;
   `;
 
   return <StyledContainer>{children}</StyledContainer>;

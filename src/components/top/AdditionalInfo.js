@@ -1,12 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-import Container from '../Container';
 import ReactLogo from '../../logos/react_logo.svg';
 
 const AdditionalInfo = () => {
   const InfoContainer = styled.div`
     flex: 1 10;
     margin-bottom: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 800px) {
+      align-items: flex-start;
+    }
+
+    @media screen and (min-width: 1000px) {
+      margin-bottom: 2em;
+    }
   `;
 
   const Label = styled.h3`
@@ -22,24 +32,22 @@ const AdditionalInfo = () => {
     }
   `;
 
+  const Img = styled.img`
+    display: block;
+  `;
+
   const Caption = styled(Label)`
     font-size: 1.1rem;
     margin-top: 1em;
     transform: translateX(40px);
-
-    @media (max-width: 800px) {
-      transform: translate(25px);
-    }
   `;
 
   return (
-    <Container>
-      <InfoContainer>
-        <Label>Built with:</Label>
-        <img src={ReactLogo} className='react-logo' alt='React logo.' />
-        <Caption>React</Caption>
-      </InfoContainer>
-    </Container>
+    <InfoContainer>
+      <Label>Built with:</Label>
+      <Img src={ReactLogo} className='react-logo' alt='React logo.' />
+      <Caption>React</Caption>
+    </InfoContainer>
   );
 };
 
