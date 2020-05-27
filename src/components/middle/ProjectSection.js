@@ -6,8 +6,6 @@ import Container from '../Container';
 const StyledSection = styled.section`
   background: ${(props) => props.theme.secondary};
   padding: 8em 0;
-  position: relative;
-  z-index: -2;
 
   @media (max-width: 1000px) {
     padding: 4em 0;
