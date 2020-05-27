@@ -5,7 +5,7 @@ import ReactLogo from '../../logos/react_logo.svg';
 const AdditionalInfo = () => {
   const InfoContainer = styled.div`
     flex: 1 10;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +15,7 @@ const AdditionalInfo = () => {
     }
 
     @media screen and (min-width: 1000px) {
-      margin-bottom: 2em;
+      /* margin-bottom: 2em; */
     }
   `;
 
