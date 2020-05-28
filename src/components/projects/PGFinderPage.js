@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import PGFinderDemo from '../../gifs/pg-finder-demo.mp4';
 import PGFinderResponsive from '../../images/pg-finder-responsive.png';
+import PGFinderIphone from '../../images/pg-finder-iphone.png';
 import PGFinderDocumentation from '../../images/pg-finder-documentation1.png';
 import {
   Container,
@@ -73,7 +74,7 @@ const PGFinderPage = () => {
             </StyledParagraph>
           </InnerContainer>
         </Container>
-        <ResponsiveImg src={PGFinderResponsive} alt='Responsive design.' />
+        <ResponsiveImg iphone src={PGFinderIphone} alt='Responsive design.' />
       </PaddingWrapper>
 
       <BackgroundWrapper>

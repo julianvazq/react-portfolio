@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import PetMatcherDemo from '../../gifs/pet-matcher-demo.mp4';
 import PetMatcherResponsive from '../../images/pet-matcher-responsive.png';
+import PetMatcherIphone from '../../images/pet-matcher-iphone.png';
 import {
   Container,
   InnerContainer,
@@ -70,7 +71,7 @@ const PetMatcherPage = () => {
             </StyledParagraph>
           </InnerContainer>
         </Container>
-        <ResponsiveImg src={PetMatcherResponsive} alt='Responsive design.' />
+        <ResponsiveImg iphone src={PetMatcherIphone} alt='Responsive design.' />
       </PaddingWrapper>
 
       <BackgroundWrapper>

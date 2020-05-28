@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import TypingTestDemo from '../../gifs/js-typing-test-demo.mp4';
 import TypingTestResponsive from '../../images/js-typing-test-responsive.png';
+import TypingTestIphone from '../../images/js-typing-test-iphone.png';
+
 import {
   Container,
   InnerContainer,
@@ -71,7 +73,7 @@ const TypingTestPage = () => {
             </StyledParagraph>
           </InnerContainer>
         </Container>
-        <ResponsiveImg src={TypingTestResponsive} alt='Responsive design.' />
+        <ResponsiveImg iphone src={TypingTestIphone} alt='Responsive design.' />
       </PaddingWrapper>
       <BackgroundWrapper>
         <PaddingWrapper>

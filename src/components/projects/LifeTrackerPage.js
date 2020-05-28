@@ -3,6 +3,8 @@ import { HashLink as Link } from 'react-router-hash-link';
 import LifeTrackerDemo from '../../gifs/life-tracker-demo.mp4';
 import LifeTrackerDemoEdit from '../../gifs/life-tracker-demo-edit.mp4';
 import LifeTrackerResponsive from '../../images/life-tracker-responsive.png';
+import LifeTrackerIphone from '../../images/life-tracker-iphone.png';
+
 import {
   Container,
   InnerContainer,
@@ -88,7 +90,11 @@ const LifeTrackerPage = () => {
             </StyledParagraph>
           </InnerContainer>
         </Container>
-        <ResponsiveImg src={LifeTrackerResponsive} alt='Responsive design.' />
+        <ResponsiveImg
+          iphone
+          src={LifeTrackerIphone}
+          alt='Responsive design.'
+        />
       </PaddingWrapper>
 
       <BackgroundWrapper>

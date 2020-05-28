@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import ExoticPetStoreDemo from '../../gifs/exotic-pet-store-demo.mp4';
 import ExoticPetStoreResponsive from '../../images/exotic-pet-store-responsive.png';
+import ExoticPetStoreIphone from '../../images/exotic-pet-store-iphone.png';
+
 import {
   Container,
   InnerContainer,
@@ -72,7 +74,8 @@ const ExoticPetStorePage = () => {
           </InnerContainer>
         </Container>
         <ResponsiveImg
-          src={ExoticPetStoreResponsive}
+          iphone
+          src={ExoticPetStoreIphone}
           alt='Responsive design.'
         />
       </PaddingWrapper>

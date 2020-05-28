@@ -59,8 +59,17 @@ export const ResponsiveImg = styled.img`
   display: block;
   max-height: 700px;
 
+  @media (max-width: 600px) {
+    height: ${(props) => props.iphone && '400px'};
+  }
+
   @media (max-width: 1100px) {
-    width: 90%;
+    width: ${(props) => !props.iphone && '90%'};
+    max-width: 100%;
+  }
+
+  @media (max-width: 1500px) {
+    height: ${(props) => props.iphone && '500px'};
   }
 `;
 

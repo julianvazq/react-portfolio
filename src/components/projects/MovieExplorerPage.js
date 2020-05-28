@@ -3,6 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import MovieExplorerBrowse from '../../gifs/movie-explorer-browse.mp4';
 import MovieExplorerWatchlist from '../../gifs/movie-explorer-watchlist.mp4';
 import MovieExplorerResponsive from '../../images/movie-explorer-responsive.png';
+import MovieExplorerIphone from '../../images/movie-explorer-iphone.png';
 import {
   Container,
   InnerContainer,
@@ -87,7 +88,11 @@ const MovieExplorerPage = () => {
             </StyledParagraph>
           </InnerContainer>
         </Container>
-        <ResponsiveImg src={MovieExplorerResponsive} alt='Responsive design.' />
+        <ResponsiveImg
+          iphone
+          src={MovieExplorerIphone}
+          alt='Responsive design.'
+        />
       </PaddingWrapper>
 
       <BackgroundWrapper>

@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import ExerciseSiteHomePage from '../../images/lg/exercise-site-lg.jpg';
 import ExerciseSiteResponsive from '../../images/exercise-site-responsive.jpg';
+import ExerciseSiteIphone from '../../images/exercise-site-iphone.png';
+
 import {
   Container,
   InnerContainer,
@@ -68,15 +70,10 @@ const ExoticPetStorePage = () => {
             </StyledParagraph>
           </InnerContainer>
         </Container>
-        <img
-          src={ExerciseSiteResponsive}
+        <ResponsiveImg
+          iphone
+          src={ExerciseSiteIphone}
           alt='Responsive design.'
-          style={{
-            display: 'block',
-            width: '90%',
-            maxWidth: '1370px',
-            margin: 'auto',
-          }}
         />
       </PaddingWrapper>
 
