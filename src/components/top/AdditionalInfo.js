@@ -13,10 +13,6 @@ const AdditionalInfo = () => {
     @media screen and (min-width: 800px) {
       align-items: flex-start;
     }
-
-    @media screen and (min-width: 1000px) {
-      /* margin-bottom: 2em; */
-    }
   `;
 
   const Label = styled.h3`

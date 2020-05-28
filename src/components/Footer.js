@@ -1,14 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import Container from './Container';
+import { GrLinkedinOption } from 'react-icons/gr';
+import { MdEmail, MdPictureAsPdf } from 'react-icons/md';
+import { RiExternalLinkLine } from 'react-icons/ri';
+import { FiGithub } from 'react-icons/fi';
 import ResumePDF from '../docs/julian_vazquez_resume.pdf';
+import ContactImage from '../images/contact.svg';
 
 const Footer = () => {
-  const Footer = styled.div`
+  const Footer = styled.footer`
     display: flex;
     flex-flow: row wrap;
     margin: 6em 0;
     width: 100%;
+    text-align: center;
+    justify-content: center;
 
     a:focus {
       opacity: 0.8;
@@ -21,60 +28,109 @@ const Footer = () => {
     @media (max-width: 580px) {
       flex-direction: column;
     }
+
+    @media (min-width: 1015px) {
+      justify-content: flex-start;
+    }
   `;
 
   const FooterText = styled.h2`
     max-width: 840px;
-    font-size: 3.3rem;
+    font-size: 2.1rem;
     line-height: 68px;
     letter-spacing: -1px;
     font-weight: 400;
     flex: 0 0 auto;
     padding-right: 0.3em;
 
-    @media (max-width: 850px) {
-      font-size: 2.1rem;
-    }
-
-    @media (max-width: 580px) {
-      margin-bottom: 1em;
+    @media (min-width: 850px) {
+      font-size: 3rem;
     }
   `;
 
   const FooterCTA = styled(FooterText)`
     color: ${(props) => props.theme.primary};
     font-weight: 300;
+    margin-bottom: 3.5rem;
 
     &:hover,
     &:focus {
       opacity: 0.8;
+    }
+  `;
+
+  const Img = styled.img`
+    display: block;
+    margin: auto;
+    width: 250px;
+
+    @media (min-width: 1200px) {
+      width: 350px;
     }
   `;
 
   const ContactList = styled.ul`
-    margin-top: 3em;
+    padding-top: 3em;
     list-style: none;
     display: flex;
-    font-size: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1.25rem;
     width: 100%;
-    text-align: left;
+    text-align: center;
+    max-width: max-content;
+    margin: auto;
 
-    @media (max-width: 650px) {
-      margin-top: 1em;
-      flex-direction: column;
+    a {
+      max-width: max-content;
+    }
+
+    /* Icons */
+
+    @media (min-width: 650px) {
+      flex-direction: row;
+    }
+
+    @media (min-width: 1015px) {
+      margin: 0;
     }
   `;
 
   const ContactItem = styled.li`
-    margin-right: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover,
     &:focus {
       opacity: 0.8;
     }
 
-    @media (max-width: 650px) {
-      margin-bottom: 1em;
+    @media (min-width: 650px) {
+      margin-right: 1em;
+    }
+
+    @media (min-width: 800px) {
+      margin-right: 1.25em;
+    }
+  `;
+
+  const IconContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: ${(props) => props.theme.primary && props.theme.primary};
+    margin-right: 0.5rem;
+    color: #fff;
+
+    @media (min-width: 650px) {
+      margin-bottom: 0;
+      margin-right: 0.5rem;
     }
   `;
 
@@ -89,37 +145,63 @@ const Footer = () => {
         >
           <FooterCTA>Let's talk.</FooterCTA>
         </a>
+        <Img src={ContactImage} alt='Illustration.' />
         <ContactList>
           <a
             href='https://github.com/julianvazq'
             target='_blank'
             rel='noopener noreferrer'
           >
-            <ContactItem>GitHub</ContactItem>
+            <ContactItem>
+              <IconContainer>
+                <FiGithub />
+              </IconContainer>
+              GitHub
+            </ContactItem>
           </a>
           <a
             href='https://www.linkedin.com/in/julian-vazquez/'
             target='_blank'
             rel='noopener noreferrer'
           >
-            <ContactItem>LinkedIn</ContactItem>
+            <ContactItem>
+              <IconContainer>
+                <GrLinkedinOption />
+              </IconContainer>
+              Linkedin
+            </ContactItem>
           </a>
           <a
             href='mailto:julianvazquez101@gmail.com'
             target='_blank'
             rel='noopener noreferrer'
           >
-            <ContactItem>Email</ContactItem>
+            <ContactItem>
+              <IconContainer>
+                <MdEmail />
+              </IconContainer>
+              Email
+            </ContactItem>
           </a>
           <a href={ResumePDF} target='_blank' rel='noopener noreferrer'>
-            <ContactItem>Resume</ContactItem>
+            <ContactItem>
+              <IconContainer>
+                <MdPictureAsPdf />
+              </IconContainer>
+              Resume
+            </ContactItem>
           </a>
           <a
             href='https://julianvazq.github.io/accessibility-web-explainer/'
             target='_blank'
             rel='noopener noreferrer'
           >
-            <ContactItem>Accessibility</ContactItem>
+            <ContactItem>
+              <IconContainer>
+                <RiExternalLinkLine />
+              </IconContainer>
+              Accessibility
+            </ContactItem>
           </a>
         </ContactList>
       </Footer>
