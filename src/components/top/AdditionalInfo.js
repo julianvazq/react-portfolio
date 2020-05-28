@@ -12,6 +12,11 @@ const AdditionalInfo = () => {
 
     @media screen and (min-width: 800px) {
       align-items: flex-start;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 1005px) {
+      margin-bottom: 2em;
     }
   `;
 

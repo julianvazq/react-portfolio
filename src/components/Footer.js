@@ -31,10 +31,14 @@ const Footer = () => {
 
     @media (min-width: 1015px) {
       justify-content: flex-start;
+
+      a {
+        align-self: flex-start;
+      }
     }
   `;
 
-  const FooterText = styled.h2`
+  const FooterText = styled.p`
     max-width: 840px;
     font-size: 2.1rem;
     line-height: 68px;
@@ -57,6 +61,10 @@ const Footer = () => {
     &:focus {
       opacity: 0.8;
     }
+
+    @media (min-width: 1015px) {
+      margin-bottom: 0;
+    }
   `;
 
   const Img = styled.img`
@@ -64,7 +72,7 @@ const Footer = () => {
     margin: auto;
     width: 250px;
 
-    @media (min-width: 1200px) {
+    @media (min-width: 1500px) {
       width: 350px;
     }
   `;
