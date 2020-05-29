@@ -17,6 +17,7 @@ import {
   ListItem,
   ButtonContainer,
   Button,
+  SecondaryButton,
   MarginButton,
   StyledSpan,
   BackgroundWrapper,
@@ -46,13 +47,13 @@ const TypingTestPage = () => {
                 >
                   Go to website
                 </Button>
-                <Button
+                <SecondaryButton
                   href='https://github.com/julianvazq/typing-speed-tester'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   Go to GitHub
-                </Button>
+                </SecondaryButton>
               </ButtonContainer>
             </InnerContainer>
           </Container>

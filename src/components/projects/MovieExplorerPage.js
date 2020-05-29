@@ -18,6 +18,7 @@ import {
   ListItem,
   ButtonContainer,
   Button,
+  SecondaryButton,
   MarginButton,
   StyledSpan,
   BackgroundWrapper,
@@ -45,13 +46,13 @@ const MovieExplorerPage = () => {
                 >
                   Go to website
                 </Button>
-                <Button
+                <SecondaryButton
                   href='https://github.com/julianvazq/movie-explorer'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   Go to GitHub
-                </Button>
+                </SecondaryButton>
               </ButtonContainer>
             </InnerContainer>
           </Container>

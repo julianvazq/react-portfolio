@@ -170,6 +170,10 @@ export const Button = styled.a`
   }
 `;
 
+export const SecondaryButton = styled(Button)`
+  background: #949393;
+`;
+
 export const MarginButton = styled(Button)`
   margin-top: 4em;
 `;
@@ -184,4 +188,5 @@ export const BackgroundWrapper = styled.main`
 
 export const PaddingWrapper = styled.section`
   padding: 4em 0;
+  position: relative;
 `;

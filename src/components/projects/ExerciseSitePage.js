@@ -16,12 +16,14 @@ import {
   ListItem,
   ButtonContainer,
   Button,
+  SecondaryButton,
   MarginButton,
   StyledSpan,
   BackgroundWrapper,
   PaddingWrapper,
 } from '../styled-components/StyledComponents';
 import Navbar from '../top/Navbar';
+import styled from 'styled-components';
 
 const ExoticPetStorePage = () => {
   return (
@@ -44,13 +46,13 @@ const ExoticPetStorePage = () => {
                 >
                   Go to website
                 </Button>
-                <Button
+                <SecondaryButton
                   href='https://github.com/julianvazq/exercise-site'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   Go to GitHub
-                </Button>
+                </SecondaryButton>
               </ButtonContainer>
             </InnerContainer>
           </Container>

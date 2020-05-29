@@ -16,6 +16,7 @@ import {
   ListItem,
   ButtonContainer,
   Button,
+  SecondaryButton,
   MarginButton,
   StyledSpan,
   BackgroundWrapper,
@@ -43,13 +44,13 @@ const PetMatcherPage = () => {
                 >
                   Go to website
                 </Button>
-                <Button
+                <SecondaryButton
                   href='https://github.com/julianvazq/pet-matcher'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   Go to GitHub
-                </Button>
+                </SecondaryButton>
               </ButtonContainer>
             </InnerContainer>
           </Container>
