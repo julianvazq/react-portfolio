@@ -6,7 +6,7 @@ import { MdEmail, MdPictureAsPdf } from 'react-icons/md';
 import { RiExternalLinkLine } from 'react-icons/ri';
 import { FiGithub } from 'react-icons/fi';
 import ResumePDF from '../docs/julian_vazquez_resume.pdf';
-import ContactImage from '../images/contact.svg';
+import ContactImage from '../images/illustrations/contact.svg';
 
 const Footer = () => {
   const Footer = styled.footer`
@@ -94,8 +94,6 @@ const Footer = () => {
       max-width: max-content;
     }
 
-    /* Icons */
-
     @media (min-width: 650px) {
       flex-direction: row;
     }
@@ -132,7 +130,7 @@ const Footer = () => {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: ${(props) => props.theme.primary && props.theme.primary};
+    background: ${(props) => props.theme.primary};
     margin-right: 0.5rem;
     color: #fff;
 

@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import PetMatcherDemo from '../../gifs/pet-matcher-demo.mp4';
-import PetMatcherResponsive from '../../images/pet-matcher-responsive.png';
-import PetMatcherIphone from '../../images/pet-matcher-iphone.png';
+import PetMatcherIphone from '../../images/iphone/pet-matcher-iphone.png';
 import {
   Container,
   InnerContainer,
@@ -14,6 +13,7 @@ import {
   StyledParagraph,
   TechList,
   ListItem,
+  IconContainer,
   ButtonContainer,
   Button,
   SecondaryButton,
@@ -22,12 +22,12 @@ import {
   BackgroundWrapper,
   PaddingWrapper,
 } from '../styled-components/StyledComponents';
-import Navbar from '../top/Navbar';
+import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
+import { FaServer } from 'react-icons/fa';
 
 const PetMatcherPage = () => {
   return (
     <Fragment>
-      <Navbar />
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -82,17 +82,32 @@ const PetMatcherPage = () => {
               <SubHeading>Technologies</SubHeading>
               <TechList>
                 <ListItem>
-                  <StyledSpan>Frontend</StyledSpan>
-                  <br /> React, Styled Components (CSS)
+                  <IconContainer>
+                    <BsDisplayFill />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Frontend</StyledSpan>
+                    <br /> React, Styled Components (CSS)
+                  </div>
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Backend</StyledSpan>
-                  <br /> Node, Express
+                  <IconContainer>
+                    <FaServer />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Backend</StyledSpan>
+                    <br /> Node, Express
+                  </div>
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Others</StyledSpan>
-                  <br /> Form Validation, Error Handling, React Router, React
-                  Hooks, Context API
+                  <IconContainer>
+                    <BsThreeDots />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Others</StyledSpan>
+                    <br /> Form Validation, Error Handling, React Router, React
+                    Hooks, Context API
+                  </div>
                 </ListItem>
               </TechList>
               <MarginButton as={Link} to='/#projects'>

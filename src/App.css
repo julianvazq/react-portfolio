@@ -31,13 +31,13 @@ a {
 
 /* React Logo */
 .react-logo {
-  height: 100px;
+  height: 80px;
   pointer-events: none;
 }
 
 @media only screen and (max-width: 800px) {
   .react-logo {
-    height: 80px;
+    height: 70px;
   }
 }
 

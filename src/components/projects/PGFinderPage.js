@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import PGFinderDemo from '../../gifs/pg-finder-demo.mp4';
-import PGFinderResponsive from '../../images/pg-finder-responsive.png';
-import PGFinderIphone from '../../images/pg-finder-iphone.png';
+import PGFinderIphone from '../../images/iphone/pg-finder-iphone.png';
 import PGFinderDocumentation from '../../images/pg-finder-documentation1.png';
 import {
   Container,
@@ -15,6 +14,7 @@ import {
   StyledParagraph,
   TechList,
   ListItem,
+  IconContainer,
   ButtonContainer,
   Button,
   SecondaryButton,
@@ -23,12 +23,12 @@ import {
   BackgroundWrapper,
   PaddingWrapper,
 } from '../styled-components/StyledComponents';
-import Navbar from '../top/Navbar';
+import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
+import { FaServer } from 'react-icons/fa';
 
 const PGFinderPage = () => {
   return (
     <Fragment>
-      <Navbar />
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -114,18 +114,33 @@ const PGFinderPage = () => {
         <Container>
           <InnerContainer>
             <SubHeading>Technologies</SubHeading>
-            <TechList style={{ background: '#f0f4f6' }}>
+            <TechList>
               <ListItem>
-                <StyledSpan>Frontend</StyledSpan>
-                <br /> Vanilla JavaScript, CSS, HTML
+                <IconContainer>
+                  <BsDisplayFill />
+                </IconContainer>
+                <div>
+                  <StyledSpan>Frontend</StyledSpan>
+                  <br /> Vanilla JavaScript, CSS, HTML
+                </div>
               </ListItem>
               <ListItem>
-                <StyledSpan>Backend</StyledSpan>
-                <br /> Node, Express
+                <IconContainer>
+                  <FaServer />
+                </IconContainer>
+                <div>
+                  <StyledSpan>Backend</StyledSpan>
+                  <br /> Node, Express
+                </div>
               </ListItem>
               <ListItem>
-                <StyledSpan>Others</StyledSpan>
-                <br /> Leaflet Map API
+                <IconContainer>
+                  <BsThreeDots />
+                </IconContainer>
+                <div>
+                  <StyledSpan>Others</StyledSpan>
+                  <br /> Leaflet Map API
+                </div>
               </ListItem>
             </TechList>
             <MarginButton as={Link} to='/#projects'>

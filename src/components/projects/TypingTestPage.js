@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import TypingTestDemo from '../../gifs/js-typing-test-demo.mp4';
-import TypingTestResponsive from '../../images/js-typing-test-responsive.png';
-import TypingTestIphone from '../../images/js-typing-test-iphone.png';
+import TypingTestIphone from '../../images/iphone/js-typing-test-iphone.png';
 
 import {
   Container,
@@ -15,6 +14,7 @@ import {
   StyledParagraph,
   TechList,
   ListItem,
+  IconContainer,
   ButtonContainer,
   Button,
   SecondaryButton,
@@ -23,12 +23,11 @@ import {
   BackgroundWrapper,
   PaddingWrapper,
 } from '../styled-components/StyledComponents';
-import Navbar from '../top/Navbar';
+import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 
 const TypingTestPage = () => {
   return (
     <Fragment>
-      <Navbar />
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -83,12 +82,22 @@ const TypingTestPage = () => {
               <SubHeading>Technologies</SubHeading>
               <TechList>
                 <ListItem>
-                  <StyledSpan>Frontend</StyledSpan>
-                  <br /> JS, HTML, CSS
+                  <IconContainer>
+                    <BsDisplayFill />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Frontend</StyledSpan>
+                    <br /> JS, HTML, CSS
+                  </div>
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Others</StyledSpan>
-                  <br /> CSS Flexbox
+                  <IconContainer>
+                    <BsThreeDots />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Others</StyledSpan>
+                    <br /> CSS Flexbox
+                  </div>
                 </ListItem>
               </TechList>
               <MarginButton as={Link} to='/#projects'>

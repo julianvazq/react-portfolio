@@ -2,8 +2,9 @@ import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import LifeTrackerDemo from '../../gifs/life-tracker-demo.mp4';
 import LifeTrackerDemoEdit from '../../gifs/life-tracker-demo-edit.mp4';
-import LifeTrackerResponsive from '../../images/life-tracker-responsive.png';
-import LifeTrackerIphone from '../../images/life-tracker-iphone.png';
+import LifeTrackerIphone from '../../images/iphone/life-tracker-iphone.png';
+import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
+import { FaServer, FaDatabase } from 'react-icons/fa';
 
 import {
   Container,
@@ -17,6 +18,7 @@ import {
   StyledParagraph,
   TechList,
   ListItem,
+  IconContainer,
   ButtonContainer,
   Button,
   SecondaryButton,
@@ -25,12 +27,10 @@ import {
   BackgroundWrapper,
   PaddingWrapper,
 } from '../styled-components/StyledComponents';
-import Navbar from '../top/Navbar';
 
 const LifeTrackerPage = () => {
   return (
     <Fragment>
-      <Navbar />
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -105,21 +105,41 @@ const LifeTrackerPage = () => {
               <SubHeading>Technologies</SubHeading>
               <TechList>
                 <ListItem>
-                  <StyledSpan>Frontend</StyledSpan>
-                  <br /> React, Reactstrap
+                  <IconContainer>
+                    <BsDisplayFill />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Frontend</StyledSpan>
+                    <br /> React, Reactstrap
+                  </div>
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Backend</StyledSpan>
-                  <br /> Node, Express
+                  <IconContainer>
+                    <FaServer />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Backend</StyledSpan>
+                    <br /> Node, Express
+                  </div>
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Database</StyledSpan>
-                  <br /> MongoDB Atlas
+                  <IconContainer>
+                    <FaDatabase />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Database</StyledSpan>
+                    <br /> MongoDB Atlas
+                  </div>
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Others</StyledSpan>
-                  <br /> Form Validation, Error Handling, React Router, React
-                  Hooks, Context API
+                  <IconContainer>
+                    <BsThreeDots />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Others</StyledSpan>
+                    <br /> Form Validation, Error Handling, React Router, React
+                    Hooks, Context API
+                  </div>
                 </ListItem>
               </TechList>
               <MarginButton as={Link} to='/#projects'>

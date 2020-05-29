@@ -1,9 +1,7 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import ExerciseSiteHomePage from '../../images/lg/exercise-site-lg.jpg';
-import ExerciseSiteResponsive from '../../images/exercise-site-responsive.jpg';
-import ExerciseSiteIphone from '../../images/exercise-site-iphone.png';
-
+import ExerciseSiteIphone from '../../images/iphone/exercise-site-iphone.png';
 import {
   Container,
   InnerContainer,
@@ -14,6 +12,7 @@ import {
   StyledParagraph,
   TechList,
   ListItem,
+  IconContainer,
   ButtonContainer,
   Button,
   SecondaryButton,
@@ -22,13 +21,11 @@ import {
   BackgroundWrapper,
   PaddingWrapper,
 } from '../styled-components/StyledComponents';
-import Navbar from '../top/Navbar';
-import styled from 'styled-components';
+import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 
 const ExoticPetStorePage = () => {
   return (
     <Fragment>
-      <Navbar />
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -86,12 +83,22 @@ const ExoticPetStorePage = () => {
               <SubHeading>Technologies</SubHeading>
               <TechList>
                 <ListItem>
-                  <StyledSpan>Frontend</StyledSpan>
-                  <br /> HTML, CSS
+                  <IconContainer>
+                    <BsDisplayFill />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Frontend</StyledSpan>
+                    <br /> HTML, CSS
+                  </div>
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Others</StyledSpan>
-                  <br /> CSS Grid, CSS Flexbox
+                  <IconContainer>
+                    <BsThreeDots />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Others</StyledSpan>
+                    <br /> CSS Grid, CSS Flexbox
+                  </div>
                 </ListItem>
               </TechList>
               <MarginButton as={Link} to='/#projects'>

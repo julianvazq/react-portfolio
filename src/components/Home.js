@@ -2,8 +2,7 @@ import React from 'react';
 import Hero from './top/Hero';
 import AdditionalInfo from './top/AdditionalInfo';
 import ProjectSection from './middle/ProjectSection.js';
-import Navbar from './top/Navbar';
-import CoverImage from '../images/cover-image.svg';
+import CoverImage from '../images/illustrations/cover-image.svg';
 import styled from 'styled-components';
 import { Container } from './styled-components/StyledComponents';
 
@@ -41,7 +40,6 @@ const Img = styled.img`
 const Home = () => {
   return (
     <HomeContainer>
-      <Navbar home />
       <Container>
         <Img src={CoverImage} alt='Illustration.' />
         <Hero />

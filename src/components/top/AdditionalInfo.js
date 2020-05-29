@@ -24,8 +24,8 @@ const AdditionalInfo = () => {
     margin-bottom: 1em;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-size: 1.1rem;
-    transform: translateX(17px);
+    font-size: 0.9rem;
+    transform: translateX(12px);
     font-weight: 300;
 
     @media (max-width: 800px) {
@@ -38,14 +38,14 @@ const AdditionalInfo = () => {
   `;
 
   const Caption = styled(Label)`
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     margin-top: 1em;
-    transform: translateX(40px);
+    transform: translateX(32px);
   `;
 
   return (
     <InfoContainer>
-      <Label>Built with:</Label>
+      <Label>Built with</Label>
       <Img src={ReactLogo} className='react-logo' alt='React logo.' />
       <Caption>React</Caption>
     </InfoContainer>

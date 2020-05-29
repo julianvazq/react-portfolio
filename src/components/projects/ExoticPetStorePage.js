@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import ExoticPetStoreDemo from '../../gifs/exotic-pet-store-demo.mp4';
-import ExoticPetStoreResponsive from '../../images/exotic-pet-store-responsive.png';
-import ExoticPetStoreIphone from '../../images/exotic-pet-store-iphone.png';
+import ExoticPetStoreIphone from '../../images/iphone/exotic-pet-store-iphone.png';
 
 import {
   Container,
@@ -15,6 +14,7 @@ import {
   StyledParagraph,
   TechList,
   ListItem,
+  IconContainer,
   ButtonContainer,
   Button,
   SecondaryButton,
@@ -23,12 +23,11 @@ import {
   BackgroundWrapper,
   PaddingWrapper,
 } from '../styled-components/StyledComponents';
-import Navbar from '../top/Navbar';
+import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 
 const ExoticPetStorePage = () => {
   return (
     <Fragment>
-      <Navbar />
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -88,12 +87,22 @@ const ExoticPetStorePage = () => {
               <SubHeading>Technologies</SubHeading>
               <TechList>
                 <ListItem>
-                  <StyledSpan>Frontend</StyledSpan>
-                  <br /> JS, HTML, CSS
+                  <IconContainer>
+                    <BsDisplayFill />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Frontend</StyledSpan>
+                    <br /> JS, HTML, CSS
+                  </div>
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Others</StyledSpan>
-                  <br /> CSS Grid, CSS Flexbox
+                  <IconContainer>
+                    <BsThreeDots />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Others</StyledSpan>
+                    <br /> CSS Grid, CSS Flexbox
+                  </div>
                 </ListItem>
               </TechList>
               <MarginButton as={Link} to='/#projects'>

@@ -216,54 +216,6 @@ const ProjectSection = () => {
             </div>
           </ProjectItem>
         </Link>
-        <Link to='/js-typing-test'>
-          <ProjectItem>
-            <div>
-              <TechInfo>
-                <p>JS | HTML | CSS</p>
-              </TechInfo>
-              <picture>
-                <source
-                  srcSet={require('../../images/lg/js-typing-test-lg.jpg')}
-                  media='(min-width: 1200px)'
-                />
-                <source
-                  srcSet={require('../../images/sm/js-typing-test-sm.jpg')}
-                  media='(max-width: 1200px)'
-                />
-                <img
-                  src={require('../../images/lg/js-typing-test-lg.jpg')}
-                  alt='JavaScript Typing Test.'
-                />
-              </picture>
-              <h3>JS Typing Test</h3>
-            </div>
-          </ProjectItem>
-        </Link>
-        <Link to='/pg-finder'>
-          <ProjectItem>
-            <div>
-              <TechInfo>
-                <p>JS | Node | Express | HTML | CSS </p>
-              </TechInfo>
-              <picture>
-                <source
-                  srcSet={require('../../images/lg/pg-finder-lg.jpg')}
-                  media='(min-width: 1200px)'
-                />
-                <source
-                  srcSet={require('../../images/sm/pg-finder-sm.jpg')}
-                  media='(max-width: 1200px)'
-                />
-                <img
-                  src={require('../../images/lg/pg-finder-lg.jpg')}
-                  alt='PG Finder App.'
-                />
-              </picture>
-              <h3>PG Finder</h3>
-            </div>
-          </ProjectItem>
-        </Link>
         <Link to='/exotic-pet-store'>
           <ProjectItem>
             <div>
@@ -309,6 +261,54 @@ const ProjectSection = () => {
                 />
               </picture>
               <h3>Product Landing Page</h3>
+            </div>
+          </ProjectItem>
+        </Link>
+        <Link to='/js-typing-test'>
+          <ProjectItem>
+            <div>
+              <TechInfo>
+                <p>JS | HTML | CSS</p>
+              </TechInfo>
+              <picture>
+                <source
+                  srcSet={require('../../images/lg/js-typing-test-lg.jpg')}
+                  media='(min-width: 1200px)'
+                />
+                <source
+                  srcSet={require('../../images/sm/js-typing-test-sm.jpg')}
+                  media='(max-width: 1200px)'
+                />
+                <img
+                  src={require('../../images/lg/js-typing-test-lg.jpg')}
+                  alt='JavaScript Typing Test.'
+                />
+              </picture>
+              <h3>JS Typing Test</h3>
+            </div>
+          </ProjectItem>
+        </Link>
+        <Link to='/pg-finder'>
+          <ProjectItem>
+            <div>
+              <TechInfo>
+                <p>JS | Node | Express | HTML | CSS </p>
+              </TechInfo>
+              <picture>
+                <source
+                  srcSet={require('../../images/lg/pg-finder-lg.jpg')}
+                  media='(min-width: 1200px)'
+                />
+                <source
+                  srcSet={require('../../images/sm/pg-finder-sm.jpg')}
+                  media='(max-width: 1200px)'
+                />
+                <img
+                  src={require('../../images/lg/pg-finder-lg.jpg')}
+                  alt='PG Finder App.'
+                />
+              </picture>
+              <h3>PG Finder</h3>
             </div>
           </ProjectItem>
         </Link>

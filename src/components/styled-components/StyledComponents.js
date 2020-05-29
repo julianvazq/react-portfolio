@@ -119,7 +119,6 @@ export const StyledParagraph = styled.p`
 `;
 
 export const TechList = styled.ul`
-  background: #fff;
   list-style-type: none;
   list-style-position: inside;
   font-size: 1.5rem;
@@ -127,8 +126,7 @@ export const TechList = styled.ul`
   grid-template-columns: 1fr;
   grid-gap: 1em;
   border-radius: 0.3rem;
-  padding: 2em;
-  box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.15);
+  padding-top: 2em;
 
   @media (max-width: 700px) {
     font-size: 1.2rem;
@@ -139,6 +137,35 @@ export const ListItem = styled.li`
   padding-bottom: 0.5em;
   border-bottom: 1px solid ${(props) => props.theme.primary};
   line-height: 1.7;
+  display: flex;
+  align-items: center;
+`;
+
+export const IconContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  background: ${(props) => props.theme.primary};
+  margin-right: 2rem;
+  color: #fff;
+
+  svg {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 600px) {
+    min-width: 50px;
+    min-height: 50px;
+  }
+
+  @media (min-width: 800px) {
+    svg {
+      font-size: 1.75rem;
+    }
+  }
 `;
 
 export const ButtonContainer = styled.div`

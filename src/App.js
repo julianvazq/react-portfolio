@@ -12,6 +12,7 @@ import ExoticPetStorePage from './components/projects/ExoticPetStorePage';
 import TypingTestPage from './components/projects/TypingTestPage';
 import ExerciseSitePage from './components/projects/ExerciseSitePage';
 import MovieExplorerPage from './components/projects/MovieExplorerPage';
+import Navbar from './components/top/Navbar';
 
 const theme = {
   primary: '#60b0f4',
@@ -24,6 +25,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <ScrollToTop />
+        <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/life-tracker' component={LifeTrackerPage} />

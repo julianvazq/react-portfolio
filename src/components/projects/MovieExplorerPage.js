@@ -2,8 +2,7 @@ import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import MovieExplorerBrowse from '../../gifs/movie-explorer-browse.mp4';
 import MovieExplorerWatchlist from '../../gifs/movie-explorer-watchlist.mp4';
-import MovieExplorerResponsive from '../../images/movie-explorer-responsive.png';
-import MovieExplorerIphone from '../../images/movie-explorer-iphone.png';
+import MovieExplorerIphone from '../../images/iphone/movie-explorer-iphone.png';
 import {
   Container,
   InnerContainer,
@@ -16,6 +15,7 @@ import {
   StyledParagraph,
   TechList,
   ListItem,
+  IconContainer,
   ButtonContainer,
   Button,
   SecondaryButton,
@@ -24,12 +24,12 @@ import {
   BackgroundWrapper,
   PaddingWrapper,
 } from '../styled-components/StyledComponents';
-import Navbar from '../top/Navbar';
+import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
+import { FaServer } from 'react-icons/fa';
 
 const MovieExplorerPage = () => {
   return (
     <Fragment>
-      <Navbar />
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -103,16 +103,31 @@ const MovieExplorerPage = () => {
               <SubHeading>Technologies</SubHeading>
               <TechList>
                 <ListItem>
-                  <StyledSpan>Frontend</StyledSpan>
-                  <br /> React, Redux, Styled Components
+                  <IconContainer>
+                    <BsDisplayFill />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Frontend</StyledSpan>
+                    <br /> React, Redux, Styled Components
+                  </div>
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Backend</StyledSpan>
-                  <br /> Node, Express
+                  <IconContainer>
+                    <FaServer />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Backend</StyledSpan>
+                    <br /> Node, Express
+                  </div>
                 </ListItem>
                 <ListItem>
-                  <StyledSpan>Others</StyledSpan>
-                  <br /> React Hooks, React Router, Responsive Images
+                  <IconContainer>
+                    <BsThreeDots />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Others</StyledSpan>
+                    <br /> React Hooks, React Router, Responsive Images
+                  </div>
                 </ListItem>
               </TechList>
               <MarginButton as={Link} to='/#projects'>
