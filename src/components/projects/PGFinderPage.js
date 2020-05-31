@@ -3,6 +3,8 @@ import { HashLink as Link } from 'react-router-hash-link';
 import PGFinderDemo from '../../gifs/pg-finder-demo.mp4';
 import PGFinderIphone from '../../images/iphone/pg-finder-iphone.png';
 import PGFinderDocumentation from '../../images/pg-finder-documentation1.png';
+import { motion } from 'framer-motion';
+
 import {
   Container,
   InnerContainer,
@@ -28,7 +30,11 @@ import { FaServer } from 'react-icons/fa';
 
 const PGFinderPage = () => {
   return (
-    <Fragment>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -102,6 +108,7 @@ const PGFinderPage = () => {
                 href='http://pg-finder.julianvazquez.me/doc.html'
                 target='_blank'
                 rel='noopener noreferrer'
+                style={{ background: '#949393' }}
               >
                 Read documentation
               </MarginButton>
@@ -149,7 +156,7 @@ const PGFinderPage = () => {
           </InnerContainer>
         </Container>
       </PaddingWrapper>
-    </Fragment>
+    </motion.div>
   );
 };
 

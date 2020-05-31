@@ -5,6 +5,7 @@ import LifeTrackerDemoEdit from '../../gifs/life-tracker-demo-edit.mp4';
 import LifeTrackerIphone from '../../images/iphone/life-tracker-iphone.png';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { FaServer, FaDatabase } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 import {
   Container,
@@ -30,7 +31,11 @@ import {
 
 const LifeTrackerPage = () => {
   return (
-    <Fragment>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -149,7 +154,7 @@ const LifeTrackerPage = () => {
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>
-    </Fragment>
+    </motion.div>
   );
 };
 

@@ -1,5 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useLocation,
+} from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import './App.css';
 import Home from './components/Home';
@@ -13,6 +18,7 @@ import TypingTestPage from './components/projects/TypingTestPage';
 import ExerciseSitePage from './components/projects/ExerciseSitePage';
 import MovieExplorerPage from './components/projects/MovieExplorerPage';
 import Navbar from './components/top/Navbar';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const theme = {
   primary: '#60b0f4',
@@ -25,18 +31,20 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <ScrollToTop />
-        <Navbar />
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/life-tracker' component={LifeTrackerPage} />
-          <Route path='/pet-matcher' component={PetMatcherPage} />
-          <Route path='/pg-finder' component={PGFinderPage} />
-          <Route path='/exotic-pet-store' component={ExoticPetStorePage} />
-          <Route path='/js-typing-test' component={TypingTestPage} />
-          <Route path='/exercise-site' component={ExerciseSitePage} />
-          <Route path='/movie-explorer' component={MovieExplorerPage} />
-        </Switch>
-        <Footer />
+        <AnimatePresence>
+          <Navbar />
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/life-tracker' component={LifeTrackerPage} />
+            <Route path='/pet-matcher' component={PetMatcherPage} />
+            <Route path='/pg-finder' component={PGFinderPage} />
+            <Route path='/exotic-pet-store' component={ExoticPetStorePage} />
+            <Route path='/js-typing-test' component={TypingTestPage} />
+            <Route path='/exercise-site' component={ExerciseSitePage} />
+            <Route path='/movie-explorer' component={MovieExplorerPage} />
+          </Switch>
+          <Footer />
+        </AnimatePresence>
       </Router>
     </ThemeProvider>
   );

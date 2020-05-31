@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import ExoticPetStoreDemo from '../../gifs/exotic-pet-store-demo.mp4';
 import ExoticPetStoreIphone from '../../images/iphone/exotic-pet-store-iphone.png';
+import { motion } from 'framer-motion';
 
 import {
   Container,
@@ -27,7 +28,11 @@ import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 
 const ExoticPetStorePage = () => {
   return (
-    <Fragment>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -112,7 +117,7 @@ const ExoticPetStorePage = () => {
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>
-    </Fragment>
+    </motion.div>
   );
 };
 

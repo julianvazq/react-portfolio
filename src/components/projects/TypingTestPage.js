@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import TypingTestDemo from '../../gifs/js-typing-test-demo.mp4';
 import TypingTestIphone from '../../images/iphone/js-typing-test-iphone.png';
+import { motion } from 'framer-motion';
 
 import {
   Container,
@@ -27,7 +28,11 @@ import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 
 const TypingTestPage = () => {
   return (
-    <Fragment>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -107,7 +112,7 @@ const TypingTestPage = () => {
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>
-    </Fragment>
+    </motion.div>
   );
 };
 

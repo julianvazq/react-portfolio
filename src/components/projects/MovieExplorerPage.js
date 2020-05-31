@@ -3,6 +3,8 @@ import { HashLink as Link } from 'react-router-hash-link';
 import MovieExplorerBrowse from '../../gifs/movie-explorer-browse.mp4';
 import MovieExplorerWatchlist from '../../gifs/movie-explorer-watchlist.mp4';
 import MovieExplorerIphone from '../../images/iphone/movie-explorer-iphone.png';
+import { motion } from 'framer-motion';
+
 import {
   Container,
   InnerContainer,
@@ -29,7 +31,11 @@ import { FaServer } from 'react-icons/fa';
 
 const MovieExplorerPage = () => {
   return (
-    <Fragment>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -137,7 +143,7 @@ const MovieExplorerPage = () => {
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>
-    </Fragment>
+    </motion.div>
   );
 };
 

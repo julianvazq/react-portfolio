@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import PetMatcherDemo from '../../gifs/pet-matcher-demo.mp4';
 import PetMatcherIphone from '../../images/iphone/pet-matcher-iphone.png';
+import { motion } from 'framer-motion';
+
 import {
   Container,
   InnerContainer,
@@ -27,7 +29,11 @@ import { FaServer } from 'react-icons/fa';
 
 const PetMatcherPage = () => {
   return (
-    <Fragment>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -117,7 +123,7 @@ const PetMatcherPage = () => {
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>
-    </Fragment>
+    </motion.div>
   );
 };
 

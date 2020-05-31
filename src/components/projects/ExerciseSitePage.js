@@ -22,10 +22,15 @@ import {
   PaddingWrapper,
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
+import { motion } from 'framer-motion';
 
 const ExoticPetStorePage = () => {
   return (
-    <Fragment>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
@@ -108,7 +113,7 @@ const ExoticPetStorePage = () => {
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>
-    </Fragment>
+    </motion.div>
   );
 };
 

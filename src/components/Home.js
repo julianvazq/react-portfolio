@@ -5,6 +5,7 @@ import ProjectSection from './middle/ProjectSection.js';
 import CoverImage from '../images/illustrations/cover-image.svg';
 import styled from 'styled-components';
 import { Container } from './styled-components/StyledComponents';
+import { motion } from 'framer-motion';
 
 const HomeContainer = styled.div`
   /* position: relative; */
@@ -39,14 +40,20 @@ const Img = styled.img`
 
 const Home = () => {
   return (
-    <HomeContainer>
-      <Container>
-        <Img src={CoverImage} alt='Illustration.' />
-        <Hero />
-        <AdditionalInfo />
-      </Container>
-      <ProjectSection />
-    </HomeContainer>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <HomeContainer>
+        <Container>
+          <Img src={CoverImage} alt='Illustration.' />
+          <Hero />
+          <AdditionalInfo />
+        </Container>
+        <ProjectSection />
+      </HomeContainer>
+    </motion.div>
   );
 };
 
