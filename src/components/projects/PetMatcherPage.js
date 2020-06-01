@@ -61,7 +61,14 @@ const PetMatcherPage = () => {
               </ButtonContainer>
             </InnerContainer>
           </Container>
-          <Video autoPlay loop muted playsInline controls>
+          <Video
+            autoPlay
+            loop
+            muted
+            playsInline
+            controls
+            poster={require('../../images/pet-matcher-fallback.png')}
+          >
             <source src={PetMatcherDemo} type='video/mp4' />
             <source src={PetMatcherDemoWebm} type='video/webm' />
             Your browser does not support HTML video.
