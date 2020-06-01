@@ -60,8 +60,9 @@ const ExoticPetStorePage = () => {
               </ButtonContainer>
             </InnerContainer>
           </Container>
-          <Video autoPlay loop muted playsInline>
+          <Video autoPlay loop muted playsInline controls>
             <source src={ExoticPetStoreDemo} type='video/mp4' />
+            Your browser does not support HTML video.
           </Video>
         </PaddingWrapper>
       </BackgroundWrapper>

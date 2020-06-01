@@ -68,8 +68,9 @@ const LifeTrackerPage = () => {
               <VideoHeading>Add and delete items</VideoHeading>
             </InnerContainer>
           </Container>
-          <Video autoPlay loop muted playsInline>
+          <Video autoPlay loop muted playsInline controls>
             <source src={LifeTrackerDemo} type='video/mp4' />
+            Your browser does not support HTML video.
           </Video>
           <Container style={{ padding: 0 }}>
             <InnerContainer>
@@ -78,8 +79,9 @@ const LifeTrackerPage = () => {
               </VideoHeading>
             </InnerContainer>
           </Container>
-          <Video autoPlay loop muted playsInline>
+          <Video autoPlay loop muted playsInline controls>
             <source src={LifeTrackerDemoEdit} type='video/mp4' />
+            Your browser does not support HTML video.
           </Video>
         </PaddingWrapper>
       </BackgroundWrapper>

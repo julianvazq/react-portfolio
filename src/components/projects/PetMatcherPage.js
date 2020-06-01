@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import PetMatcherDemo from '../../gifs/pet-matcher-demo.mp4';
+import PetMatcherDemoWebm from '../../gifs/pet-matcher-demo-webm.webm';
 import PetMatcherIphone from '../../images/iphone/pet-matcher-iphone.png';
 import { motion } from 'framer-motion';
 
@@ -60,8 +61,10 @@ const PetMatcherPage = () => {
               </ButtonContainer>
             </InnerContainer>
           </Container>
-          <Video autoPlay loop muted playsInline>
+          <Video autoPlay loop muted playsInline controls>
             <source src={PetMatcherDemo} type='video/mp4' />
+            <source src={PetMatcherDemoWebm} type='video/webm' />
+            Your browser does not support HTML video.
           </Video>
         </PaddingWrapper>
       </BackgroundWrapper>

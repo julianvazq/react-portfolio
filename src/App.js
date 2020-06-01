@@ -18,35 +18,27 @@ import TypingTestPage from './components/projects/TypingTestPage';
 import ExerciseSitePage from './components/projects/ExerciseSitePage';
 import MovieExplorerPage from './components/projects/MovieExplorerPage';
 import Navbar from './components/top/Navbar';
-import { motion, AnimatePresence } from 'framer-motion';
-
-const theme = {
-  primary: '#60b0f4',
-  secondary: '#f0f4f6',
-  gray: 'hsl(0, 0%, 55%)',
-};
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Router>
-        <ScrollToTop />
-        <AnimatePresence>
-          <Navbar />
-          <Switch>
-            <Route path='/' exact component={Home} />
-            <Route path='/life-tracker' component={LifeTrackerPage} />
-            <Route path='/pet-matcher' component={PetMatcherPage} />
-            <Route path='/pg-finder' component={PGFinderPage} />
-            <Route path='/exotic-pet-store' component={ExoticPetStorePage} />
-            <Route path='/js-typing-test' component={TypingTestPage} />
-            <Route path='/exercise-site' component={ExerciseSitePage} />
-            <Route path='/movie-explorer' component={MovieExplorerPage} />
-          </Switch>
-          <Footer />
-        </AnimatePresence>
-      </Router>
-    </ThemeProvider>
+    <>
+      <ScrollToTop />
+      <AnimatePresence>
+        <Navbar />
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/life-tracker' component={LifeTrackerPage} />
+          <Route path='/pet-matcher' component={PetMatcherPage} />
+          <Route path='/pg-finder' component={PGFinderPage} />
+          <Route path='/exotic-pet-store' component={ExoticPetStorePage} />
+          <Route path='/js-typing-test' component={TypingTestPage} />
+          <Route path='/exercise-site' component={ExerciseSitePage} />
+          <Route path='/movie-explorer' component={MovieExplorerPage} />
+        </Switch>
+        <Footer />
+      </AnimatePresence>
+    </>
   );
 }
 

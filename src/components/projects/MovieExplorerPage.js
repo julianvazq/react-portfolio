@@ -67,8 +67,9 @@ const MovieExplorerPage = () => {
               <VideoHeading>Browse similar movies</VideoHeading>
             </InnerContainer>
           </Container>
-          <Video autoPlay loop muted playsInline>
+          <Video autoPlay loop muted playsInline controls>
             <source src={MovieExplorerBrowse} type='video/mp4' />
+            Your browser does not support HTML video.
           </Video>
           <Container style={{ padding: 0 }}>
             <InnerContainer>
@@ -77,8 +78,9 @@ const MovieExplorerPage = () => {
               </VideoHeading>
             </InnerContainer>
           </Container>
-          <Video autoPlay loop muted playsInline>
+          <Video autoPlay loop muted playsInline controls>
             <source src={MovieExplorerWatchlist} type='video/mp4' />
+            Your browser does not support HTML video.
           </Video>
         </PaddingWrapper>
       </BackgroundWrapper>
