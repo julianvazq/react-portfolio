@@ -216,54 +216,6 @@ const ProjectSection = () => {
             </div>
           </ProjectItem>
         </Link>
-        <Link to='/exotic-pet-store'>
-          <ProjectItem>
-            <div>
-              <TechInfo>
-                <p>JS | HTML | CSS</p>
-              </TechInfo>
-              <picture>
-                <source
-                  srcSet={require('../../images/lg/exotic-pet-store-lg.jpg')}
-                  media='(min-width: 1200px)'
-                />
-                <source
-                  srcSet={require('../../images/sm/exotic-pet-store-sm.png')}
-                  media='(max-width: 1200px)'
-                />
-                <img
-                  src={require('../../images/lg/exotic-pet-store-lg.jpg')}
-                  alt='Exotic Pet Store Landing Page.'
-                />
-              </picture>
-              <h3>Store Landing Page</h3>
-            </div>
-          </ProjectItem>
-        </Link>
-        <Link to='/exercise-site'>
-          <ProjectItem>
-            <div>
-              <TechInfo>
-                <p>HTML | CSS</p>
-              </TechInfo>
-              <picture>
-                <source
-                  srcSet={require('../../images/lg/exercise-site-lg.jpg')}
-                  media='(min-width: 1200px)'
-                />
-                <source
-                  srcSet={require('../../images/sm/exercise-site-sm.jpg')}
-                  media='(max-width: 1200px)'
-                />
-                <img
-                  src={require('../../images/lg/exercise-site-lg.jpg')}
-                  alt='Exercise Site Product Landing Page.'
-                />
-              </picture>
-              <h3>Product Landing Page</h3>
-            </div>
-          </ProjectItem>
-        </Link>
         <Link to='/js-typing-test'>
           <ProjectItem>
             <div>
@@ -309,6 +261,54 @@ const ProjectSection = () => {
                 />
               </picture>
               <h3>PG Finder</h3>
+            </div>
+          </ProjectItem>
+        </Link>
+        <Link to='/exotic-pet-store'>
+          <ProjectItem>
+            <div>
+              <TechInfo>
+                <p>JS | HTML | CSS</p>
+              </TechInfo>
+              <picture>
+                <source
+                  srcSet={require('../../images/lg/exotic-pet-store-lg.jpg')}
+                  media='(min-width: 1200px)'
+                />
+                <source
+                  srcSet={require('../../images/sm/exotic-pet-store-sm.png')}
+                  media='(max-width: 1200px)'
+                />
+                <img
+                  src={require('../../images/lg/exotic-pet-store-lg.jpg')}
+                  alt='Exotic Pet Store Landing Page.'
+                />
+              </picture>
+              <h3>Store Landing Page</h3>
+            </div>
+          </ProjectItem>
+        </Link>
+        <Link to='/exercise-site'>
+          <ProjectItem>
+            <div>
+              <TechInfo>
+                <p>HTML | CSS</p>
+              </TechInfo>
+              <picture>
+                <source
+                  srcSet={require('../../images/lg/exercise-site-lg.jpg')}
+                  media='(min-width: 1200px)'
+                />
+                <source
+                  srcSet={require('../../images/sm/exercise-site-sm.jpg')}
+                  media='(max-width: 1200px)'
+                />
+                <img
+                  src={require('../../images/lg/exercise-site-lg.jpg')}
+                  alt='Exercise Site Product Landing Page.'
+                />
+              </picture>
+              <h3>Product Landing Page</h3>
             </div>
           </ProjectItem>
         </Link>
