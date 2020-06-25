@@ -16,7 +16,8 @@ export const Container = styled.div`
 
 export const InnerContainer = styled.div`
   margin: auto;
-  width: 700px;
+  width: 100%;
+  max-width: 1000px;
 `;
 
 export const Title = styled.h1`
@@ -112,6 +113,10 @@ export const SubHeading = styled.h3`
 export const StyledParagraph = styled.p`
   font-size: 1.5rem;
   line-height: 1.7;
+
+  a {
+    color: ${(props) => props.theme.primary};
+  }
 
   @media (max-width: 700px) {
     font-size: 1.2rem;
@@ -209,7 +214,7 @@ export const StyledSpan = styled.span`
   color: hsl(208, 40%, 65%);
 `;
 
-export const BackgroundWrapper = styled.main`
+export const BackgroundWrapper = styled.section`
   background: ${(props) => props.theme.secondary};
 `;
 

@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useLocation,
-} from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 import Footer from './components/Footer';
@@ -19,6 +13,7 @@ import ExerciseSitePage from './components/projects/ExerciseSitePage';
 import MovieExplorerPage from './components/projects/MovieExplorerPage';
 import Navbar from './components/top/Navbar';
 import { AnimatePresence } from 'framer-motion';
+import ECommercePage from './components/projects/EcommercePage';
 
 function App() {
   return (
@@ -28,11 +23,12 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
+          <Route path='/e-commerce' component={ECommercePage} />
           <Route path='/life-tracker' component={LifeTrackerPage} />
           <Route path='/pet-matcher' component={PetMatcherPage} />
-          <Route path='/pg-finder' component={PGFinderPage} />
+          {/* <Route path='/pg-finder' component={PGFinderPage} /> */}
           <Route path='/exotic-pet-store' component={ExoticPetStorePage} />
-          <Route path='/js-typing-test' component={TypingTestPage} />
+          {/* <Route path='/js-typing-test' component={TypingTestPage} /> */}
           <Route path='/exercise-site' component={ExerciseSitePage} />
           <Route path='/movie-explorer' component={MovieExplorerPage} />
         </Switch>

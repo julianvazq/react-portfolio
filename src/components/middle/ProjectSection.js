@@ -49,9 +49,9 @@ const GridContainer = styled.div`
     grid-column: span 4;
   }
 
-  a:first-of-type {
+  /* a:first-of-type {
     grid-column: 3/7;
-  }
+  } */
 
   a:focus {
     transform: translateY(-3px);
@@ -63,10 +63,10 @@ const GridContainer = styled.div`
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
 
-    a,
+    /* a,
     a:first-of-type {
       grid-column: span 8;
-    }
+    } */
   }
 
   @media (max-width: 580px) {
@@ -144,6 +144,30 @@ const ProjectSection = () => {
         <SectionTitle id='projects'>Recent Projects</SectionTitle>
       </Container>
       <GridContainer>
+        <Link to='/e-commerce'>
+          <ProjectItem>
+            <div>
+              <TechInfo>
+                <p>NextJS | Node | Express </p>
+              </TechInfo>
+              <picture>
+                <source
+                  srcSet={require('../../images/lg/e-commerce-lg.png')}
+                  media='(min-width: 1200px)'
+                />
+                <source
+                  srcSet={require('../../images/sm/e-commerce-sm.png')}
+                  media='(max-width: 1200px)'
+                />
+                <img
+                  src={require('../../images/lg/e-commerce-lg.png')}
+                  alt='Movie Explorer App.'
+                />
+              </picture>
+              <h3>Mock E-Commerce</h3>
+            </div>
+          </ProjectItem>
+        </Link>
         <Link to='/movie-explorer'>
           <ProjectItem>
             <div>
@@ -216,7 +240,7 @@ const ProjectSection = () => {
             </div>
           </ProjectItem>
         </Link>
-        <Link to='/js-typing-test'>
+        {/* <Link to='/js-typing-test'>
           <ProjectItem>
             <div>
               <TechInfo>
@@ -239,8 +263,8 @@ const ProjectSection = () => {
               <h3>JS Typing Test</h3>
             </div>
           </ProjectItem>
-        </Link>
-        <Link to='/pg-finder'>
+        </Link> */}
+        {/* <Link to='/pg-finder'>
           <ProjectItem>
             <div>
               <TechInfo>
@@ -263,7 +287,7 @@ const ProjectSection = () => {
               <h3>PG Finder</h3>
             </div>
           </ProjectItem>
-        </Link>
+        </Link> */}
         <Link to='/exotic-pet-store'>
           <ProjectItem>
             <div>

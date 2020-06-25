@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import ExerciseSiteHomePage from '../../images/lg/exercise-site-lg.jpg';
 import ExerciseSiteIphone from '../../images/iphone/exercise-site-iphone.png';

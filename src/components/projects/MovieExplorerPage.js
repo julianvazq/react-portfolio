@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import MovieExplorerBrowse from '../../gifs/movie-explorer-browse.mp4';
 import MovieExplorerWatchlist from '../../gifs/movie-explorer-watchlist.mp4';
