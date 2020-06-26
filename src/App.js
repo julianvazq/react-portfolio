@@ -1,14 +1,14 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import LifeTrackerPage from './components/projects/LifeTrackerPage';
 import PetMatcherPage from './components/projects/PetMatcherPage';
-import PGFinderPage from './components/projects/PGFinderPage';
+// import PGFinderPage from './components/projects/PGFinderPage';
 import ExoticPetStorePage from './components/projects/ExoticPetStorePage';
-import TypingTestPage from './components/projects/TypingTestPage';
+// import TypingTestPage from './components/projects/TypingTestPage';
 import ExerciseSitePage from './components/projects/ExerciseSitePage';
 import MovieExplorerPage from './components/projects/MovieExplorerPage';
 import Navbar from './components/top/Navbar';
@@ -16,9 +16,17 @@ import { AnimatePresence } from 'framer-motion';
 import ECommercePage from './components/projects/EcommercePage';
 
 function App() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
+
   return (
     <>
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <AnimatePresence>
         <Navbar />
         <Switch>
