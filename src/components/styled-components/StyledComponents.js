@@ -16,7 +16,7 @@ export const Container = styled.div`
 
 export const InnerContainer = styled.div`
   margin: auto;
-  width: 700px;
+  max-width: 700px;
 `;
 
 export const LongContainer = styled.div`
