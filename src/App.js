@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
@@ -16,20 +16,14 @@ import { AnimatePresence } from 'framer-motion';
 import ECommercePage from './components/projects/EcommercePage';
 
 function App() {
-  const { pathname, hash } = useLocation();
-
-  useEffect(() => {
-    if (!hash) {
-      window.scrollTo(0, 0);
-    }
-  }, [pathname]);
+  const location = useLocation();
 
   return (
     <>
-      {/* <ScrollToTop /> */}
-      <AnimatePresence>
-        <Navbar />
-        <Switch>
+      <ScrollToTop />
+      <Navbar />
+      <AnimatePresence exitBeforeEnter>
+        <Switch key={location.pathname}>
           <Route path='/' exact component={Home} />
           <Route path='/e-commerce' component={ECommercePage} />
           <Route path='/life-tracker' component={LifeTrackerPage} />
@@ -40,8 +34,8 @@ function App() {
           <Route path='/exercise-site' component={ExerciseSitePage} />
           <Route path='/movie-explorer' component={MovieExplorerPage} />
         </Switch>
-        <Footer />
       </AnimatePresence>
+      <Footer />
     </>
   );
 }
