@@ -296,7 +296,7 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/exotic-pet-store-lg.jpg')}
+                  srcSet={require('../../images/lg/exotic-pet-store-lg.png')}
                   media='(min-width: 1200px)'
                 />
                 <source
@@ -304,7 +304,7 @@ const ProjectSection = () => {
                   media='(max-width: 1200px)'
                 />
                 <img
-                  src={require('../../images/lg/exotic-pet-store-lg.jpg')}
+                  src={require('../../images/lg/exotic-pet-store-lg.png')}
                   alt='Exotic Pet Store Landing Page.'
                 />
               </picture>
@@ -320,7 +320,7 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/exercise-site-lg.jpg')}
+                  srcSet={require('../../images/lg/exercise-site-lg.png')}
                   media='(min-width: 1200px)'
                 />
                 <source
@@ -328,7 +328,7 @@ const ProjectSection = () => {
                   media='(max-width: 1200px)'
                 />
                 <img
-                  src={require('../../images/lg/exercise-site-lg.jpg')}
+                  src={require('../../images/lg/exercise-site-lg.png')}
                   alt='Exercise Site Product Landing Page.'
                 />
               </picture>
