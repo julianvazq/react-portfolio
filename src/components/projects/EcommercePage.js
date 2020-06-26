@@ -147,8 +147,9 @@ const ECommercePage = () => {
             <InnerContainer>
               <SubHeading id='editing'>Editing</SubHeading>
               <StyledParagraph>
-                Because I only used copyright free images for this project, I
-                had to do a little editing in{' '}
+                Images can make or break a site. Because I only used
+                non-copyrighted images for this project, I had to do a little
+                editing in{' '}
                 <a
                   href='https://www.gimp.org/'
                   target='_blank'
@@ -157,7 +158,7 @@ const ECommercePage = () => {
                   GIMP
                 </a>
                 . Turns out there's not many high-quality headphone images
-                (without a background) labeled for reuse...
+                labeled for reuse...
               </StyledParagraph>
             </InnerContainer>
           </Container>

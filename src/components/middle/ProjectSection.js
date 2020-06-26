@@ -176,7 +176,7 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/movie-explorer-lg.jpg')}
+                  srcSet={require('../../images/lg/movie-explorer-lg.png')}
                   media='(min-width: 1200px)'
                 />
                 <source
