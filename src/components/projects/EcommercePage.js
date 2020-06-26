@@ -20,6 +20,7 @@ import {
   StyledSpan,
   BackgroundWrapper,
   PaddingWrapper,
+  LongContainer,
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { FaServer } from 'react-icons/fa';
@@ -60,7 +61,7 @@ const ECommercePage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
+            <LongContainer>
               <Title>Exercise&trade;</Title>
               <FlexContainer>
                 <div>
@@ -102,7 +103,7 @@ const ECommercePage = () => {
                   </ul>
                 </Navigation>
               </FlexContainer>
-            </InnerContainer>
+            </LongContainer>
           </Container>
           <ResponsiveImg src={EcommerceHome} alt='Responsive design.' />
         </PaddingWrapper>
@@ -110,7 +111,7 @@ const ECommercePage = () => {
 
       <PaddingWrapper>
         <Container>
-          <InnerContainer>
+          <LongContainer>
             <SubHeading id='design'>Design vs. Actual</SubHeading>
             <StyledParagraph>
               I already had a design in mind, so I started off by creating a
@@ -129,7 +130,7 @@ const ECommercePage = () => {
               To compliment the look, I chose appropriate sans-serif fonts
               (Oswald &amp; Open Sans), and added a few smooth animations.
             </StyledParagraph>
-          </InnerContainer>
+          </LongContainer>
         </Container>
         <StackedImg
           src={require('../../images/figma-vs-actual-1.png')}
@@ -144,7 +145,7 @@ const ECommercePage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
+            <LongContainer>
               <SubHeading id='editing'>Editing</SubHeading>
               <StyledParagraph>
                 Images can make or break a site. Because I only used
@@ -160,7 +161,7 @@ const ECommercePage = () => {
                 . Turns out there's not many high-quality headphone images
                 labeled for reuse...
               </StyledParagraph>
-            </InnerContainer>
+            </LongContainer>
           </Container>
           <ResponsiveImg
             src={require('../../images/before-after.png')}
@@ -171,7 +172,7 @@ const ECommercePage = () => {
 
       <PaddingWrapper>
         <Container>
-          <InnerContainer>
+          <LongContainer>
             <SubHeading id='responsiveness'>Responsive design</SubHeading>
             <StyledParagraph>
               Mobile accounts for approximately half of web traffic worldwide.
@@ -179,7 +180,7 @@ const ECommercePage = () => {
               growing, making it increasingly important to cater to devices of
               all sizes.
             </StyledParagraph>
-          </InnerContainer>
+          </LongContainer>
         </Container>
         <ResponsiveImg iphone src={EcommerceIphone} alt='Responsive design.' />
       </PaddingWrapper>
@@ -187,41 +188,43 @@ const ECommercePage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
+            <LongContainer>
               <SubHeading id='tech'>Technologies</SubHeading>
-              <TechList>
-                <ListItem>
-                  <IconContainer>
-                    <BsDisplayFill />
-                  </IconContainer>
-                  <div>
-                    <StyledSpan>Frontend</StyledSpan>
-                    <br /> React (NextJS), Styled Components
-                  </div>
-                </ListItem>
-                <ListItem>
-                  <IconContainer>
-                    <FaServer />
-                  </IconContainer>
-                  <div>
-                    <StyledSpan>Backend</StyledSpan>
-                    <br /> Node, Express
-                  </div>
-                </ListItem>
-                <ListItem>
-                  <IconContainer>
-                    <BsThreeDots />
-                  </IconContainer>
-                  <div>
-                    <StyledSpan>Others</StyledSpan>
-                    <br /> React Hooks, Dynamic Routes
-                  </div>
-                </ListItem>
-              </TechList>
-              <MarginButton as={Link} to='/#projects'>
-                Back to projects
-              </MarginButton>
-            </InnerContainer>
+              <InnerContainer>
+                <TechList>
+                  <ListItem>
+                    <IconContainer>
+                      <BsDisplayFill />
+                    </IconContainer>
+                    <div>
+                      <StyledSpan>Frontend</StyledSpan>
+                      <br /> React (NextJS), Styled Components
+                    </div>
+                  </ListItem>
+                  <ListItem>
+                    <IconContainer>
+                      <FaServer />
+                    </IconContainer>
+                    <div>
+                      <StyledSpan>Backend</StyledSpan>
+                      <br /> Node, Express
+                    </div>
+                  </ListItem>
+                  <ListItem>
+                    <IconContainer>
+                      <BsThreeDots />
+                    </IconContainer>
+                    <div>
+                      <StyledSpan>Others</StyledSpan>
+                      <br /> React Hooks, Dynamic Routes
+                    </div>
+                  </ListItem>
+                </TechList>
+                <MarginButton as={Link} to='/#projects'>
+                  Back to projects
+                </MarginButton>
+              </InnerContainer>
+            </LongContainer>
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>

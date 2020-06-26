@@ -16,6 +16,11 @@ export const Container = styled.div`
 
 export const InnerContainer = styled.div`
   margin: auto;
+  width: 700px;
+`;
+
+export const LongContainer = styled.div`
+  margin: auto;
   width: 100%;
   max-width: 1000px;
 `;
