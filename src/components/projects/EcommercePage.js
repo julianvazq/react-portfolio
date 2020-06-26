@@ -62,7 +62,7 @@ const ECommercePage = () => {
         <PaddingWrapper>
           <Container>
             <LongContainer>
-              <Title>Exercise&trade;</Title>
+              <Title>Mock E-Commerce</Title>
               <FlexContainer>
                 <div>
                   <ProjectDescription>
