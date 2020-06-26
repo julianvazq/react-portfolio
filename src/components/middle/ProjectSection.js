@@ -152,15 +152,19 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/e-commerce-lg.png')}
-                  media='(min-width: 1200px)'
+                  srcSet={require('../../images/sm/e-commerce-sm.png')}
+                  media='(max-width: 799px)'
                 />
                 <source
-                  srcSet={require('../../images/sm/e-commerce-sm.png')}
-                  media='(max-width: 1200px)'
+                  srcSet={require('../../images/md/e-commerce-md.png')}
+                  media='(max-width: 1500px)'
+                />
+                <source
+                  srcSet={require('../../images/lg/e-commerce-lg.png')}
+                  media='(min-width: 1500px)'
                 />
                 <img
-                  src={require('../../images/lg/e-commerce-lg.png')}
+                  src={require('../../images/md/e-commerce-md.png')}
                   alt='Movie Explorer App.'
                 />
               </picture>
@@ -176,15 +180,19 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/movie-explorer-lg.png')}
-                  media='(min-width: 1200px)'
+                  srcSet={require('../../images/sm/movie-explorer-sm.png')}
+                  media='(max-width: 799px)'
                 />
                 <source
-                  srcSet={require('../../images/sm/movie-explorer-sm.jpg')}
-                  media='(max-width: 1200px)'
+                  srcSet={require('../../images/md/movie-explorer-md.png')}
+                  media='(max-width: 1500px)'
+                />
+                <source
+                  srcSet={require('../../images/lg/movie-explorer-lg.png')}
+                  media='(min-width: 1500px)'
                 />
                 <img
-                  src={require('../../images/lg/movie-explorer-lg.jpg')}
+                  src={require('../../images/md/movie-explorer-md.png')}
                   alt='Movie Explorer App.'
                 />
               </picture>
@@ -200,15 +208,19 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/life-tracker-lg.png')}
-                  media='(min-width: 1200px)'
+                  srcSet={require('../../images/sm/life-tracker-sm.png')}
+                  media='(max-width: 799px)'
                 />
                 <source
-                  srcSet={require('../../images/sm/life-tracker-sm.jpg')}
-                  media='(max-width: 1200px)'
+                  srcSet={require('../../images/md/life-tracker-md.png')}
+                  media='(max-width: 1500px)'
+                />
+                <source
+                  srcSet={require('../../images/lg/life-tracker-lg.png')}
+                  media='(min-width: 1500px)'
                 />
                 <img
-                  src={require('../../images/lg/life-tracker-lg.png')}
+                  src={require('../../images/md/life-tracker-md.png')}
                   alt='Life Tracker App.'
                 />
               </picture>
@@ -224,15 +236,19 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/pet-matcher-lg.png')}
-                  media='(min-width: 1200px)'
+                  srcSet={require('../../images/sm/pet-matcher-sm.png')}
+                  media='(max-width: 799px)'
                 />
                 <source
-                  srcSet={require('../../images/sm/pet-matcher-sm.png')}
-                  media='(max-width: 1200px)'
+                  srcSet={require('../../images/md/pet-matcher-md.png')}
+                  media='(max-width: 1500px)'
+                />
+                <source
+                  srcSet={require('../../images/lg/pet-matcher-lg.png')}
+                  media='(min-width: 1500px)'
                 />
                 <img
-                  src={require('../../images/lg/pet-matcher-lg.png')}
+                  src={require('../../images/md/pet-matcher-md.png')}
                   alt='Pet Matcher App.'
                 />
               </picture>
@@ -248,15 +264,15 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/js-typing-test-lg.jpg')}
+                  srcSet={require('../../images/lg/js-typing-test-lg.png')}
                   media='(min-width: 1200px)'
                 />
                 <source
-                  srcSet={require('../../images/sm/js-typing-test-sm.jpg')}
+                  srcSet={require('../../images/sm/js-typing-test-sm.png')}
                   media='(max-width: 1200px)'
                 />
                 <img
-                  src={require('../../images/lg/js-typing-test-lg.jpg')}
+                  src={require('../../images/lg/js-typing-test-lg.png')}
                   alt='JavaScript Typing Test.'
                 />
               </picture>
@@ -272,15 +288,15 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/pg-finder-lg.jpg')}
+                  srcSet={require('../../images/lg/pg-finder-lg.png')}
                   media='(min-width: 1200px)'
                 />
                 <source
-                  srcSet={require('../../images/sm/pg-finder-sm.jpg')}
+                  srcSet={require('../../images/sm/pg-finder-sm.png')}
                   media='(max-width: 1200px)'
                 />
                 <img
-                  src={require('../../images/lg/pg-finder-lg.jpg')}
+                  src={require('../../images/lg/pg-finder-lg.png')}
                   alt='PG Finder App.'
                 />
               </picture>
@@ -296,15 +312,19 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/exotic-pet-store-lg.png')}
-                  media='(min-width: 1200px)'
+                  srcSet={require('../../images/sm/exotic-pet-store-sm.png')}
+                  media='(max-width: 799px)'
                 />
                 <source
-                  srcSet={require('../../images/sm/exotic-pet-store-sm.png')}
-                  media='(max-width: 1200px)'
+                  srcSet={require('../../images/md/exotic-pet-store-md.png')}
+                  media='(max-width: 1500px)'
+                />
+                <source
+                  srcSet={require('../../images/lg/exotic-pet-store-lg.png')}
+                  media='(min-width: 1500px)'
                 />
                 <img
-                  src={require('../../images/lg/exotic-pet-store-lg.png')}
+                  src={require('../../images/md/exotic-pet-store-md.png')}
                   alt='Exotic Pet Store Landing Page.'
                 />
               </picture>
@@ -320,15 +340,19 @@ const ProjectSection = () => {
               </TechInfo>
               <picture>
                 <source
-                  srcSet={require('../../images/lg/exercise-site-lg.png')}
-                  media='(min-width: 1200px)'
+                  srcSet={require('../../images/sm/exercise-site-sm.png')}
+                  media='(max-width: 799px)'
                 />
                 <source
-                  srcSet={require('../../images/sm/exercise-site-sm.jpg')}
-                  media='(max-width: 1200px)'
+                  srcSet={require('../../images/md/exercise-site-md.png')}
+                  media='(max-width: 1500px)'
+                />
+                <source
+                  srcSet={require('../../images/lg/exercise-site-lg.png')}
+                  media='(min-width: 1500px)'
                 />
                 <img
-                  src={require('../../images/lg/exercise-site-lg.png')}
+                  src={require('../../images/md/exercise-site-md.png')}
                   alt='Exercise Site Product Landing Page.'
                 />
               </picture>

@@ -117,7 +117,7 @@ const ECommercePage = () => {
               I already had a design in mind, so I started off by creating a
               high-fidelity wireframe in{' '}
               <a
-                href='https://www.figma.com'
+                href='https://www.figma.com/file/OR9WLOXwJJ6IHV3IbO5W2w/Headphones-E-Commerce?node-id=0%3A1'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -127,8 +127,8 @@ const ECommercePage = () => {
               white space and an eye-catching primary color.
             </StyledParagraph>
             <StyledParagraph style={{ marginTop: '1em' }}>
-              To compliment the look, I chose appropriate sans-serif fonts
-              (Oswald &amp; Open Sans), and added a few smooth animations.
+              To compliment the look, I chose fitting sans-serif fonts (Oswald
+              &amp; Open Sans), and added a few smooth animations.
             </StyledParagraph>
           </LongContainer>
         </Container>
@@ -216,7 +216,7 @@ const ECommercePage = () => {
                     </IconContainer>
                     <div>
                       <StyledSpan>Others</StyledSpan>
-                      <br /> React Hooks, Dynamic Routes
+                      <br /> React Hooks, React Context, Dynamic Routes
                     </div>
                   </ListItem>
                 </TechList>

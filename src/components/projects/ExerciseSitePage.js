@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import ExerciseSiteHomePage from '../../images/lg/exercise-site-lg.jpg';
+import ExerciseSiteHomePage from '../../images/lg/exercise-site-lg.png';
 import ExerciseSiteIphone from '../../images/iphone/exercise-site-iphone.png';
 import {
   Container,
@@ -37,8 +37,8 @@ const ExoticPetStorePage = () => {
             <InnerContainer>
               <Title>Exercise&trade;</Title>
               <ProjectDescription>
-                Landing page for a fictional product. Decided to have a little
-                fun and made it as if 'Exercise' was the product.
+                Landing page for a fictional product. Didn't want to use a
+                specific product, so I used 'Exercise' as if it were a product.
               </ProjectDescription>
               <ButtonContainer>
                 <Button
