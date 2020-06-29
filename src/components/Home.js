@@ -4,15 +4,16 @@ import AdditionalInfo from './top/AdditionalInfo';
 import ProjectSection from './middle/ProjectSection.js';
 import CoverImage from '../images/illustrations/cover-image.svg';
 import styled from 'styled-components';
-import { Container } from './styled-components/StyledComponents';
+import {
+  Container,
+  fadeIn,
+  fadeInFromRight,
+} from './styled-components/StyledComponents';
 import { motion } from 'framer-motion';
 
-const HomeContainer = styled.div`
-  /* position: relative; */
-  /* z-index: 1; */
-`;
+const HomeContainer = styled.div``;
 
-const Img = styled.img`
+const Img = styled(motion.img)`
   display: block;
   width: 250px;
   margin: 1rem auto 4rem auto;
@@ -41,13 +42,18 @@ const Img = styled.img`
 const Home = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      variants={fadeIn}
+      initial='hidden'
+      animate='visible'
+      exit='hidden'
     >
       <HomeContainer>
         <Container>
-          <Img src={CoverImage} alt='Illustration.' />
+          <Img
+            src={CoverImage}
+            alt='Illustration.'
+            variants={fadeInFromRight}
+          />
           <Hero />
           <AdditionalInfo />
         </Container>

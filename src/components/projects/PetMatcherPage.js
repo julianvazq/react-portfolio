@@ -4,8 +4,8 @@ import PetMatcherDemo from '../../gifs/pet-matcher-demo.mp4';
 import PetMatcherDemoWebm from '../../gifs/pet-matcher-demo-webm.webm';
 import PetMatcherIphone from '../../images/iphone/pet-matcher-iphone.png';
 import { motion } from 'framer-motion';
-
 import {
+  fadeIn,
   Container,
   InnerContainer,
   Title,
@@ -31,9 +31,10 @@ import { FaServer } from 'react-icons/fa';
 const PetMatcherPage = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      variants={fadeIn}
+      initial='hidden'
+      animate='visible'
+      exit='hidden'
     >
       <BackgroundWrapper>
         <PaddingWrapper>
@@ -95,7 +96,7 @@ const PetMatcherPage = () => {
         <PaddingWrapper>
           <Container>
             <InnerContainer>
-              <SubHeading>Technologies</SubHeading>
+              <SubHeading>Tech Details</SubHeading>
               <TechList>
                 <ListItem>
                   <IconContainer>

@@ -23,7 +23,7 @@ const SectionTitle = styled.h2`
   margin: auto;
   position: relative;
 
-  &:after {
+  /* &:after {
     content: '';
     position: absolute;
     bottom: -30%;
@@ -31,7 +31,7 @@ const SectionTitle = styled.h2`
     width: 40%;
     height: 3px;
     background: ${(props) => props.theme.primary};
-  }
+  } */
 
   @media (max-width: 580px) {
     font-size: 2.2rem;
@@ -98,14 +98,15 @@ const ProjectItem = styled.div`
     font-size: 1.8rem;
     padding: 0.5em 0;
     letter-spacing: 2px;
-    background: linear-gradient(
+    /* background: linear-gradient(
       34deg,
       rgba(134, 200, 255, 1) 0%,
       rgba(110, 186, 252, 1) 25%,
       rgba(96, 176, 244, 1) 50%,
       rgba(110, 186, 252, 1) 75%,
       rgba(134, 200, 255, 1) 100%
-    );
+    ); */
+    background: #e2e4e6;
     color: #333;
   }
 
@@ -127,6 +128,7 @@ const TechInfo = styled.div`
   background: #fff;
   color: ${(props) => props.theme.gray};
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-top: 4px solid #60b0f4;
 
   @media (max-width: 950px) {
     font-size: 1.1rem;

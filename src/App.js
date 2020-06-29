@@ -16,14 +16,12 @@ import { AnimatePresence } from 'framer-motion';
 import ECommercePage from './components/projects/EcommercePage';
 
 function App() {
-  const location = useLocation();
-
   return (
     <>
       <ScrollToTop />
       <Navbar />
       <AnimatePresence exitBeforeEnter>
-        <Switch key={location.pathname}>
+        <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/e-commerce' component={ECommercePage} />
           <Route path='/life-tracker' component={LifeTrackerPage} />

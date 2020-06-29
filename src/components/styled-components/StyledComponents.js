@@ -1,5 +1,39 @@
 import styled from 'styled-components';
 
+export const fadeIn = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.75,
+    },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
+
+export const fadeInFromRight = {
+  hidden: {
+    opacity: 0,
+    x: 100,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.75,
+      type: 'spring',
+      damping: 20,
+    },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
+
 export const Container = styled.div`
   max-width: 1400px;
   width: 90%;

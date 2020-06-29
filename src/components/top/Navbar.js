@@ -55,13 +55,6 @@ const Navbar = () => {
           <a href={ResumePDF} target='_blank' rel='noopener noreferrer'>
             <ListItem>Resume</ListItem>
           </a>
-          <a
-            href='https://github.com/julianvazq'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <ListItem>GitHub</ListItem>
-          </a>
         </LinkList>
       </Container>
     </Nav>

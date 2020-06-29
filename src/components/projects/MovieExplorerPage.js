@@ -4,8 +4,8 @@ import MovieExplorerBrowse from '../../gifs/movie-explorer-browse.mp4';
 import MovieExplorerWatchlist from '../../gifs/movie-explorer-watchlist.mp4';
 import MovieExplorerIphone from '../../images/iphone/movie-explorer-iphone.png';
 import { motion } from 'framer-motion';
-
 import {
+  fadeIn,
   Container,
   InnerContainer,
   Title,
@@ -32,9 +32,10 @@ import { FaServer } from 'react-icons/fa';
 const MovieExplorerPage = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      variants={fadeIn}
+      initial='hidden'
+      animate='visible'
+      exit='hidden'
     >
       <BackgroundWrapper>
         <PaddingWrapper>
@@ -108,7 +109,7 @@ const MovieExplorerPage = () => {
         <PaddingWrapper>
           <Container>
             <InnerContainer>
-              <SubHeading>Technologies</SubHeading>
+              <SubHeading>Tech Details</SubHeading>
               <TechList>
                 <ListItem>
                   <IconContainer>
@@ -116,7 +117,7 @@ const MovieExplorerPage = () => {
                   </IconContainer>
                   <div>
                     <StyledSpan>Frontend</StyledSpan>
-                    <br /> React, Redux, Styled Components
+                    <br /> React, Redux, Styled Components (CSS)
                   </div>
                 </ListItem>
                 <ListItem>

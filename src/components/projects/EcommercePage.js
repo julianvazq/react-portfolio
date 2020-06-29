@@ -3,6 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import EcommerceHome from '../../images/lg/e-commerce-lg.png';
 import EcommerceIphone from '../../images/iphone/e-commerce-iphone.png';
 import {
+  fadeIn,
   Container,
   InnerContainer,
   Title,
@@ -54,9 +55,10 @@ const StackedImg = styled(ResponsiveImg)`
 const ECommercePage = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      variants={fadeIn}
+      initial='hidden'
+      animate='visible'
+      exit='hidden'
     >
       <BackgroundWrapper>
         <PaddingWrapper>
@@ -98,7 +100,7 @@ const ECommercePage = () => {
                       <a href='#responsiveness'>Responsiveness</a>
                     </li>
                     <li>
-                      <a href='#tech'>Tech Stack</a>
+                      <a href='#tech'>Tech Details</a>
                     </li>
                   </ul>
                 </Navigation>
@@ -123,12 +125,13 @@ const ECommercePage = () => {
               >
                 Figma
               </a>
-              . I went for a minimalistic and modern aesthetic, with plenty of
-              white space and an eye-catching primary color.
+              . I went for a flat and modern aesthetic, with plenty of white
+              space and an eye-catching primary color.
             </StyledParagraph>
             <StyledParagraph style={{ marginTop: '1em' }}>
-              To compliment the look, I chose fitting sans-serif fonts (Oswald
-              &amp; Open Sans), and added a few smooth animations.
+              To compliment the look, I chose fitting sans-serif fonts that pair
+              well together (Oswald &amp; Open Sans), and added a few smooth
+              animations.
             </StyledParagraph>
           </LongContainer>
         </Container>
@@ -189,7 +192,7 @@ const ECommercePage = () => {
         <PaddingWrapper>
           <Container>
             <LongContainer>
-              <SubHeading id='tech'>Technologies</SubHeading>
+              <SubHeading id='tech'>Tech Details</SubHeading>
               <InnerContainer>
                 <TechList>
                   <ListItem>
@@ -198,7 +201,7 @@ const ECommercePage = () => {
                     </IconContainer>
                     <div>
                       <StyledSpan>Frontend</StyledSpan>
-                      <br /> React (NextJS), Styled Components
+                      <br /> React (NextJS), Styled Components (CSS)
                     </div>
                   </ListItem>
                   <ListItem>

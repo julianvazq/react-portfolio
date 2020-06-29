@@ -5,6 +5,7 @@ import ExoticPetStoreIphone from '../../images/iphone/exotic-pet-store-iphone.pn
 import { motion } from 'framer-motion';
 
 import {
+  fadeIn,
   Container,
   InnerContainer,
   Title,
@@ -29,9 +30,10 @@ import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 const ExoticPetStorePage = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      variants={fadeIn}
+      initial='hidden'
+      animate='visible'
+      exit='hidden'
     >
       <BackgroundWrapper>
         <PaddingWrapper>
@@ -90,7 +92,7 @@ const ExoticPetStorePage = () => {
         <PaddingWrapper>
           <Container>
             <InnerContainer>
-              <SubHeading>Technologies</SubHeading>
+              <SubHeading>Tech Details</SubHeading>
               <TechList>
                 <ListItem>
                   <IconContainer>

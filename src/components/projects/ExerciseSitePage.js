@@ -3,6 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import ExerciseSiteHomePage from '../../images/lg/exercise-site-lg.png';
 import ExerciseSiteIphone from '../../images/iphone/exercise-site-iphone.png';
 import {
+  fadeIn,
   Container,
   InnerContainer,
   Title,
@@ -27,9 +28,10 @@ import { motion } from 'framer-motion';
 const ExoticPetStorePage = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      variants={fadeIn}
+      initial='hidden'
+      animate='visible'
+      exit='hidden'
     >
       <BackgroundWrapper>
         <PaddingWrapper>
@@ -85,7 +87,7 @@ const ExoticPetStorePage = () => {
         <PaddingWrapper>
           <Container>
             <InnerContainer>
-              <SubHeading>Technologies</SubHeading>
+              <SubHeading>Tech Details</SubHeading>
               <TechList>
                 <ListItem>
                   <IconContainer>

@@ -6,8 +6,8 @@ import LifeTrackerIphone from '../../images/iphone/life-tracker-iphone.png';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { FaServer, FaDatabase } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-
 import {
+  fadeIn,
   Container,
   InnerContainer,
   Title,
@@ -32,9 +32,10 @@ import {
 const LifeTrackerPage = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      variants={fadeIn}
+      initial='hidden'
+      animate='visible'
+      exit='hidden'
     >
       <BackgroundWrapper>
         <PaddingWrapper>
@@ -109,7 +110,7 @@ const LifeTrackerPage = () => {
         <PaddingWrapper>
           <Container>
             <InnerContainer>
-              <SubHeading>Technologies</SubHeading>
+              <SubHeading>Tech Details</SubHeading>
               <TechList>
                 <ListItem>
                   <IconContainer>
