@@ -209,7 +209,7 @@ const ECommercePage = () => {
                 >
                   Chrome extension
                 </a>{' '}
-                to perform color blidness testing, and added a visible label
+                to perform color blindness testing, and added a visible label
                 above the color-picker to ensure it's accessible.
               </StyledParagraph>
             </LongContainer>
