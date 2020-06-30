@@ -97,7 +97,10 @@ const ECommercePage = () => {
                       <a href='#editing'>Editing</a>
                     </li>
                     <li>
-                      <a href='#responsiveness'>Responsiveness</a>
+                      <a href='#responsiveness'>Mobile First</a>
+                    </li>
+                    <li>
+                      <a href='#accessibility'>Accessibility</a>
                     </li>
                     <li>
                       <a href='#tech'>Tech Details</a>
@@ -107,6 +110,7 @@ const ECommercePage = () => {
               </FlexContainer>
             </LongContainer>
           </Container>
+
           <ResponsiveImg src={EcommerceHome} alt='Responsive design.' />
         </PaddingWrapper>
       </BackgroundWrapper>
@@ -151,9 +155,11 @@ const ECommercePage = () => {
             <LongContainer>
               <SubHeading id='editing'>Editing</SubHeading>
               <StyledParagraph>
-                Images can make or break a site. Because I only used
-                non-copyrighted images for this project, I had to do a little
-                editing in{' '}
+                Images can make or break a site. Nailing the flat look that I
+                wanted meant that I would need headphones images with
+                transparent backgrounds. Because of the lack of non-copyrighted
+                images that fit what I was looking for, I ended up doing a
+                little editing in{' '}
                 <a
                   href='https://www.gimp.org/'
                   target='_blank'
@@ -161,8 +167,7 @@ const ECommercePage = () => {
                 >
                   GIMP
                 </a>
-                . Turns out there's not many high-quality headphone images
-                labeled for reuse...
+                .
               </StyledParagraph>
             </LongContainer>
           </Container>
@@ -176,7 +181,7 @@ const ECommercePage = () => {
       <PaddingWrapper>
         <Container>
           <LongContainer>
-            <SubHeading id='responsiveness'>Responsive design</SubHeading>
+            <SubHeading id='responsiveness'>Mobile First</SubHeading>
             <StyledParagraph>
               Mobile accounts for approximately half of web traffic worldwide.
               In the upcoming decade, mobile web traffic is expected to keep
@@ -192,45 +197,71 @@ const ECommercePage = () => {
         <PaddingWrapper>
           <Container>
             <LongContainer>
-              <SubHeading id='tech'>Tech Details</SubHeading>
-              <InnerContainer>
-                <TechList>
-                  <ListItem>
-                    <IconContainer>
-                      <BsDisplayFill />
-                    </IconContainer>
-                    <div>
-                      <StyledSpan>Frontend</StyledSpan>
-                      <br /> React (NextJS), Styled Components (CSS)
-                    </div>
-                  </ListItem>
-                  <ListItem>
-                    <IconContainer>
-                      <FaServer />
-                    </IconContainer>
-                    <div>
-                      <StyledSpan>Backend</StyledSpan>
-                      <br /> Node, Express
-                    </div>
-                  </ListItem>
-                  <ListItem>
-                    <IconContainer>
-                      <BsThreeDots />
-                    </IconContainer>
-                    <div>
-                      <StyledSpan>Others</StyledSpan>
-                      <br /> React Hooks, React Context, Dynamic Routes
-                    </div>
-                  </ListItem>
-                </TechList>
-                <MarginButton as={Link} to='/#projects'>
-                  Back to projects
-                </MarginButton>
-              </InnerContainer>
+              <SubHeading id='accessibility'>Accessibility</SubHeading>
+              <StyledParagraph>
+                The web should be accessible to all. Every page can be accessed
+                using keyboard-only navigation, and ARIA labels are included to
+                make it compatible with screen-readers. Lastly, I used a handy{' '}
+                <a
+                  href='https://chrome.google.com/webstore/detail/colorblinding/dgbgleaofjainknadoffbjkclicbbgaa?hl=en'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Chrome extension
+                </a>{' '}
+                to perform color blidness testing, and added a visible label
+                above the color-picker to ensure it's accessible.
+              </StyledParagraph>
             </LongContainer>
           </Container>
+          <ResponsiveImg
+            src={require('../../images/colorblindness.png')}
+            alt='Color blindness testing.'
+          />
         </PaddingWrapper>
       </BackgroundWrapper>
+
+      <PaddingWrapper>
+        <Container>
+          <LongContainer>
+            <SubHeading id='tech'>Tech Details</SubHeading>
+            <InnerContainer>
+              <TechList>
+                <ListItem>
+                  <IconContainer>
+                    <BsDisplayFill />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Frontend</StyledSpan>
+                    <br /> React (NextJS), Styled Components (CSS)
+                  </div>
+                </ListItem>
+                <ListItem>
+                  <IconContainer>
+                    <FaServer />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Backend</StyledSpan>
+                    <br /> Node, Express
+                  </div>
+                </ListItem>
+                <ListItem>
+                  <IconContainer>
+                    <BsThreeDots />
+                  </IconContainer>
+                  <div>
+                    <StyledSpan>Others</StyledSpan>
+                    <br /> React Hooks, React Context, Dynamic Routes
+                  </div>
+                </ListItem>
+              </TechList>
+              <MarginButton as={Link} to='/#projects'>
+                Back to projects
+              </MarginButton>
+            </InnerContainer>
+          </LongContainer>
+        </Container>
+      </PaddingWrapper>
     </motion.div>
   );
 };
