@@ -7,8 +7,15 @@ import { RiExternalLinkLine } from 'react-icons/ri';
 import { FiGithub } from 'react-icons/fi';
 import ResumePDF from '../docs/julian_vazquez_resume.pdf';
 import ContactImage from '../images/illustrations/contact.svg';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
+  const { pathname } = useLocation();
+
+  const BackgroundContainer = styled.section`
+    background: ${(props) => props.background && '#f0f4f6'};
+  `;
+
   const Footer = styled.footer`
     display: flex;
     flex-flow: row wrap;
@@ -141,77 +148,79 @@ const Footer = () => {
   `;
 
   return (
-    <Container>
-      <Footer id='contact'>
-        <FooterText>Liked my portfolio?</FooterText>
-        <a
-          href='mailto:julianvazquez101@gmail.com'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <FooterCTA>Let's talk.</FooterCTA>
-        </a>
-        <Img src={ContactImage} alt='Illustration.' />
-        <ContactList>
-          <a
-            href='https://github.com/julianvazq'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <ContactItem>
-              <IconContainer>
-                <FiGithub />
-              </IconContainer>
-              GitHub
-            </ContactItem>
-          </a>
-          <a
-            href='https://www.linkedin.com/in/julian-vazquez/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <ContactItem>
-              <IconContainer>
-                <GrLinkedinOption />
-              </IconContainer>
-              Linkedin
-            </ContactItem>
-          </a>
+    <BackgroundContainer background={pathname === '/e-commerce'}>
+      <Container>
+        <Footer id='contact'>
+          <FooterText>Liked my portfolio?</FooterText>
           <a
             href='mailto:julianvazquez101@gmail.com'
             target='_blank'
             rel='noopener noreferrer'
           >
-            <ContactItem>
-              <IconContainer>
-                <MdEmail />
-              </IconContainer>
-              Email
-            </ContactItem>
+            <FooterCTA>Let's talk.</FooterCTA>
           </a>
-          <a href={ResumePDF} target='_blank' rel='noopener noreferrer'>
-            <ContactItem>
-              <IconContainer>
-                <MdPictureAsPdf />
-              </IconContainer>
-              Resume
-            </ContactItem>
-          </a>
-          <a
-            href='https://julianvazq.github.io/accessibility-web-explainer/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <ContactItem>
-              <IconContainer>
-                <RiExternalLinkLine />
-              </IconContainer>
-              Accessibility
-            </ContactItem>
-          </a>
-        </ContactList>
-      </Footer>
-    </Container>
+          <Img src={ContactImage} alt='Illustration.' />
+          <ContactList>
+            <a
+              href='https://github.com/julianvazq'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <ContactItem>
+                <IconContainer>
+                  <FiGithub />
+                </IconContainer>
+                GitHub
+              </ContactItem>
+            </a>
+            <a
+              href='https://www.linkedin.com/in/julian-vazquez/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <ContactItem>
+                <IconContainer>
+                  <GrLinkedinOption />
+                </IconContainer>
+                Linkedin
+              </ContactItem>
+            </a>
+            <a
+              href='mailto:julianvazquez101@gmail.com'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <ContactItem>
+                <IconContainer>
+                  <MdEmail />
+                </IconContainer>
+                Email
+              </ContactItem>
+            </a>
+            <a href={ResumePDF} target='_blank' rel='noopener noreferrer'>
+              <ContactItem>
+                <IconContainer>
+                  <MdPictureAsPdf />
+                </IconContainer>
+                Resume
+              </ContactItem>
+            </a>
+            <a
+              href='https://julianvazq.github.io/accessibility-web-explainer/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <ContactItem>
+                <IconContainer>
+                  <RiExternalLinkLine />
+                </IconContainer>
+                Accessibility
+              </ContactItem>
+            </a>
+          </ContactList>
+        </Footer>
+      </Container>
+    </BackgroundContainer>
   );
 };
 

@@ -242,7 +242,8 @@ export const Button = styled.a`
 `;
 
 export const SecondaryButton = styled(Button)`
-  background: #949393;
+  background: hsl(210, 7%, 89%);
+  color: hsl(210, 7%, 50%);
 `;
 
 export const MarginButton = styled(Button)`
