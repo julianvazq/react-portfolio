@@ -22,16 +22,18 @@ const Hero = () => {
     color: ${(props) => props.theme.primary};
     margin-bottom: 1rem;
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
   `;
 
   const Position = styled(Name)`
-    font-size: 2.25rem;
+    font-family: 'Work Sans', 'Helvetica', 'sans-serif';
+    font-size: 1.75em;
     color: #808080;
     line-height: 1.2;
     margin-bottom: 4rem;
 
     @media (max-width: 580px) {
-      font-size: 2.1rem;
+      font-size: 1.5rem;
       line-height: 1.25;
     }
   `;
