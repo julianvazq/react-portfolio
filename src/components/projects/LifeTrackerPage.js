@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import LifeTrackerDemo from '../../gifs/life-tracker-demo.mp4';
 import LifeTrackerDemoEdit from '../../gifs/life-tracker-demo-edit.mp4';

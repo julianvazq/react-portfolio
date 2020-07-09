@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import ExoticPetStoreDemo from '../../gifs/exotic-pet-store-demo.mp4';
 import ExoticPetStoreIphone from '../../images/iphone/exotic-pet-store-iphone.png';
