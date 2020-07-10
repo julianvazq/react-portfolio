@@ -7,7 +7,7 @@ const Container = styled.div`
 
   h3 {
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   ul {

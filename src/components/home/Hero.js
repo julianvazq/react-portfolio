@@ -40,8 +40,9 @@ const Hero = () => {
     font-family: 'Open Sans', sans-serif;
   `;
 
-  const Position = styled(Name)`
+  const Position = styled.h2`
     font-family: 'Work Sans', 'Helvetica', 'sans-serif';
+    font-weight: 500;
     font-size: 1.75em;
     color: #808080;
     line-height: 1.2;
