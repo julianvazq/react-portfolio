@@ -1,17 +1,15 @@
 import React from 'react';
-import Hero from './top/Hero';
-import AdditionalInfo from './top/AdditionalInfo';
-import ProjectSection from './middle/ProjectSection.js';
-import CoverImage from '../images/illustrations/cover-image.svg';
+import Hero from './Hero';
+import CTA from './CTA';
+import ProjectSection from './ProjectSection.js';
+import CoverImage from '../../images/illustrations/cover-image.svg';
 import styled from 'styled-components';
 import {
   Container,
   fadeIn,
   fadeInFromRight,
-} from './styled-components/StyledComponents';
+} from '../styled-components/StyledComponents';
 import { motion } from 'framer-motion';
-
-const HomeContainer = styled.div``;
 
 const Img = styled(motion.img)`
   display: block;
@@ -47,18 +45,12 @@ const Home = () => {
       animate='visible'
       exit='hidden'
     >
-      <HomeContainer>
-        <Container>
-          <Img
-            src={CoverImage}
-            alt='Illustration.'
-            variants={fadeInFromRight}
-          />
-          <Hero />
-          <AdditionalInfo />
-        </Container>
-        <ProjectSection />
-      </HomeContainer>
+      <Container hero>
+        <Img src={CoverImage} alt='Illustration.' variants={fadeInFromRight} />
+        <Hero />
+        <CTA />
+      </Container>
+      <ProjectSection />
     </motion.div>
   );
 };

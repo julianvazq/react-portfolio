@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
-import Home from './components/Home';
-import Footer from './components/Footer';
+import Home from './components/home/Home';
+import Footer from './components/global/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import LifeTrackerPage from './components/projects/LifeTrackerPage';
 import PetMatcherPage from './components/projects/PetMatcherPage';
@@ -11,7 +11,7 @@ import ExoticPetStorePage from './components/projects/ExoticPetStorePage';
 // import TypingTestPage from './components/projects/TypingTestPage';
 import ExerciseSitePage from './components/projects/ExerciseSitePage';
 import MovieExplorerPage from './components/projects/MovieExplorerPage';
-import Navbar from './components/top/Navbar';
+import Navbar from './components/global/Navbar';
 import { AnimatePresence } from 'framer-motion';
 import ECommercePage from './components/projects/EcommercePage';
 

@@ -42,9 +42,14 @@ export const Container = styled.div`
   margin: auto;
   flex-flow: row wrap;
   padding-bottom: 4em;
+  margin-bottom: ${(props) => props.hero && '8em'};
 
   @media (max-width: 450px) {
     padding-bottom: 2em;
+  }
+
+  @media (max-width: 800px) {
+    margin-bottom: ${(props) => props.hero && '0'};
   }
 `;
 
