@@ -9,7 +9,6 @@ import { motion } from 'framer-motion';
 import {
   fadeIn,
   Container,
-  InnerContainer,
   Title,
   VideoHeading,
   Video,
@@ -27,7 +26,10 @@ import {
   StyledSpan,
   BackgroundWrapper,
   PaddingWrapper,
+  LongContainer,
+  FlexContainer,
 } from '../styled-components/StyledComponents';
+import PageNav from './shared/PageNav';
 
 const LifeTrackerPage = () => {
   return (
@@ -40,45 +42,52 @@ const LifeTrackerPage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
+            <LongContainer>
               <Title>Life Tracker</Title>
-              <ProjectDescription>
-                CRUD app that allows users to track certain aspects of their
-                lives, such as groceries, appointments, moods, books and more.{' '}
-              </ProjectDescription>
-              <ButtonContainer>
-                <Button
-                  href='http://life-tracker.julianvazquez.me'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Go to website
-                </Button>
-                <SecondaryButton
-                  href='https://github.com/julianvazq/mern-stack'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Go to GitHub
-                </SecondaryButton>
-              </ButtonContainer>
-            </InnerContainer>
+              <FlexContainer>
+                <div>
+                  <ProjectDescription>
+                    CRUD app that allows users to track certain aspects of their
+                    lives, such as groceries, appointments, moods, books and
+                    more.{' '}
+                  </ProjectDescription>
+                  <ButtonContainer>
+                    <Button
+                      href='http://life-tracker.julianvazquez.me'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      Go to website
+                    </Button>
+                    <SecondaryButton
+                      href='https://github.com/julianvazq/mern-stack'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      Go to GitHub
+                    </SecondaryButton>
+                  </ButtonContainer>
+                </div>
+                <PageNav />
+              </FlexContainer>
+            </LongContainer>
           </Container>
-          <Container style={{ padding: 0 }}>
-            <InnerContainer>
+
+          <Container style={{ padding: 0 }} id='preview'>
+            <LongContainer>
               <VideoHeading>Add and delete items</VideoHeading>
-            </InnerContainer>
+            </LongContainer>
           </Container>
           <Video autoPlay loop muted playsInline controls>
             <source src={LifeTrackerDemo} type='video/mp4' />
             Your browser does not support HTML video.
           </Video>
           <Container style={{ padding: 0 }}>
-            <InnerContainer>
+            <LongContainer>
               <VideoHeading style={{ marginTop: '2em' }}>
                 Edit items
               </VideoHeading>
-            </InnerContainer>
+            </LongContainer>
           </Container>
           <Video autoPlay loop muted playsInline controls>
             <source src={LifeTrackerDemoEdit} type='video/mp4' />
@@ -89,15 +98,15 @@ const LifeTrackerPage = () => {
 
       <PaddingWrapper>
         <Container>
-          <InnerContainer>
-            <SubHeading>Responsive design</SubHeading>
+          <LongContainer>
+            <SubHeading id='responsiveness'>Responsive design</SubHeading>
             <StyledParagraph>
               Mobile accounts for approximately half of web traffic worldwide.
               In the upcoming decade, mobile web traffic is expected to keep
               growing, making it increasingly important to cater to devices of
               all sizes.
             </StyledParagraph>
-          </InnerContainer>
+          </LongContainer>
         </Container>
         <ResponsiveImg
           iphone
@@ -109,8 +118,8 @@ const LifeTrackerPage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
-              <SubHeading>Tech Details</SubHeading>
+            <LongContainer>
+              <SubHeading id='tech'>Tech Details</SubHeading>
               <TechList>
                 <ListItem>
                   <IconContainer>
@@ -153,7 +162,7 @@ const LifeTrackerPage = () => {
               <MarginButton as={Link} to='/#projects'>
                 Back to projects
               </MarginButton>
-            </InnerContainer>
+            </LongContainer>
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>

@@ -5,6 +5,7 @@ import EcommerceIphone from '../../images/iphone/e-commerce-iphone.png';
 import {
   fadeIn,
   Container,
+  FlexContainer,
   InnerContainer,
   Title,
   ProjectDescription,
@@ -27,30 +28,36 @@ import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { FaServer } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import Navigation from './shared/Navigation';
-
-const FlexContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  div:first-child {
-    width: 70%;
-  }
-
-  @media (max-width: 800px) {
-    flex-direction: column;
-
-    div:first-child {
-      width: 100%;
-    }
-  }
-`;
+import PageNav from './shared/PageNav';
 
 const StackedImg = styled(ResponsiveImg)`
   &:first-of-type {
     margin-bottom: 4em;
   }
 `;
+
+const navLinks = [
+  {
+    hash: '#design',
+    title: 'Design vs. Actual',
+  },
+  {
+    hash: '#editing',
+    title: 'Editing',
+  },
+  {
+    hash: '#responsiveness',
+    title: 'Mobile First',
+  },
+  {
+    hash: '#accessibility',
+    title: 'Accessibility',
+  },
+  {
+    hash: '#tech',
+    title: 'Tech Details',
+  },
+];
 
 const ECommercePage = () => {
   return (
@@ -68,8 +75,8 @@ const ECommercePage = () => {
               <FlexContainer>
                 <div>
                   <ProjectDescription>
-                    Mock e-commerce store that exclusively sells high-quality
-                    headphones and earbuds.
+                    Mock e-commerce store that exclusively sells headphones and
+                    earbuds.
                   </ProjectDescription>
                   <ButtonContainer>
                     <Button
@@ -88,25 +95,7 @@ const ECommercePage = () => {
                     </SecondaryButton>
                   </ButtonContainer>
                 </div>
-                <Navigation>
-                  <ul>
-                    <li>
-                      <a href='#design'>Design vs. Actual</a>
-                    </li>
-                    <li>
-                      <a href='#editing'>Editing</a>
-                    </li>
-                    <li>
-                      <a href='#responsiveness'>Mobile First</a>
-                    </li>
-                    <li>
-                      <a href='#accessibility'>Accessibility</a>
-                    </li>
-                    <li>
-                      <a href='#tech'>Tech Details</a>
-                    </li>
-                  </ul>
-                </Navigation>
+                <PageNav navLinks={navLinks} />
               </FlexContainer>
             </LongContainer>
           </Container>
@@ -225,40 +214,38 @@ const ECommercePage = () => {
         <Container>
           <LongContainer>
             <SubHeading id='tech'>Tech Details</SubHeading>
-            <InnerContainer>
-              <TechList>
-                <ListItem>
-                  <IconContainer>
-                    <BsDisplayFill />
-                  </IconContainer>
-                  <div>
-                    <StyledSpan>Frontend</StyledSpan>
-                    <br /> React (NextJS), Styled Components (CSS)
-                  </div>
-                </ListItem>
-                <ListItem>
-                  <IconContainer>
-                    <FaServer />
-                  </IconContainer>
-                  <div>
-                    <StyledSpan>Backend</StyledSpan>
-                    <br /> Node, Express
-                  </div>
-                </ListItem>
-                <ListItem>
-                  <IconContainer>
-                    <BsThreeDots />
-                  </IconContainer>
-                  <div>
-                    <StyledSpan>Others</StyledSpan>
-                    <br /> React Hooks, React Context, Dynamic Routes
-                  </div>
-                </ListItem>
-              </TechList>
-              <MarginButton as={Link} to='/#projects'>
-                Back to projects
-              </MarginButton>
-            </InnerContainer>
+            <TechList>
+              <ListItem>
+                <IconContainer>
+                  <BsDisplayFill />
+                </IconContainer>
+                <div>
+                  <StyledSpan>Frontend</StyledSpan>
+                  <br /> React (NextJS), Styled Components (CSS)
+                </div>
+              </ListItem>
+              <ListItem>
+                <IconContainer>
+                  <FaServer />
+                </IconContainer>
+                <div>
+                  <StyledSpan>Backend</StyledSpan>
+                  <br /> Node, Express
+                </div>
+              </ListItem>
+              <ListItem>
+                <IconContainer>
+                  <BsThreeDots />
+                </IconContainer>
+                <div>
+                  <StyledSpan>Others</StyledSpan>
+                  <br /> React Hooks, React Context, Dynamic Routes
+                </div>
+              </ListItem>
+            </TechList>
+            <MarginButton as={Link} to='/#projects'>
+              Back to projects
+            </MarginButton>
           </LongContainer>
         </Container>
       </PaddingWrapper>

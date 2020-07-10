@@ -48,6 +48,23 @@ export const Container = styled.div`
   }
 `;
 
+export const FlexContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  div:first-child {
+    width: 70%;
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+
+    div:first-child {
+      width: 100%;
+    }
+  }
+`;
+
 export const InnerContainer = styled.div`
   margin: auto;
   max-width: 700px;
@@ -74,12 +91,8 @@ export const VideoHeading = styled.h3`
   font-size: 1.5rem;
   font-weight: 300;
 
-  @media (max-width: 850px) {
-    /* text-align: center; */
-  }
-
   @media (max-width: 700px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 `;
 

@@ -7,7 +7,8 @@ import { motion } from 'framer-motion';
 import {
   fadeIn,
   Container,
-  InnerContainer,
+  LongContainer,
+  FlexContainer,
   Title,
   ProjectDescription,
   Video,
@@ -26,6 +27,7 @@ import {
   PaddingWrapper,
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
+import PageNav from './shared/PageNav';
 
 const ExoticPetStorePage = () => {
   return (
@@ -38,31 +40,36 @@ const ExoticPetStorePage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
+            <LongContainer>
               <Title>Exotic Pet Store</Title>
-              <ProjectDescription>
-                Landing page for a fictional store that offers services related
-                to exotic animals.
-              </ProjectDescription>
-              <ButtonContainer>
-                <Button
-                  href='https://julianvazq.github.io/exotic-pet-store/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Go to website
-                </Button>
-                <SecondaryButton
-                  href='https://github.com/julianvazq/exotic-pet-store'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Go to GitHub
-                </SecondaryButton>
-              </ButtonContainer>
-            </InnerContainer>
+              <FlexContainer>
+                <div>
+                  <ProjectDescription>
+                    Landing page for a fictional store that offers services
+                    related to exotic animals.
+                  </ProjectDescription>
+                  <ButtonContainer>
+                    <Button
+                      href='https://julianvazq.github.io/exotic-pet-store/'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      Go to website
+                    </Button>
+                    <SecondaryButton
+                      href='https://github.com/julianvazq/exotic-pet-store'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      Go to GitHub
+                    </SecondaryButton>
+                  </ButtonContainer>
+                </div>
+                <PageNav />
+              </FlexContainer>
+            </LongContainer>
           </Container>
-          <Video autoPlay loop muted playsInline controls>
+          <Video id='preview' autoPlay loop muted playsInline controls>
             <source src={ExoticPetStoreDemo} type='video/mp4' />
             Your browser does not support HTML video.
           </Video>
@@ -71,15 +78,15 @@ const ExoticPetStorePage = () => {
 
       <PaddingWrapper>
         <Container>
-          <InnerContainer>
-            <SubHeading>Responsive design</SubHeading>
+          <LongContainer>
+            <SubHeading id='responsiveness'>Responsive design</SubHeading>
             <StyledParagraph>
               Mobile accounts for approximately half of web traffic worldwide.
               In the upcoming decade, mobile web traffic is expected to keep
               growing, making it increasingly important to cater to devices of
               all sizes.
             </StyledParagraph>
-          </InnerContainer>
+          </LongContainer>
         </Container>
         <ResponsiveImg
           iphone
@@ -91,8 +98,8 @@ const ExoticPetStorePage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
-              <SubHeading>Tech Details</SubHeading>
+            <LongContainer>
+              <SubHeading id='tech'>Tech Details</SubHeading>
               <TechList>
                 <ListItem>
                   <IconContainer>
@@ -116,7 +123,7 @@ const ExoticPetStorePage = () => {
               <MarginButton as={Link} to='/#projects'>
                 Back to projects
               </MarginButton>
-            </InnerContainer>
+            </LongContainer>
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>

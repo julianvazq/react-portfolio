@@ -7,7 +7,8 @@ import { motion } from 'framer-motion';
 import {
   fadeIn,
   Container,
-  InnerContainer,
+  LongContainer,
+  FlexContainer,
   Title,
   ProjectDescription,
   Video,
@@ -27,6 +28,7 @@ import {
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { FaServer } from 'react-icons/fa';
+import PageNav from './shared/PageNav';
 
 const PetMatcherPage = () => {
   return (
@@ -39,30 +41,37 @@ const PetMatcherPage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
-              <Title>Pet Matcher</Title>
-              <ProjectDescription>
-                Find dogs up for adoption in your area.
-              </ProjectDescription>
-              <ButtonContainer>
-                <Button
-                  href='https://pet-matcher.julianvazquez.me/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Go to website
-                </Button>
-                <SecondaryButton
-                  href='https://github.com/julianvazq/pet-matcher'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Go to GitHub
-                </SecondaryButton>
-              </ButtonContainer>
-            </InnerContainer>
+            <LongContainer>
+              <FlexContainer>
+                <div>
+                  <Title>Pet Matcher</Title>
+                  <ProjectDescription>
+                    Find dogs up for adoption in your area.
+                  </ProjectDescription>
+                  <ButtonContainer>
+                    <Button
+                      href='https://pet-matcher.julianvazquez.me/'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      Go to website
+                    </Button>
+                    <SecondaryButton
+                      href='https://github.com/julianvazq/pet-matcher'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      Go to GitHub
+                    </SecondaryButton>
+                  </ButtonContainer>
+                </div>
+                <PageNav />
+              </FlexContainer>
+            </LongContainer>
           </Container>
+
           <Video
+            id='preview'
             autoPlay
             loop
             muted
@@ -79,15 +88,15 @@ const PetMatcherPage = () => {
 
       <PaddingWrapper>
         <Container>
-          <InnerContainer>
-            <SubHeading>Responsive design</SubHeading>
+          <LongContainer>
+            <SubHeading id='responsiveness'>Responsive design</SubHeading>
             <StyledParagraph>
               Mobile accounts for approximately half of web traffic worldwide.
               In the upcoming decade, mobile web traffic is expected to keep
               growing, making it increasingly important to cater to devices of
               all sizes.
             </StyledParagraph>
-          </InnerContainer>
+          </LongContainer>
         </Container>
         <ResponsiveImg iphone src={PetMatcherIphone} alt='Responsive design.' />
       </PaddingWrapper>
@@ -95,8 +104,8 @@ const PetMatcherPage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
-              <SubHeading>Tech Details</SubHeading>
+            <LongContainer>
+              <SubHeading id='tech'>Tech Details</SubHeading>
               <TechList>
                 <ListItem>
                   <IconContainer>
@@ -130,7 +139,7 @@ const PetMatcherPage = () => {
               <MarginButton as={Link} to='/#projects'>
                 Back to projects
               </MarginButton>
-            </InnerContainer>
+            </LongContainer>
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>

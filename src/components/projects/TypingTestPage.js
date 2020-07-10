@@ -37,7 +37,7 @@ const TypingTestPage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
+            <LongContainer>
               <Title>JS Typing Test</Title>
               <ProjectDescription>
                 Allows users to test their typing speed and accuracy by copying
@@ -60,7 +60,7 @@ const TypingTestPage = () => {
                   Go to GitHub
                 </SecondaryButton>
               </ButtonContainer>
-            </InnerContainer>
+            </LongContainer>
           </Container>
           <Video autoPlay loop muted playsInline controls>
             <source src={TypingTestDemo} type='video/mp4' />
@@ -70,23 +70,23 @@ const TypingTestPage = () => {
       </BackgroundWrapper>
       <PaddingWrapper>
         <Container>
-          <InnerContainer>
-            <SubHeading>Responsive design</SubHeading>
+          <LongContainer>
+            <SubHeading id='responsiveness'>Responsive design</SubHeading>
             <StyledParagraph>
               Mobile accounts for approximately half of web traffic worldwide.
               In the upcoming decade, mobile web traffic is expected to keep
               growing, making it increasingly important to cater to devices of
               all sizes.
             </StyledParagraph>
-          </InnerContainer>
+          </LongContainer>
         </Container>
         <ResponsiveImg iphone src={TypingTestIphone} alt='Responsive design.' />
       </PaddingWrapper>
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
-              <SubHeading>Tech Details</SubHeading>
+            <LongContainer>
+              <SubHeading id='tech'>Tech Details</SubHeading>
               <TechList>
                 <ListItem>
                   <IconContainer>
@@ -110,7 +110,7 @@ const TypingTestPage = () => {
               <MarginButton as={Link} to='/#projects'>
                 Back to projects
               </MarginButton>
-            </InnerContainer>
+            </LongContainer>
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>

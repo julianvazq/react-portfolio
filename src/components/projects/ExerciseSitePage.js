@@ -5,7 +5,8 @@ import ExerciseSiteIphone from '../../images/iphone/exercise-site-iphone.png';
 import {
   fadeIn,
   Container,
-  InnerContainer,
+  LongContainer,
+  FlexContainer,
   Title,
   ProjectDescription,
   ResponsiveImg,
@@ -24,6 +25,7 @@ import {
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { motion } from 'framer-motion';
+import PageNav from './shared/PageNav';
 
 const ExoticPetStorePage = () => {
   return (
@@ -36,45 +38,55 @@ const ExoticPetStorePage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
+            <LongContainer>
               <Title>Exercise&trade;</Title>
-              <ProjectDescription>
-                Landing page for a fictional product. Didn't want to use a
-                specific product, so I used 'Exercise' as if it were a product.
-              </ProjectDescription>
-              <ButtonContainer>
-                <Button
-                  href='https://julianvazq.github.io/exercise-site/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Go to website
-                </Button>
-                <SecondaryButton
-                  href='https://github.com/julianvazq/exercise-site'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Go to GitHub
-                </SecondaryButton>
-              </ButtonContainer>
-            </InnerContainer>
+              <FlexContainer>
+                <div>
+                  <ProjectDescription>
+                    Landing page for a fictional product. Didn't want to use a
+                    specific product, so I used 'Exercise' as if it were a
+                    product.
+                  </ProjectDescription>
+                  <ButtonContainer>
+                    <Button
+                      href='https://julianvazq.github.io/exercise-site/'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      Go to website
+                    </Button>
+                    <SecondaryButton
+                      href='https://github.com/julianvazq/exercise-site'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      Go to GitHub
+                    </SecondaryButton>
+                  </ButtonContainer>
+                </div>
+                <PageNav />
+              </FlexContainer>
+            </LongContainer>
           </Container>
-          <ResponsiveImg src={ExerciseSiteHomePage} alt='Responsive design.' />
+          <ResponsiveImg
+            id='preview'
+            src={ExerciseSiteHomePage}
+            alt='Responsive design.'
+          />
         </PaddingWrapper>
       </BackgroundWrapper>
 
       <PaddingWrapper>
         <Container>
-          <InnerContainer>
-            <SubHeading>Responsive design</SubHeading>
+          <LongContainer>
+            <SubHeading id='responsiveness'>Responsive design</SubHeading>
             <StyledParagraph>
               Mobile accounts for approximately half of web traffic worldwide.
               In the upcoming decade, mobile web traffic is expected to keep
               growing, making it increasingly important to cater to devices of
               all sizes.
             </StyledParagraph>
-          </InnerContainer>
+          </LongContainer>
         </Container>
         <ResponsiveImg
           iphone
@@ -86,8 +98,8 @@ const ExoticPetStorePage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
-              <SubHeading>Tech Details</SubHeading>
+            <LongContainer>
+              <SubHeading id='tech'>Tech Details</SubHeading>
               <TechList>
                 <ListItem>
                   <IconContainer>
@@ -111,7 +123,7 @@ const ExoticPetStorePage = () => {
               <MarginButton as={Link} to='/#projects'>
                 Back to projects
               </MarginButton>
-            </InnerContainer>
+            </LongContainer>
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>

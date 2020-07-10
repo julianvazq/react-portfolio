@@ -7,6 +7,8 @@ import { motion } from 'framer-motion';
 import {
   fadeIn,
   Container,
+  FlexContainer,
+  LongContainer,
   InnerContainer,
   Title,
   VideoHeading,
@@ -28,6 +30,7 @@ import {
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { FaServer } from 'react-icons/fa';
+import PageNav from './shared/PageNav';
 
 const MovieExplorerPage = () => {
   return (
@@ -40,44 +43,50 @@ const MovieExplorerPage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
+            <LongContainer>
               <Title>Movie Explorer</Title>
-              <ProjectDescription>
-                Discover thousands of movies and add them to your watchlist.
-              </ProjectDescription>
-              <ButtonContainer>
-                <Button
-                  href='http://movie-explorer.julianvazquez.me'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Go to website
-                </Button>
-                <SecondaryButton
-                  href='https://github.com/julianvazq/movie-explorer'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Go to GitHub
-                </SecondaryButton>
-              </ButtonContainer>
-            </InnerContainer>
+              <FlexContainer>
+                <div>
+                  <ProjectDescription>
+                    Discover thousands of movies and add them to your watchlist.
+                  </ProjectDescription>
+                  <ButtonContainer>
+                    <Button
+                      href='http://movie-explorer.julianvazquez.me'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      Go to website
+                    </Button>
+                    <SecondaryButton
+                      href='https://github.com/julianvazq/movie-explorer'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      Go to GitHub
+                    </SecondaryButton>
+                  </ButtonContainer>
+                </div>
+                <PageNav />
+              </FlexContainer>
+            </LongContainer>
           </Container>
-          <Container style={{ padding: 0 }}>
-            <InnerContainer>
+
+          <Container style={{ padding: 0 }} id='preview'>
+            <LongContainer>
               <VideoHeading>Browse similar movies</VideoHeading>
-            </InnerContainer>
+            </LongContainer>
           </Container>
           <Video autoPlay loop muted playsInline controls>
             <source src={MovieExplorerBrowse} type='video/mp4' />
             Your browser does not support HTML video.
           </Video>
           <Container style={{ padding: 0 }}>
-            <InnerContainer>
+            <LongContainer>
               <VideoHeading style={{ marginTop: '2em' }}>
                 Add movies to watchlist
               </VideoHeading>
-            </InnerContainer>
+            </LongContainer>
           </Container>
           <Video autoPlay loop muted playsInline controls>
             <source src={MovieExplorerWatchlist} type='video/mp4' />
@@ -88,15 +97,15 @@ const MovieExplorerPage = () => {
 
       <PaddingWrapper>
         <Container>
-          <InnerContainer>
-            <SubHeading>Responsive design</SubHeading>
+          <LongContainer>
+            <SubHeading id='responsiveness'>Responsive design</SubHeading>
             <StyledParagraph>
               Mobile accounts for approximately half of web traffic worldwide.
               In the upcoming decade, mobile web traffic is expected to keep
               growing, making it increasingly important to cater to devices of
               all sizes.
             </StyledParagraph>
-          </InnerContainer>
+          </LongContainer>
         </Container>
         <ResponsiveImg
           iphone
@@ -108,8 +117,8 @@ const MovieExplorerPage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
-              <SubHeading>Tech Details</SubHeading>
+            <LongContainer>
+              <SubHeading id='tech'>Tech Details</SubHeading>
               <TechList>
                 <ListItem>
                   <IconContainer>
@@ -142,7 +151,7 @@ const MovieExplorerPage = () => {
               <MarginButton as={Link} to='/#projects'>
                 Back to projects
               </MarginButton>
-            </InnerContainer>
+            </LongContainer>
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>

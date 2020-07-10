@@ -39,7 +39,7 @@ const PGFinderPage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
+            <LongContainer>
               <Title>PG Finder</Title>
               <ProjectDescription>
                 Allows residents of PG County to easily find the location of
@@ -62,7 +62,7 @@ const PGFinderPage = () => {
                   Go to GitHub
                 </SecondaryButton>
               </ButtonContainer>
-            </InnerContainer>
+            </LongContainer>
           </Container>
           <Video autoPlay loop muted playsInline controls>
             <source src={PGFinderDemo} type='video/mp4' />
@@ -73,15 +73,15 @@ const PGFinderPage = () => {
 
       <PaddingWrapper>
         <Container>
-          <InnerContainer>
-            <SubHeading>Responsive design</SubHeading>
+          <LongContainer>
+            <SubHeading id='responsiveness'>Responsive design</SubHeading>
             <StyledParagraph>
               Mobile accounts for approximately half of web traffic worldwide.
               In the upcoming decade, mobile web traffic is expected to keep
               growing, making it increasingly important to cater to devices of
               all sizes.
             </StyledParagraph>
-          </InnerContainer>
+          </LongContainer>
         </Container>
         <ResponsiveImg iphone src={PGFinderIphone} alt='Responsive design.' />
       </PaddingWrapper>
@@ -89,14 +89,14 @@ const PGFinderPage = () => {
       <BackgroundWrapper>
         <PaddingWrapper>
           <Container>
-            <InnerContainer>
+            <LongContainer>
               <SubHeading>Documentation</SubHeading>
               <StyledParagraph>
                 Writing solid documentation helps keep track of all aspects of
                 an application, improves the quality of the product, and makes
                 it easier to bring other developers up to speed.
               </StyledParagraph>
-            </InnerContainer>
+            </LongContainer>
           </Container>
           <ResponsiveImg
             src={PGFinderDocumentation}
@@ -105,7 +105,7 @@ const PGFinderPage = () => {
           />
 
           <Container style={{ paddingBottom: 0 }}>
-            <InnerContainer>
+            <LongContainer>
               <MarginButton
                 href='http://pg-finder.julianvazquez.me/doc.html'
                 target='_blank'
@@ -114,15 +114,15 @@ const PGFinderPage = () => {
               >
                 Read documentation
               </MarginButton>
-            </InnerContainer>
+            </LongContainer>
           </Container>
         </PaddingWrapper>
       </BackgroundWrapper>
 
       <PaddingWrapper>
         <Container>
-          <InnerContainer>
-            <SubHeading>Tech Details</SubHeading>
+          <LongContainer>
+            <SubHeading id='tech'>Tech Details</SubHeading>
             <TechList>
               <ListItem>
                 <IconContainer>
@@ -155,7 +155,7 @@ const PGFinderPage = () => {
             <MarginButton as={Link} to='/#projects'>
               Back to projects
             </MarginButton>
-          </InnerContainer>
+          </LongContainer>
         </Container>
       </PaddingWrapper>
     </motion.div>

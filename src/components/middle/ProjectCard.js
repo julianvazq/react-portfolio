@@ -89,7 +89,7 @@ const TechInfo = styled.div`
   background: #fff;
   color: ${(props) => props.theme.gray};
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
-  border-top: 4px solid #60b0f4;
+  border-top: 4px solid ${(props) => props.theme.primary};
 
   @media (max-width: 950px) {
     font-size: 1.1rem;

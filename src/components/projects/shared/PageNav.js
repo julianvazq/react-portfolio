@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   width: 20%;
-  min-width: 183px;
+  min-width: 210px;
 
   h3 {
     font-size: 2rem;
@@ -34,13 +34,34 @@ const Container = styled.div`
   }
 `;
 
-const Navigation = ({ children }) => {
+const defaultLinks = [
+  {
+    hash: '#preview',
+    title: 'Preview',
+  },
+  {
+    hash: '#responsiveness',
+    title: 'Responsive Design',
+  },
+  {
+    hash: '#tech',
+    title: 'Tech Details',
+  },
+];
+
+const PageNav = ({ navLinks = defaultLinks }) => {
   return (
     <Container>
       <h3>Content</h3>
-      {children}
+      <ul>
+        {navLinks.map((link) => (
+          <li>
+            <a href={link.hash}>{link.title}</a>
+          </li>
+        ))}
+      </ul>
     </Container>
   );
 };
 
-export default Navigation;
+export default PageNav;
