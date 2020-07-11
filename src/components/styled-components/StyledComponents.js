@@ -85,8 +85,12 @@ export const Title = styled.h1`
   margin-bottom: 1em;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 300;
+
+  @media (max-width: 700px) {
+    font-size: 1rem;
+  }
 `;
 
 export const VideoHeading = styled.h3`

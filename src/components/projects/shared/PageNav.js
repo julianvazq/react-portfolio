@@ -55,7 +55,7 @@ const PageNav = ({ navLinks = defaultLinks }) => {
       <h3>Content</h3>
       <ul>
         {navLinks.map((link) => (
-          <li>
+          <li key={link.hash}>
             <a href={link.hash}>{link.title}</a>
           </li>
         ))}
