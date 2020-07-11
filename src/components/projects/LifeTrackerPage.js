@@ -75,7 +75,9 @@ const LifeTrackerPage = () => {
 
           <Container style={{ padding: 0 }} id='preview'>
             <LongContainer>
-              <VideoHeading>Add and delete items</VideoHeading>
+              <VideoHeading>
+                Track your goals, among other categories
+              </VideoHeading>
             </LongContainer>
           </Container>
           <Video autoPlay loop muted playsInline controls>
@@ -85,7 +87,7 @@ const LifeTrackerPage = () => {
           <Container style={{ padding: 0 }}>
             <LongContainer>
               <VideoHeading style={{ marginTop: '2em' }}>
-                Edit items
+                Easily edit your entries
               </VideoHeading>
             </LongContainer>
           </Container>

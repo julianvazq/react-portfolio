@@ -85,12 +85,12 @@ export const Title = styled.h1`
   margin-bottom: 1em;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 300;
   font-family: 'Open Sans';
 
   @media (max-width: 700px) {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 `;
 
@@ -98,8 +98,9 @@ export const VideoHeading = styled.h3`
   margin-bottom: 1em;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
 
   @media (max-width: 700px) {
     font-size: 1rem;
