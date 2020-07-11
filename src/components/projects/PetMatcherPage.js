@@ -44,7 +44,7 @@ const PetMatcherPage = () => {
             <LongContainer>
               <FlexContainer>
                 <div>
-                  <Title>Pet Matcher</Title>
+                  <Title>Dog Finder</Title>
                   <ProjectDescription>
                     Find dogs up for adoption in your area.
                   </ProjectDescription>

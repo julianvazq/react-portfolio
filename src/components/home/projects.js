@@ -14,7 +14,7 @@ export const projects = [
     title: 'Movie Explorer',
     link: '/movie-explorer',
     tech: ['React', 'Redux', 'Node', 'Express'],
-    description: 'Discover thousands of movies and add them to your watchlist.',
+    description: 'Discover thousands of movies and create a curated watchlist.',
     images: {
       sm: require('../../images/sm/movie-explorer-sm.png'),
       md: require('../../images/md/movie-explorer-md.png'),
