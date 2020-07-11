@@ -6,7 +6,6 @@ import {
   fadeIn,
   Container,
   FlexContainer,
-  InnerContainer,
   Title,
   ProjectDescription,
   ResponsiveImg,

@@ -9,7 +9,6 @@ import {
   Container,
   FlexContainer,
   LongContainer,
-  InnerContainer,
   Title,
   VideoHeading,
   Video,

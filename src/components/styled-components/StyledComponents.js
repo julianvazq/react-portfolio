@@ -87,6 +87,7 @@ export const Title = styled.h1`
   text-transform: uppercase;
   font-size: 1.25rem;
   font-weight: 300;
+  font-family: 'Open Sans';
 
   @media (max-width: 700px) {
     font-size: 1rem;
