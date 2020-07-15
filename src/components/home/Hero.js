@@ -15,21 +15,6 @@ const Hero = () => {
     }
   `;
 
-  const SmallText = styled.p`
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transform: translateX(2px);
-
-    @media (max-width: 600px) {
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 800px) {
-      transform: translateX(-7px);
-    }
-  `;
-
   const Name = styled.h1`
     font-size: 3.3rem;
     line-height: 1.1;
@@ -58,7 +43,6 @@ const Hero = () => {
     <HeroContainer>
       <Name>Julian Vazquez</Name>
       <Position>Front End Developer</Position>
-      <SmallText>Design &amp; Development</SmallText>
     </HeroContainer>
   );
 };

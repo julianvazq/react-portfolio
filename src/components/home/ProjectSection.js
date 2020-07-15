@@ -18,16 +18,33 @@ const StyledSection = styled.section`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 3.3rem;
+  font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: -1px;
-  margin: auto;
-  position: relative;
+  width: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Open Sans';
+  margin-bottom: 1rem;
+  font-weight: 700;
+
+  span {
+    color: #3e9cec;
+    font-weight: 400;
+  }
 
   @media (max-width: 580px) {
     font-size: 2.2rem;
-    margin: 0 auto 0 auto;
   }
+`;
+
+const SectionSubtitle = styled.h3`
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-family: 'Open Sans';
 `;
 
 const GridContainer = styled.div`
@@ -69,7 +86,10 @@ const ProjectSection = () => {
   return (
     <StyledSection>
       <Container>
-        <SectionTitle id='projects'>Recent Projects</SectionTitle>
+        <SectionTitle id='projects'>
+          <span>Recent</span> Projects
+        </SectionTitle>
+        <SectionSubtitle>Design &amp; Development</SectionSubtitle>
       </Container>
       <GridContainer>
         {projects.map((project) => (
