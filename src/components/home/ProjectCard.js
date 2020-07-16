@@ -119,9 +119,9 @@ const ProjectCard = ({
           <ImgContainer>
             <Overlay>{description}</Overlay>
             <picture>
-              <source src={images.sm} media='(max-width: 799px)' />
-              <source src={images.md} media='(max-width: 1500px)' />
-              <source src={images.lg} media='(min-width: 1500px)' />
+              <source srcSet={images.sm} media='(max-width: 799px)' />
+              <source srcSet={images.lg} media='(min-width: 1500px)' />
+              <source srcSet={images.md} media='(max-width: 1500px)' />
               <img src={images.md} alt={title} />
             </picture>
           </ImgContainer>
