@@ -9,6 +9,7 @@ export const projects = [
       md: require('../../images/md/e-commerce-md.png'),
       lg: require('../../images/lg/e-commerce-lg.png'),
     },
+    borderColor: '#00c7bb',
   },
   {
     title: 'Movie Explorer',
@@ -20,6 +21,7 @@ export const projects = [
       md: require('../../images/md/movie-explorer-md.png'),
       lg: require('../../images/lg/movie-explorer-lg.png'),
     },
+    borderColor: '#bfa240',
   },
   {
     title: 'Life Tracker',
@@ -31,6 +33,7 @@ export const projects = [
       md: require('../../images/md/life-tracker-md.png'),
       lg: require('../../images/lg/life-tracker-lg.png'),
     },
+    borderColor: '#97bde3',
   },
   {
     title: 'Dog Finder',
@@ -42,6 +45,7 @@ export const projects = [
       md: require('../../images/md/pet-matcher-md.png'),
       lg: require('../../images/lg/pet-matcher-lg.png'),
     },
+    borderColor: '#c1ba99',
   },
   {
     title: 'Pet Store Landing Page',
@@ -53,6 +57,7 @@ export const projects = [
       md: require('../../images/md/exotic-pet-store-md.png'),
       lg: require('../../images/lg/exotic-pet-store-lg.png'),
     },
+    borderColor: '#779730',
   },
   {
     title: 'Exercise Landing Page',
@@ -64,5 +69,6 @@ export const projects = [
       md: require('../../images/md/exercise-site-md.png'),
       lg: require('../../images/lg/exercise-site-lg.png'),
     },
+    borderColor: '#7116b9',
   },
 ];

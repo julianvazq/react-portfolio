@@ -89,7 +89,8 @@ const TechInfo = styled.div`
   background: #fff;
   color: ${(props) => props.theme.gray};
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
-  border-top: 4px solid ${(props) => props.theme.primary};
+  border-top: 4px solid
+    ${(props) => (props.borderColor ? props.borderColor : props.theme.primary)};
 
   @media (max-width: 950px) {
     font-size: 1.1rem;
@@ -100,12 +101,19 @@ const TechInfo = styled.div`
   }
 `;
 
-const ProjectCard = ({ title, tech, description, images, link }) => {
+const ProjectCard = ({
+  title,
+  tech,
+  description,
+  images,
+  link,
+  borderColor,
+}) => {
   return (
     <StyledLink to={link}>
       <ProjectItem>
         <div>
-          <TechInfo>
+          <TechInfo borderColor={borderColor}>
             <p>{tech.join(' | ')}</p>
           </TechInfo>
           <ImgContainer>
