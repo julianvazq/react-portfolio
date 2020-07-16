@@ -26,12 +26,23 @@ const SectionTitle = styled.h2`
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'Open Sans';
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 700;
+  position: relative;
 
   span {
     color: #3e9cec;
     font-weight: 400;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    width: 90px;
+    height: 3px;
+    background: ${(props) => props.theme.primary};
   }
 
   @media (max-width: 580px) {
@@ -45,6 +56,17 @@ const SectionSubtitle = styled.h3`
   letter-spacing: 1px;
   font-weight: 400;
   font-family: 'Open Sans';
+  position: relative;
+
+  /* &:after {
+    content: '';
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    width: 20%;
+    height: 3px;
+    background: ${(props) => props.theme.primary};
+  } */
 `;
 
 const GridContainer = styled.div`
