@@ -43,6 +43,7 @@ const SectionTitle = styled.h2`
     width: 90px;
     height: 3px;
     background: ${(props) => props.theme.primary};
+    border-radius: 1rem;
   }
 
   @media (max-width: 580px) {

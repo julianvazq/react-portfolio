@@ -59,16 +59,10 @@ const ProjectItem = styled.div`
     font-size: 1.8rem;
     padding: 0.5em 0;
     letter-spacing: 2px;
-    /* background: linear-gradient(
-      34deg,
-      rgba(134, 200, 255, 1) 0%,
-      rgba(110, 186, 252, 1) 25%,
-      rgba(96, 176, 244, 1) 50%,
-      rgba(110, 186, 252, 1) 75%,
-      rgba(134, 200, 255, 1) 100%
-    ); */
     background: #e2e4e6;
     color: #333;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
   }
 
   @media (max-width: 950px) {
@@ -91,6 +85,8 @@ const TechInfo = styled.div`
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
   border-top: 4px solid
     ${(props) => (props.borderColor ? props.borderColor : props.theme.primary)};
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
 
   @media (max-width: 950px) {
     font-size: 1.1rem;

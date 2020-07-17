@@ -162,10 +162,12 @@ export const SubHeading = styled.h3`
     content: '';
     position: absolute;
     bottom: -80%;
+    /* top: -80%; */
     left: 0;
     width: 20%;
     height: 3px;
     background: ${(props) => props.theme.primary};
+    border-radius: 1rem;
   }
 
   @media (max-width: 750px) {
@@ -202,11 +204,14 @@ export const TechList = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  padding-bottom: 0.5em;
+  padding-bottom: 1em;
   border-bottom: 1px solid ${(props) => props.theme.primary};
+  border-radius: 1rem;
+  padding-left: 1em;
   line-height: 1.7;
   display: flex;
   align-items: center;
+  position: relative;
 `;
 
 export const IconContainer = styled.div`
