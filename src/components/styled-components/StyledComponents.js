@@ -206,7 +206,7 @@ export const TechList = styled.ul`
 
 export const ListItem = styled.li`
   padding-bottom: 1em;
-  border-bottom: 1px solid ${(props) => props.theme.primary};
+  border-bottom: 0.75px solid hsl(208, 40%, 80%);
   border-radius: 1rem;
   padding-left: 1em;
   line-height: 1.7;
