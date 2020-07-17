@@ -88,6 +88,8 @@ export const Title = styled.h1`
   font-size: 1.5rem;
   font-weight: 300;
   font-family: 'Open Sans';
+  position: relative;
+  display: inline-block;
 
   @media (max-width: 700px) {
     font-size: 1.25rem;
@@ -161,10 +163,9 @@ export const SubHeading = styled.h3`
   &:after {
     content: '';
     position: absolute;
-    bottom: -80%;
-    /* top: -80%; */
+    bottom: -2rem;
     left: 0;
-    width: 20%;
+    width: 90px;
     height: 3px;
     background: ${(props) => props.theme.primary};
     border-radius: 1rem;

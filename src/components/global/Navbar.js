@@ -12,36 +12,30 @@ const Navbar = () => {
   `;
 
   const ListItem = styled.li`
-font-size: 1.3rem;
-display: inline-block;
-letter-spacing: 0.5px;
-margin: 0 20px;
-padding-bottom: 10px;
-position: relative;
+    font-size: 1.3rem;
+    display: inline-block;
+    letter-spacing: 0.5px;
+    margin: 0 20px;
+    padding-bottom: 10px;
+    position: relative;
 
-/* &:hover,
-&:focus {
-  color: ${(props) => props.theme.gray};
-} */
+    &:hover:after {
+      transform: scaleX(1);
+    }
 
-&:hover:after
-{
-  transform: scaleX(1);
-}
-
-&:after {
-  content: '';
-  height: 1.5px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: ${(props) => props.theme.primary};
-  transition: transform 250ms ease-in-out;
-  transform: scaleX(0);
-  
-}
-`;
+    &:after {
+      content: '';
+      height: 1.5px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: ${(props) => props.theme.primary};
+      transition: transform 250ms ease-in-out;
+      transform: scaleX(0);
+      border-radius: 1rem;
+    }
+  `;
 
   const LinkList = styled.ul`
     align-self: right;
