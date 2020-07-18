@@ -149,7 +149,7 @@ const ProjectCard = ({
   borderColor,
 }) => {
   return (
-    <StyledLink to={link}>
+    <StyledLink to={link} aria-label={title}>
       <ProjectItem initial='rest' whileHover='hover' animate='rest'>
         <div>
           <TechInfo borderColor={borderColor}>
