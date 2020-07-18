@@ -22,11 +22,11 @@ const Hero = () => {
     color: ${(props) => props.theme.primary};
     margin-bottom: 1rem;
     width: 100%;
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
   `;
 
   const Position = styled.h2`
-    font-family: 'Work Sans', 'Helvetica', 'sans-serif';
+    font-family: 'Work Sans', 'Helvetica', sans-serif;
     font-weight: 500;
     font-size: 1.75em;
     color: #808080;
