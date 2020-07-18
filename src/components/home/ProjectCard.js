@@ -1,12 +1,43 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+
+const overlayVariant = {
+  rest: {
+    opacity: 0,
+  },
+  hover: {
+    opacity: 1,
+    transition: {
+      duration: 0.15,
+      type: 'tween',
+      ease: 'easeIn',
+    },
+  },
+};
+
+const textVariant = {
+  rest: {
+    opacity: 0,
+    y: 5,
+  },
+  hover: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.25,
+      delay: 0.3,
+    },
+  },
+};
 
 const ImgContainer = styled.div`
   position: relative;
+  overflow: hidden;
 `;
 
-const Overlay = styled.div`
+const Overlay = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,24 +49,36 @@ const Overlay = styled.div`
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
   font-weight: 400;
-  font-size: 1.5rem;
   line-height: 1.5;
   opacity: 0;
   transition: opacity 350ms ease-in-out;
   -moz-transition: opacity 350ms ease-in-out;
   padding: 4rem;
+
+  p {
+    font-size: 1.5rem;
+
+    @media (max-width: 650px) {
+      font-size: 1.25rem;
+    }
+  }
 `;
 
 // For accessibility
 const StyledLink = styled(Link)`
   @media (min-width: 800px) {
-    &:hover ${Overlay}, &:focus ${Overlay} {
-      opacity: 1;
+    &:focus ${Overlay} {
+      opacity: 1 !important;
+    }
+
+    &:focus ${Overlay} p {
+      opacity: 1 !important;
+      transform: translateY(5px) !important;
     }
   }
 `;
 
-const ProjectItem = styled.div`
+const ProjectItem = styled(motion.article)`
   border-radius: 0.3rem;
   background-size: cover;
   object-fit: cover;
@@ -107,13 +150,15 @@ const ProjectCard = ({
 }) => {
   return (
     <StyledLink to={link}>
-      <ProjectItem>
+      <ProjectItem initial='rest' whileHover='hover' animate='rest'>
         <div>
           <TechInfo borderColor={borderColor}>
             <p>{tech.join(' | ')}</p>
           </TechInfo>
           <ImgContainer>
-            <Overlay>{description}</Overlay>
+            <Overlay variants={overlayVariant}>
+              <motion.p variants={textVariant}>{description}</motion.p>
+            </Overlay>
             <picture>
               <source srcSet={images.sm} media='(max-width: 799px)' />
               <source srcSet={images.lg} media='(min-width: 1500px)' />
