@@ -152,7 +152,7 @@ export const ProjectDescription = styled.h2`
 `;
 
 export const SubHeading = styled.h3`
-  margin-bottom: 2em;
+  margin-bottom: 4rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 2rem;

@@ -3,7 +3,7 @@ export const projects = [
     title: 'Mock E-Commerce',
     link: '/e-commerce',
     tech: ['NextJS', 'Node', 'Express'],
-    description: 'Mock e-commerce store that sells headphones and earbuds.',
+    description: 'Headphone e-commerce store with a modern look and feel.',
     images: {
       sm: require('../../images/sm/e-commerce-sm.png'),
       md: require('../../images/md/e-commerce-md.png'),
