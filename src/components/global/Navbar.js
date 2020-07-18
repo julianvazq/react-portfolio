@@ -18,12 +18,14 @@ const Navbar = () => {
     padding-bottom: 10px;
     position: relative;
 
-    &:hover:after {
-      transform: scaleX(1);
-    }
+    @media (min-width: 750px) {
+      &:hover:after {
+        transform: scaleX(1);
+      }
 
-    a:focus &:after {
-      transform: scaleX(1);
+      a:focus &:after {
+        transform: scaleX(1);
+      }
     }
 
     &:after {
