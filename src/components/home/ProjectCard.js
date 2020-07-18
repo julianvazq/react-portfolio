@@ -17,7 +17,7 @@ const Overlay = styled.div`
   left: 0;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.5;
   opacity: 0;

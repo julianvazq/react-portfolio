@@ -25,7 +25,6 @@ const SectionTitle = styled.h2`
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: 'Open Sans';
   margin-bottom: 0.5rem;
   font-weight: 700;
   position: relative;
@@ -56,7 +55,6 @@ const SectionSubtitle = styled.h3`
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
-  font-family: 'Open Sans';
   position: relative;
 
   /* &:after {

@@ -87,7 +87,6 @@ export const Title = styled.h1`
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 300;
-  font-family: 'Open Sans';
   position: relative;
   display: inline-block;
 
@@ -102,7 +101,6 @@ export const VideoHeading = styled.h3`
   text-transform: uppercase;
   font-size: 1.25rem;
   font-weight: 400;
-  font-family: 'Open Sans', sans-serif;
 
   @media (max-width: 700px) {
     font-size: 1rem;

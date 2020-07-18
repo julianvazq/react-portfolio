@@ -22,7 +22,6 @@ const Hero = () => {
     color: ${(props) => props.theme.primary};
     margin-bottom: 1rem;
     width: 100%;
-    /* font-family: 'Open Sans', sans-serif; */
   `;
 
   const Position = styled.h2`
