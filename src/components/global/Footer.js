@@ -84,7 +84,7 @@ const Footer = () => {
     }
   `;
 
-  const ContactList = styled.ul`
+  const ContactList = styled.div`
     padding-top: 3em;
     list-style: none;
     display: flex;
@@ -110,7 +110,7 @@ const Footer = () => {
     }
   `;
 
-  const ContactItem = styled.li`
+  const ContactItem = styled.div`
     margin-bottom: 1em;
     display: flex;
     justify-content: center;
