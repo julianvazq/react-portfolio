@@ -8,6 +8,7 @@ import { FiGithub } from 'react-icons/fi';
 import ResumePDF from '../../docs/julian_vazquez_resume.pdf';
 import ContactImage from '../../images/illustrations/contact.svg';
 import { useLocation } from 'react-router-dom';
+import ContactForm from './ContactForm';
 
 const Footer = () => {
   const { pathname } = useLocation();
@@ -159,6 +160,7 @@ const Footer = () => {
           >
             <FooterCTA>Let's talk.</FooterCTA>
           </a>
+          <ContactForm />
           <Img src={ContactImage} alt='Illustration.' />
           <ContactList>
             <a
