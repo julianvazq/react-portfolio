@@ -15,6 +15,15 @@ const inputStyles = css`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
+  grid-column: -1/1;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+
+  @media (min-width: 800px) {
+    grid-column: 1/2;
+    margin: 0;
+  }
 `;
 
 const InputGroup = styled.div`
@@ -72,6 +81,7 @@ const TextArea = styled.textarea`
 const SubmitButton = styled(SecondaryButton)`
   font-size: 1rem;
   border: none;
+  margin: 0;
 `;
 
 const ErrorMessage = styled.p`
