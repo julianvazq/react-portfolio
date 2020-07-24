@@ -70,8 +70,12 @@ const TextArea = styled.textarea`
 `;
 
 const SubmitButton = styled(SecondaryButton)`
-  margin-right: auto;
   font-size: 1rem;
+  border: none;
+`;
+
+const ErrorMessage = styled.p`
+  margin-top: 1rem;
 `;
 
 const ContactForm = () => {
@@ -139,9 +143,11 @@ const ContactForm = () => {
       {status === 'SUCCESS' ? (
         <p>Thanks!</p>
       ) : (
-        <SubmitButton>Submit</SubmitButton>
+        <SubmitButton as='button'>Submit</SubmitButton>
       )}
-      {status === 'ERROR' && <p>Ooops! There was an error.</p>}
+      {status === 'ERROR' && (
+        <ErrorMessage>Ooops! There was an error.</ErrorMessage>
+      )}
     </Form>
   );
 };
