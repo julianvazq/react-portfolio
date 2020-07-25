@@ -18,7 +18,7 @@ const Form = styled.form`
   grid-column: -1/1;
   width: 100%;
   max-width: 500px;
-  margin: auto;
+  margin: 0 auto 4rem auto;
 
   @media (min-width: 800px) {
     grid-column: 1/2;

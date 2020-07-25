@@ -17,7 +17,7 @@ const List = styled.div`
   width: 100%;
   text-align: center;
   max-width: max-content;
-  margin: auto;
+  margin: 6rem auto 0 auto;
 
   a {
     max-width: max-content;
@@ -28,7 +28,7 @@ const List = styled.div`
   }
 
   @media (min-width: 800px) {
-    margin: 0;
+    margin: 6rem 0 0;
   }
 `;
 
