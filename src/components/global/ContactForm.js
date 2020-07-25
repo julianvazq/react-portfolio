@@ -68,6 +68,7 @@ const TextAreaLabel = styled.label`
 
 const TextArea = styled.textarea`
   ${inputStyles}
+  resize: none;
   font-family: 'Open Sans', 'Helvetica', 'sans-serif';
   position: relative;
   padding-top: 2rem;
