@@ -72,6 +72,7 @@ const TextArea = styled.textarea`
   font-family: 'Open Sans', 'Helvetica', 'sans-serif';
   position: relative;
   padding-top: 2rem;
+  height: 150px;
 
   &:focus + label {
     font-size: 14px;

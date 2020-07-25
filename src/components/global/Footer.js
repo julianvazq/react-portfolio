@@ -1,11 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Container from '../Container';
-// import { GrLinkedinOption } from 'react-icons/gr';
-// import { MdEmail, MdPictureAsPdf } from 'react-icons/md';
-// import { RiExternalLinkLine } from 'react-icons/ri';
-// import { FiGithub } from 'react-icons/fi';
-// import ResumePDF from '../../docs/julian_vazquez_resume.pdf';
 import ContactImage from '../../images/illustrations/contact.svg';
 import { useLocation } from 'react-router-dom';
 import ContactForm from './ContactForm';
