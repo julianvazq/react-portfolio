@@ -64,7 +64,9 @@ const SectionSubtitle = styled.h3`
     left: 0;
     width: 20%;
     height: 3px;
-    background: ${(props) => props.theme.primary};
+    background: ${(
+    props
+  ) => props.theme.primary};
   } */
 `;
 
@@ -113,8 +115,8 @@ const ProjectSection = () => {
         <SectionSubtitle>Design &amp; Development</SectionSubtitle>
       </Container>
       <GridContainer>
-        {projects.map((project) => (
-          <ProjectCard key={project.title} {...project} />
+        {projects.map((project, index) => (
+          <ProjectCard key={project.title} index={index} {...project} />
         ))}
       </GridContainer>
     </StyledSection>

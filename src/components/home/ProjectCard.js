@@ -147,6 +147,7 @@ const ProjectCard = ({
   images,
   link,
   borderColor,
+  index,
 }) => {
   return (
     <StyledLink to={link} aria-label={title}>
@@ -163,7 +164,11 @@ const ProjectCard = ({
               <source srcSet={images.sm} media='(max-width: 799px)' />
               <source srcSet={images.lg} media='(min-width: 1500px)' />
               <source srcSet={images.md} media='(max-width: 1500px)' />
-              <img src={images.md} alt={title} />
+              <img
+                src={images.md}
+                alt={title}
+                loading={index > 1 ? 'lazy' : 'eager'}
+              />
             </picture>
           </ImgContainer>
           <h3>{title}</h3>
