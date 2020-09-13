@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import PGFinderDemo from '../../gifs/pg-finder-demo.mp4';
 import PGFinderIphone from '../../images/iphone/pg-finder-iphone.png';
@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 
 import {
   Container,
-  InnerContainer,
   Title,
   ProjectDescription,
   Video,
@@ -106,14 +105,14 @@ const PGFinderPage = () => {
 
           <Container style={{ paddingBottom: 0 }}>
             <LongContainer>
-              <MarginButton
+              <Button
                 href='http://pg-finder.julianvazquez.me/doc.html'
                 target='_blank'
                 rel='noopener noreferrer'
                 style={{ background: '#949393' }}
               >
                 Read documentation
-              </MarginButton>
+              </Button>
             </LongContainer>
           </Container>
         </PaddingWrapper>
@@ -152,9 +151,9 @@ const PGFinderPage = () => {
                 </div>
               </ListItem>
             </TechList>
-            <MarginButton as={Link} to='/#projects'>
+            <Button as={Link} to='/#projects'>
               Back to projects
-            </MarginButton>
+            </Button>
           </LongContainer>
         </Container>
       </PaddingWrapper>

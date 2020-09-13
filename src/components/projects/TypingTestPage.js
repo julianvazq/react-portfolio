@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import TypingTestDemo from '../../gifs/js-typing-test-demo.mp4';
 import TypingTestIphone from '../../images/iphone/js-typing-test-iphone.png';
@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 
 import {
   Container,
-  InnerContainer,
   Title,
   ProjectDescription,
   Video,
@@ -107,9 +106,9 @@ const TypingTestPage = () => {
                   </div>
                 </ListItem>
               </TechList>
-              <MarginButton as={Link} to='/#projects'>
+              <Button as={Link} to='/#projects'>
                 Back to projects
-              </MarginButton>
+              </Button>
             </LongContainer>
           </Container>
         </PaddingWrapper>

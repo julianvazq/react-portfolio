@@ -120,9 +120,9 @@ const ExoticPetStorePage = () => {
                   </div>
                 </ListItem>
               </TechList>
-              <MarginButton as={Link} to='/#projects'>
+              <Button as={Link} to='/#projects'>
                 Back to projects
-              </MarginButton>
+              </Button>
             </LongContainer>
           </Container>
         </PaddingWrapper>
