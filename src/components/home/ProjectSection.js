@@ -115,7 +115,7 @@ const ProjectSection = () => {
         <SectionSubtitle>Design &amp; Development</SectionSubtitle>
       </Container>
       <GridContainer>
-        {projects.map((project, index) => (
+        {projects.slice(0, 6).map((project, index) => (
           <ProjectCard key={project.title} index={index} {...project} />
         ))}
       </GridContainer>

@@ -204,8 +204,8 @@ export const TechList = styled.ul`
 
 export const ListItem = styled.li`
   padding-bottom: 1em;
-  border-bottom: 0.75px solid hsl(208, 40%, 80%);
   border-radius: 1rem;
+  border-bottom: 1px solid hsla(208, 40%, 80%, 0.75);
   padding-left: 1em;
   line-height: 1.7;
   display: flex;
