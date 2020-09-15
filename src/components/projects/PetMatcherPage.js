@@ -6,29 +6,17 @@ import PetMatcherIphone from '../../images/iphone/pet-matcher-iphone.png';
 import { motion } from 'framer-motion';
 import {
   fadeIn,
-  Container,
-  LongContainer,
-  FlexContainer,
-  Title,
-  ProjectDescription,
   Video,
   ResponsiveImg,
-  SubHeading,
   StyledParagraph,
   TechList,
   ListItem,
   IconContainer,
-  ButtonContainer,
   Button,
-  SecondaryButton,
-  MarginButton,
   StyledSpan,
-  BackgroundWrapper,
-  PaddingWrapper,
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { FaServer } from 'react-icons/fa';
-import PageNav from './shared/PageNav';
 import Header from './shared/Header';
 import Section from './shared/Section';
 

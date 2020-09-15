@@ -53,23 +53,6 @@ export const Container = styled.div`
   }
 `;
 
-export const FlexContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  div:first-child {
-    width: 70%;
-  }
-
-  @media (max-width: 800px) {
-    flex-direction: column;
-
-    div:first-child {
-      width: 100%;
-    }
-  }
-`;
-
 export const LongContainer = styled.div`
   margin: auto;
   width: 100%;
@@ -105,25 +88,18 @@ export const VideoHeading = styled.h3`
 export const Video = styled.video`
   margin: auto;
   display: block;
-  width: 80%;
+  width: 100%;
   max-height: 700px;
-
-  @media (max-width: 1100px) {
-    width: 90%;
-  }
 `;
 
 export const ResponsiveImg = styled.img`
   margin: auto;
   display: block;
   max-height: 700px;
+  width: ${(props) => !props.iphone && '100%'};
 
   @media (max-width: 1500px) {
     height: ${(props) => props.iphone && '500px'};
-  }
-
-  @media (max-width: 1100px) {
-    width: ${(props) => !props.iphone && '100%'};
   }
 
   @media (max-width: 600px) {
@@ -185,7 +161,17 @@ export const StyledParagraph = styled.p`
   }
 `;
 
-export const ListTitle = styled.h3`
+export const Example = styled.h3`
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+
+  @media (max-width: 1700px) {
+    font-size: 1.25rem;
+  }
+`;
+
+export const ListTitle = styled.h4`
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 
@@ -218,6 +204,29 @@ export const List = styled.ul`
     height: 5px;
     width: 5px;
     border-radius: 50%;
+  }
+
+  @media (max-width: 1700px) {
+    font-size: 1.25rem;
+  }
+`;
+
+export const OrderedList = styled.ol`
+  list-style-position: inside;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  list-style: none;
+  counter-reset: my-counter;
+
+  li {
+    counter-increment: my-counter;
+  }
+
+  li::before {
+    content: counter(my-counter) '. ';
+    color: ${(props) => props.theme.primary};
+    font-weight: 600;
+    margin-right: 0.5rem;
   }
 
   @media (max-width: 1700px) {

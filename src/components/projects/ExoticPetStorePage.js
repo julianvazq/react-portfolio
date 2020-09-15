@@ -21,7 +21,6 @@ import {
   ButtonContainer,
   Button,
   SecondaryButton,
-  MarginButton,
   StyledSpan,
   BackgroundWrapper,
   PaddingWrapper,
@@ -42,7 +41,7 @@ const ExoticPetStorePage = () => {
           <Container>
             <LongContainer>
               <Title>Exotic Pet Store</Title>
-              <FlexContainer>
+              {/* <FlexContainer>
                 <div>
                   <ProjectDescription>
                     Landing page for a fictional store that offers services
@@ -66,7 +65,7 @@ const ExoticPetStorePage = () => {
                   </ButtonContainer>
                 </div>
                 <PageNav />
-              </FlexContainer>
+              </FlexContainer> */}
             </LongContainer>
           </Container>
           <Video id='preview' autoPlay loop muted playsInline controls>

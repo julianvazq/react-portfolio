@@ -13,6 +13,8 @@ import {
   IconContainer,
   StyledSpan,
   Button,
+  Example,
+  OrderedList,
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { FaServer, FaDatabase } from 'react-icons/fa';
@@ -82,10 +84,6 @@ const ListifyPage = () => {
           src={require('../../images/projects/e-commerce/figma-vs-actual-1.png')}
           alt='Figma design vs. actual website.'
         />
-        <ResponsiveImg
-          src={require('../../images/projects/e-commerce/figma-vs-actual-2.png')}
-          alt='Figma design vs. actual website.'
-        />
       </Section>
 
       <Section title='Mobile First' id='responsiveness' bg={true}>
@@ -101,23 +99,21 @@ const ListifyPage = () => {
         <div>
           <StyledParagraph>
             The software architecture of Listify leverages web sockets to
-            maintain constant communication between clients and the server,
-            allowing for nearly instant updates to lists.
+            maintain constant communication between clients and server, allowing
+            all members of a list to experience a "real-time" concurrent
+            experience.
           </StyledParagraph>
         </div>
         <ResponsiveImg
           src={require('../../images/projects/listify/architecture.png')}
           alt='Architecture diagram.'
-          style={{ marginBottom: '4em' }}
         />
         <div>
           <StyledParagraph>
-            The "hub" of the application, as seen in the diagram above, is an
-            Express server. It is in charge of the communication among clients
-            and the interactions with the database.
-          </StyledParagraph>
-          <StyledParagraph>
-            Example interaction: a user adds an item to a list.
+            The "hub" of the application, as pictured in the diagram above, is
+            an Express server. This is where the logic that drives the
+            application lives, and it is the layer through which all
+            interactions among users, as well as with the database, take place.
           </StyledParagraph>
           <StyledParagraph>
             For storage, the application uses PostgreSQL. When designing the
@@ -141,6 +137,34 @@ const ListifyPage = () => {
               A list can have <span>many</span> items
             </li>
           </List>
+        </div>
+        <ResponsiveImg
+          src={require('../../images/projects/listify/erd.png')}
+          alt='Entity Relationship Diagram.'
+        />
+        <div>
+          <StyledParagraph>
+            Given the above constraints, there were three clear tables that make
+            themselves apparent: lists, users and items. Finally, because lists
+            can have many users and users can be members of many lists, I added
+            the join table "memberships." The existence of this table makes it
+            easy to keep track of lists and the users that are in it.
+          </StyledParagraph>
+          <StyledParagraph>
+            <Example>Example interaction</Example>
+          </StyledParagraph>
+          <OrderedList>
+            <li>
+              User adds item
+              <br />
+              Database creates new item
+            </li>
+            <li>
+              User adds item
+              <br />
+              Database creates new item
+            </li>
+          </OrderedList>
         </div>
       </Section>
 

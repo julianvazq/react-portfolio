@@ -4,38 +4,19 @@ import EcommerceHome from '../../images/lg/e-commerce-lg.png';
 import EcommerceIphone from '../../images/iphone/e-commerce-iphone.png';
 import {
   fadeIn,
-  Container,
-  FlexContainer,
-  Title,
-  ProjectDescription,
   ResponsiveImg,
-  SubHeading,
   StyledParagraph,
   TechList,
   ListItem,
   IconContainer,
-  ButtonContainer,
   Button,
-  SecondaryButton,
-  MarginButton,
   StyledSpan,
-  BackgroundWrapper,
-  PaddingWrapper,
-  LongContainer,
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { FaServer } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import styled from 'styled-components';
-import PageNav from './shared/PageNav';
 import Header from './shared/Header';
 import Section from './shared/Section';
-
-const StackedImg = styled(ResponsiveImg)`
-  &:first-of-type {
-    margin-bottom: 4em;
-  }
-`;
 
 const navLinks = [
   {

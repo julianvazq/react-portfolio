@@ -8,27 +8,16 @@ import { FaServer, FaDatabase } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import {
   fadeIn,
-  Container,
-  Title,
   VideoHeading,
   Video,
   ResponsiveImg,
-  ProjectDescription,
-  SubHeading,
   StyledParagraph,
   TechList,
   ListItem,
   IconContainer,
-  ButtonContainer,
   Button,
-  SecondaryButton,
   StyledSpan,
-  BackgroundWrapper,
-  PaddingWrapper,
-  LongContainer,
-  FlexContainer,
 } from '../styled-components/StyledComponents';
-import PageNav from './shared/PageNav';
 import Header from './shared/Header';
 import Section from './shared/Section';
 
@@ -48,24 +37,14 @@ const LifeTrackerPage = () => {
         url='http://life-tracker.julianvazquez.me'
         github='https://github.com/julianvazq/mern-stack'
       >
-        <Container style={{ padding: 0 }} id='preview'>
-          <LongContainer>
-            <VideoHeading>
-              Track your goals, among other categories
-            </VideoHeading>
-          </LongContainer>
-        </Container>
+        <VideoHeading>Track your goals, among other categories</VideoHeading>
         <Video autoPlay loop muted playsInline controls>
           <source src={LifeTrackerDemo} type='video/mp4' />
           Your browser does not support HTML video.
         </Video>
-        <Container style={{ padding: 0 }}>
-          <LongContainer>
-            <VideoHeading style={{ marginTop: '2em' }}>
-              Easily edit your entries
-            </VideoHeading>
-          </LongContainer>
-        </Container>
+        <VideoHeading style={{ marginTop: '2em' }}>
+          Easily edit your entries
+        </VideoHeading>
         <Video autoPlay loop muted playsInline controls>
           <source src={LifeTrackerDemoEdit} type='video/mp4' />
           Your browser does not support HTML video.

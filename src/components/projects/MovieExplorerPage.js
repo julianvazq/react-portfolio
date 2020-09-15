@@ -6,25 +6,15 @@ import MovieExplorerIphone from '../../images/iphone/movie-explorer-iphone.png';
 import { motion } from 'framer-motion';
 import {
   fadeIn,
-  Container,
-  FlexContainer,
-  LongContainer,
-  Title,
   VideoHeading,
   Video,
   ResponsiveImg,
-  ProjectDescription,
-  SubHeading,
   StyledParagraph,
   TechList,
   ListItem,
   IconContainer,
-  ButtonContainer,
   Button,
-  SecondaryButton,
   StyledSpan,
-  BackgroundWrapper,
-  PaddingWrapper,
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { FaServer } from 'react-icons/fa';
@@ -45,22 +35,14 @@ const MovieExplorerPage = () => {
         url='http://movie-explorer.julianvazquez.me'
         github='https://github.com/julianvazq/movie-explorer'
       >
-        <Container style={{ padding: 0 }} id='preview'>
-          <LongContainer>
-            <VideoHeading>Browse similar movies</VideoHeading>
-          </LongContainer>
-        </Container>
+        <VideoHeading>Browse similar movies</VideoHeading>
         <Video autoPlay loop muted playsInline controls>
           <source src={MovieExplorerBrowse} type='video/mp4' />
           Your browser does not support HTML video.
         </Video>
-        <Container style={{ padding: 0 }}>
-          <LongContainer>
-            <VideoHeading style={{ marginTop: '2em' }}>
-              Add movies to watchlist
-            </VideoHeading>
-          </LongContainer>
-        </Container>
+        <VideoHeading style={{ marginTop: '2em' }}>
+          Add movies to watchlist
+        </VideoHeading>
         <Video autoPlay loop muted playsInline controls>
           <source src={MovieExplorerWatchlist} type='video/mp4' />
           Your browser does not support HTML video.

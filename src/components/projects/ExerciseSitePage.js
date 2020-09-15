@@ -4,28 +4,16 @@ import ExerciseSiteHomePage from '../../images/lg/exercise-site-lg.png';
 import ExerciseSiteIphone from '../../images/iphone/exercise-site-iphone.png';
 import {
   fadeIn,
-  Container,
-  LongContainer,
-  FlexContainer,
-  Title,
-  ProjectDescription,
   ResponsiveImg,
-  SubHeading,
   StyledParagraph,
   TechList,
   ListItem,
   IconContainer,
-  ButtonContainer,
   Button,
-  SecondaryButton,
-  MarginButton,
   StyledSpan,
-  BackgroundWrapper,
-  PaddingWrapper,
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { motion } from 'framer-motion';
-import PageNav from './shared/PageNav';
 import Header from './shared/Header';
 import Section from './shared/Section';
 
