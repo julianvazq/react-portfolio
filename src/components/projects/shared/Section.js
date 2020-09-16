@@ -12,12 +12,16 @@ const SectionContainer = styled.section`
     margin-bottom: 4rem;
   }
 
-  *:last-child {
+  & > *:last-child {
     margin-bottom: 0;
   }
 
   & > div > p {
     margin-bottom: 1rem;
+  }
+
+  & > div > p:last-child {
+    margin-bottom: 0;
   }
 `;
 

@@ -17,10 +17,36 @@ import {
   OrderedList,
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
-import { FaServer, FaDatabase } from 'react-icons/fa';
+import { FaServer, FaDatabase, FaNodeJs, FaReact } from 'react-icons/fa';
+import { DiPostgresql } from 'react-icons/di';
 import { motion } from 'framer-motion';
 import Header from './shared/Header';
 import Section from './shared/Section';
+import styled, { css } from 'styled-components';
+
+const IconStyles = css`
+  font-size: 3rem;
+  margin-right: 0.5rem;
+
+  @media (max-width: 1700px) {
+    font-size: 2rem;
+  }
+`;
+
+const ReactIcon = styled(FaReact)`
+  ${IconStyles};
+  color: #61dafb;
+`;
+
+const NodeIcon = styled(FaNodeJs)`
+  ${IconStyles};
+  color: #3c873a;
+`;
+
+const PostgreIcon = styled(DiPostgresql)`
+  ${IconStyles};
+  color: #336791;
+`;
 
 const navLinks = [
   {
@@ -110,8 +136,8 @@ const ListifyPage = () => {
         />
         <div>
           <StyledParagraph>
-            The "hub" of the application, as pictured in the diagram above, is
-            an Express server. This is where the logic that drives the
+            The "hub" of the application, as pictured in the diagram above, is a
+            NodeJS (Express) server. This is where the logic that drives the
             application lives, and it is the layer through which all
             interactions among users, as well as with the database, take place.
           </StyledParagraph>
@@ -145,24 +171,55 @@ const ListifyPage = () => {
         <div>
           <StyledParagraph>
             Given the above constraints, there were three clear tables that make
-            themselves apparent: lists, users and items. Finally, because lists
-            can have many users and users can be members of many lists, I added
-            the join table "memberships." The existence of this table makes it
-            easy to keep track of lists and the users that are in it.
+            themselves apparent: lists, users and items. Lastly, a join table
+            named "memberships" helps handle the many-to-many relationship
+            between users and lists, while making it easy to keep track of the
+            users that are members of each list.
           </StyledParagraph>
-          <StyledParagraph>
-            <Example>Example interaction</Example>
-          </StyledParagraph>
+        </div>
+        <div>
+          <Example>
+            Example interaction: <span>User adds a new item to a list</span>
+          </Example>
           <OrderedList>
             <li>
-              User adds item
-              <br />
-              Database creates new item
+              <span>
+                <ReactIcon />
+                React{' '}
+              </span>
+              <span>Client sends request to the server with item data</span>
             </li>
             <li>
-              User adds item
-              <br />
-              Database creates new item
+              <span>
+                <NodeIcon />
+                NodeJS
+              </span>
+              <span>
+                Server handles the request and communicates with the database{' '}
+              </span>
+            </li>
+            <li>
+              <span>
+                <PostgreIcon />
+                PostgreSQL
+              </span>
+              <span>
+                Database executes an INSERT statement, storing the new item
+              </span>
+            </li>
+            <li>
+              <span>
+                <NodeIcon />
+                NodeJS
+              </span>
+              <span>Server sends the new item to all the other clients</span>
+            </li>
+            <li>
+              <span>
+                <ReactIcon />
+                React{' '}
+              </span>
+              <span>Clients receive the new item data and update the list</span>
             </li>
           </OrderedList>
         </div>

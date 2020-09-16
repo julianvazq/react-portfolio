@@ -161,10 +161,16 @@ export const StyledParagraph = styled.p`
   }
 `;
 
-export const Example = styled.h3`
+export const Example = styled.p`
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1.5rem;
+  line-height: 1.7;
+  font-weight: 600;
+
+  span {
+    font-weight: 400;
+  }
 
   @media (max-width: 1700px) {
     font-size: 1.25rem;
@@ -220,6 +226,17 @@ export const OrderedList = styled.ol`
 
   li {
     counter-increment: my-counter;
+  }
+
+  span:first-child {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 0.5rem;
   }
 
   li::before {
