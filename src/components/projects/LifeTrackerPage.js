@@ -37,15 +37,17 @@ const LifeTrackerPage = () => {
         url='http://life-tracker.julianvazquez.me'
         github='https://github.com/julianvazq/mern-stack'
       >
-        <VideoHeading>Track your goals, among other categories</VideoHeading>
-        <Video autoPlay loop muted playsInline controls>
+        <VideoHeading id='preview'>
+          Track your goals, among other categories
+        </VideoHeading>
+        <Video loop muted playsInline controls>
           <source src={LifeTrackerDemo} type='video/mp4' />
           Your browser does not support HTML video.
         </Video>
         <VideoHeading style={{ marginTop: '2em' }}>
           Easily edit your entries
         </VideoHeading>
-        <Video autoPlay loop muted playsInline controls>
+        <Video loop muted playsInline controls>
           <source src={LifeTrackerDemoEdit} type='video/mp4' />
           Your browser does not support HTML video.
         </Video>

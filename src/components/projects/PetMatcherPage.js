@@ -36,7 +36,6 @@ const PetMatcherPage = () => {
       >
         <Video
           id='preview'
-          autoPlay
           loop
           muted
           playsInline

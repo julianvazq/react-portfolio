@@ -63,7 +63,7 @@ const PGFinderPage = () => {
               </ButtonContainer>
             </LongContainer>
           </Container>
-          <Video autoPlay loop muted playsInline controls>
+          <Video loop muted playsInline controls>
             <source src={PGFinderDemo} type='video/mp4' />
             Your browser does not support HTML video.
           </Video>

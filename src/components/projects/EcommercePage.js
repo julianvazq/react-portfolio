@@ -72,13 +72,23 @@ const ECommercePage = () => {
             >
               Figma
             </a>
-            . I went for a flat and modern aesthetic, with plenty of white space
-            and an eye-catching primary color.
+            . Throughout the prototyping phase I actually changed the original
+            design quite a bit. In the end I went with a mostly flat and
+            minimalistic aesthetic, plenty of white space and an eye-catching
+            primary color.
           </StyledParagraph>
           <StyledParagraph>
-            To compliment the look, I chose fitting sans-serif fonts that pair
-            well together (Oswald &amp; Open Sans), and added a few smooth
-            animations.
+            To compliment the look, I chose two modern sans-serif fonts that go
+            well together (Oswald &amp; Open Sans), and implemented a few smooth
+            animations with{' '}
+            <a
+              href='https://www.framer.com/motion/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Framer Motion
+            </a>
+            .
           </StyledParagraph>
         </div>
         <ResponsiveImg
@@ -93,18 +103,18 @@ const ECommercePage = () => {
 
       <Section title='Editing' id='editing' bg={true}>
         <StyledParagraph>
-          Images can make or break a site. Nailing the flat look that I wanted
-          meant that I would need headphones images with transparent
-          backgrounds. Because of the lack of non-copyrighted images that fit
-          what I was looking for, I ended up doing a little editing in{' '}
+          Images can make or break a site. Nailing the overall look that I
+          wanted meant that I would need headphone images with transparent
+          backgrounds. Because of the lack of royalty-free images that fit my
+          requirements, I reached for{' '}
           <a
             href='https://www.gimp.org/'
             target='_blank'
             rel='noopener noreferrer'
           >
             GIMP
-          </a>
-          .
+          </a>{' '}
+          to do some light editing .
         </StyledParagraph>
         <ResponsiveImg
           src={require('../../images/projects/e-commerce/before-after.png')}
@@ -123,9 +133,10 @@ const ECommercePage = () => {
 
       <Section title='Accessibility' id='accessibility' bg={true}>
         <StyledParagraph>
-          The web should be accessible to all. Every page can be accessed using
-          keyboard-only navigation, and ARIA labels are included to make it
-          compatible with screen-readers. Lastly, I used a handy{' '}
+          The web should be accessible to all. Every page of this site can be
+          accessed using keyboard-only navigation, and ARIA labels are included
+          to make it compatible with screen-readers. Additionally, I used a
+          handy{' '}
           <a
             href='https://chrome.google.com/webstore/detail/colorblinding/dgbgleaofjainknadoffbjkclicbbgaa?hl=en'
             target='_blank'
@@ -133,8 +144,8 @@ const ECommercePage = () => {
           >
             Chrome extension
           </a>{' '}
-          to perform color blindness testing, and added a visible label above
-          the color-picker to ensure it's accessible.
+          to perform color blindness testing, and implemented a readable label
+          above the headphone's color-picker to ensure it's fully accessible.
         </StyledParagraph>
         <ResponsiveImg
           src={require('../../images/projects/e-commerce/colorblindness.png')}

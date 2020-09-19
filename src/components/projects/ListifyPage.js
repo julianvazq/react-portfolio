@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import ListifyHome from '../../images/lg/listify-lg.png';
+import ListifyDemo from '../../gifs/listify-demo.mp4';
 import ListifyIphone from '../../images/iphone/listify-iphone.png';
 import {
   fadeIn,
@@ -15,6 +15,7 @@ import {
   Button,
   Example,
   OrderedList,
+  Video,
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { FaServer, FaDatabase, FaNodeJs, FaReact } from 'react-icons/fa';
@@ -50,8 +51,12 @@ const PostgreIcon = styled(DiPostgresql)`
 
 const navLinks = [
   {
+    hash: '#preview',
+    title: 'Preview',
+  },
+  {
     hash: '#design',
-    title: 'Design vs. Actual',
+    title: 'Figma Design',
   },
   {
     hash: '#responsiveness',
@@ -82,32 +87,32 @@ const ListifyPage = () => {
         github='https://github.com/julianvazq/listify'
         navLinks={navLinks}
       >
-        <ResponsiveImg src={ListifyHome} alt='Responsive design.' />
+        <Video id='preview' loop muted playsInline controls>
+          <source src={ListifyDemo} type='video/mp4' />
+        </Video>
       </Header>
 
-      <Section title='Design vs. Actual' id='design'>
+      <Section title='Figma Design' id='design'>
         <div>
           <StyledParagraph>
-            I already had a design in mind, so I started off by creating a
-            high-fidelity wireframe in{' '}
+            I created the wireframe that Listify is based on in{' '}
             <a
-              href='https://www.figma.com/file/OR9WLOXwJJ6IHV3IbO5W2w/Headphones-E-Commerce?node-id=0%3A1'
+              href='https://www.figma.com/file/GKZeaaFn7n62knNd8FgG8l/Listify?node-id=0%3A1'
               target='_blank'
               rel='noopener noreferrer'
             >
               Figma
             </a>
-            . I went for a flat and modern aesthetic, with plenty of white space
-            and an eye-catching primary color.
+            . Because I wanted the app to be as straightforward as possible, the
+            design only includes the necessary elements and nothing more.
           </StyledParagraph>
           <StyledParagraph>
-            To compliment the look, I chose fitting sans-serif fonts that pair
-            well together (Oswald &amp; Open Sans), and added a few smooth
-            animations.
+            Along the process of building the app I made some slighly design
+            changes, but the overall look and feel remained the same.
           </StyledParagraph>
         </div>
         <ResponsiveImg
-          src={require('../../images/projects/e-commerce/figma-vs-actual-1.png')}
+          src={require('../../images/projects/listify/design.png')}
           alt='Figma design vs. actual website.'
         />
       </Section>

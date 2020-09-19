@@ -45,9 +45,9 @@ const Header = ({ title, description, url, github, navLinks, children }) => {
   return (
     <BackgroundWrapper>
       <HeaderContainer>
-        <Title>{title}</Title>
         <FlexContainer>
           <div>
+            <Title>{title}</Title>
             <ProjectDescription>{description}</ProjectDescription>
             <ButtonContainer>
               <Button href={url} target='_blank' rel='noopener noreferrer'>

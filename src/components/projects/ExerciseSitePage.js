@@ -27,8 +27,8 @@ const ExoticPetStorePage = () => {
     >
       <Header
         title='Exercise'
-        description=" Landing page for a fictional product. Didn't want to use a
-                    specific product, so I used 'Exercise' as if it were a
+        description="Product landing page. Didn't want to use a
+                    specific product, so I used 'Exercise' as if it were the
                     product."
         url='https://julianvazq.github.io/exercise-site/'
         github='https://github.com/julianvazq/exercise-site'

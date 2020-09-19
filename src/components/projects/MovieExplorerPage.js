@@ -35,15 +35,15 @@ const MovieExplorerPage = () => {
         url='http://movie-explorer.julianvazquez.me'
         github='https://github.com/julianvazq/movie-explorer'
       >
-        <VideoHeading>Browse similar movies</VideoHeading>
-        <Video autoPlay loop muted playsInline controls>
+        <VideoHeading id='preview'>Browse similar movies</VideoHeading>
+        <Video loop muted playsInline controls>
           <source src={MovieExplorerBrowse} type='video/mp4' />
           Your browser does not support HTML video.
         </Video>
         <VideoHeading style={{ marginTop: '2em' }}>
           Add movies to watchlist
         </VideoHeading>
-        <Video autoPlay loop muted playsInline controls>
+        <Video loop muted playsInline controls>
           <source src={MovieExplorerWatchlist} type='video/mp4' />
           Your browser does not support HTML video.
         </Video>

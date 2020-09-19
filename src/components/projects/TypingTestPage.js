@@ -61,7 +61,7 @@ const TypingTestPage = () => {
               </ButtonContainer>
             </LongContainer>
           </Container>
-          <Video autoPlay loop muted playsInline controls>
+          <Video loop muted playsInline controls>
             <source src={TypingTestDemo} type='video/mp4' />
             Your browser does not support HTML video.
           </Video>

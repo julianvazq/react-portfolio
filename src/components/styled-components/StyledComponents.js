@@ -154,6 +154,7 @@ export const StyledParagraph = styled.p`
 
   a {
     color: ${(props) => props.theme.primary};
+    border-bottom: 1px solid ${(props) => props.theme.primary};
   }
 
   @media (max-width: 1700px) {
