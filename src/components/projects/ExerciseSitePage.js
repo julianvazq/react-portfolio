@@ -4,28 +4,18 @@ import ExerciseSiteHomePage from '../../images/lg/exercise-site-lg.png';
 import ExerciseSiteIphone from '../../images/iphone/exercise-site-iphone.png';
 import {
   fadeIn,
-  Container,
-  LongContainer,
-  FlexContainer,
-  Title,
-  ProjectDescription,
   ResponsiveImg,
-  SubHeading,
   StyledParagraph,
   TechList,
   ListItem,
   IconContainer,
-  ButtonContainer,
   Button,
-  SecondaryButton,
-  MarginButton,
   StyledSpan,
-  BackgroundWrapper,
-  PaddingWrapper,
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { motion } from 'framer-motion';
-import PageNav from './shared/PageNav';
+import Header from './shared/Header';
+import Section from './shared/Section';
 
 const ExoticPetStorePage = () => {
   return (
@@ -35,98 +25,59 @@ const ExoticPetStorePage = () => {
       animate='visible'
       exit='hidden'
     >
-      <BackgroundWrapper>
-        <PaddingWrapper>
-          <Container>
-            <LongContainer>
-              <Title>Exercise&trade;</Title>
-              <FlexContainer>
-                <div>
-                  <ProjectDescription>
-                    Landing page for a fictional product. Didn't want to use a
-                    specific product, so I used 'Exercise' as if it were a
-                    product.
-                  </ProjectDescription>
-                  <ButtonContainer>
-                    <Button
-                      href='https://julianvazq.github.io/exercise-site/'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
-                      Go to website
-                    </Button>
-                    <SecondaryButton
-                      href='https://github.com/julianvazq/exercise-site'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
-                      Go to GitHub
-                    </SecondaryButton>
-                  </ButtonContainer>
-                </div>
-                <PageNav />
-              </FlexContainer>
-            </LongContainer>
-          </Container>
-          <ResponsiveImg
-            id='preview'
-            src={ExerciseSiteHomePage}
-            alt='Responsive design.'
-          />
-        </PaddingWrapper>
-      </BackgroundWrapper>
+      <Header
+        title='Exercise'
+        description="Product landing page. Didn't want to use a
+                    specific product, so I used 'Exercise' as if it were the
+                    product."
+        url='https://julianvazq.github.io/exercise-site/'
+        github='https://github.com/julianvazq/exercise-site'
+      >
+        <ResponsiveImg
+          id='preview'
+          src={ExerciseSiteHomePage}
+          alt='Responsive design.'
+        />
+      </Header>
 
-      <PaddingWrapper>
-        <Container>
-          <LongContainer>
-            <SubHeading id='responsiveness'>Responsive design</SubHeading>
-            <StyledParagraph>
-              Mobile accounts for approximately half of web traffic worldwide.
-              In the upcoming decade, mobile web traffic is expected to keep
-              growing, making it increasingly important to cater to devices of
-              all sizes.
-            </StyledParagraph>
-          </LongContainer>
-        </Container>
+      <Section title='Responsive Design' id='responsiveness'>
+        <StyledParagraph>
+          Mobile accounts for approximately half of web traffic worldwide. In
+          the upcoming decade, mobile web traffic is expected to keep growing,
+          making it increasingly important to cater to devices of all sizes.
+        </StyledParagraph>
         <ResponsiveImg
           iphone
           src={ExerciseSiteIphone}
           alt='Responsive design.'
         />
-      </PaddingWrapper>
+      </Section>
 
-      <BackgroundWrapper>
-        <PaddingWrapper>
-          <Container>
-            <LongContainer>
-              <SubHeading id='tech'>Tech Details</SubHeading>
-              <TechList>
-                <ListItem>
-                  <IconContainer>
-                    <BsDisplayFill />
-                  </IconContainer>
-                  <div>
-                    <StyledSpan>Frontend</StyledSpan>
-                    <br /> HTML, CSS
-                  </div>
-                </ListItem>
-                <ListItem>
-                  <IconContainer>
-                    <BsThreeDots />
-                  </IconContainer>
-                  <div>
-                    <StyledSpan>Others</StyledSpan>
-                    <br /> CSS Grid, CSS Flexbox
-                  </div>
-                </ListItem>
-              </TechList>
-              <MarginButton as={Link} to='/#projects'>
-                Back to projects
-              </MarginButton>
-            </LongContainer>
-          </Container>
-        </PaddingWrapper>
-      </BackgroundWrapper>
+      <Section title='Tech Details' id='tech' bg={true}>
+        <TechList>
+          <ListItem>
+            <IconContainer>
+              <BsDisplayFill />
+            </IconContainer>
+            <div>
+              <StyledSpan>Frontend</StyledSpan>
+              <br /> HTML, CSS
+            </div>
+          </ListItem>
+          <ListItem>
+            <IconContainer>
+              <BsThreeDots />
+            </IconContainer>
+            <div>
+              <StyledSpan>Others</StyledSpan>
+              <br /> CSS Grid, CSS Flexbox
+            </div>
+          </ListItem>
+        </TechList>
+        <Button as={Link} to='/#projects'>
+          Back to projects
+        </Button>
+      </Section>
     </motion.div>
   );
 };

@@ -53,28 +53,6 @@ export const Container = styled.div`
   }
 `;
 
-export const FlexContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  div:first-child {
-    width: 70%;
-  }
-
-  @media (max-width: 800px) {
-    flex-direction: column;
-
-    div:first-child {
-      width: 100%;
-    }
-  }
-`;
-
-export const InnerContainer = styled.div`
-  margin: auto;
-  max-width: 700px;
-`;
-
 export const LongContainer = styled.div`
   margin: auto;
   width: 100%;
@@ -110,37 +88,29 @@ export const VideoHeading = styled.h3`
 export const Video = styled.video`
   margin: auto;
   display: block;
-  width: 80%;
+  width: 100%;
   max-height: 700px;
-
-  @media (max-width: 1100px) {
-    width: 90%;
-  }
 `;
 
 export const ResponsiveImg = styled.img`
   margin: auto;
   display: block;
   max-height: 700px;
-
-  @media (max-width: 600px) {
-    height: ${(props) => props.iphone && '400px'};
-  }
-
-  @media (max-width: 1100px) {
-    width: ${(props) => !props.iphone && '90%'};
-    max-width: 100%;
-  }
+  width: ${(props) => !props.iphone && '100%'};
 
   @media (max-width: 1500px) {
     height: ${(props) => props.iphone && '500px'};
+  }
+
+  @media (max-width: 600px) {
+    height: ${(props) => props.iphone && '400px'};
   }
 `;
 
 export const ProjectDescription = styled.h2`
   letter-spacing: -1.5px;
   line-height: 1.7;
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: 400;
   margin-bottom: 1.5em;
 
@@ -169,6 +139,10 @@ export const SubHeading = styled.h3`
     border-radius: 1rem;
   }
 
+  @media (max-width: 1700px) {
+    font-size: 1.75rem;
+  }
+
   @media (max-width: 750px) {
     font-size: 1.5rem;
   }
@@ -180,32 +154,120 @@ export const StyledParagraph = styled.p`
 
   a {
     color: ${(props) => props.theme.primary};
+    border-bottom: 1px solid ${(props) => props.theme.primary};
   }
 
-  @media (max-width: 700px) {
-    font-size: 1.2rem;
+  @media (max-width: 1700px) {
+    font-size: 1.25rem;
+  }
+`;
+
+export const Example = styled.p`
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  font-weight: 600;
+
+  span {
+    font-weight: 400;
+  }
+
+  @media (max-width: 1700px) {
+    font-size: 1.25rem;
+  }
+`;
+
+export const ListTitle = styled.h4`
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 1700px) {
+    font-size: 1.25rem;
+  }
+`;
+
+export const List = styled.ul`
+  list-style: none;
+  margin-bottom: 1em;
+  font-size: 1.5rem;
+  line-height: 1.7;
+
+  li {
+    margin-left: 1.5rem;
+    position: relative;
+
+    span {
+      font-style: italic;
+    }
+  }
+
+  li:before {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 50%;
+    background: ${(props) => props.theme.primary};
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+  }
+
+  @media (max-width: 1700px) {
+    font-size: 1.25rem;
+  }
+`;
+
+export const OrderedList = styled.ol`
+  list-style-position: inside;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  list-style: none;
+  counter-reset: my-counter;
+
+  li {
+    counter-increment: my-counter;
+  }
+
+  span:first-child {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  li::before {
+    content: counter(my-counter) '. ';
+    color: ${(props) => props.theme.primary};
+    font-weight: 600;
+    margin-right: 0.5rem;
+  }
+
+  @media (max-width: 1700px) {
+    font-size: 1.25rem;
   }
 `;
 
 export const TechList = styled.ul`
   list-style-type: none;
-  list-style-position: inside;
-  font-size: 1.5rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1em;
-  border-radius: 0.3rem;
-  padding-top: 2em;
+  font-size: 1.5rem;
 
-  @media (max-width: 700px) {
-    font-size: 1.2rem;
+  @media (max-width: 1700px) {
+    font-size: 1.25rem;
   }
 `;
 
 export const ListItem = styled.li`
   padding-bottom: 1em;
-  border-bottom: 0.75px solid hsl(208, 40%, 80%);
   border-radius: 1rem;
+  border-bottom: 1px solid hsla(208, 40%, 80%, 0.75);
   padding-left: 1em;
   line-height: 1.7;
   display: flex;
@@ -231,9 +293,7 @@ export const IconContainer = styled.div`
   @media (min-width: 600px) {
     min-width: 50px;
     min-height: 50px;
-  }
 
-  @media (min-width: 800px) {
     svg {
       font-size: 1.75rem;
     }
@@ -274,10 +334,6 @@ export const SecondaryButton = styled(Button)`
   color: hsl(210, 7%, 50%);
 `;
 
-export const MarginButton = styled(Button)`
-  margin-top: 4em;
-`;
-
 export const StyledSpan = styled.span`
   color: hsl(208, 40%, 65%);
 `;
@@ -287,6 +343,6 @@ export const BackgroundWrapper = styled.section`
 `;
 
 export const PaddingWrapper = styled.section`
-  padding: 4em 0;
+  padding: 4rem 0;
   position: relative;
 `;

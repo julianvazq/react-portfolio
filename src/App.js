@@ -14,6 +14,7 @@ import MovieExplorerPage from './components/projects/MovieExplorerPage';
 import Navbar from './components/global/Navbar';
 import { AnimatePresence } from 'framer-motion';
 import ECommercePage from './components/projects/EcommercePage';
+import ListifyPage from './components/projects/ListifyPage';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           {/* <Route path='/js-typing-test' component={TypingTestPage} /> */}
           <Route path='/exercise-site' component={ExerciseSitePage} />
           <Route path='/movie-explorer' component={MovieExplorerPage} />
+          <Route path='/listify' component={ListifyPage} />
         </Switch>
       </AnimatePresence>
       <Footer />

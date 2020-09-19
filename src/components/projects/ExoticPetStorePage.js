@@ -21,7 +21,6 @@ import {
   ButtonContainer,
   Button,
   SecondaryButton,
-  MarginButton,
   StyledSpan,
   BackgroundWrapper,
   PaddingWrapper,
@@ -42,7 +41,7 @@ const ExoticPetStorePage = () => {
           <Container>
             <LongContainer>
               <Title>Exotic Pet Store</Title>
-              <FlexContainer>
+              {/* <FlexContainer>
                 <div>
                   <ProjectDescription>
                     Landing page for a fictional store that offers services
@@ -66,10 +65,10 @@ const ExoticPetStorePage = () => {
                   </ButtonContainer>
                 </div>
                 <PageNav />
-              </FlexContainer>
+              </FlexContainer> */}
             </LongContainer>
           </Container>
-          <Video id='preview' autoPlay loop muted playsInline controls>
+          <Video id='preview' loop muted playsInline controls>
             <source src={ExoticPetStoreDemo} type='video/mp4' />
             Your browser does not support HTML video.
           </Video>
@@ -120,9 +119,9 @@ const ExoticPetStorePage = () => {
                   </div>
                 </ListItem>
               </TechList>
-              <MarginButton as={Link} to='/#projects'>
+              <Button as={Link} to='/#projects'>
                 Back to projects
-              </MarginButton>
+              </Button>
             </LongContainer>
           </Container>
         </PaddingWrapper>

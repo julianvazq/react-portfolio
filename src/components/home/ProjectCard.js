@@ -117,6 +117,7 @@ const ProjectItem = styled(motion.article)`
   img {
     width: 100%;
     display: block;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
 `;
 
@@ -125,7 +126,6 @@ const TechInfo = styled.div`
   padding: 0.75em;
   background: #fff;
   color: ${(props) => props.theme.gray};
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
   border-top: 4px solid
     ${(props) => (props.borderColor ? props.borderColor : props.theme.primary)};
   border-top-left-radius: 0.3rem;
@@ -162,10 +162,9 @@ const ProjectCard = ({
             </Overlay>
             <picture>
               <source srcSet={images.sm} media='(max-width: 799px)' />
-              <source srcSet={images.lg} media='(min-width: 1500px)' />
               <source srcSet={images.md} media='(max-width: 1500px)' />
               <img
-                src={images.md}
+                src={images.lg}
                 alt={title}
                 loading={index > 1 ? 'lazy' : 'eager'}
               />
