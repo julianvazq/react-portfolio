@@ -107,7 +107,7 @@ const ListifyPage = () => {
             design only includes the necessary elements and nothing more.
           </StyledParagraph>
           <StyledParagraph>
-            Along the process of building the app I made some slighly design
+            Along the process of building the app I made some slight design
             changes, but the overall look and feel remained the same.
           </StyledParagraph>
         </div>
