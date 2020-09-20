@@ -131,26 +131,34 @@ const ContactForm = () => {
           onChange={(e) => setName(e.target.value)}
           hasText={name.length > 0}
         />
-        <Label hasText={name.length > 0}>Name</Label>
+        <Label hasText={name.length > 0} for='name'>
+          Name
+        </Label>
       </InputGroup>
       <InputGroup>
         <Input
           type='email'
           name='email'
+          id='email'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           hasText={email.length > 0}
         />
-        <Label hasText={email.length > 0}>Email</Label>
+        <Label hasText={email.length > 0} for='email'>
+          Email
+        </Label>
       </InputGroup>
       <InputGroup>
         <TextArea
           type='body'
           name='message'
+          id='message'
           onChange={(e) => setMessage(e.target.value)}
           hasText={message.length > 0}
         />
-        <TextAreaLabel hasText={message.length > 0}>Message</TextAreaLabel>
+        <TextAreaLabel hasText={message.length > 0} for='message'>
+          Message
+        </TextAreaLabel>
       </InputGroup>
       {status === 'SUCCESS' ? (
         <p>Thanks!</p>
