@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import styled, { css } from 'styled-components';
 import { SecondaryButton } from '../styled-components/StyledComponents';
 
@@ -44,6 +44,7 @@ const Label = styled.label`
 
 const Input = styled.input`
   ${inputStyles}
+  border: ${(props) => props.error && '1px solid #ff4646'};
   height: 60px;
   padding-top: ${(props) => props.hasText && '2rem'};
 
@@ -68,6 +69,7 @@ const TextAreaLabel = styled.label`
 
 const TextArea = styled.textarea`
   ${inputStyles}
+  border: ${(props) => props.error && '1px solid #ff4646'};
   resize: none;
   font-family: 'Open Sans', 'Helvetica', 'sans-serif';
   position: relative;
@@ -86,8 +88,21 @@ const SubmitButton = styled(SecondaryButton)`
   margin: 0;
 `;
 
-const ErrorMessage = styled.p`
+const Failed = styled.p`
   margin-top: 1rem;
+`;
+
+const ErrorMessage = styled.p`
+  text-align: left;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background: #ebc1c1;
+  color: hsl(0deg 51% 30%);
+
+  span {
+    font-weight: 600;
+  }
 `;
 
 const ContactForm = () => {
@@ -95,9 +110,45 @@ const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState({
+    name: false,
+    email: false,
+    message: false,
+  });
+
+  const validateForm = useCallback(() => {
+    const errors = {
+      name: false,
+      email: false,
+      message: false,
+    };
+
+    if (!name) {
+      errors.name = true;
+    }
+    if (!email) {
+      errors.email = true;
+    }
+    if (!message) {
+      errors.message = true;
+    }
+
+    setErrors(errors);
+  }, [name, email, message]);
 
   const submitForm = (ev) => {
     ev.preventDefault();
+
+    setIsSubmitted(true);
+
+    if (!isSubmitted || Object.values(errors).some((err) => err)) {
+      return;
+    }
+
+    console.log('yeah');
+    return;
+
     const form = ev.target;
     const data = new FormData(form);
     const xhr = new XMLHttpRequest();
@@ -115,6 +166,12 @@ const ContactForm = () => {
     xhr.send(data);
   };
 
+  useEffect(() => {
+    if (isSubmitted) {
+      validateForm();
+    }
+  }, [name, email, message, isSubmitted, validateForm]);
+
   return (
     <Form
       onSubmit={submitForm}
@@ -122,8 +179,9 @@ const ContactForm = () => {
       method='POST'
     >
       <input type='text' name='_gotcha' style={{ display: 'none' }} />
-      <InputGroup>
+      <InputGroup errors={errors}>
         <Input
+          error={errors.name}
           type='text'
           name='name'
           id='name'
@@ -131,12 +189,18 @@ const ContactForm = () => {
           onChange={(e) => setName(e.target.value)}
           hasText={name.length > 0}
         />
-        <Label hasText={name.length > 0} for='name'>
+        <Label hasText={name.length > 0} htmlFor='name'>
           Name
         </Label>
       </InputGroup>
+      {errors.name && (
+        <ErrorMessage>
+          <span>Name</span> is a required field.
+        </ErrorMessage>
+      )}
       <InputGroup>
         <Input
+          error={errors.email}
           type='email'
           name='email'
           id='email'
@@ -144,30 +208,39 @@ const ContactForm = () => {
           onChange={(e) => setEmail(e.target.value)}
           hasText={email.length > 0}
         />
-        <Label hasText={email.length > 0} for='email'>
+        <Label hasText={email.length > 0} htmlFor='email'>
           Email
         </Label>
       </InputGroup>
+      {errors.email && (
+        <ErrorMessage>
+          <span>Email</span> is a required field.
+        </ErrorMessage>
+      )}
       <InputGroup>
         <TextArea
+          error={errors.message}
           type='body'
           name='message'
           id='message'
           onChange={(e) => setMessage(e.target.value)}
           hasText={message.length > 0}
         />
-        <TextAreaLabel hasText={message.length > 0} for='message'>
+        <TextAreaLabel hasText={message.length > 0} htmlFor='message'>
           Message
         </TextAreaLabel>
       </InputGroup>
+      {errors.message && (
+        <ErrorMessage>
+          A <span>message</span> would be appreciated.
+        </ErrorMessage>
+      )}
       {status === 'SUCCESS' ? (
         <p>Thanks!</p>
       ) : (
         <SubmitButton as='button'>Submit</SubmitButton>
       )}
-      {status === 'ERROR' && (
-        <ErrorMessage>Ooops! There was an error.</ErrorMessage>
-      )}
+      {status === 'ERROR' && <Failed>Ooops! There was an error.</Failed>}
     </Form>
   );
 };

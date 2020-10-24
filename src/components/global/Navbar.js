@@ -22,10 +22,6 @@ const Navbar = () => {
       &:hover:after {
         transform: scaleX(1);
       }
-
-      a:focus &:after {
-        transform: scaleX(1);
-      }
     }
 
     &:after {
@@ -48,11 +44,6 @@ const Navbar = () => {
     justify-content: flex-end;
     flex: 1 1 0;
     text-align: right;
-    padding-bottom: 10px;
-
-    /* a:focus ${ListItem}:after {
-      transform: scaleX(1);
-    } */
 
     @media (max-width: 735px) {
       flex-direction: column;
