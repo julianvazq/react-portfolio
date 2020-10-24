@@ -265,14 +265,34 @@ export const TechList = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  padding-bottom: 1em;
+  margin-bottom: 1em;
   border-radius: 1rem;
-  border-bottom: 1px solid hsla(208, 40%, 80%, 0.75);
+  /* border-bottom: 1px solid hsla(208, 40%, 80%, 0.75); */
   padding-left: 1em;
   line-height: 1.7;
   display: flex;
   align-items: center;
   position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1em;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: ${(props) =>
+      `linear-gradient(to right, #e0e0e0, ${
+        props.altGradientColor ? '#FFF' : '#f0f4f6'
+      })`};
+    border-radius: 0.3rem;
+  }
+
+  @media (min-width: 800px) {
+    &::after {
+      width: 80%;
+    }
+  }
 `;
 
 export const IconContainer = styled.div`

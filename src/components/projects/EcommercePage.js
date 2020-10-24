@@ -17,6 +17,7 @@ import { FaServer } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Header from './shared/Header';
 import Section from './shared/Section';
+import { useLocation } from 'react-router-dom';
 
 const navLinks = [
   {
@@ -155,7 +156,7 @@ const ECommercePage = () => {
 
       <Section title='Tech Details' id='tech'>
         <TechList>
-          <ListItem>
+          <ListItem altGradientColor={true}>
             <IconContainer>
               <BsDisplayFill />
             </IconContainer>
@@ -164,7 +165,7 @@ const ECommercePage = () => {
               <br /> React (NextJS), Styled Components (CSS)
             </div>
           </ListItem>
-          <ListItem>
+          <ListItem altGradientColor={true}>
             <IconContainer>
               <FaServer />
             </IconContainer>
@@ -173,7 +174,7 @@ const ECommercePage = () => {
               <br /> Node, Express
             </div>
           </ListItem>
-          <ListItem>
+          <ListItem altGradientColor={true}>
             <IconContainer>
               <BsThreeDots />
             </IconContainer>

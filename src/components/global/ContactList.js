@@ -17,7 +17,7 @@ const ListContainer = styled.div`
     position: absolute;
     top: -3rem;
     left: 0;
-    width: 100%;
+    width: 125%;
     height: 1px;
     background: ${(props) =>
       `linear-gradient(to right, #e0e0e0, ${props.backgroundColor})`};
@@ -28,13 +28,7 @@ const ListContainer = styled.div`
     margin: 6rem 0 0;
 
     &:before {
-      width: 80%;
-    }
-  }
-
-  @media (min-width: 1500px) {
-    &:before {
-      width: 65%;
+      width: 85%;
     }
   }
 `;
