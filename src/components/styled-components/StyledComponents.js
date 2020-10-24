@@ -282,7 +282,7 @@ export const ListItem = styled.li`
     width: 100%;
     height: 1px;
     background: ${(props) =>
-      `linear-gradient(to right, #e0e0e0, ${
+      `linear-gradient(to right, hsl(208 87% 67% / 0.5), ${
         props.altGradientColor ? '#FFF' : '#f0f4f6'
       })`};
     border-radius: 0.3rem;

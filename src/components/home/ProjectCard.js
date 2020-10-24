@@ -5,14 +5,16 @@ import { motion } from 'framer-motion';
 
 const overlayVariant = {
   rest: {
-    opacity: 0,
+    filter: 'blur(300px)',
+    scale: 0,
   },
   hover: {
-    opacity: 1,
+    filter: 'blur(0px)',
+    scale: 1,
     transition: {
-      duration: 0.15,
+      duration: 0.2,
       type: 'tween',
-      ease: 'easeIn',
+      ease: 'linear',
     },
   },
 };
@@ -21,13 +23,15 @@ const textVariant = {
   rest: {
     opacity: 0,
     y: 5,
+    filter: 'blur(7px)',
   },
   hover: {
     opacity: 1,
     y: 0,
+    filter: 'blur(0px)',
     transition: {
       duration: 0.25,
-      delay: 0.3,
+      delay: 0.2,
     },
   },
 };
@@ -46,11 +50,10 @@ const Overlay = styled(motion.div)`
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgb(22 22 22 / 70%);
   color: #fff;
   font-weight: 400;
   line-height: 1.5;
-  opacity: 0;
   transition: opacity 350ms ease-in-out;
   -moz-transition: opacity 350ms ease-in-out;
   padding: 4rem;
@@ -64,15 +67,20 @@ const Overlay = styled(motion.div)`
   }
 `;
 
-// For accessibility
+// For accessibility (tab)
 const StyledLink = styled(Link)`
   @media (min-width: 800px) {
     &:focus ${Overlay} {
-      opacity: 1 !important;
+      transition: all 200ms ease-in-out;
+      transform: scale(1) !important;
+      filter: blur(0px) !important;
     }
 
     &:focus ${Overlay} p {
+      transition: all 250ms ease-in-out 150ms;
       opacity: 1 !important;
+      filter: blur(0px) !important;
+      transform: scale(1) !important;
       transform: translateY(5px) !important;
     }
   }
