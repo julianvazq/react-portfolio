@@ -83,30 +83,44 @@ const TextArea = styled.textarea`
 `;
 
 const SubmitButton = styled(SecondaryButton)`
+  width: 100%;
   font-size: 1rem;
-  border: none;
-  margin: 0;
-`;
-
-const Failed = styled.p`
-  margin-top: 1rem;
-`;
-
-const ErrorMessage = styled.p`
-  text-align: left;
   margin-bottom: 1rem;
+  border: none;
+`;
+
+const feedbackStyles = css`
+  text-align: left;
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
-  background: #ebc1c1;
-  color: hsl(0deg 51% 30%);
 
   span {
     font-weight: 600;
   }
 `;
 
+const Failure = styled.p`
+  ${feedbackStyles};
+  background: #faddb4;
+  color: hsl(35deg 88% 25%);
+  line-height: 1.5;
+`;
+
+const Success = styled.p`
+  ${feedbackStyles};
+  background: #c5fbc5;
+  color: hsl(120deg 87% 25%);
+`;
+
+const ErrorMessage = styled.p`
+  ${feedbackStyles};
+  margin-bottom: 1rem;
+  background: #ebc1c1;
+  color: hsl(0deg 51% 30%);
+`;
+
 const ContactForm = () => {
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState(null);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -118,6 +132,8 @@ const ContactForm = () => {
   });
 
   const validateForm = useCallback(() => {
+    setStatus(null);
+
     const errors = {
       name: false,
       email: false,
@@ -142,12 +158,9 @@ const ContactForm = () => {
 
     setIsSubmitted(true);
 
-    if (!isSubmitted || Object.values(errors).some((err) => err)) {
+    if (Object.values(errors).some((err) => err)) {
       return;
     }
-
-    console.log('yeah');
-    return;
 
     const form = ev.target;
     const data = new FormData(form);
@@ -167,10 +180,8 @@ const ContactForm = () => {
   };
 
   useEffect(() => {
-    if (isSubmitted) {
-      validateForm();
-    }
-  }, [name, email, message, isSubmitted, validateForm]);
+    validateForm();
+  }, [name, email, message, validateForm]);
 
   return (
     <Form
@@ -179,9 +190,10 @@ const ContactForm = () => {
       method='POST'
     >
       <input type='text' name='_gotcha' style={{ display: 'none' }} />
-      <InputGroup errors={errors}>
+      <InputGroup>
         <Input
-          error={errors.name}
+          error={isSubmitted && errors.name}
+          disabled={status === 'SUCCESS'}
           type='text'
           name='name'
           id='name'
@@ -193,14 +205,15 @@ const ContactForm = () => {
           Name
         </Label>
       </InputGroup>
-      {errors.name && (
+      {isSubmitted && errors.name && (
         <ErrorMessage>
           <span>Name</span> is a required field.
         </ErrorMessage>
       )}
       <InputGroup>
         <Input
-          error={errors.email}
+          error={isSubmitted && errors.email}
+          disabled={status === 'SUCCESS'}
           type='email'
           name='email'
           id='email'
@@ -212,14 +225,15 @@ const ContactForm = () => {
           Email
         </Label>
       </InputGroup>
-      {errors.email && (
+      {isSubmitted && errors.email && (
         <ErrorMessage>
           <span>Email</span> is a required field.
         </ErrorMessage>
       )}
       <InputGroup>
         <TextArea
-          error={errors.message}
+          error={isSubmitted && errors.message}
+          disabled={status === 'SUCCESS'}
           type='body'
           name='message'
           id='message'
@@ -230,17 +244,26 @@ const ContactForm = () => {
           Message
         </TextAreaLabel>
       </InputGroup>
-      {errors.message && (
+      {isSubmitted && errors.message && (
         <ErrorMessage>
-          A <span>message</span> would be appreciated.
+          <span>Message</span> is a required field.
         </ErrorMessage>
       )}
       {status === 'SUCCESS' ? (
-        <p>Thanks!</p>
+        <Success>
+          <span>Thank you</span> for your message. I'll be in touch soon.
+        </Success>
       ) : (
         <SubmitButton as='button'>Submit</SubmitButton>
       )}
-      {status === 'ERROR' && <Failed>Ooops! There was an error.</Failed>}
+      {status === 'ERROR' && (
+        <Failure>
+          Looks like there was an <span>error</span>.
+          <br />
+          Try again and if the issue persists, please contact me through one of
+          my social media accounts below.
+        </Failure>
+      )}
     </Form>
   );
 };

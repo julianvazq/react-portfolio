@@ -6,29 +6,76 @@ import { RiExternalLinkLine } from 'react-icons/ri';
 import { FiGithub } from 'react-icons/fi';
 import ResumePDF from '../../docs/julian_vazquez_resume.pdf';
 
-const List = styled.div`
+const ListContainer = styled.div`
   grid-column: -1/1;
+  width: 100%;
+  margin: 6rem auto 0 auto;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -3rem;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: ${(props) =>
+      `linear-gradient(to right, #e0e0e0, ${props.backgroundColor})`};
+    border-radius: 0.3rem;
+  }
+
+  @media (min-width: 800px) {
+    margin: 6rem 0 0;
+
+    &:before {
+      width: 80%;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    &:before {
+      width: 65%;
+    }
+  }
+`;
+
+const List = styled.div`
+  /* grid-column: -1/1; */
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   font-size: 1.25rem;
-  width: 100%;
+  /* width: 100%; */
   text-align: center;
   max-width: max-content;
-  margin: 6rem auto 0 auto;
+  /* margin: 6rem auto 0 auto; */
+  margin: auto;
+  position: relative;
 
   a {
     max-width: max-content;
   }
+
+  /* &::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    width: 100%;
+    height: 1px;
+    background: ${(props) =>
+    `linear-gradient(to right, #e7e7e9, ${props.backgroundColor})`};
+  } */
 
   @media (min-width: 650px) {
     flex-direction: row;
   }
 
   @media (min-width: 800px) {
-    margin: 6rem 0 0;
+    /* margin: 6rem 0 0; */
+    max-width: none;
+    justify-content: flex-start;
   }
 `;
 
@@ -75,66 +122,68 @@ const Anchor = styled.a`
   }
 `;
 
-const ContactList = () => {
+const ContactList = ({ backgroundColor }) => {
   return (
-    <List>
-      <Anchor
-        href='https://github.com/julianvazq'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <ContactItem>
-          <IconContainer>
-            <FiGithub />
-          </IconContainer>
-          GitHub
-        </ContactItem>
-      </Anchor>
-      <Anchor
-        href='https://www.linkedin.com/in/julian-vazquez/'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <ContactItem>
-          <IconContainer>
-            <GrLinkedinOption />
-          </IconContainer>
-          Linkedin
-        </ContactItem>
-      </Anchor>
-      <Anchor
-        href='mailto:julianvazquez101@gmail.com'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <ContactItem>
-          <IconContainer>
-            <MdEmail />
-          </IconContainer>
-          Email
-        </ContactItem>
-      </Anchor>
-      <Anchor href={ResumePDF} target='_blank' rel='noopener noreferrer'>
-        <ContactItem>
-          <IconContainer>
-            <MdPictureAsPdf />
-          </IconContainer>
-          Resume
-        </ContactItem>
-      </Anchor>
-      <Anchor
-        href='https://julianvazq.github.io/accessibility-web-explainer/'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <ContactItem>
-          <IconContainer>
-            <RiExternalLinkLine />
-          </IconContainer>
-          Accessibility
-        </ContactItem>
-      </Anchor>
-    </List>
+    <ListContainer backgroundColor={backgroundColor}>
+      <List>
+        <Anchor
+          href='https://github.com/julianvazq'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <ContactItem>
+            <IconContainer>
+              <FiGithub />
+            </IconContainer>
+            GitHub
+          </ContactItem>
+        </Anchor>
+        <Anchor
+          href='https://www.linkedin.com/in/julian-vazquez/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <ContactItem>
+            <IconContainer>
+              <GrLinkedinOption />
+            </IconContainer>
+            Linkedin
+          </ContactItem>
+        </Anchor>
+        <Anchor
+          href='mailto:julianvazquez101@gmail.com'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <ContactItem>
+            <IconContainer>
+              <MdEmail />
+            </IconContainer>
+            Email
+          </ContactItem>
+        </Anchor>
+        <Anchor href={ResumePDF} target='_blank' rel='noopener noreferrer'>
+          <ContactItem>
+            <IconContainer>
+              <MdPictureAsPdf />
+            </IconContainer>
+            Resume
+          </ContactItem>
+        </Anchor>
+        <Anchor
+          href='https://julianvazq.github.io/accessibility-web-explainer/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <ContactItem>
+            <IconContainer>
+              <RiExternalLinkLine />
+            </IconContainer>
+            Accessibility
+          </ContactItem>
+        </Anchor>
+      </List>
+    </ListContainer>
   );
 };
 

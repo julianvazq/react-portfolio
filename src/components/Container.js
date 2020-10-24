@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = ({ children }) => {
+const Container = ({ maxWidth = 1400, children }) => {
   const StyledContainer = styled.div`
-    max-width: 1400px;
+    max-width: ${(props) => `${props.maxWidth}px`};
     width: 90%;
     display: flex;
     align-items: center;
@@ -12,7 +12,7 @@ const Container = ({ children }) => {
     position: relative;
   `;
 
-  return <StyledContainer>{children}</StyledContainer>;
+  return <StyledContainer maxWidth={maxWidth}>{children}</StyledContainer>;
 };
 
 export default Container;

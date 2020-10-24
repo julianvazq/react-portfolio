@@ -9,14 +9,20 @@ import ContactList from './ContactList';
 const Footer = () => {
   const { pathname } = useLocation();
 
+  const alternateBackgroundColor = ['/e-commerce'];
+
+  const backgroundColor = alternateBackgroundColor.includes(pathname)
+    ? '#f0f4f6'
+    : '#FFF';
+
   const BackgroundContainer = styled.section`
-    background: ${(props) => props.background && '#f0f4f6'};
+    background: ${(props) => props.backgroundColor};
   `;
 
   const Footer = styled.footer`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 3em 0;
+    margin: 3rem 0 2rem;
     width: 100%;
     text-align: center;
     justify-content: center;
@@ -26,29 +32,31 @@ const Footer = () => {
     }
 
     @media (min-width: 750px) {
-      margin: 6em 0;
+      margin: 4rem 0 2rem;
     }
   `;
 
   const FooterText = styled.p`
     grid-column: -1/1;
     max-width: 840px;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     letter-spacing: -1px;
-    font-weight: 400;
+    font-weight: 300;
     padding-right: 0.3em;
     margin-bottom: 2rem;
 
     span {
       color: ${(props) => props.theme.primary};
-      font-weight: 300;
       white-space: nowrap;
     }
 
     @media (min-width: 800px) {
-      font-size: 2rem;
       text-align: left;
+    }
+
+    @media (min-width: 1500px) {
+      font-size: 1.75rem;
     }
   `;
 
@@ -66,25 +74,24 @@ const Footer = () => {
     }
 
     @media (min-width: 1000px) {
-      /* Center */
-      margin: auto;
-    }
-
-    @media (min-width: 1500px) {
-      width: 400px;
+      margin: ${(props) => props.center && 'auto'};
     }
   `;
 
   return (
-    <BackgroundContainer background={pathname === '/e-commerce'}>
-      <Container>
+    <BackgroundContainer backgroundColor={backgroundColor}>
+      <Container maxWidth={pathname === '/' ? 1400 : 1000}>
         <Footer id='contact'>
           <FooterText>
             Liked my portfolio? <span>Let's talk.</span>
           </FooterText>
           <ContactForm />
-          <Img src={ContactImage} alt='Illustration.' />
-          <ContactList />
+          <Img
+            src={ContactImage}
+            alt='Illustration.'
+            center={pathname === '/'}
+          />
+          <ContactList backgroundColor={backgroundColor} />
         </Footer>
       </Container>
     </BackgroundContainer>

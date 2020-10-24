@@ -51,7 +51,7 @@ const ECommercePage = () => {
     >
       <Header
         title='Mock E-Commerce'
-        description=' Mock e-commerce store that exclusively sells headphones and
+        description='Stylish mock e-commerce store whose main products are headphones and
                     earbuds.'
         url='https://e-commerce.julianvazquez.me'
         github='https://github.com/julianvazq/headphones-ecommerce'

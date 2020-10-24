@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   BackgroundWrapper,
-  Container,
-  LongContainer,
   Title,
   ProjectDescription,
   ButtonContainer,

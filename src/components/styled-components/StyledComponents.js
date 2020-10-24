@@ -63,7 +63,7 @@ export const Title = styled.h1`
   margin-bottom: 1em;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 300;
   position: relative;
   display: inline-block;
@@ -110,7 +110,7 @@ export const ResponsiveImg = styled.img`
 export const ProjectDescription = styled.h2`
   letter-spacing: -1.5px;
   line-height: 1.7;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 400;
   margin-bottom: 1.5em;
 
