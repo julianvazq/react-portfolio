@@ -156,7 +156,7 @@ const ECommercePage = () => {
 
       <Section title='Tech Details' id='tech'>
         <TechList>
-          <ListItem altGradientColor={true}>
+          <ListItem>
             <IconContainer>
               <BsDisplayFill />
             </IconContainer>
@@ -165,7 +165,7 @@ const ECommercePage = () => {
               <br /> React (NextJS), Styled Components (CSS)
             </div>
           </ListItem>
-          <ListItem altGradientColor={true}>
+          <ListItem>
             <IconContainer>
               <FaServer />
             </IconContainer>
@@ -174,7 +174,7 @@ const ECommercePage = () => {
               <br /> Node, Express
             </div>
           </ListItem>
-          <ListItem altGradientColor={true}>
+          <ListItem>
             <IconContainer>
               <BsThreeDots />
             </IconContainer>

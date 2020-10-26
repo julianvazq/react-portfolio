@@ -19,8 +19,7 @@ const ListContainer = styled.div`
     left: 0;
     width: 125%;
     height: 1px;
-    background: ${(props) =>
-      `linear-gradient(to right, #e0e0e0, ${props.backgroundColor})`};
+    background: linear-gradient(to right, #e0e0e0, transparent);
     border-radius: 0.3rem;
   }
 
@@ -34,17 +33,14 @@ const ListContainer = styled.div`
 `;
 
 const List = styled.div`
-  /* grid-column: -1/1; */
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   font-size: 1.25rem;
-  /* width: 100%; */
   text-align: center;
   max-width: max-content;
-  /* margin: 6rem auto 0 auto; */
   margin: auto;
   position: relative;
 
@@ -52,22 +48,11 @@ const List = styled.div`
     max-width: max-content;
   }
 
-  /* &::before {
-    content: '';
-    position: absolute;
-    top: -2rem;
-    width: 100%;
-    height: 1px;
-    background: ${(props) =>
-    `linear-gradient(to right, #e7e7e9, ${props.backgroundColor})`};
-  } */
-
   @media (min-width: 650px) {
     flex-direction: row;
   }
 
   @media (min-width: 800px) {
-    /* margin: 6rem 0 0; */
     max-width: none;
     justify-content: flex-start;
   }
@@ -116,9 +101,9 @@ const Anchor = styled.a`
   }
 `;
 
-const ContactList = ({ backgroundColor }) => {
+const ContactList = () => {
   return (
-    <ListContainer backgroundColor={backgroundColor}>
+    <ListContainer>
       <List>
         <Anchor
           href='https://github.com/julianvazq'

@@ -91,7 +91,7 @@ const Footer = () => {
             alt='Illustration.'
             center={pathname === '/'}
           />
-          <ContactList backgroundColor={backgroundColor} />
+          <ContactList />
         </Footer>
       </Container>
     </BackgroundContainer>

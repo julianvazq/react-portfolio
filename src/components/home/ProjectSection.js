@@ -39,9 +39,9 @@ const SectionTitle = styled.h2`
     position: absolute;
     top: -1rem;
     left: 0;
-    width: 90px;
+    width: 200px;
     height: 3px;
-    background: ${(props) => props.theme.primary};
+    background: linear-gradient(90deg, rgba(96, 176, 244, 1), transparent);
     border-radius: 1rem;
   }
 
@@ -56,18 +56,6 @@ const SectionSubtitle = styled.h3`
   letter-spacing: 1px;
   font-weight: 400;
   position: relative;
-
-  /* &:after {
-    content: '';
-    position: absolute;
-    bottom: -1.5rem;
-    left: 0;
-    width: 20%;
-    height: 3px;
-    background: ${(
-    props
-  ) => props.theme.primary};
-  } */
 `;
 
 const GridContainer = styled.div`

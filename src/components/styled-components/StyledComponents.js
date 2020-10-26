@@ -153,8 +153,8 @@ export const StyledParagraph = styled.p`
   line-height: 1.7;
 
   a {
-    color: ${(props) => props.theme.primary};
-    border-bottom: 1px solid ${(props) => props.theme.primary};
+    color: hsl(208 87% 50% / 1);
+    border-bottom: 1px solid hsl(208 87% 50% / 1);
   }
 
   @media (max-width: 1700px) {
@@ -267,7 +267,6 @@ export const TechList = styled.ul`
 export const ListItem = styled.li`
   margin-bottom: 1em;
   border-radius: 1rem;
-  /* border-bottom: 1px solid hsla(208, 40%, 80%, 0.75); */
   padding-left: 1em;
   line-height: 1.7;
   display: flex;
@@ -281,10 +280,7 @@ export const ListItem = styled.li`
     left: 0;
     width: 100%;
     height: 1px;
-    background: ${(props) =>
-      `linear-gradient(to right, hsl(208 87% 67% / 0.5), ${
-        props.altGradientColor ? '#FFF' : '#f0f4f6'
-      })`};
+    background: linear-gradient(to right, hsl(208 87% 67% / 0.5), transparent);
     border-radius: 0.3rem;
   }
 

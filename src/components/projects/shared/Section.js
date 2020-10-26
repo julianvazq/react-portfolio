@@ -32,6 +32,7 @@ const SectionTitle = styled.h3`
   font-size: 2rem;
   font-weight: 400;
   color: ${(props) => props.theme.gray};
+  display: inline-block;
   position: relative;
 
   &:after {
@@ -39,9 +40,9 @@ const SectionTitle = styled.h3`
     position: absolute;
     bottom: -2rem;
     left: 0;
-    width: 90px;
+    width: 100%;
     height: 3px;
-    background: ${(props) => props.theme.primary};
+    background: linear-gradient(90deg, rgba(96, 176, 244, 1), transparent);
     border-radius: 1rem;
   }
 
