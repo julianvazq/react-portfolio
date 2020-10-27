@@ -12,10 +12,10 @@ export const projects = [
     borderColor: '#38405f',
   },
   {
-    title: 'Mock E-Commerce',
+    title: 'E-Commerce Store',
     link: '/e-commerce',
     tech: ['NextJS', 'Node', 'Express'],
-    description: 'Headphone e-commerce store with a modern look and feel.',
+    description: "Headphone's e-commerce store with a modern look and feel.",
     images: {
       sm: require('../../images/sm/e-commerce-sm.png'),
       md: require('../../images/md/e-commerce-md.png'),

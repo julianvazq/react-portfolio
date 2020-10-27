@@ -17,7 +17,6 @@ import { FaServer } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Header from './shared/Header';
 import Section from './shared/Section';
-import { useLocation } from 'react-router-dom';
 
 const navLinks = [
   {
@@ -51,7 +50,7 @@ const ECommercePage = () => {
       exit='hidden'
     >
       <Header
-        title='Mock E-Commerce'
+        title='E-Commerce Store'
         description='Stylish mock e-commerce store whose main products are headphones and
                     earbuds.'
         url='https://e-commerce.julianvazquez.me'
