@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 import ExerciseSiteHomePage from '../../images/lg/exercise-site-lg.png';
 import ExerciseSiteIphone from '../../images/iphone/exercise-site-iphone.png';
 import {
@@ -9,13 +8,13 @@ import {
   TechList,
   ListItem,
   IconContainer,
-  Button,
   StyledSpan,
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import Header from './shared/Header';
 import Section from './shared/Section';
+import BackButton from './shared/BackButton';
 
 const ExoticPetStorePage = () => {
   return (
@@ -74,9 +73,7 @@ const ExoticPetStorePage = () => {
             </div>
           </ListItem>
         </TechList>
-        <Button as={Link} to='/#projects'>
-          Back to projects
-        </Button>
+        <BackButton />
       </Section>
     </motion.div>
   );

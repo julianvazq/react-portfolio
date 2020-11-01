@@ -1,8 +1,8 @@
 import React from 'react';
+import { RiExternalLinkLine } from 'react-icons/ri';
+import { FiGithub } from 'react-icons/fi';
 import {
   BackgroundWrapper,
-  Title,
-  ProjectDescription,
   ButtonContainer,
   Button,
   SecondaryButton,
@@ -39,6 +39,49 @@ const FlexContainer = styled.div`
   }
 `;
 
+const ProjectDescription = styled.h2`
+  letter-spacing: -1.5px;
+  line-height: 1.7;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 700px) {
+    font-size: 1.5rem;
+  }
+`;
+
+const Title = styled.h1`
+  margin-bottom: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 300;
+  position: relative;
+  display: inline-block;
+
+  @media (max-width: 700px) {
+    font-size: 1.25rem;
+  }
+`;
+
+const WebsiteButton = styled(Button)`
+  margin-top: 0.5rem;
+`;
+
+const GithubButton = styled(SecondaryButton)`
+  margin-top: 0.5rem;
+`;
+
+const LinkIcon = styled(RiExternalLinkLine)`
+  margin-left: 0.5rem;
+`;
+
+const GithubIcon = styled(FiGithub)`
+  margin-left: 0.5rem;
+  color: hsl(210, 7%, 55%);
+`;
+
 const Header = ({ title, description, url, github, navLinks, children }) => {
   return (
     <BackgroundWrapper>
@@ -48,16 +91,20 @@ const Header = ({ title, description, url, github, navLinks, children }) => {
             <Title>{title}</Title>
             <ProjectDescription>{description}</ProjectDescription>
             <ButtonContainer>
-              <Button href={url} target='_blank' rel='noopener noreferrer'>
-                Go to website
-              </Button>
-              <SecondaryButton
+              <WebsiteButton
+                href={url}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Go to website <LinkIcon />
+              </WebsiteButton>
+              <GithubButton
                 href={github}
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                Go to GitHub
-              </SecondaryButton>
+                Go to GitHub <GithubIcon />
+              </GithubButton>
             </ButtonContainer>
           </div>
           <PageNav navLinks={navLinks} />

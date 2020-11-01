@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 import LifeTrackerDemo from '../../gifs/life-tracker-demo.mp4';
 import LifeTrackerDemoEdit from '../../gifs/life-tracker-demo-edit.mp4';
 import LifeTrackerIphone from '../../images/iphone/life-tracker-iphone.png';
@@ -15,11 +14,11 @@ import {
   TechList,
   ListItem,
   IconContainer,
-  Button,
   StyledSpan,
 } from '../styled-components/StyledComponents';
 import Header from './shared/Header';
 import Section from './shared/Section';
+import BackButton from './shared/BackButton';
 
 const LifeTrackerPage = () => {
   return (
@@ -106,9 +105,7 @@ const LifeTrackerPage = () => {
             </div>
           </ListItem>
         </TechList>
-        <Button as={Link} to='/#projects'>
-          Back to projects
-        </Button>
+        <BackButton />
       </Section>
     </motion.div>
   );

@@ -4,10 +4,13 @@ import styled from 'styled-components';
 const Container = styled.div`
   width: 20%;
   min-width: 210px;
+  margin-left: 3rem;
 
   h3 {
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
   ul {
@@ -15,7 +18,7 @@ const Container = styled.div`
   }
 
   li {
-    margin: 0.5rem 0;
+    margin: 0.25rem 0;
     font-size: 1.25rem;
     position: relative;
 
@@ -29,6 +32,7 @@ const Container = styled.div`
   }
 
   @media (max-width: 800px) {
+    margin-left: 0;
     margin-top: 2em;
     width: 100%;
   }

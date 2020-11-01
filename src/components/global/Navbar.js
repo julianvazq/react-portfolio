@@ -7,16 +7,17 @@ import ResumePDF from '../../docs/julian_vazquez_resume.pdf';
 
 const Navbar = () => {
   const Nav = styled.nav`
-    padding: 2em 0;
+    padding: 2rem 0;
   `;
 
   const ListItem = styled.li`
     font-size: 1.3rem;
     display: inline-block;
     letter-spacing: 0.5px;
-    margin: 0 20px;
+    margin: 0 1.25rem;
     padding-bottom: 10px;
     position: relative;
+    z-index: 1;
 
     @media (min-width: 750px) {
       &:hover:after {
@@ -26,13 +27,15 @@ const Navbar = () => {
 
     &:after {
       content: '';
-      height: 1.5px;
-      width: 100%;
+      height: 2px;
+      width: 110%;
       position: absolute;
       bottom: 0;
       left: 0;
-      background: ${(props) => props.theme.primary};
-      transition: transform 250ms ease-in-out;
+      /* background: ${(props) => props.theme.primary}; */
+      background: linear-gradient(90deg, rgba(96, 176, 244, 1), 80%, #fff);
+      transform-origin: left;
+      transition: transform 200ms ease-in-out;
       transform: scaleX(0);
       border-radius: 1rem;
     }

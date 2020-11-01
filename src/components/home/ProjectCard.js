@@ -107,6 +107,7 @@ const ProjectItem = styled(motion.article)`
   }
 
   h3 {
+    font-weight: 700;
     font-size: 1.8rem;
     padding: 0.5em 0;
     letter-spacing: 2px;

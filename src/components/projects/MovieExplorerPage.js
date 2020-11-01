@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 import MovieExplorerBrowse from '../../gifs/movie-explorer-browse.mp4';
 import MovieExplorerWatchlist from '../../gifs/movie-explorer-watchlist.mp4';
 import MovieExplorerIphone from '../../images/iphone/movie-explorer-iphone.png';
@@ -13,13 +12,13 @@ import {
   TechList,
   ListItem,
   IconContainer,
-  Button,
   StyledSpan,
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { FaServer } from 'react-icons/fa';
 import Header from './shared/Header';
 import Section from './shared/Section';
+import BackButton from './shared/BackButton';
 
 const MovieExplorerPage = () => {
   return (
@@ -92,9 +91,7 @@ const MovieExplorerPage = () => {
             </div>
           </ListItem>
         </TechList>
-        <Button as={Link} to='/#projects'>
-          Back to projects
-        </Button>
+        <BackButton />
       </Section>
     </motion.div>
   );

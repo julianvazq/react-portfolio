@@ -18,7 +18,7 @@ export const fadeIn = {
 export const fadeInFromRight = {
   hidden: {
     opacity: 0,
-    x: 100,
+    x: -50,
   },
   visible: {
     opacity: 1,
@@ -322,18 +322,21 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled.a`
-  display: inline-block;
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
   background: ${(props) => props.theme.primary};
   color: #fff;
-  padding: 0.5em 0.8em;
+  padding: 0.75rem 1rem;
   font-family: inherit;
   border-radius: 0.3rem;
   cursor: pointer;
-  margin-right: 1em;
+  margin-right: 1rem;
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
 
   @media (max-width: 600px) {
@@ -346,8 +349,8 @@ export const Button = styled.a`
 `;
 
 export const SecondaryButton = styled(Button)`
-  background: hsl(210, 7%, 89%);
-  color: hsl(210, 7%, 50%);
+  background: hsl(208 0% 93% / 1);
+  color: hsl(210, 7%, 45%);
 `;
 
 export const StyledSpan = styled.span`

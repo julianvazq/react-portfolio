@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 import EcommerceHome from '../../images/lg/e-commerce-lg.png';
 import EcommerceIphone from '../../images/iphone/e-commerce-iphone.png';
 import {
@@ -9,7 +8,6 @@ import {
   TechList,
   ListItem,
   IconContainer,
-  Button,
   StyledSpan,
 } from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
@@ -17,11 +15,12 @@ import { FaServer } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Header from './shared/Header';
 import Section from './shared/Section';
+import BackButton from './shared/BackButton';
 
 const navLinks = [
   {
     hash: '#design',
-    title: 'Design vs. Actual',
+    title: 'Design',
   },
   {
     hash: '#editing',
@@ -60,7 +59,7 @@ const ECommercePage = () => {
         <ResponsiveImg src={EcommerceHome} alt='Responsive design.' />
       </Header>
 
-      <Section title='Design vs. Actual' id='design'>
+      <Section title='Design' id='design'>
         <div>
           <StyledParagraph>
             I already had a design in mind, so I started off by creating a
@@ -183,9 +182,7 @@ const ECommercePage = () => {
             </div>
           </ListItem>
         </TechList>
-        <Button as={Link} to='/#projects'>
-          Back to projects
-        </Button>
+        <BackButton />
       </Section>
     </motion.div>
   );

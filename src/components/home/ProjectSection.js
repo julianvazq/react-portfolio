@@ -4,7 +4,7 @@ import Container from '../Container';
 import ProjectCard from './ProjectCard';
 import { projects } from './projects';
 
-const StyledSection = styled.section`
+const StyledSection = styled.main`
   background: ${(props) => props.theme.secondary};
   padding: 6em 0 4em;
 
@@ -26,7 +26,7 @@ const SectionTitle = styled.h2`
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
-  font-weight: 700;
+  font-weight: 600;
   position: relative;
 
   span {
@@ -79,7 +79,7 @@ const GridContainer = styled.div`
       0 32px 16px rgba(0, 0, 0, 0.09);
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     grid-template-columns: 1fr;
 
     /* a,

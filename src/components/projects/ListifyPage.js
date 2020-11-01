@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 import ListifyDemo from '../../gifs/listify-demo.mp4';
 import ListifyIphone from '../../images/iphone/listify-iphone.png';
 import {
@@ -12,7 +11,6 @@ import {
   ListItem,
   IconContainer,
   StyledSpan,
-  Button,
   Example,
   OrderedList,
   Video,
@@ -24,6 +22,7 @@ import { motion } from 'framer-motion';
 import Header from './shared/Header';
 import Section from './shared/Section';
 import styled, { css } from 'styled-components';
+import BackButton from './shared/BackButton';
 
 const IconStyles = css`
   font-size: 3rem;
@@ -56,7 +55,7 @@ const navLinks = [
   },
   {
     hash: '#design',
-    title: 'Figma Design',
+    title: 'Design',
   },
   {
     hash: '#responsiveness',
@@ -82,7 +81,7 @@ const ListifyPage = () => {
     >
       <Header
         title='Listify'
-        description='Real-time, collaborative lists to easily share with others.'
+        description='Real-time, collaborative lists to easily share with others. Think Google Docs, but for lists...'
         url='http://listify.julianvazquez.me/'
         github='https://github.com/julianvazq/listify'
         navLinks={navLinks}
@@ -92,7 +91,7 @@ const ListifyPage = () => {
         </Video>
       </Header>
 
-      <Section title='Figma Design' id='design'>
+      <Section title='Design' id='design'>
         <div>
           <StyledParagraph>
             I created the wireframe that Listify is based on in{' '}
@@ -269,9 +268,7 @@ const ListifyPage = () => {
             </div>
           </ListItem>
         </TechList>
-        <Button as={Link} to='/#projects'>
-          Back to projects
-        </Button>
+        <BackButton />
       </Section>
     </motion.div>
   );
