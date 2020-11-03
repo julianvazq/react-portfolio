@@ -265,13 +265,21 @@ export const TechList = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  margin-bottom: 1em;
-  border-radius: 1rem;
-  padding-left: 1em;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
   line-height: 1.7;
   display: flex;
   align-items: center;
   position: relative;
+
+  span {
+    font-family: 'Work Sans', 'Helvetica', sans-serif;
+    color: hsl(208 40% 44% / 1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
 
   &::after {
     content: '';
@@ -280,7 +288,11 @@ export const ListItem = styled.li`
     left: 0;
     width: 100%;
     height: 1px;
-    background: linear-gradient(to right, hsl(208 87% 67% / 0.5), transparent);
+    background: linear-gradient(
+      to right,
+      hsl(208 87% 67% / 0.5),
+      rgba(255, 255, 255, 0)
+    );
     border-radius: 0.3rem;
   }
 
@@ -316,27 +328,22 @@ export const IconContainer = styled.div`
   }
 `;
 
-export const ButtonContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`;
-
 export const Button = styled.a`
-  width: 240px;
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
+  width: 245px;
   display: flex;
   justify-content: center;
   align-items: center;
   letter-spacing: 2px;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 1.25rem;
-  font-weight: 400;
   background: ${(props) => props.theme.primary};
   color: #fff;
   padding: 0.75rem 1rem;
   font-family: inherit;
   border-radius: 0.3rem;
   cursor: pointer;
-  margin-right: 1rem;
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
 
   @media (max-width: 600px) {

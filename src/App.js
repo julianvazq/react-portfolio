@@ -15,11 +15,13 @@ import Navbar from './components/global/Navbar';
 import { AnimatePresence } from 'framer-motion';
 import ECommercePage from './components/projects/EcommercePage';
 import ListifyPage from './components/projects/ListifyPage';
+import Scroller from './components/projects/shared/Scroller';
 
 function App() {
   return (
     <>
       <ScrollToTop />
+      <Scroller />
       <Navbar />
       <AnimatePresence exitBeforeEnter>
         <Switch>

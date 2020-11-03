@@ -245,8 +245,8 @@ const ListifyPage = () => {
               <FaServer />
             </IconContainer>
             <div>
-              <StyledSpan>Backend</StyledSpan>
-              <br /> Web Sockets, Node, Express
+              <span>Backend</span>
+              <br /> Node, Express
             </div>
           </ListItem>
           <ListItem>
@@ -264,7 +264,7 @@ const ListifyPage = () => {
             </IconContainer>
             <div>
               <StyledSpan>Others</StyledSpan>
-              <br /> React Hooks, React Context
+              <br /> Web Sockets, React Hooks, React Context
             </div>
           </ListItem>
         </TechList>

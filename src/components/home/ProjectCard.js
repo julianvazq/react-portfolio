@@ -131,22 +131,17 @@ const ProjectItem = styled(motion.article)`
 `;
 
 const TechInfo = styled.div`
-  font-size: 1.3rem;
+  font-family: 'Work Sans';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
   padding: 0.75em;
   background: #fff;
-  color: ${(props) => props.theme.gray};
+  color: hsl(0, 0%, 45%);
   border-top: 4px solid
     ${(props) => (props.borderColor ? props.borderColor : props.theme.primary)};
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
-
-  @media (max-width: 950px) {
-    font-size: 1.1rem;
-  }
-
-  @media (max-width: 580px) {
-    font-size: 1rem;
-  }
 `;
 
 const ProjectCard = ({

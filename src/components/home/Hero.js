@@ -95,7 +95,7 @@ const Hero = () => {
   const Position = styled.h2`
     font-weight: 600;
     font-size: 1.25rem;
-    color: hsl(208 100% 20% / 0.75);
+    color: hsl(0deg 0% 40%);
     line-height: 1.2;
 
     @media (max-width: 580px) {

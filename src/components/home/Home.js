@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from './Hero';
 import ProjectSection from './ProjectSection.js';
-import { Container, fadeIn } from '../styled-components/StyledComponents';
+import { fadeIn } from '../styled-components/StyledComponents';
 import { motion } from 'framer-motion';
 
 const Home = () => {

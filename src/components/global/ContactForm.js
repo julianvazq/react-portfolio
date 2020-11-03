@@ -44,7 +44,7 @@ const Label = styled.label`
 
 const Input = styled.input`
   ${inputStyles}
-  border: ${(props) => props.error && '1px solid #ff4646'};
+  border: ${(props) => props.error && '1px solid #ff8787'};
   height: 60px;
   padding-top: ${(props) => props.hasText && '2rem'};
 

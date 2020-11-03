@@ -26,11 +26,12 @@ const SectionContainer = styled.section`
 `;
 
 const SectionTitle = styled.h3`
-  margin-bottom: 4rem;
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 400;
+  margin-bottom: 4rem;
   color: ${(props) => props.theme.gray};
   display: inline-block;
   position: relative;
@@ -42,7 +43,11 @@ const SectionTitle = styled.h3`
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(90deg, rgba(96, 176, 244, 1), transparent);
+    background: linear-gradient(
+      90deg,
+      rgba(96, 176, 244, 1),
+      rgba(255, 255, 255, 0)
+    );
     border-radius: 1rem;
   }
 

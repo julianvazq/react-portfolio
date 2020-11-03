@@ -3,14 +3,13 @@ import { RiExternalLinkLine } from 'react-icons/ri';
 import { FiGithub } from 'react-icons/fi';
 import {
   BackgroundWrapper,
-  ButtonContainer,
   Button,
   SecondaryButton,
 } from '../../styled-components/StyledComponents';
 import PageNav from './PageNav';
 import styled from 'styled-components';
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.section`
   margin: auto;
   width: 90%;
   max-width: 1000px;
@@ -52,16 +51,27 @@ const ProjectDescription = styled.h2`
 `;
 
 const Title = styled.h1`
-  margin-bottom: 1em;
-  letter-spacing: 2px;
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
+  color: hsl(0 0% 50% / 1);
+  font-weight: 400;
+  letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 1.25rem;
-  font-weight: 300;
+  margin-bottom: 1rem;
   position: relative;
   display: inline-block;
 
-  @media (max-width: 700px) {
-    font-size: 1.25rem;
+  @media (min-width: 700px) {
+    font-size: 1.5rem;
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+
+  & > a:first-child {
+    margin-right: 1.5rem;
   }
 `;
 

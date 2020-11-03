@@ -19,7 +19,11 @@ const ListContainer = styled.div`
     left: 0;
     width: 125%;
     height: 2px;
-    background: linear-gradient(to right, hsl(210, 7%, 89%), transparent);
+    background: linear-gradient(
+      to right,
+      hsl(210, 7%, 89%),
+      rgba(255, 255, 255, 0)
+    );
   }
 
   @media (min-width: 800px) {

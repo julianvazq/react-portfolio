@@ -7,10 +7,11 @@ const Container = styled.div`
   margin-left: 3rem;
 
   h3 {
+    font-family: 'Work Sans', 'Helvetica', sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    letter-spacing: 2px;
   }
 
   ul {

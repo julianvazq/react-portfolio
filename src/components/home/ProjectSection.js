@@ -18,6 +18,7 @@ const StyledSection = styled.main`
 `;
 
 const SectionTitle = styled.h2`
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: -1px;
@@ -39,9 +40,13 @@ const SectionTitle = styled.h2`
     position: absolute;
     top: -1rem;
     left: 0;
-    width: 200px;
+    width: 180px;
     height: 3px;
-    background: linear-gradient(90deg, rgba(96, 176, 244, 1), transparent);
+    background: linear-gradient(
+      90deg,
+      rgba(96, 176, 244, 1),
+      rgba(255, 255, 255, 0)
+    );
     border-radius: 1rem;
   }
 
@@ -51,26 +56,21 @@ const SectionTitle = styled.h2`
 `;
 
 const SectionSubtitle = styled.h3`
-  margin-bottom: 1rem;
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
+  margin-bottom: 1rem;
   position: relative;
 `;
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: 3rem;
-  margin: 4em 3em;
-
-  a {
-    grid-column: span 4;
-  }
-
-  /* a:first-of-type {
-    grid-column: 3/7;
-  } */
+  margin: 4rem auto;
+  max-width: 1800px;
+  width: 90%;
 
   a:focus {
     transform: translateY(-3px);
@@ -79,17 +79,12 @@ const GridContainer = styled.div`
       0 32px 16px rgba(0, 0, 0, 0.09);
   }
 
-  @media (max-width: 1000px) {
-    grid-template-columns: 1fr;
-
-    /* a,
-    a:first-of-type {
-      grid-column: span 8;
-    } */
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 580px) {
-    margin: 4em 0.5em;
+  @media (min-width: 1900px) {
+    width: auto;
   }
 `;
 

@@ -8,7 +8,7 @@ import App from './App';
 const theme = {
   primary: '#60b0f4',
   secondary: '#f0f4f6',
-  gray: 'hsl(0, 0%, 55%)',
+  gray: 'hsl(0, 0%, 50%)',
 };
 
 ReactDOM.render(

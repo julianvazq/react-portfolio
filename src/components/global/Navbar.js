@@ -11,11 +11,10 @@ const Navbar = () => {
   `;
 
   const ListItem = styled.li`
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     display: inline-block;
     letter-spacing: 0.5px;
     margin: 0 1.25rem;
-    padding-bottom: 10px;
     position: relative;
     z-index: 1;
 
@@ -30,9 +29,8 @@ const Navbar = () => {
       height: 2px;
       width: 110%;
       position: absolute;
-      bottom: 0;
+      bottom: -10px;
       left: 0;
-      /* background: ${(props) => props.theme.primary}; */
       background: linear-gradient(90deg, rgba(96, 176, 244, 1), 80%, #fff);
       transform-origin: left;
       transition: transform 200ms ease-in-out;
