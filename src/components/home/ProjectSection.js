@@ -68,6 +68,7 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem;
+  align-items: center;
   margin: 4rem auto;
   max-width: 1800px;
   width: 90%;

@@ -108,7 +108,7 @@ const ProjectItem = styled(motion.article)`
 
   h3 {
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     padding: 0.5em 0;
     letter-spacing: 2px;
     background: #e2e4e6;
@@ -134,6 +134,7 @@ const TechInfo = styled.div`
   font-family: 'Work Sans';
   text-transform: uppercase;
   letter-spacing: 1px;
+  line-height: 1.5;
   font-size: 1rem;
   padding: 0.75em;
   background: #fff;

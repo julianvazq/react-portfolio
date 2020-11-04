@@ -182,7 +182,7 @@ const Hero = () => {
           <Position>Front End Developer</Position>
         </Details>
         <CTAButton href='#projects'>
-          My projects <DownArrow />
+          View projects <DownArrow />
         </CTAButton>
       </ContentContainer>
     </HeroContainer>
