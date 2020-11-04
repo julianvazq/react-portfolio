@@ -7,7 +7,7 @@ import {
   SecondaryButton,
 } from '../../styled-components/StyledComponents';
 import PageNav from './PageNav';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const HeaderContainer = styled.section`
   margin: auto;
@@ -43,7 +43,7 @@ const ProjectDescription = styled.h2`
   line-height: 1.7;
   font-size: 1.75rem;
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 
   @media (max-width: 700px) {
     font-size: 1.5rem;
@@ -75,12 +75,21 @@ export const ButtonContainer = styled.div`
   }
 `;
 
+const buttonStyling = css`
+  margin-top: 1rem;
+  width: 227px;
+
+  @media (min-width: 700px) {
+    width: 245px;
+  }
+`;
+
 const WebsiteButton = styled(Button)`
-  margin-top: 0.5rem;
+  ${buttonStyling}
 `;
 
 const GithubButton = styled(SecondaryButton)`
-  margin-top: 0.5rem;
+  ${buttonStyling}
 `;
 
 const LinkIcon = styled(RiExternalLinkLine)`

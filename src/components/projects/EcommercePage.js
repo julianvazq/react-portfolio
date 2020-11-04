@@ -50,8 +50,7 @@ const ECommercePage = () => {
     >
       <Header
         title='E-Commerce Store'
-        description='Stylish mock e-commerce store whose main products are headphones and
-                    earbuds.'
+        description='Stylish mock headphones and earbuds e-commerce store.'
         url='https://e-commerce.julianvazquez.me'
         github='https://github.com/julianvazq/headphones-ecommerce'
         navLinks={navLinks}

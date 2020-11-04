@@ -14,9 +14,10 @@ const BackArrow = styled(IoIosArrowBack)`
 `;
 
 const BkButton = styled(Button)`
-  width: 100%;
-  max-width: 290px;
-  margin-top: 6rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 `;
 
 const BackButton = () => {

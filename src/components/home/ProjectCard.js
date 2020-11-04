@@ -14,7 +14,7 @@ const overlayVariant = {
     transition: {
       duration: 0.2,
       type: 'tween',
-      ease: 'linear',
+      ease: 'easeInOut',
     },
   },
 };
@@ -158,7 +158,7 @@ const ProjectCard = ({
       <ProjectItem initial='rest' whileHover='hover' animate='rest'>
         <div>
           <TechInfo borderColor={borderColor}>
-            <p>{tech.join(' 🞄 ')}</p>
+            <p>{tech.join(' • ')}</p>
           </TechInfo>
           <ImgContainer>
             <Overlay variants={overlayVariant}>

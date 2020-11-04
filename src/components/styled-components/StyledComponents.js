@@ -291,6 +291,7 @@ export const ListItem = styled.li`
     background: linear-gradient(
       to right,
       hsl(208 87% 67% / 0.5),
+      70%,
       rgba(255, 255, 255, 0)
     );
     border-radius: 0.3rem;
@@ -299,6 +300,11 @@ export const ListItem = styled.li`
   @media (min-width: 800px) {
     &::after {
       width: 80%;
+      background: linear-gradient(
+        to right,
+        hsl(208 87% 67% / 0.5),
+        rgba(255, 255, 255, 0)
+      );
     }
   }
 `;
@@ -330,10 +336,8 @@ export const IconContainer = styled.div`
 
 export const Button = styled.a`
   font-family: 'Work Sans', 'Helvetica', sans-serif;
-  width: 245px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  text-align: center;
   letter-spacing: 2px;
   font-weight: 600;
   text-transform: uppercase;
@@ -346,12 +350,8 @@ export const Button = styled.a`
   cursor: pointer;
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
 
-  @media (max-width: 600px) {
-    font-size: 1.1rem;
-  }
-
-  @media (max-width: 460px) {
-    margin-bottom: 1em;
+  @media (max-width: 700px) {
+    font-size: 1.125rem;
   }
 `;
 
