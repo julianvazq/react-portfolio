@@ -79,9 +79,7 @@ const Scroller = () => {
     }
 
     return () => {
-      if (pathname !== '/') {
-        window.removeEventListener('scroll', onScroll);
-      }
+      window.removeEventListener('scroll', onScroll);
     };
   }, [onScroll, pathname]);
 
@@ -89,7 +87,10 @@ const Scroller = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  /* USE ANIMATE PRESENCEK */
+  if (pathname === '/' || !showScroller) {
+    return null;
+  }
+
   if (showScroller) {
     return (
       <AnimatePresence>
@@ -106,8 +107,6 @@ const Scroller = () => {
       </AnimatePresence>
     );
   }
-
-  return null;
 };
 
 export default Scroller;
