@@ -52,7 +52,7 @@ const ProjectDescription = styled.h2`
 
 const Title = styled.h1`
   font-family: 'Work Sans', 'Helvetica', sans-serif;
-  color: hsl(0 0% 50% / 1);
+  color: hsl(0 0% 45% / 1);
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;

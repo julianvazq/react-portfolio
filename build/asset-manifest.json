@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.734bad67.chunk.css",
-    "main.js": "/static/js/main.a814de7e.chunk.js",
-    "main.js.map": "/static/js/main.a814de7e.chunk.js.map",
+    "main.js": "/static/js/main.40fcbf5e.chunk.js",
+    "main.js.map": "/static/js/main.40fcbf5e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.36661ff0.js",
     "runtime-main.js.map": "/static/js/runtime-main.36661ff0.js.map",
     "static/js/2.4dcb5a7c.chunk.js": "/static/js/2.4dcb5a7c.chunk.js",
     "static/js/2.4dcb5a7c.chunk.js.map": "/static/js/2.4dcb5a7c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.0caba9de5393d48cbf4413fd001c9a93.js": "/precache-manifest.0caba9de5393d48cbf4413fd001c9a93.js",
+    "precache-manifest.fa72563b677dd46f121ddea06c758cc0.js": "/precache-manifest.fa72563b677dd46f121ddea06c758cc0.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.734bad67.chunk.css.map": "/static/css/main.734bad67.chunk.css.map",
     "static/js/2.4dcb5a7c.chunk.js.LICENSE": "/static/js/2.4dcb5a7c.chunk.js.LICENSE",
@@ -18,13 +18,13 @@
     "static/media/contact.svg": "/static/media/contact.87c0f543.svg",
     "static/media/cover-image.svg": "/static/media/cover-image.7c6a0893.svg",
     "static/media/design.png": "/static/media/design.be894449.png",
-    "static/media/e-commerce-iphone.png": "/static/media/e-commerce-iphone.9b9a97ce.png",
     "static/media/e-commerce-lg.png": "/static/media/e-commerce-lg.82fc746b.png",
     "static/media/e-commerce-md.png": "/static/media/e-commerce-md.54fc415e.png",
+    "static/media/e-commerce-responsive2.png": "/static/media/e-commerce-responsive2.52790a72.png",
     "static/media/e-commerce-sm.png": "/static/media/e-commerce-sm.67bc062d.png",
-    "static/media/exercise-site-iphone.png": "/static/media/exercise-site-iphone.73656a05.png",
     "static/media/exercise-site-lg.png": "/static/media/exercise-site-lg.c2ec7489.png",
     "static/media/exercise-site-md.png": "/static/media/exercise-site-md.1c7b484c.png",
+    "static/media/exercise-site-responsive.png": "/static/media/exercise-site-responsive.5e1b1185.png",
     "static/media/exercise-site-sm.png": "/static/media/exercise-site-sm.5b3776ad.png",
     "static/media/exotic-pet-store-demo.mp4": "/static/media/exotic-pet-store-demo.ad2354dc.mp4",
     "static/media/exotic-pet-store-iphone.png": "/static/media/exotic-pet-store-iphone.0d6cb336.png",
@@ -34,9 +34,9 @@
     "static/media/jv_logo.png": "/static/media/jv_logo.c5677b6e.png",
     "static/media/life-tracker-demo-edit.mp4": "/static/media/life-tracker-demo-edit.5963bbd7.mp4",
     "static/media/life-tracker-demo.mp4": "/static/media/life-tracker-demo.9940e345.mp4",
-    "static/media/life-tracker-iphone.png": "/static/media/life-tracker-iphone.c52959bc.png",
     "static/media/life-tracker-lg.png": "/static/media/life-tracker-lg.4f7192f7.png",
     "static/media/life-tracker-md.png": "/static/media/life-tracker-md.751a83af.png",
+    "static/media/life-tracker-responsive.png": "/static/media/life-tracker-responsive.c71dc875.png",
     "static/media/life-tracker-sm.png": "/static/media/life-tracker-sm.d78a44ac.png",
     "static/media/listify-demo.mp4": "/static/media/listify-demo.6435907d.mp4",
     "static/media/listify-iphone.png": "/static/media/listify-iphone.7a2dcfb0.png",
@@ -61,6 +61,6 @@
     "static/js/runtime-main.36661ff0.js",
     "static/js/2.4dcb5a7c.chunk.js",
     "static/css/main.734bad67.chunk.css",
-    "static/js/main.a814de7e.chunk.js"
+    "static/js/main.40fcbf5e.chunk.js"
   ]
 }

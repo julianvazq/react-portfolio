@@ -1,7 +1,7 @@
 import React from 'react';
 import LifeTrackerDemo from '../../gifs/life-tracker-demo.mp4';
 import LifeTrackerDemoEdit from '../../gifs/life-tracker-demo-edit.mp4';
-import LifeTrackerIphone from '../../images/iphone/life-tracker-iphone.png';
+import LifeTrackerResponsive from '../../images/iphone/life-tracker-responsive.png';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { FaServer, FaDatabase } from 'react-icons/fa';
 import { motion } from 'framer-motion';
@@ -60,7 +60,7 @@ const LifeTrackerPage = () => {
         </StyledParagraph>
         <ResponsiveImg
           iphone
-          src={LifeTrackerIphone}
+          src={LifeTrackerResponsive}
           alt='Responsive design.'
         />
       </Section>

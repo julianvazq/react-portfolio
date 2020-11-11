@@ -1,6 +1,6 @@
 import React from 'react';
 import EcommerceHome from '../../images/lg/e-commerce-lg.png';
-import EcommerceIphone from '../../images/iphone/e-commerce-iphone.png';
+import EcommerceResponsive from '../../images/iphone/e-commerce-responsive2.png';
 import {
   fadeIn,
   ResponsiveImg,
@@ -122,11 +122,16 @@ const ECommercePage = () => {
 
       <Section title='Mobile First' id='responsiveness'>
         <StyledParagraph>
-          Mobile accounts for approximately half of web traffic worldwide. In
-          the upcoming decade, mobile web traffic is expected to keep growing,
-          making it increasingly important to cater to devices of all sizes.
+          Designing and prototyping websites for mobile devices first helps
+          ensure that the users' experience is seamless on any device. As mobile
+          designs are typically simpler, taking a mobile first approach allows
+          for progressively adding more complexity as the device size increases.
         </StyledParagraph>
-        <ResponsiveImg iphone src={EcommerceIphone} alt='Responsive design.' />
+        <ResponsiveImg
+          iphone
+          src={EcommerceResponsive}
+          alt='Responsive design.'
+        />
       </Section>
 
       <Section title='Accessibility' id='accessibility' bg={true}>

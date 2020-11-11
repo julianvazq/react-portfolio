@@ -27,6 +27,7 @@ const Footer = () => {
     text-align: center;
     justify-content: center;
     overflow: hidden;
+    z-index: 1;
 
     a:focus {
       opacity: 0.8;

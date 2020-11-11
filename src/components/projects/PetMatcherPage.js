@@ -49,9 +49,10 @@ const PetMatcherPage = () => {
 
       <Section title='Responsive Design' id='responsiveness'>
         <StyledParagraph>
-          Mobile accounts for approximately half of web traffic worldwide. In
-          the upcoming decade, mobile web traffic is expected to keep growing,
-          making it increasingly important to cater to devices of all sizes.
+          Designing and prototyping websites for mobile devices first helps
+          ensure that the users' experience is seamless on any device. As mobile
+          designs are typically simpler, taking a mobile first approach allows
+          for progressively adding more complexity as the device size increases.
         </StyledParagraph>
         <ResponsiveImg iphone src={PetMatcherIphone} alt='Responsive design.' />
       </Section>

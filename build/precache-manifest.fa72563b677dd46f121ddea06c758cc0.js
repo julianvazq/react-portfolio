@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9ae05cb9e85d89d5b6f5c3e0c71af71e",
+    "revision": "ba9cb8e7123b33ed8fce49ef1122cb01",
     "url": "/index.html"
   },
   {
-    "revision": "fd3fc72a9ee078e36903",
+    "revision": "008e627a2ab30ce7eeca",
     "url": "/static/css/main.734bad67.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.4dcb5a7c.chunk.js.LICENSE"
   },
   {
-    "revision": "fd3fc72a9ee078e36903",
-    "url": "/static/js/main.a814de7e.chunk.js"
+    "revision": "008e627a2ab30ce7eeca",
+    "url": "/static/js/main.40fcbf5e.chunk.js"
   },
   {
     "revision": "c8d7855bb8c34e28ab24",
@@ -48,10 +48,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/design.be894449.png"
   },
   {
-    "revision": "9b9a97ce478e5941670158ac5b587046",
-    "url": "/static/media/e-commerce-iphone.9b9a97ce.png"
-  },
-  {
     "revision": "82fc746ba0b5d6b15f99127b614699cd",
     "url": "/static/media/e-commerce-lg.82fc746b.png"
   },
@@ -60,12 +56,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/e-commerce-md.54fc415e.png"
   },
   {
-    "revision": "67bc062d4ad6df91133ac67136040cbb",
-    "url": "/static/media/e-commerce-sm.67bc062d.png"
+    "revision": "52790a7287ad05a715e1b7468156df4f",
+    "url": "/static/media/e-commerce-responsive2.52790a72.png"
   },
   {
-    "revision": "73656a050572063c7981656e5ab318c0",
-    "url": "/static/media/exercise-site-iphone.73656a05.png"
+    "revision": "67bc062d4ad6df91133ac67136040cbb",
+    "url": "/static/media/e-commerce-sm.67bc062d.png"
   },
   {
     "revision": "c2ec74891dc7f26cb7df507c6d3c833d",
@@ -74,6 +70,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1c7b484c0fbc2adb73f607f2c7ba9750",
     "url": "/static/media/exercise-site-md.1c7b484c.png"
+  },
+  {
+    "revision": "5e1b1185f12e8ea11efab3bf178c6ae3",
+    "url": "/static/media/exercise-site-responsive.5e1b1185.png"
   },
   {
     "revision": "5b3776addbc0c0f49b4005a6f13dbd56",
@@ -112,16 +112,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/life-tracker-demo.9940e345.mp4"
   },
   {
-    "revision": "c52959bcc4f7287140dc794dcfe6d207",
-    "url": "/static/media/life-tracker-iphone.c52959bc.png"
-  },
-  {
     "revision": "4f7192f7aa35226d5485d7defee4cf8c",
     "url": "/static/media/life-tracker-lg.4f7192f7.png"
   },
   {
     "revision": "751a83af3e50ee8ae88069dc87625ea2",
     "url": "/static/media/life-tracker-md.751a83af.png"
+  },
+  {
+    "revision": "c71dc8756ec117d9502d96916fd78692",
+    "url": "/static/media/life-tracker-responsive.c71dc875.png"
   },
   {
     "revision": "d78a44acb4f5bfa0d5fb7476b148d303",

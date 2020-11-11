@@ -1,6 +1,6 @@
 import React from 'react';
 import ExerciseSiteHomePage from '../../images/lg/exercise-site-lg.png';
-import ExerciseSiteIphone from '../../images/iphone/exercise-site-iphone.png';
+import ExerciseSiteResponsive from '../../images/iphone/exercise-site-responsive.png';
 import {
   fadeIn,
   ResponsiveImg,
@@ -27,7 +27,7 @@ const ExoticPetStorePage = () => {
       <Header
         title='Exercise'
         description={
-          'Mock product landing page: displays features, benefits and prompts user to take action. Did not want to use a specific product, so I used "Exercise" as the product.'
+          'Brochure style landing page: displays features, benefits and prompts user to take action. Did not want to showcase a specific product, so "Exercise" is the product.'
         }
         url='https://julianvazq.github.io/exercise-site/'
         github='https://github.com/julianvazq/exercise-site'
@@ -47,7 +47,7 @@ const ExoticPetStorePage = () => {
         </StyledParagraph>
         <ResponsiveImg
           iphone
-          src={ExerciseSiteIphone}
+          src={ExerciseSiteResponsive}
           alt='Responsive design.'
         />
       </Section>

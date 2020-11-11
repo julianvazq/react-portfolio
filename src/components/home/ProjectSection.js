@@ -6,14 +6,16 @@ import { projects } from './projects';
 
 const StyledSection = styled.main`
   background: ${(props) => props.theme.secondary};
-  padding: 6em 0 4em;
+  padding: 6rem 0 4rem;
+  position: relative;
+  z-index: 1;
 
   @media (max-width: 1000px) {
-    padding: 4em 0;
+    padding: 4rem 0;
   }
 
   @media (max-width: 750px) {
-    padding: 4em 0 1em 0;
+    padding: 4rem 0 1rem 0;
   }
 `;
 

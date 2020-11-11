@@ -5,13 +5,14 @@ const Container = styled.div`
   width: 20%;
   min-width: 210px;
   margin-left: 3rem;
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
 
   h3 {
-    font-family: 'Work Sans', 'Helvetica', sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin-bottom: 0.75rem;
   }
 
   ul {
@@ -19,17 +20,15 @@ const Container = styled.div`
   }
 
   li {
-    margin: 0.25rem 0;
+    margin-bottom: 1rem;
     font-size: 1.25rem;
-    position: relative;
+  }
 
-    &:before {
-      content: '•';
-      display: inline-block;
-      margin-right: 1rem;
-      font-size: 1.5rem;
-      color: ${(props) => props.theme.primary};
-    }
+  a {
+    background: hsl(200 25% 92% / 1);
+    color: hsl(200 5% 40% / 1);
+    padding: 0.125rem 0.75rem;
+    border-radius: 0.3rem;
   }
 
   @media (max-width: 800px) {

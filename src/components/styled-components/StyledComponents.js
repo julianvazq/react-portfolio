@@ -96,7 +96,8 @@ export const ResponsiveImg = styled.img`
   margin: auto;
   display: block;
   max-height: 700px;
-  width: ${(props) => !props.iphone && '100%'};
+  object-fit: contain;
+  width: 100%;
 
   @media (max-width: 1500px) {
     height: ${(props) => props.iphone && '500px'};
