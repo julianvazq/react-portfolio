@@ -12,7 +12,7 @@ const Container = styled.div`
     font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   ul {

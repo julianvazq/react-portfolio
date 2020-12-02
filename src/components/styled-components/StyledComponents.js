@@ -330,7 +330,7 @@ export const IconContainer = styled.div`
     min-height: 50px;
 
     svg {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
     }
   }
 `;

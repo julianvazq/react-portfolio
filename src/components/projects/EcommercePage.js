@@ -50,7 +50,7 @@ const ECommercePage = () => {
     >
       <Header
         title='E-Commerce Store'
-        description='Stylish mock headphones and earbuds e-commerce store.'
+        description='Stylish mock headphones and earbuds e-commerce store. Try making a purchase and see what happens...'
         url='https://e-commerce.julianvazquez.me'
         github='https://github.com/julianvazq/headphones-ecommerce'
         navLinks={navLinks}
@@ -122,10 +122,10 @@ const ECommercePage = () => {
 
       <Section title='Mobile First' id='responsiveness'>
         <StyledParagraph>
-          Designing and prototyping websites for mobile devices first helps
-          ensure that the users' experience is seamless on any device. As mobile
-          designs are typically simpler, taking a mobile first approach allows
-          for progressively adding more complexity as the device size increases.
+          Designing and prototyping websites for mobile first helps ensure that
+          the user experience is seamless on any device. Because mobile designs
+          are typically simpler, taking a mobile first approach allows for
+          progressively adding more complexity as the device size increases.
         </StyledParagraph>
         <ResponsiveImg
           iphone

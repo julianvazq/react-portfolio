@@ -19,6 +19,21 @@ import Header from './shared/Header';
 import Section from './shared/Section';
 import BackButton from './shared/BackButton';
 
+const navLinks = [
+  {
+    hash: '#prewiew',
+    title: 'Preview',
+  },
+  {
+    hash: '#responsiveness',
+    title: 'Mobile First',
+  },
+  {
+    hash: '#tech',
+    title: 'Tech Details',
+  },
+];
+
 const PetMatcherPage = () => {
   return (
     <motion.div
@@ -29,9 +44,10 @@ const PetMatcherPage = () => {
     >
       <Header
         title='Dog Finder'
-        description='Get personalized results of dogs up for adoption in your area.'
+        description='Looking for a new best friend? Get personalized results of dogs for adoption in your area.'
         url='https://pet-matcher.julianvazquez.me/'
         github='https://github.com/julianvazq/pet-matcher'
+        navLinks={navLinks}
       >
         <Video
           id='preview'
@@ -47,12 +63,13 @@ const PetMatcherPage = () => {
         </Video>
       </Header>
 
-      <Section title='Responsive Design' id='responsiveness'>
+      <Section title='Mobile First' id='responsiveness'>
         <StyledParagraph>
-          Designing and prototyping websites for mobile devices first helps
-          ensure that the users' experience is seamless on any device. As mobile
-          designs are typically simpler, taking a mobile first approach allows
-          for progressively adding more complexity as the device size increases.
+          Designing and prototyping websites for mobile first helps ensure that
+          the user experience is seamless on any device. Because mobile designs
+          are typically simpler, taking a mobile first approach allows for
+          progressively adding more complexity as the the screen real state
+          increases.
         </StyledParagraph>
         <ResponsiveImg iphone src={PetMatcherIphone} alt='Responsive design.' />
       </Section>

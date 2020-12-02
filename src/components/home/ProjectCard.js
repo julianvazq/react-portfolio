@@ -5,16 +5,16 @@ import { motion } from 'framer-motion';
 
 const overlayVariant = {
   rest: {
-    filter: 'blur(300px)',
-    scale: 0,
+    // filter: 'blur(300px)',
+    // scale: 0,
   },
   hover: {
-    filter: 'blur(0px)',
-    scale: 1,
+    // filter: 'blur(0px)',
+    // scale: 1,
     transition: {
-      duration: 0.2,
-      type: 'tween',
-      ease: 'easeInOut',
+      // duration: 0.2,
+      // type: 'tween',
+      // ease: 'easeInOut',
     },
   },
 };
@@ -30,10 +30,15 @@ const textVariant = {
     y: 0,
     filter: 'blur(0px)',
     transition: {
-      duration: 0.25,
+      duration: 0.125,
       delay: 0.2,
     },
   },
+};
+
+const borderWidth = {
+  md: '1000px 1000px 0 0',
+  lg: '1500px 1500px 0 0',
 };
 
 const ImgContainer = styled.div`
@@ -50,30 +55,40 @@ const Overlay = styled(motion.div)`
   width: 100%;
   top: 0;
   left: 0;
-  background: rgb(22 22 22 / 70%);
   color: #fff;
   font-weight: 400;
   line-height: 1.5;
-  transition: opacity 350ms ease-in-out;
-  -moz-transition: opacity 350ms ease-in-out;
   padding: 4rem;
 
   p {
     font-size: 1.5rem;
+    z-index: 99;
 
     @media (max-width: 650px) {
       font-size: 1.25rem;
     }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0px 0px 0 0;
+    border-color: rgb(22 22 22 / 70%) transparent transparent transparent;
+    transition: 0.65s ease border-width;
   }
 `;
 
 // For accessibility (tab)
 const StyledLink = styled(Link)`
   @media (min-width: 800px) {
-    &:focus ${Overlay} {
-      transition: all 200ms ease-in-out;
-      transform: scale(1) !important;
-      filter: blur(0px) !important;
+    &:focus ${Overlay}::before {
+      border-width: ${borderWidth.md};
     }
 
     &:focus ${Overlay} p {
@@ -82,6 +97,24 @@ const StyledLink = styled(Link)`
       filter: blur(0px) !important;
       transform: scale(1) !important;
       transform: translateY(5px) !important;
+    }
+  }
+
+  @media (min-width: 700px) {
+    &:focus ${Overlay}::before {
+      border-width: ${borderWidth.lg};
+    }
+  }
+
+  @media (min-width: 1000px) {
+    &:focus ${Overlay}::before {
+      border-width: ${borderWidth.md};
+    }
+  }
+
+  @media (min-width: 1450px) {
+    &:focus ${Overlay}::before {
+      border-width: ${borderWidth.lg};
     }
   }
 `;
@@ -105,6 +138,10 @@ const ProjectItem = styled(motion.article)`
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09), 0 4px 2px rgba(0, 0, 0, 0.09),
       0 8px 4px rgba(0, 0, 0, 0.09), 0 16px 8px rgba(0, 0, 0, 0.09),
       0 32px 16px rgba(0, 0, 0, 0.09);
+
+    ${Overlay}::before {
+      border-width: ${borderWidth.md};
+    }
   }
 
   h3 {
@@ -118,16 +155,43 @@ const ProjectItem = styled(motion.article)`
     border-bottom-right-radius: 0.3rem;
   }
 
+  img {
+    width: 100%;
+    display: block;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
   @media (max-width: 950px) {
     h3 {
       font-size: 1.5rem;
     }
   }
 
-  img {
-    width: 100%;
-    display: block;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  @media (min-width: 700px) {
+    &:hover,
+    &:focus {
+      ${Overlay}::before {
+        border-width: ${borderWidth.lg};
+      }
+    }
+  }
+
+  @media (min-width: 1000px) {
+    &:hover,
+    &:focus {
+      ${Overlay}::before {
+        border-width: ${borderWidth.md};
+      }
+    }
+  }
+
+  @media (min-width: 1450px) {
+    &:hover,
+    &:focus {
+      ${Overlay}::before {
+        border-width: ${borderWidth.lg};
+      }
+    }
   }
 `;
 

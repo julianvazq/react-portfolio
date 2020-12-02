@@ -40,7 +40,7 @@ export const projects = [
     title: 'Dog Finder',
     link: '/pet-matcher',
     tech: ['React', 'Node', 'Express', 'Styled Components'],
-    description: 'Displays personalized results of pets up for adoption.',
+    description: 'Personalized results of dogs for adoption in your area.',
     images: {
       sm: require('../../images/sm/pet-matcher-sm.png'),
       md: require('../../images/md/pet-matcher-md.png'),
@@ -64,7 +64,8 @@ export const projects = [
     title: 'Life Tracker',
     link: '/life-tracker',
     tech: ['React', 'Node', 'Express', 'MongoDB'],
-    description: 'Track your groceries, appointments, favorite books and more.',
+    description:
+      'Track your groceries, personal appointments, favorite books and more.',
     images: {
       sm: require('../../images/sm/life-tracker-sm.png'),
       md: require('../../images/md/life-tracker-md.png'),

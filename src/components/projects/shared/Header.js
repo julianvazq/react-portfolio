@@ -39,6 +39,8 @@ const FlexContainer = styled.div`
 `;
 
 const ProjectDescription = styled.h2`
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
+  font-style: italic;
   letter-spacing: -1.5px;
   line-height: 1.7;
   font-size: 1.75rem;

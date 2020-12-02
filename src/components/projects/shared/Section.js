@@ -29,10 +29,10 @@ const SectionTitle = styled.h3`
   font-family: 'Work Sans', 'Helvetica', sans-serif;
   font-size: 2rem;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 4rem;
-  color: ${(props) => props.theme.gray};
+  color: hsl(210 5% 47% / 1);
   display: inline-block;
   position: relative;
 

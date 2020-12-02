@@ -81,7 +81,7 @@ const ListifyPage = () => {
     >
       <Header
         title='Listify'
-        description='Real-time, collaborative lists to easily share with others. Think Google Docs, but for lists...'
+        description='Real-time, collaborative lists to easily share with others. Think Google Docs, but for lists.'
         url='http://listify.julianvazquez.me/'
         github='https://github.com/julianvazq/listify'
         navLinks={navLinks}
@@ -94,15 +94,16 @@ const ListifyPage = () => {
       <Section title='Design' id='design'>
         <div>
           <StyledParagraph>
-            I created the wireframe that Listify is based on in{' '}
+            I used{' '}
             <a
               href='https://www.figma.com/file/GKZeaaFn7n62knNd8FgG8l/Listify?node-id=0%3A1'
               target='_blank'
               rel='noopener noreferrer'
             >
               Figma
-            </a>
-            . Because I wanted the app to be as straightforward as possible, the
+            </a>{' '}
+            to create the wireframe that Listify is based on (seen below).
+            Because I wanted the app to be as straightforward as possible, the
             design only includes the necessary elements and nothing more.
           </StyledParagraph>
           <StyledParagraph>
@@ -118,10 +119,11 @@ const ListifyPage = () => {
 
       <Section title='Mobile First' id='responsiveness' bg={true}>
         <StyledParagraph>
-          Designing and prototyping websites for mobile devices first helps
-          ensure that the users' experience is seamless on any device. As mobile
-          designs are typically simpler, taking a mobile first approach allows
-          for progressively adding more complexity as the device size increases.
+          Designing and prototyping websites for mobile first helps ensure that
+          the user experience is seamless on any device. Because mobile designs
+          are typically simpler, taking a mobile first approach allows for
+          progressively adding more complexity as the screen real state
+          increases.
         </StyledParagraph>
         <ResponsiveImg iphone src={ListifyIphone} alt='Responsive design.' />
       </Section>
@@ -265,7 +267,7 @@ const ListifyPage = () => {
             </IconContainer>
             <div>
               <StyledSpan>Others</StyledSpan>
-              <br /> Web Sockets, React Hooks, React Context
+              <br /> Web Sockets, React Hooks, React Router, React Context
             </div>
           </ListItem>
         </TechList>

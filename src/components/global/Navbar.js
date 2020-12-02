@@ -8,7 +8,7 @@ import ResumePDF from '../../docs/julian_vazquez_resume.pdf';
 const Navbar = () => {
   const Nav = styled.nav`
     padding: 1rem 0;
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.08);
+    /* box-shadow: 0 0px 8px rgba(0, 0, 0, 0.08); */
   `;
 
   const ListItem = styled.li`

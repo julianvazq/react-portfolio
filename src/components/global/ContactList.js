@@ -20,8 +20,9 @@ const ListContainer = styled.div`
     width: 125%;
     height: 2px;
     background: linear-gradient(
-      to right,
+      90deg,
       hsl(210, 7%, 89%),
+      80%,
       rgba(255, 255, 255, 0)
     );
   }
@@ -31,17 +32,23 @@ const ListContainer = styled.div`
 
     &:before {
       width: 85%;
+      background: linear-gradient(
+        90deg,
+        hsl(210, 7%, 89%),
+        40%,
+        rgba(255, 255, 255, 0)
+      );
     }
   }
 `;
 
 const List = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: column;
+  grid-column-gap: 0.5rem;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-align: center;
   max-width: max-content;
   margin: auto;
@@ -52,7 +59,9 @@ const List = styled.div`
   }
 
   @media (min-width: 650px) {
-    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   @media (min-width: 800px) {
@@ -65,14 +74,15 @@ const IconContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
+  font-size: 1.25rem;
+  color: #fff;
   border-radius: 50%;
   background: ${(props) => props.theme.primary};
   border: 1px solid ${(props) => props.theme.primary};
   margin-right: 0.5rem;
   transition: all 200ms ease-out;
-  color: #fff;
 
   @media (min-width: 650px) {
     margin-bottom: 0;
@@ -87,7 +97,8 @@ const ContactItem = styled.div`
 `;
 
 const Anchor = styled.a`
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
+  grid-column: ${(props) => props.column};
 
   &:hover ${IconContainer}, &:focus ${IconContainer} {
     background: #f5f5f5;
@@ -96,11 +107,11 @@ const Anchor = styled.a`
   }
 
   @media (min-width: 650px) {
-    margin-right: 1em;
+    margin-right: 1rem;
   }
 
   @media (min-width: 800px) {
-    margin-right: 1.25em;
+    margin-right: 1.25rem;
   }
 `;
 
@@ -112,6 +123,7 @@ const ContactList = () => {
           href='https://github.com/julianvazq'
           target='_blank'
           rel='noopener noreferrer'
+          column={1}
         >
           <ContactItem>
             <IconContainer>
@@ -124,6 +136,7 @@ const ContactList = () => {
           href='https://www.linkedin.com/in/julian-vazquez/'
           target='_blank'
           rel='noopener noreferrer'
+          column={1}
         >
           <ContactItem>
             <IconContainer>
@@ -136,6 +149,7 @@ const ContactList = () => {
           href='mailto:julianvazquez101@gmail.com'
           target='_blank'
           rel='noopener noreferrer'
+          column={1}
         >
           <ContactItem>
             <IconContainer>
@@ -144,7 +158,12 @@ const ContactList = () => {
             Email
           </ContactItem>
         </Anchor>
-        <Anchor href={ResumePDF} target='_blank' rel='noopener noreferrer'>
+        <Anchor
+          href={ResumePDF}
+          target='_blank'
+          rel='noopener noreferrer'
+          column={2}
+        >
           <ContactItem>
             <IconContainer>
               <MdPictureAsPdf />
@@ -156,6 +175,7 @@ const ContactList = () => {
           href='https://julianvazq.github.io/accessibility-web-explainer/'
           target='_blank'
           rel='noopener noreferrer'
+          column={2}
         >
           <ContactItem>
             <IconContainer>

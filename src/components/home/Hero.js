@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
-import styled from 'styled-components';
+import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im';
+import styled, { css } from 'styled-components';
 import CoverImage from '../../images/illustrations/cover-image.svg';
 import { Button, fadeInFromRight } from '../styled-components/StyledComponents';
 
@@ -107,11 +108,17 @@ const Position = styled.h2`
   font-size: 1.25rem;
   color: hsl(0deg 0% 40%);
   line-height: 1.2;
+  display: flex;
+  align-items: center;
 
   @media (max-width: 580px) {
     font-size: 1.5rem;
     line-height: 1.25;
   }
+`;
+
+const HeadingContainer = styled.div`
+  position: relative;
 `;
 
 const Heading = styled.h1`
@@ -124,17 +131,28 @@ const Heading = styled.h1`
   font-weight: 500;
   text-transform: capitalize;
   font-family: 'Work Sans', 'Helvetica', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 
-  span {
-    font-weight: 700;
-    color: #5d5d5d;
-    letter-spacing: 2px;
-    position: relative;
-    display: inline-block;
-    transform-origin: right;
+  @media (min-width: 800px) {
+    justify-content: flex-start;
   }
+`;
 
-  span:after {
+const StyledText = styled(motion.span)`
+  font-weight: 700;
+  font-style: italic;
+  color: #5d5d5d;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  transform-origin: right;
+  align-self: center;
+  margin-bottom: 1rem;
+
+  &:after {
     content: '';
     position: absolute;
     left: 0;
@@ -144,15 +162,15 @@ const Heading = styled.h1`
     background: linear-gradient(90deg, rgba(96, 176, 244, 1), 80%, #fff);
     border-radius: 1rem;
   }
+
+  @media (min-width: 800px) {
+    align-self: flex-start;
+  }
 `;
 
 const CTAButton = styled(Button)`
   display: flex;
   align-items: center;
-
-  @media (min-width: 600px) {
-    /* font-size: 1.5rem; */
-  }
 `;
 
 const DownArrow = styled(IoIosArrowDown)`
@@ -162,6 +180,35 @@ const DownArrow = styled(IoIosArrowDown)`
 
   @media (max-width: 600px) {
     font-size: 1.5rem;
+  }
+`;
+
+const quotesStyles = css`
+  font-size: 7rem;
+  /* color: #efefef; */
+  color: #f7f7f7;
+  z-index: -1;
+  position: absolute;
+`;
+
+const OpenQuotes = styled(ImQuotesLeft)`
+  ${quotesStyles}
+  top: -40px;
+  left: -10px;
+
+  @media (min-width: 800px) {
+    left: -50px;
+  }
+`;
+
+const CloseQuotes = styled(ImQuotesRight)`
+  ${quotesStyles}
+  display: none;
+  bottom: -10px;
+  right: -50px;
+
+  @media (min-width: 1150px) {
+    display: block;
   }
 `;
 
@@ -177,19 +224,21 @@ const Hero = () => {
           animate='visible'
         />
         <ContentContainer>
-          <Heading>
-            Let's turn your{' '}
-            <motion.span
-              variants={textVariant}
-              initial='hidden'
-              animate='visible'
-            >
-              ideas
-            </motion.span>{' '}
-            <br /> into{' '}
-            <motion.span variants={textVariant}>reality</motion.span>
-          </Heading>
-
+          <HeadingContainer>
+            <OpenQuotes />
+            <Heading>
+              <span>I create</span>
+              <StyledText
+                variants={textVariant}
+                initial='hidden'
+                animate='visible'
+              >
+                enjoyable
+              </StyledText>{' '}
+              <span>web experiences</span>
+            </Heading>
+            <CloseQuotes />
+          </HeadingContainer>
           <Details>
             <Name>Julian Vazquez</Name>
             <Position>Front End Developer</Position>

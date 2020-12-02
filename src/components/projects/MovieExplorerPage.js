@@ -30,7 +30,7 @@ const MovieExplorerPage = () => {
     >
       <Header
         title='Movie Explorer'
-        description='Discover thousands of movies and create a curated watchlist.'
+        description='Browse top rated movies and get recommendations based on your curated watchlist.'
         url='http://movie-explorer.julianvazquez.me'
         github='https://github.com/julianvazq/movie-explorer'
       >
