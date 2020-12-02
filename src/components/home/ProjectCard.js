@@ -87,6 +87,7 @@ const StyledLink = styled(Link)`
 `;
 
 const ProjectItem = styled(motion.article)`
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
   border-radius: 0.3rem;
   background-size: cover;
   object-fit: cover;
@@ -107,12 +108,12 @@ const ProjectItem = styled(motion.article)`
   }
 
   h3 {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.75rem;
     padding: 0.5em 0;
     letter-spacing: 2px;
     background: #e2e4e6;
-    color: #333;
+    color: hsl(210 10% 25% / 1);
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
   }
@@ -131,7 +132,6 @@ const ProjectItem = styled(motion.article)`
 `;
 
 const TechInfo = styled.div`
-  font-family: 'Work Sans';
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1.5;
