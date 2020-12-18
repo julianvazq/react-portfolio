@@ -102,7 +102,7 @@ const ListifyPage = () => {
             >
               Figma
             </a>{' '}
-            to create the wireframe that Listify is based on (seen below).
+            to create the wireframe that Listify is based on (see below).
             Because I wanted the app to be as straightforward as possible, the
             design only includes the necessary elements and nothing more.
           </StyledParagraph>
@@ -117,7 +117,7 @@ const ListifyPage = () => {
         />
       </Section>
 
-      <Section title='Mobile First' id='responsiveness' bg={true}>
+      <Section title='Mobile First' id='responsiveness' bg>
         <StyledParagraph>
           Designing and prototyping websites for mobile first helps ensure that
           the user experience is seamless on any device. Because mobile designs
@@ -180,8 +180,8 @@ const ListifyPage = () => {
             Given the above constraints, there were three clear tables that make
             themselves apparent: lists, users and items. Lastly, a join table
             named "memberships" helps handle the many-to-many relationship
-            between users and lists, while making it easy to keep track of the
-            users that are members of each list.
+            between users and lists, making it easy to keep track of the users
+            that are members of each list.
           </StyledParagraph>
         </div>
         <div>
@@ -232,7 +232,7 @@ const ListifyPage = () => {
         </div>
       </Section>
 
-      <Section title='Tech Details' id='tech' bg={true}>
+      <Section title='Tech Details' id='tech' bg>
         <TechList>
           <ListItem>
             <IconContainer>

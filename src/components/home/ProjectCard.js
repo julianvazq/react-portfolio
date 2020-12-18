@@ -61,16 +61,18 @@ const Overlay = styled(motion.div)`
   padding: 4rem;
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     z-index: 99;
+    visibility: hidden;
 
-    @media (max-width: 650px) {
-      font-size: 1.25rem;
+    @media (min-width: 700px) {
+      font-size: 1.5rem;
+      visibility: visible;
     }
   }
 
   &::before {
-    content: '';
+    /* content: ''; */
     display: block;
     position: absolute;
     top: 0;
@@ -81,12 +83,19 @@ const Overlay = styled(motion.div)`
     border-width: 0px 0px 0 0;
     border-color: rgb(22 22 22 / 70%) transparent transparent transparent;
     transition: 0.65s ease border-width;
+    backdrop-filter: blur(2px);
+  }
+
+  @media (min-width: 700px) {
+    &::before {
+      content: '';
+    }
   }
 `;
 
 // For accessibility (tab)
 const StyledLink = styled(Link)`
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     &:focus ${Overlay}::before {
       border-width: ${borderWidth.md};
     }

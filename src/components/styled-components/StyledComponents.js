@@ -7,7 +7,8 @@ export const fadeIn = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.75,
+      duration: 0.5,
+      ease: 'easeIn',
     },
   },
   exit: {
@@ -18,15 +19,15 @@ export const fadeIn = {
 export const fadeInFromRight = {
   hidden: {
     opacity: 0,
-    x: -50,
+    x: 50,
   },
   visible: {
     opacity: 1,
     x: 0,
     transition: {
       duration: 0.75,
-      type: 'spring',
-      damping: 20,
+      delay: 0.75,
+      ease: 'easeOut',
     },
   },
   exit: {

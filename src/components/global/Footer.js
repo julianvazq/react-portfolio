@@ -9,7 +9,7 @@ import ContactList from './ContactList';
 const Footer = () => {
   const { pathname } = useLocation();
 
-  const alternateBackgroundColor = ['/e-commerce'];
+  const alternateBackgroundColor = [''];
 
   const backgroundColor = alternateBackgroundColor.includes(pathname)
     ? '#f0f4f6'

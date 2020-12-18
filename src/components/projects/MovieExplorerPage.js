@@ -61,7 +61,7 @@ const MovieExplorerPage = () => {
         />
       </Section>
 
-      <Section title='Tech Details' id='tech' bg={true}>
+      <Section title='Tech Details' id='tech' bg>
         <TechList>
           <ListItem>
             <IconContainer>

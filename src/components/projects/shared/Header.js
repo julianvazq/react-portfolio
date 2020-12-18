@@ -8,6 +8,7 @@ import {
 } from '../../styled-components/StyledComponents';
 import PageNav from './PageNav';
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 
 const HeaderContainer = styled.section`
   margin: auto;
@@ -80,6 +81,8 @@ export const ButtonContainer = styled.div`
 const buttonStyling = css`
   margin-top: 1rem;
   width: 227px;
+  display: inline-flex;
+  align-items: center;
 
   @media (min-width: 700px) {
     width: 245px;
@@ -95,11 +98,11 @@ const GithubButton = styled(SecondaryButton)`
 `;
 
 const LinkIcon = styled(RiExternalLinkLine)`
-  margin-left: 0.5rem;
+  margin-left: auto;
 `;
 
 const GithubIcon = styled(FiGithub)`
-  margin-left: 0.5rem;
+  margin-left: auto;
   color: hsl(210, 7%, 55%);
 `;
 

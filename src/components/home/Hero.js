@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import CoverImage from '../../images/illustrations/cover-image.svg';
 import { Button, fadeInFromRight } from '../styled-components/StyledComponents';
 
@@ -19,6 +19,54 @@ const textVariant = {
     },
   },
 };
+
+const fadeInFromBottom = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const fadeUpVariant = {
+  hidden: {
+    opacity: 0,
+    y: 10,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.75,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const fadeInVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      delay: 1.5,
+    },
+  },
+};
+
+const expandFromLeft = keyframes`
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+`;
 
 const OuterContainer = styled.section`
   position: relative;
@@ -117,7 +165,7 @@ const Position = styled.h2`
   }
 `;
 
-const HeadingContainer = styled.div`
+const HeadingContainer = styled(motion.div)`
   position: relative;
 `;
 
@@ -135,6 +183,7 @@ const Heading = styled.h1`
   flex-direction: column;
   justify-content: center;
   position: relative;
+  z-index: 3;
 
   @media (min-width: 800px) {
     justify-content: flex-start;
@@ -161,6 +210,8 @@ const StyledText = styled(motion.span)`
     height: 3px;
     background: linear-gradient(90deg, rgba(96, 176, 244, 1), 80%, #fff);
     border-radius: 1rem;
+    animation: 1s ${expandFromLeft} ease-in;
+    transform-origin: left;
   }
 
   @media (min-width: 800px) {
@@ -185,7 +236,6 @@ const DownArrow = styled(IoIosArrowDown)`
 
 const quotesStyles = css`
   font-size: 7rem;
-  /* color: #efefef; */
   color: #f7f7f7;
   z-index: -1;
   position: absolute;
@@ -224,20 +274,32 @@ const Hero = () => {
           animate='visible'
         />
         <ContentContainer>
-          <HeadingContainer>
-            <OpenQuotes />
+          <HeadingContainer
+            variants={fadeInFromBottom}
+            initial='hidden'
+            animate='show'
+          >
+            <motion.span
+              variants={fadeInVariant}
+              initial='hidden'
+              animate='show'
+            >
+              <OpenQuotes />
+            </motion.span>
             <Heading>
-              <span>I create</span>
-              <StyledText
-                variants={textVariant}
-                initial='hidden'
-                animate='visible'
-              >
-                enjoyable
-              </StyledText>{' '}
-              <span>web experiences</span>
+              <motion.span variants={fadeUpVariant}>I create</motion.span>
+              <StyledText variants={fadeUpVariant}>enjoyable</StyledText>{' '}
+              <motion.span variants={fadeUpVariant}>
+                web experiences
+              </motion.span>
             </Heading>
-            <CloseQuotes />
+            <motion.span
+              variants={fadeInVariant}
+              initial='hidden'
+              animate='show'
+            >
+              <CloseQuotes />
+            </motion.span>
           </HeadingContainer>
           <Details>
             <Name>Julian Vazquez</Name>

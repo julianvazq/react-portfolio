@@ -16,6 +16,15 @@ import { motion } from 'framer-motion';
 import Header from './shared/Header';
 import Section from './shared/Section';
 import BackButton from './shared/BackButton';
+import styled from 'styled-components';
+
+const NextJS = styled(ResponsiveImg)`
+  max-height: 100px;
+
+  @media (min-width: 800px) {
+    max-height: 150px;
+  }
+`;
 
 const navLinks = [
   {
@@ -33,6 +42,10 @@ const navLinks = [
   {
     hash: '#accessibility',
     title: 'Accessibility',
+  },
+  {
+    hash: '#architecture',
+    title: 'Architecture',
   },
   {
     hash: '#tech',
@@ -99,7 +112,7 @@ const ECommercePage = () => {
         />
       </Section>
 
-      <Section title='Editing' id='editing' bg={true}>
+      <Section title='Editing' id='editing' bg>
         <StyledParagraph>
           Images can make or break a site. Nailing the overall look that I
           wanted meant that I would need headphone images with transparent
@@ -134,7 +147,7 @@ const ECommercePage = () => {
         />
       </Section>
 
-      <Section title='Accessibility' id='accessibility' bg={true}>
+      <Section title='Accessibility' id='accessibility' bg>
         <StyledParagraph>
           The web should be accessible to all. Every page of this site can be
           accessed using keyboard-only navigation, and ARIA labels are included
@@ -156,7 +169,41 @@ const ECommercePage = () => {
         />
       </Section>
 
-      <Section title='Tech Details' id='tech'>
+      <Section title='Architecture' id='architecture'>
+        <div>
+          <StyledParagraph>
+            This website was built with{' '}
+            <a
+              href='https://nextjs.org/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              NextJS
+            </a>
+            , a modern React framework.
+          </StyledParagraph>
+          <StyledParagraph>
+            Next offers server-side rendering out of the box, which means that
+            as opposed to client-side rendering, the browser actually receives
+            HTML documents instead of a bunch of JavaScript bundles. Because
+            browsers are inherently fast at rendering HTML, server-side
+            rendering allows for faster websites and better performance while
+            also using less bandwidth (great for mobile users).
+          </StyledParagraph>
+          <StyledParagraph>
+            As a bonus, search engines are better at indexing HTML than
+            single-page-applications (SPAs), meaning that server-side rendering
+            provides improved search engine optimization (SEO) by default, no
+            additional effort required.
+          </StyledParagraph>
+        </div>
+        <NextJS
+          src={require('../../images/projects/e-commerce/nextjs-logo.svg')}
+          alt='Responsive design.'
+        />
+      </Section>
+
+      <Section title='Tech Details' id='tech' bg>
         <TechList>
           <ListItem>
             <IconContainer>
@@ -164,7 +211,7 @@ const ECommercePage = () => {
             </IconContainer>
             <div>
               <StyledSpan>Frontend</StyledSpan>
-              <br /> React (NextJS), Styled Components (CSS)
+              <br /> NextJS (React), Styled Components (CSS)
             </div>
           </ListItem>
           <ListItem>
