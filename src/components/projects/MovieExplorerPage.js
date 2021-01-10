@@ -31,7 +31,7 @@ const MovieExplorerPage = () => {
       <Header
         title='Movie Explorer'
         description='Browse top rated movies and get recommendations based on your curated watchlist.'
-        url='http://movie-explorer.julianvazquez.me'
+        url='http://movie-explorer.julianvaz.com'
         github='https://github.com/julianvazq/movie-explorer'
       >
         <VideoHeading id='preview'>Browse similar movies</VideoHeading>

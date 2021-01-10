@@ -6,20 +6,6 @@ import styled, { css, keyframes } from 'styled-components';
 import CoverImage from '../../images/illustrations/cover-image.svg';
 import { Button, fadeInFromRight } from '../styled-components/StyledComponents';
 
-const textVariant = {
-  hidden: {
-    opacity: 0,
-    width: 0,
-  },
-  visible: {
-    width: 'auto',
-    opacity: 1,
-    transition: {
-      duration: 0.75,
-    },
-  },
-};
-
 const fadeInFromBottom = {
   hidden: { opacity: 0 },
   show: {
@@ -62,9 +48,11 @@ const fadeInVariant = {
 const expandFromLeft = keyframes`
   0% {
     transform: scaleX(0);
+    visibility: visible;
   }
   100% {
     transform: scaleX(1);
+    visibility: visible;
   }
 `;
 
@@ -149,18 +137,25 @@ const Name = styled.p`
   font-size: 1.75rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  text-align: center;
+
+  @media (min-width: 800px) {
+    text-align: left;
+  }
 `;
 
 const Position = styled.h2`
+  font-family: 'Work Sans', 'Helvetica', sans-serif;
   font-weight: 600;
-  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 1px;
   color: hsl(0deg 0% 40%);
   line-height: 1.2;
   display: flex;
   align-items: center;
 
   @media (max-width: 580px) {
-    font-size: 1.5rem;
     line-height: 1.25;
   }
 `;
@@ -210,7 +205,9 @@ const StyledText = styled(motion.span)`
     height: 3px;
     background: linear-gradient(90deg, rgba(96, 176, 244, 1), 80%, #fff);
     border-radius: 1rem;
-    animation: 1s ${expandFromLeft} ease-in;
+    visibility: hidden;
+    animation: 1s 0.2s ${expandFromLeft} ease-in;
+    animation-fill-mode: both;
     transform-origin: left;
   }
 

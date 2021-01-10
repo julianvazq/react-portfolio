@@ -33,7 +33,7 @@ const LifeTrackerPage = () => {
         description=' CRUD app that allows users to track certain aspects of their
                     lives, such as groceries, appointments, moods, books and
                     more.'
-        url='http://life-tracker.julianvazquez.me'
+        url='http://life-tracker.julianvaz.com'
         github='https://github.com/julianvazq/mern-stack'
       >
         <VideoHeading id='preview'>

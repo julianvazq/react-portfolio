@@ -28,7 +28,7 @@ function App() {
           <Route path='/' exact component={Home} />
           <Route path='/e-commerce' component={ECommercePage} />
           <Route path='/life-tracker' component={LifeTrackerPage} />
-          <Route path='/pet-matcher' component={PetMatcherPage} />
+          <Route path='/dog-finder' component={PetMatcherPage} />
           {/* <Route path='/pg-finder' component={PGFinderPage} /> */}
           <Route path='/exotic-pet-store' component={ExoticPetStorePage} />
           {/* <Route path='/js-typing-test' component={TypingTestPage} /> */}

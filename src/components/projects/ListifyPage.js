@@ -82,7 +82,7 @@ const ListifyPage = () => {
       <Header
         title='Listify'
         description='Real-time, collaborative lists to easily share with others. Think Google Docs, but for lists.'
-        url='http://listify.julianvazquez.me/'
+        url='http://listify.julianvaz.com/'
         github='https://github.com/julianvazq/listify'
         navLinks={navLinks}
       >

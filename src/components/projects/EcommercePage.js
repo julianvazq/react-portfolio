@@ -64,7 +64,7 @@ const ECommercePage = () => {
       <Header
         title='E-Commerce Store'
         description='Stylish mock headphones and earbuds e-commerce store. Try making a purchase and see what happens...'
-        url='https://e-commerce.julianvazquez.me'
+        url='https://e-commerce.julianvaz.com'
         github='https://github.com/julianvazq/headphones-ecommerce'
         navLinks={navLinks}
       >

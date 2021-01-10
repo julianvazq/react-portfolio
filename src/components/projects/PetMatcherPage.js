@@ -45,7 +45,7 @@ const PetMatcherPage = () => {
       <Header
         title='Dog Finder'
         description='Looking for a new best friend? Get personalized results of dogs for adoption in your area.'
-        url='https://pet-matcher.julianvazquez.me/'
+        url='https://dog-finder.julianvaz.com/'
         github='https://github.com/julianvazq/pet-matcher'
         navLinks={navLinks}
       >

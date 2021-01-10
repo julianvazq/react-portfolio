@@ -38,7 +38,7 @@ export const projects = [
   },
   {
     title: 'Dog Finder',
-    link: '/pet-matcher',
+    link: '/dog-finder',
     tech: ['React', 'Node', 'Express', 'Styled Components'],
     description: 'Personalized results of dogs for adoption in your area.',
     images: {

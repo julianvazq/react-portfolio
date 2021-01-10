@@ -1,1 +1,1 @@
-# julianvazquez.me
+# julianvaz.com

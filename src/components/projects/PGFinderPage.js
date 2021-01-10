@@ -47,7 +47,7 @@ const PGFinderPage = () => {
               </ProjectDescription>
               <ButtonContainer>
                 <Button
-                  href='http://pg-finder.julianvazquez.me/'
+                  href='http://pg-finder.julianvaz.com/'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -106,7 +106,7 @@ const PGFinderPage = () => {
           <Container style={{ paddingBottom: 0 }}>
             <LongContainer>
               <Button
-                href='http://pg-finder.julianvazquez.me/doc.html'
+                href='http://pg-finder.julianvaz.com/doc.html'
                 target='_blank'
                 rel='noopener noreferrer'
                 style={{ background: '#949393' }}
