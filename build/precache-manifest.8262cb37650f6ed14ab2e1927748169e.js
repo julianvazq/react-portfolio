@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "81f29564d60fb3ed08c52ec57dc9239a",
+    "revision": "72088df65fd458917c435e6d14a4f437",
     "url": "/index.html"
   },
   {
-    "revision": "a3fdcc9f4b1551ded0b9",
+    "revision": "246ac8789af0f6a12759",
     "url": "/static/css/main.152814d7.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.ac489c81.chunk.js.LICENSE"
   },
   {
-    "revision": "a3fdcc9f4b1551ded0b9",
-    "url": "/static/js/main.e36e217d.chunk.js"
+    "revision": "246ac8789af0f6a12759",
+    "url": "/static/js/main.4c829000.chunk.js"
   },
   {
     "revision": "c8d7855bb8c34e28ab24",
@@ -96,8 +96,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/figma-vs-actual-2.a860355a.png"
   },
   {
-    "revision": "c08da1c3d1589c7bc5fbadb716d13540",
-    "url": "/static/media/julian_vazquez_resume.c08da1c3.pdf"
+    "revision": "4c345ec00d188c4d809c57e2120a754d",
+    "url": "/static/media/julian_vazquez_resume.4c345ec0.pdf"
   },
   {
     "revision": "c5677b6ef5c3c513def849ab59480ec9",
