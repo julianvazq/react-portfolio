@@ -1,280 +1,301 @@
+import { motion } from 'framer-motion';
 import React from 'react';
+import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
+import { DiPostgresql } from 'react-icons/di';
+import { FaDatabase, FaNodeJs, FaReact, FaServer } from 'react-icons/fa';
+import styled, { css } from 'styled-components';
 import ListifyDemo from '../../gifs/listify-demo.mp4';
 import ListifyIphone from '../../images/iphone/listify-iphone.png';
 import {
-  fadeIn,
-  ResponsiveImg,
-  StyledParagraph,
-  ListTitle,
-  List,
-  TechList,
-  ListItem,
-  IconContainer,
-  StyledSpan,
-  Example,
-  OrderedList,
-  Video,
+    Example,
+    fadeIn,
+    IconContainer,
+    List,
+    ListItem,
+    ListTitle,
+    OrderedList,
+    ResponsiveImg,
+    StyledParagraph,
+    StyledSpan,
+    TechList,
+    Video,
 } from '../styled-components/StyledComponents';
-import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
-import { FaServer, FaDatabase, FaNodeJs, FaReact } from 'react-icons/fa';
-import { DiPostgresql } from 'react-icons/di';
-import { motion } from 'framer-motion';
+import BackButton from './shared/BackButton';
 import Header from './shared/Header';
 import Section from './shared/Section';
-import styled, { css } from 'styled-components';
-import BackButton from './shared/BackButton';
 
 const IconStyles = css`
-  font-size: 3rem;
-  margin-right: 0.5rem;
+    font-size: 3rem;
+    margin-right: 0.5rem;
 
-  @media (max-width: 1700px) {
-    font-size: 2rem;
-  }
+    @media (max-width: 1700px) {
+        font-size: 2rem;
+    }
 `;
 
 const ReactIcon = styled(FaReact)`
-  ${IconStyles};
-  color: #61dafb;
+    ${IconStyles};
+    color: #61dafb;
 `;
 
 const NodeIcon = styled(FaNodeJs)`
-  ${IconStyles};
-  color: #3c873a;
+    ${IconStyles};
+    color: #3c873a;
 `;
 
 const PostgreIcon = styled(DiPostgresql)`
-  ${IconStyles};
-  color: #336791;
+    ${IconStyles};
+    color: #336791;
 `;
 
 const navLinks = [
-  {
-    hash: '#preview',
-    title: 'Preview',
-  },
-  {
-    hash: '#design',
-    title: 'Design',
-  },
-  {
-    hash: '#responsiveness',
-    title: 'Mobile First',
-  },
-  {
-    hash: '#architecture',
-    title: 'Architecture',
-  },
-  {
-    hash: '#tech',
-    title: 'Tech Details',
-  },
+    {
+        hash: '#preview',
+        title: 'Preview',
+    },
+    {
+        hash: '#design',
+        title: 'Design',
+    },
+    {
+        hash: '#responsiveness',
+        title: 'Mobile First',
+    },
+    {
+        hash: '#architecture',
+        title: 'Architecture',
+    },
+    {
+        hash: '#tech',
+        title: 'Tech Details',
+    },
 ];
 
 const ListifyPage = () => {
-  return (
-    <motion.div
-      variants={fadeIn}
-      initial='hidden'
-      animate='visible'
-      exit='hidden'
-    >
-      <Header
-        title='Listify'
-        description='Real-time, collaborative lists to easily share with others. Think Google Docs, but for lists.'
-        url='http://listify.julianvaz.com/'
-        github='https://github.com/julianvazq/listify'
-        navLinks={navLinks}
-      >
-        <Video id='preview' loop muted playsInline controls>
-          <source src={ListifyDemo} type='video/mp4' />
-        </Video>
-      </Header>
-
-      <Section title='Design' id='design'>
-        <div>
-          <StyledParagraph>
-            I used{' '}
-            <a
-              href='https://www.figma.com/file/GKZeaaFn7n62knNd8FgG8l/Listify?node-id=0%3A1'
-              target='_blank'
-              rel='noopener noreferrer'
+    return (
+        <motion.div
+            variants={fadeIn}
+            initial='hidden'
+            animate='visible'
+            exit='hidden'
+        >
+            <Header
+                title='Listify'
+                description='Real-time, collaborative lists to easily share with others. Think Google Docs, but for lists.'
+                url='http://listify.julianvaz.com/'
+                github='https://github.com/julianvazq/listify'
+                navLinks={navLinks}
             >
-              Figma
-            </a>{' '}
-            to create the wireframe that Listify is based on (see below).
-            Because I wanted the app to be as straightforward as possible, the
-            design only includes the necessary elements and nothing more.
-          </StyledParagraph>
-          <StyledParagraph>
-            Along the process of building the app I made some slight design
-            changes, but the overall look and feel remained the same.
-          </StyledParagraph>
-        </div>
-        <ResponsiveImg
-          src={require('../../images/projects/listify/design.png')}
-          alt='Figma design vs. actual website.'
-        />
-      </Section>
+                <Video id='preview' loop muted playsInline controls>
+                    <source src={ListifyDemo} type='video/mp4' />
+                </Video>
+            </Header>
 
-      <Section title='Mobile First' id='responsiveness' bg>
-        <StyledParagraph>
-          Designing and prototyping websites for mobile first helps ensure that
-          the user experience is seamless on any device. Because mobile designs
-          are typically simpler, taking a mobile first approach allows for
-          progressively adding more complexity as the screen real state
-          increases.
-        </StyledParagraph>
-        <ResponsiveImg iphone src={ListifyIphone} alt='Responsive design.' />
-      </Section>
+            <Section title='Design' id='design'>
+                <div>
+                    <StyledParagraph>
+                        I used{' '}
+                        <a
+                            href='https://www.figma.com/file/GKZeaaFn7n62knNd8FgG8l/Listify?node-id=0%3A1'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            Figma
+                        </a>{' '}
+                        to create the wireframe that Listify is based on (see
+                        below). Because I wanted the app to be as
+                        straightforward as possible, the design only includes
+                        the necessary elements and nothing more.
+                    </StyledParagraph>
+                    <StyledParagraph>
+                        Along the process of building the app I made some slight
+                        design changes, but the overall look and feel remained
+                        the same.
+                    </StyledParagraph>
+                </div>
+                <ResponsiveImg
+                    src={require('../../images/projects/listify/design.png')}
+                    alt='Figma design vs. actual website.'
+                />
+            </Section>
 
-      <Section title='Architecture' id='architecture'>
-        <div>
-          <StyledParagraph>
-            The software architecture of Listify leverages web sockets to
-            maintain constant communication between clients and server, allowing
-            all members of a list to experience a "real-time" concurrent
-            experience.
-          </StyledParagraph>
-        </div>
-        <ResponsiveImg
-          src={require('../../images/projects/listify/architecture.png')}
-          alt='Architecture diagram.'
-        />
-        <div>
-          <StyledParagraph>
-            The "hub" of the application, as pictured in the diagram above, is a
-            NodeJS (Express) server. This is where the logic that drives the
-            application lives, and it is the layer through which all
-            interactions among users, as well as with the database, take place.
-          </StyledParagraph>
-          <StyledParagraph>
-            For storage, the application uses PostgreSQL. When designing the
-            database model, the main constraints were:
-          </StyledParagraph>
-          <ListTitle>User</ListTitle>
-          <List>
-            <li>
-              A user can be a member of <span>many</span> lists
-            </li>
-            <li>
-              A user can create <span>many</span> list items
-            </li>
-          </List>
-          <ListTitle>List</ListTitle>
-          <List>
-            <li>
-              A list can have <span>many</span> users
-            </li>
-            <li>
-              A list can have <span>many</span> items
-            </li>
-          </List>
-        </div>
-        <ResponsiveImg
-          src={require('../../images/projects/listify/erd.png')}
-          alt='Entity Relationship Diagram.'
-        />
-        <div>
-          <StyledParagraph>
-            Given the above constraints, there were three clear tables that make
-            themselves apparent: lists, users and items. Lastly, a join table
-            named "memberships" helps handle the many-to-many relationship
-            between users and lists, making it easy to keep track of the users
-            that are members of each list.
-          </StyledParagraph>
-        </div>
-        <div>
-          <Example>
-            Example interaction: <span>User adds a new item to a list</span>
-          </Example>
-          <OrderedList>
-            <li>
-              <span>
-                <ReactIcon />
-                React{' '}
-              </span>
-              <span>Client sends request to the server with item data</span>
-            </li>
-            <li>
-              <span>
-                <NodeIcon />
-                NodeJS
-              </span>
-              <span>
-                Server handles the request and communicates with the database{' '}
-              </span>
-            </li>
-            <li>
-              <span>
-                <PostgreIcon />
-                PostgreSQL
-              </span>
-              <span>
-                Database executes an INSERT statement, storing the new item
-              </span>
-            </li>
-            <li>
-              <span>
-                <NodeIcon />
-                NodeJS
-              </span>
-              <span>Server sends the new item to all the other clients</span>
-            </li>
-            <li>
-              <span>
-                <ReactIcon />
-                React{' '}
-              </span>
-              <span>Clients receive the new item data and update the list</span>
-            </li>
-          </OrderedList>
-        </div>
-      </Section>
+            <Section title='Mobile First' id='responsiveness' bg>
+                <StyledParagraph>
+                    Designing and prototyping websites for mobile first helps
+                    ensure that the user experience is seamless on any device.
+                    Because mobile designs are typically simpler, taking a
+                    mobile first approach allows for progressively adding more
+                    complexity as the screen real state increases.
+                </StyledParagraph>
+                <ResponsiveImg
+                    iphone
+                    src={ListifyIphone}
+                    alt='Responsive design.'
+                />
+            </Section>
 
-      <Section title='Tech Details' id='tech' bg>
-        <TechList>
-          <ListItem>
-            <IconContainer>
-              <BsDisplayFill />
-            </IconContainer>
-            <div>
-              <StyledSpan>Frontend</StyledSpan>
-              <br /> React, TypeScript, Styled Components (CSS)
-            </div>
-          </ListItem>
-          <ListItem>
-            <IconContainer>
-              <FaServer />
-            </IconContainer>
-            <div>
-              <span>Backend</span>
-              <br /> Node, Express
-            </div>
-          </ListItem>
-          <ListItem>
-            <IconContainer>
-              <FaDatabase />
-            </IconContainer>
-            <div>
-              <StyledSpan>Database</StyledSpan>
-              <br /> PostgreSQL
-            </div>
-          </ListItem>
-          <ListItem>
-            <IconContainer>
-              <BsThreeDots />
-            </IconContainer>
-            <div>
-              <StyledSpan>Others</StyledSpan>
-              <br /> Web Sockets, React Hooks, React Router, React Context
-            </div>
-          </ListItem>
-        </TechList>
-        <BackButton />
-      </Section>
-    </motion.div>
-  );
+            <Section title='Architecture' id='architecture'>
+                <div>
+                    <StyledParagraph>
+                        The software architecture of Listify leverages web
+                        sockets to maintain constant communication between
+                        clients and server, allowing all members of a list to
+                        experience a "real-time" concurrent experience.
+                    </StyledParagraph>
+                </div>
+                <ResponsiveImg
+                    src={require('../../images/projects/listify/architecture.png')}
+                    alt='Architecture diagram.'
+                />
+                <div>
+                    <StyledParagraph>
+                        The "hub" of the application, as pictured in the diagram
+                        above, is a NodeJS (Express) server. This is where the
+                        logic that drives the application lives, and it is the
+                        layer through which all interactions among users, as
+                        well as with the database, take place.
+                    </StyledParagraph>
+                    <StyledParagraph>
+                        For storage, the application uses PostgreSQL. When
+                        designing the database model, the main constraints were:
+                    </StyledParagraph>
+                    <ListTitle>User</ListTitle>
+                    <List>
+                        <li>
+                            A user can be a member of <span>many</span> lists
+                        </li>
+                        <li>
+                            A user can create <span>many</span> list items
+                        </li>
+                    </List>
+                    <ListTitle>List</ListTitle>
+                    <List>
+                        <li>
+                            A list can have <span>many</span> users
+                        </li>
+                        <li>
+                            A list can have <span>many</span> items
+                        </li>
+                    </List>
+                </div>
+                <ResponsiveImg
+                    src={require('../../images/projects/listify/erd.png')}
+                    alt='Entity Relationship Diagram.'
+                />
+                <div>
+                    <StyledParagraph>
+                        Given the above constraints, there were three clear
+                        tables that make themselves apparent: lists, users and
+                        items. Lastly, a join table named "memberships" helps
+                        handle the many-to-many relationship between users and
+                        lists, making it easy to keep track of the users that
+                        are members of each list.
+                    </StyledParagraph>
+                </div>
+                <div>
+                    <Example>
+                        Example interaction:{' '}
+                        <span>User adds a new item to a list</span>
+                    </Example>
+                    <OrderedList>
+                        <li>
+                            <span>
+                                <ReactIcon />
+                                React{' '}
+                            </span>
+                            <span>
+                                Client sends request to the server with item
+                                data
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <NodeIcon />
+                                NodeJS
+                            </span>
+                            <span>
+                                Server handles the request and communicates with
+                                the database{' '}
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <PostgreIcon />
+                                PostgreSQL
+                            </span>
+                            <span>
+                                Database executes an INSERT statement, storing
+                                the new item
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <NodeIcon />
+                                NodeJS
+                            </span>
+                            <span>
+                                Server sends the new item to all the other
+                                clients
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <ReactIcon />
+                                React{' '}
+                            </span>
+                            <span>
+                                Clients receive the new item data and update the
+                                list
+                            </span>
+                        </li>
+                    </OrderedList>
+                </div>
+            </Section>
+
+            <Section title='Tech Details' id='tech' bg>
+                <TechList>
+                    <ListItem>
+                        <IconContainer>
+                            <BsDisplayFill />
+                        </IconContainer>
+                        <div>
+                            <StyledSpan>Frontend</StyledSpan>
+                            <br /> React, TypeScript, Styled Components,
+                            SocketIO Client
+                        </div>
+                    </ListItem>
+                    <ListItem>
+                        <IconContainer>
+                            <FaServer />
+                        </IconContainer>
+                        <div>
+                            <span>Backend</span>
+                            <br /> Node, Express, SocketIO
+                        </div>
+                    </ListItem>
+                    <ListItem>
+                        <IconContainer>
+                            <FaDatabase />
+                        </IconContainer>
+                        <div>
+                            <StyledSpan>Database</StyledSpan>
+                            <br /> PostgreSQL
+                        </div>
+                    </ListItem>
+                    <ListItem>
+                        <IconContainer>
+                            <BsThreeDots />
+                        </IconContainer>
+                        <div>
+                            <StyledSpan>Others</StyledSpan>
+                            <br /> React Hooks, React Router, React Context
+                        </div>
+                    </ListItem>
+                </TechList>
+                <BackButton />
+            </Section>
+        </motion.div>
+    );
 };
 
 export default ListifyPage;
