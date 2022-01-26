@@ -175,8 +175,8 @@ const MovieSwiperPage = () => {
                     would bring their personal computers to a movie night. The
                     design imitates as best it can the feel of a native
                     application you'd download on your phone, leading to a more
-                    intuitive and smooth user interface. Larger devices are
-                    fully supported, too.
+                    intuitive and responsive user intertface. Larger devices are
+                    fully supported, too, as seen below.
                 </StyledParagraph>
                 <ResponsiveImg
                     iphone
