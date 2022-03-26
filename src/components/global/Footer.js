@@ -84,7 +84,7 @@ const Footer = () => {
             <Container maxWidth={pathname === '/' ? 1400 : 1000}>
                 <Footer id='contact'>
                     <FooterText>
-                        Liked my portfolio? <span>Let's talk.</span>
+                        Like my portfolio? <span>Let's talk.</span>
                     </FooterText>
                     <ContactForm />
                     <Img
