@@ -391,7 +391,7 @@ export const Button = styled.a`
 
 export const SecondaryButton = styled(Button)`
     background: hsl(208 0% 93% / 1);
-    color: hsl(210, 7%, 45%);
+    color: hsl(210, 7%, 43%);
 `;
 
 export const StyledSpan = styled.span`

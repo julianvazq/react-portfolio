@@ -54,16 +54,27 @@ const ProjectDescription = styled.h2`
 
 const Title = styled.h1`
     font-family: 'Work Sans', 'Helvetica', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    margin-bottom: 3rem;
     position: relative;
     display: inline-block;
 
-    @media (min-width: 700px) {
-        font-size: 1.5rem;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -1.5rem;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(
+            90deg,
+            rgba(96, 176, 244, 1),
+            rgba(255, 255, 255, 0)
+        );
+        border-radius: 1rem;
     }
 `;
 
@@ -101,7 +112,6 @@ const LinkIcon = styled(RiExternalLinkLine)`
 
 const GithubIcon = styled(FiGithub)`
     margin-left: auto;
-    color: hsl(210, 7%, 55%);
 `;
 
 const Header = ({ title, description, url, github, navLinks, children }) => {

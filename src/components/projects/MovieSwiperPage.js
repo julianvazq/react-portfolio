@@ -170,13 +170,15 @@ const MovieSwiperPage = () => {
 
             <Section title='Mobile First' id='responsiveness'>
                 <StyledParagraph>
-                    The application is primarily designed for a mobile
+                    The web application is primarily designed for a mobile
                     experience, as it is highly unlikely that a group of people
                     would bring their personal computers to a movie night. The
                     design imitates as best it can the feel of a native
                     application you'd download on your phone, leading to a more
-                    intuitive and responsive user intertface. Larger devices are
-                    fully supported, too, as seen below.
+                    familiar and intuitive experience for most users. The fluid
+                    user interface design makes it extremely easy to also
+                    support larger devices, such as tablets and desktops, as
+                    seen below.
                 </StyledParagraph>
                 <ResponsiveImg
                     iphone
