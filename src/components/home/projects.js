@@ -36,18 +36,18 @@ export const projects = [
     //     },
     //     borderColor: '#8f8580',
     // },
-    {
-        title: 'Dog Finder',
-        link: '/dog-finder',
-        tech: ['React', 'Node', 'Express', 'Styled Components'],
-        description: 'Personalized results of dogs for adoption in your area.',
-        images: {
-            sm: require('../../images/sm/pet-matcher-sm.png'),
-            md: require('../../images/md/pet-matcher-md.png'),
-            lg: require('../../images/lg/pet-matcher-lg.png'),
-        },
-        borderColor: '#d3c47e',
-    },
+    // {
+    //     title: 'Dog Finder',
+    //     link: '/dog-finder',
+    //     tech: ['React', 'Node', 'Express', 'Styled Components'],
+    //     description: 'Personalized results of dogs for adoption in your area.',
+    //     images: {
+    //         sm: require('../../images/sm/pet-matcher-sm.png'),
+    //         md: require('../../images/md/pet-matcher-md.png'),
+    //         lg: require('../../images/lg/pet-matcher-lg.png'),
+    //     },
+    //     borderColor: '#d3c47e',
+    // },
     {
         title: 'Listify',
         link: '/listify',

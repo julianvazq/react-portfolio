@@ -55,6 +55,13 @@ const SectionTitle = styled.h2`
     @media (max-width: 580px) {
         font-size: 2.2rem;
     }
+
+    @media (max-width: 800px) {
+        text-align: center;
+        &:before {
+            display: none;
+        }
+    }
 `;
 
 const SectionSubtitle = styled.h3`
@@ -64,6 +71,10 @@ const SectionSubtitle = styled.h3`
     font-weight: 400;
     margin-bottom: 1rem;
     position: relative;
+
+    @media (max-width: 800px) {
+        margin: 0 auto;
+    }
 `;
 
 const GridContainer = styled.div`
@@ -101,7 +112,7 @@ const ProjectSection = () => {
                 <SectionSubtitle>Design &amp; Development</SectionSubtitle>
             </Container>
             <GridContainer>
-                {projects.slice(0, 6).map((project, index) => (
+                {projects.map((project, index) => (
                     <ProjectCard
                         key={project.title}
                         index={index}
