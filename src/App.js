@@ -1,6 +1,6 @@
 import { AnimatePresence } from 'framer-motion';
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Footer from './components/global/Footer';
 import Navbar from './components/global/Navbar';
@@ -43,6 +43,7 @@ function App() {
                     />
                     <Route path='/listify' component={ListifyPage} />
                     <Route path='/movie-swiper' component={MovieSwiperPage} />
+                    <Route render={() => <Redirect to='/' />} />
                 </Switch>
             </AnimatePresence>
             <Footer />
