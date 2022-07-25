@@ -55,7 +55,7 @@ const MovieSwiperPage = () => {
             <Header
                 title='Movie Swiper'
                 description='Add movies to a shared list and vote to find the perfect movie to watch. '
-                url='https://www.movieswiper.co'
+                url='https://www.movieswiper.site'
                 github='https://github.com/julianvazq/movie-swiper'
                 navLinks={navLinks}
             >
