@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "88c2590f4f0e163b6010990391a13e32",
+    "revision": "ebf1d805e727c04b380038cc744d8a3b",
     "url": "/index.html"
   },
   {
-    "revision": "088c6f28f3fdf0753bdb",
+    "revision": "451ee950681c38c6e127",
     "url": "/static/css/main.8f632cd8.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.734b8ebf.chunk.js.LICENSE"
   },
   {
-    "revision": "088c6f28f3fdf0753bdb",
-    "url": "/static/js/main.e7082768.chunk.js"
+    "revision": "451ee950681c38c6e127",
+    "url": "/static/js/main.9b68d8bd.chunk.js"
   },
   {
     "revision": "c8d7855bb8c34e28ab24",
@@ -100,8 +100,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/join-room.96c22699.png"
   },
   {
-    "revision": "b86b32a2ccfa773447f7fab48171e24d",
-    "url": "/static/media/julian_vazquez_resume.b86b32a2.pdf"
+    "revision": "759fa25dc902ac9c0ad0aaf47c01b920",
+    "url": "/static/media/julian_vazquez_resume.759fa25d.pdf"
   },
   {
     "revision": "c5677b6ef5c3c513def849ab59480ec9",
