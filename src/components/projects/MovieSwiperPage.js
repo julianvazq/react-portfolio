@@ -28,7 +28,7 @@ const navLinks = [
     },
     {
         hash: '#design',
-        title: 'UI/UX Design',
+        title: 'Design',
     },
     {
         hash: '#responsiveness',
@@ -55,7 +55,7 @@ const MovieSwiperPage = () => {
             <Header
                 title='Movie Swiper'
                 description='Add movies to a shared list and vote to find the perfect movie to watch. '
-                url='https://www.movieswiper.site'
+                url='https://movie-swiper.julianvaz.com'
                 github='https://github.com/julianvazq/movie-swiper'
                 navLinks={navLinks}
             >
@@ -81,15 +81,16 @@ const MovieSwiperPage = () => {
                         decided to try to do something about it.
                     </StyledParagraph>
                     <StyledParagraph>
-                        <span>Movie Swiper</span> brings democracy to the
-                        metaphorical movie night table. Everyone gets to
-                        anonymously add their preferred movies to a shared list,
-                        after which a vote takes place. If you've ever used
-                        Tinder you'll feel right at home with the user
-                        interface, where you can swipe right to like a movie, or
-                        swipe left to dislike it. Once the votes are in, you can
-                        see how many likes each movie got, and who they came
-                        from.
+                        Enter <span>Movie Swiper</span>.
+                        <br />
+                        This app brings democracy to movie night. Each
+                        participant can anonymously add their favorite picks to
+                        a shared list, after which the group votes. Inspired by
+                        Tinder's familiar interaction model, the interface lets
+                        you swipe right to like a movie or left to pass. Once
+                        voting wraps up, the results reveal how many likes each
+                        movie received, so the final choice feels fair and
+                        transparent.
                     </StyledParagraph>
                 </div>
             </Section>
@@ -151,9 +152,8 @@ const MovieSwiperPage = () => {
                         >
                             design system
                         </a>{' '}
-                        allowed the theme of the application to have a
-                        standarized look-and-feel, leading to an all-around
-                        consistent user experience.
+                        established a unified theme, giving the application a
+                        polished and consistent user experience.
                     </StyledParagraph>
                 </div>
                 <iframe
@@ -170,15 +170,13 @@ const MovieSwiperPage = () => {
 
             <Section title='Mobile First' id='responsiveness'>
                 <StyledParagraph>
-                    The web application is primarily designed for a mobile
-                    experience, as it is highly unlikely that a group of people
-                    would bring their personal computers to a movie night. The
-                    design imitates as best it can the feel of a native
-                    application you'd download on your phone, leading to a more
-                    familiar and intuitive experience for most users. The fluid
-                    user interface design makes it extremely easy to also
-                    support larger devices, such as tablets and desktops, as
-                    seen below.
+                    The web application is optimized for mobile use, since it's
+                    unlikely that people would bring personal computers to a
+                    movie night. Its design closely mirrors the look and feel of
+                    a native mobile app, creating a familiar and intuitive
+                    experience for users. At the same time, the responsive
+                    interface adapts seamlessly to larger screens, ensuring a
+                    smooth experience across all device types.
                 </StyledParagraph>
                 <ResponsiveImg
                     iphone
@@ -209,14 +207,13 @@ const MovieSwiperPage = () => {
                 </ImageGrid>
                 <div>
                     <StyledParagraph>
-                        The application is driven by a NodeJS server, and it is
-                        the layer through which all interactions among users
-                        take place. The frontend is a single-page React
-                        application.
+                        The application is driven by a NodeJS server, the layer
+                        through which all interactions among users take place.
+                        The frontend is a React single-page application.
                     </StyledParagraph>
                 </div>
                 <ResponsiveImg
-                    src={require('../../images/projects/movie-swiper/arc.svg')}
+                    src={require('../../images/projects/movie-swiper/arc.png')}
                     alt='Entity Relationship Diagram.'
                 />
             </Section>

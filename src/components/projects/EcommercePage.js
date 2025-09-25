@@ -1,25 +1,29 @@
+import { motion } from 'framer-motion';
 import React from 'react';
-import EcommerceHome from '../../images/lg/e-commerce-lg.png';
-import EcommerceResponsive from '../../images/iphone/e-commerce-responsive2.png';
-import {
-    fadeIn,
-    ResponsiveImg,
-    StyledParagraph,
-    TechList,
-    ListItem,
-    IconContainer,
-    StyledSpan,
-} from '../styled-components/StyledComponents';
 import { BsDisplayFill, BsThreeDots } from 'react-icons/bs';
 import { FaServer } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import styled from 'styled-components';
+import EcommerceResponsive from '../../images/iphone/e-commerce-responsive2.png';
+import EcommerceHome from '../../images/lg/e-commerce-lg.png';
+import NextLogo from '../../images/projects/e-commerce/nextjs-logo.svg';
+import {
+    fadeIn,
+    IconContainer,
+    ListItem,
+    ResponsiveImg,
+    StyledParagraph,
+    StyledSpan,
+    TechList,
+} from '../styled-components/StyledComponents';
+import BackButton from './shared/BackButton';
 import Header from './shared/Header';
 import Section from './shared/Section';
-import BackButton from './shared/BackButton';
-import styled from 'styled-components';
 
 const NextJS = styled(ResponsiveImg)`
     max-height: 100px;
+    margin: 0;
+    width: auto;
+    margin-bottom: 1rem;
 
     @media (min-width: 800px) {
         max-height: 150px;
@@ -125,7 +129,7 @@ const ECommercePage = () => {
                     >
                         GIMP
                     </a>{' '}
-                    to do some light editing .
+                    to do some light editing (not perfect but it'll do).
                 </StyledParagraph>
                 <ResponsiveImg
                     src={require('../../images/projects/e-commerce/before-after.png')}
@@ -184,6 +188,7 @@ const ECommercePage = () => {
                         </a>
                         , a modern React framework.
                     </StyledParagraph>
+                    <NextJS src={NextLogo} alt='Responsive design.' />
                     <StyledParagraph>
                         Next offers server-side rendering out of the box, which
                         means that as opposed to client-side rendering, the
@@ -201,10 +206,6 @@ const ECommercePage = () => {
                         required.
                     </StyledParagraph>
                 </div>
-                <NextJS
-                    src={require('../../images/projects/e-commerce/nextjs-logo.svg')}
-                    alt='Responsive design.'
-                />
             </Section>
 
             <Section title='Tech Details' id='tech' bg>
